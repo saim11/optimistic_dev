@@ -1,0 +1,75 @@
+/*===========================================================================================================================*/
+@media (max-width: 767px) {
+	
+	.collapsing, .in { /*background-color: #000;*/ border:none; }
+	.collapsing ul li a, .in ul li a { color: #fff!important; border:none; padding:10px 4px !important;  }
+	.collapsing ul li a:hover, .in ul li a:hover { color: #fff!important; border:none; }
+	
+	
+	
+	
+	
+	
+	 
+
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px){
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 980px){
+	
+	.navbar-header { width: 100%; text-align: center; margin-bottom: 33px; }
+	a.navbar-brand { margin: 0 auto; display: inline-block; float: none !important; }
+	.Alioth_Header .navbar-nav > li > a { padding: 33px 10px; }
+	.navbar-right { float:none; display: inline-block; margin: 0 auto !important;  }
+	.carousel-indicators { display: none; }
+	.Slider_Wrapper_Text { text-align: center; }
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+	header .logo img {
+		margin: 0 auto;
+		text-align: center;
+	}
+	header .opt_brands img {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.optic_navigation {
+		margin-top: 10px;
+	}
+	.navbar-default .navbar-toggle {
+		border-color: #056839 !important;
+	}
+	.optic_navigation .icon-bar { background-color: #fff !important; }
+	.wizard > .steps .current::after {
+		display: none !important;
+	}
+	.wizard > .content > .title, .tabcontrol > .content > .title {
+		display: none !important;
+	}
+
+}

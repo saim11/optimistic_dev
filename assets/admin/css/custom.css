@@ -1,0 +1,77 @@
+textarea {
+	width: 100% !important;
+	resize: none;
+}
+.profile-info {
+	color: #333;
+}
+button.alertBox {
+	font-size: 20px;
+	margin: 12px;
+}
+.font16 {
+	font-size: 16px !important;
+}
+i.addButton {
+	padding-right: 16px !important;
+}
+.page-container .sidebar-menu .logo-env {
+	/*background: #fff;*/
+}
+.sidebar-collapse-icon {
+	background: #303641;
+}
+@media (max-width: 499px) {
+.hideCol {
+	display: none;
+}
+}
+@media (max-width: 600px) {
+.hideCol2 {
+	display: none;
+}
+}
+@media (max-width: 767px) {
+.hideCol2 {
+	display: none;
+}
+}
+span.validate-has-error {
+	color: #CC2424;
+}
+.login-page .login-header {
+/* background: #FFF;*/
+}
+.red-border{
+	border-color:#cc2424;	
+}
+.inoti{
+	position:relative;	
+}
+.inoti span{
+	position:absolute;
+	top:-4px;
+	left:11px;
+	padding:2px 5px;
+	font-weight:bold;	
+}
+.delitem{
+	margin-left:-8px;	
+}
+
+#search_keywords, #search_status, #per_page,#page_cat_id{
+	padding:4px;	
+}
+.form-inline.pull-right{
+	clear:both;	
+}
+.logo img {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.logo-env .logo img {
+    border-radius: 5px;
+    padding: 8px;
+}

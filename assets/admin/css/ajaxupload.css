@@ -1,0 +1,122 @@
+
+
+#upload{
+    font-family:'PT Sans Narrow', sans-serif;
+	margin:10px;
+  /*   background-color:#373a3d;*/
+
+ /*   background-image:-webkit-linear-gradient(top, #373a3d, #313437);
+    background-image:-moz-linear-gradient(top, #373a3d, #313437);
+    background-image:linear-gradient(top, #373a3d, #313437);
+
+ */   width:100%px;
+    
+    
+}
+
+#drop{
+    /*background-color: #2E3134;*/
+    padding: 40px 50px;
+    margin-bottom: 30px;
+    border: 2px dashed #999;
+    border-radius: 3px;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size:16px;
+    font-weight:bold;
+    color:#7f858a;
+}
+
+#drop a{
+    background-color:#49AFCD;
+    padding:12px 26px;
+    color:#fff;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    display:block;
+    margin-top:12px;
+    line-height:1;
+}
+
+#drop a:hover{
+    background-color:#0986a3;
+}
+
+#drop input{
+    display:none;
+}
+
+#upload ul{
+    list-style:none;
+	 /* border: 1px solid #CCCCCC;
+   border-top:1px solid #2b2e31;
+    border-bottom:1px solid #3d4043;*/
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+#upload ul li{
+
+ /*   background-color:#333639;
+
+    background-image:-webkit-linear-gradient(top, #333639, #303335);
+    background-image:-moz-linear-gradient(top, #333639, #303335);
+    background-image:linear-gradient(top, #333639, #303335);*/
+
+   /* border-top:1px solid #999999;*/
+    border:1px solid #CCCCCC;
+    padding:15px;
+    height: 80px;
+	margin-bottom:5px;
+    position: relative;
+}
+
+#upload ul li input{
+    display: none;
+}
+
+#upload ul li p{
+  	width:64%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: ##7F858A;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+#upload ul li i{
+    font-weight: normal;
+    font-style:normal;
+    color:#7f7f7f;
+    display:block;
+}
+
+#upload ul li canvas{
+    top: 15px;
+    left: 32px;
+    position: absolute;
+}
+
+#upload ul li span{
+    width: 15px;
+    height: 12px;
+	background: url("../images/icons.png") no-repeat;
+	position: absolute;
+    top: 34px;
+    right: 10px;
+    cursor:pointer;
+}
+
+#upload ul li.working span{
+    height: 16px;
+    background-position: 0 -12px;
+}
+
+#upload ul li.error p{
+    color:red;
+}
