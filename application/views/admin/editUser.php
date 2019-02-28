@@ -10,7 +10,6 @@
 
 
 <?php 
-print_r($tbl_data['user_id']);
 $crumb2 = "";
 $courses = true;
 $data_array=array();
@@ -63,7 +62,8 @@ $data_array=array();
 
 <h2>
 	<?php echo $crumb;?> <?php echo rtrim($this->moduleName,'s');?>
-	<button type="button" class="btn btn-info" style="float:right;" onClick="javascript:window.location.href='<?php echo base_url()."manage/user/docs/".$tbl_data['user_id'] ?>'">View Documents</button>
+	<button type="button" class="btn btn-info" style="float:right;" onClick="javascript:window.location.href='<?php echo base_url()."manage/user/docs/".$tbl_data['user_id'] ?>'"><i class="entypo-picture"></i>View Documents</button>
+	<button type="button" class="btn btn-success" style="float:right;margin-right:0.2%" onClick="javascript:window.location.href='<?php echo base_url()."manage/user/docs/".$tbl_data['user_id'] ?>'"><i class="entypo-doc-text"></i>Student Forms</button>
 </h2>
 <br />
 

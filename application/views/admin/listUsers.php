@@ -60,6 +60,7 @@
             <i class="entypo-plus-circled"></i>
         </button>
 
+		
 		<button  class="btn btn-default btn-icon icon-left" type="button" onclick="javascript:window.location='<?php echo base_url('manage/cordinator');?>'">
             View Coordinators
             <i class="entypo-users"></i>

@@ -37,7 +37,7 @@ function getDataUri(url, callback) {
     }
 // ######### 2 ####
     else if(id == "driversImg" && stringVal == -1){
-        var textData = "DRIVERS LICENCE ";
+        var textData = "DRIVERS LICENCE";
     }
     else if (id == "driversImg" && stringVal != -1){
         window.open(

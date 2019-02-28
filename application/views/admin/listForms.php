@@ -29,17 +29,15 @@ a:hover {
 </ol>
 
 
-
-
-
 <div class="row" style="min-height:400px;">
 	<div class="col-md-12">
-
+	<button type="button" class="btn btn-info" style="float:right;" onClick="javascript:window.location.href='<?php echo base_url()."manage/studentForms"?>'"><i class="entypo-docs"></i>All Student Forms</button>
 		<br clear="all" />
 		<hr />
 		<div class="page-header">
   			<h1>Student Forms</h1>
 		</div>
+		
 		
 			<!-- Trainer tab -->
 			<div class="tab-pane" id="profile">
