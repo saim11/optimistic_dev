@@ -260,7 +260,7 @@ $(document).ready(function() {
 		$.ajax({
 			type: 'POST',
 			data: {qualificationSelected: qualificationSelected, user_id: <?php echo $form_apply2['enrol']['user_id']?>,form_id: <?php echo $form_apply2['enrol']['Id']?>},
-			url: '<?php echo site_url('application_forms_update/form_apply2_qualification') ?>',
+			url: '<?php echo site_url('application_forms_update/form_apply2_qualification'); ?>',
 			success: function(result){
 	    		$('#returnResult').html(result);
 	    	},

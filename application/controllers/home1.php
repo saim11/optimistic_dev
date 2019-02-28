@@ -14,11 +14,13 @@ class Home extends CI_Controller {
 			{
 				redirect(base_url('under-construction.html'));
 			}
-			$this->load->library('encrypt');
-	}
-
-	public function index()
-	{
+            $this->load->library('encrypt');
+            $this->load->library('Pdf');
+        }
+        
+        public function index()
+        {
+        $this->load->view('tcpdf_test');
         // echo $this->SqlModel->getSingleField('page_uri','pages',array('page_id' => 42));
 		$this->page($this->SqlModel->getSingleField('page_uri','pages',array('page_id'=>1)));
 	}
