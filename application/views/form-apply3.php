@@ -1,8 +1,24 @@
+
+<!-- Header files -->
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+        <!-- All pages css -->
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+
+    <!-- End header Files -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- Bootstrap -->
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
 
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/style-student-profile-form.css" rel="stylesheet">
 
@@ -10,21 +26,21 @@
 
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/jquery.fancybox.css?1" rel="stylesheet">
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet">        
+<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet">         -->
 
 
 
 <!-- Animate.css -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/animate.css">   
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/animate.css">    -->
 
 
 
 <!-- 4step form.css -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/normalize.css">
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/normalize.css">
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/jquery.steps.css">
+<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/jquery.steps.css"> -->
 
 
 
@@ -35,7 +51,21 @@
 <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>    
 
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+.top_social , .top_social > a {
+	padding: 0px !important;
+	margin: 0px !important;
 
+}
+.top_social > a {
+margin:2% 1% 2% 1% !important;
+display: inline-block ;
+}
+.nav {
+    padding: 0px;
+    margin: -5px;
+}
+</style>
 <script>
 	
 	function submitForm(){
@@ -57,16 +87,16 @@
 </script>
 
 
-<section class="Section_Devs Head_Titles">
-	<div class="container">
-		<h1>SKILLS FIRST PROGRAM ENROLMENT AGREEMENT FORM</h1>
-		<ol class="breadcrumb">
-		  <li><a href="#">Home</a></li>	
-		  <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>	  
-		  <li class="active">SKILLS FIRST PROGRAM ENROLMENT AGREEMENT FORM</li>
-		</ol>
-	</div>
-</section>
+<!--our satisfied customer Start -->
+<div class="osc">
+  <div class="ocs_sub"> 
+    <!--Carousel Wrapper-->
+    	<img src="<?php echo FRONTEND_ASSETS; ?>images/slider_login.jpg" class="img-fluid" alt="Responsive image">
+    <!--/.Carousel Wrapper--> 
+  </div>
+  <!-- ocs_sub--> 
+</div>
+<!-- osc--> 
 <!-- Head_Titles Closed -->
 
 <section class="Section_Devs Welcome_Classic Optim-Form0s">
@@ -178,14 +208,12 @@
 						<h3>COURSE OF ENROLMENT</h3>
 
 						<table class="table table-bordered opt-centered">
-							<thead>
-								<tr>
-									<th>Tick</th>
-									<th>Code</th>
-									<th>Title</th>
-								</tr>
-							</thead>
 							<tbody>
+									<tr>
+										<th>Tick</th>
+										<th>Code</th>
+										<th>Title</th>
+									</tr>
 								<?php 
 									$enrolCoursesChecked = explode(",", $form_apply3['enrol']['enrollment_course']);
 									$courses = $form_apply3['courses'];
@@ -246,7 +274,7 @@
 
 						<br class="clearfix">
 						<h3>PERSONAL DETAILS (Legal name as per photo ID, which will need to be sighted to verify legal name)</h3>
-
+						<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label class="col-sm-2">Title:</label>
@@ -308,7 +336,8 @@
 							</div>
 						</div>
 
-
+</div>
+<div class="row">  
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>First Name:</label>
@@ -322,35 +351,37 @@
 								<input type="text" id="two" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['middle_name'] ?>">
 							</div>
 						</div>
-
+</div>
+<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Last Name:</label>
 								<input type="text" id="three" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['last_name'] ?>">
 							</div>
 						</div>
-
+ 
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Date of Birth:</label>
 								<input placeholde="1999-11-24" type="text" id="four" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['date_of_birth'] ?>">
 							</div>
 						</div>
-
+</div>
+<div class="row">    
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label>Residential Address:</label>
 								<input type="text" id="five" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['residential_address'] ?>">
 							</div>
 						</div>
-
+</div>
+<div class="row">    						
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label>Suburb/Town:</label>
 								<input type="text" id="six" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['subrub_town'] ?>">
 							</div>
 						</div>
-
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label>State:</label>
@@ -358,12 +389,15 @@
 							</div>
 						</div>
 
+ 
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label>Postcode:</label>
 								<input type="text" id="eight" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['post_code'] ?>">
 							</div>
 						</div>
+</div > 		
+<div class="row"> 				
 
 						<div class="col-sm-12">
 							<div class="form-group">
@@ -371,7 +405,8 @@
 								<input type="text" id="nine" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['postal_address'] ?>">
 							</div>
 						</div>
-
+</div> 						
+<div class="row"> 
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label>Home phone:</label>
@@ -392,17 +427,20 @@
 								<input type="text" id="twelve" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['fax'] ?>">
 							</div>
 						</div>
-
+</div> 						
+<div class="row"> 
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label>Email:</label>
 								<input type="text" id="thirteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['email'] ?>">
 							</div>
 						</div>
+</div>
 
 						<br class="clearfix">
 						<h3>EMERGENCY CONTACT DETAILS</h3>
-
+						
+<div class="row">  						
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Name:</label>
@@ -416,6 +454,8 @@
 								<input type="text" id="fifteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_relationship'] ?>">
 							</div>
 						</div>
+</div>
+<div class="row">  
 
 						<div class="col-sm-6">
 							<div class="form-group">
@@ -430,18 +470,18 @@
 								<input type="text" id="seventeen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_mobile'] ?>">
 							</div>
 						</div>
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<div class="col-sm-9">
-									<label>In the event of an emergency, do you give the RTO permission to organise emergency transport and treatment and agree
+</div> 
+<div class="col-sm-12">
+	<div class="form-group">
+		<div class="col-sm-9">
+			<label>In the event of an emergency, do you give the RTO permission to organise emergency transport and treatment and agree
 										to pay all costs related to the emergency? (please tick one)</label>
 								</div>
 								<div class="col-sm-3">
 									<?php 
 										$RTOpermissionSelected = explode(",", $form_apply3['enrol']['emerg_rto_permission']);
 										$RTOpermissions = array("Yes", "No");
-
+										
 										$RTOInputNum = 17;
 										$RTOLabelNum = 17;
 										foreach ($RTOpermissions as $RTOpermission) {
@@ -450,10 +490,12 @@
 												$checked="checked";
 											}
 											?>
+											<div class="row"> 
 											<div class="checkbox">
 												<input id="box<?php echo $RTOInputNum++?>" type="checkbox" class="RTOpermission changeOption" name="RTOpermission[]" value="<?php echo $RTOpermission; ?>" <?php echo $checked; ?>/>
 												<label for="box<?php echo $RTOLabelNum++?>"><?php echo $RTOpermission; ?></label>
 											</div>
+											</div> 
 
 									<?php		
 										}
@@ -464,7 +506,7 @@
 
 						<br class="clearfix">
 						<h3>CONCESSION DETAILS</h3>
-
+<div class="row"> 
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Medicare No:</label>
@@ -478,6 +520,8 @@
 								<input type="text" id="ninteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['con_mdicare_expiry_date'] ?>">
 							</div>
 						</div>
+</div> 
+<div class="row"> 
 
 						<div class="col-sm-6">
 							<div class="form-group">
@@ -492,17 +536,17 @@
 								<input type="text" id="twentyOne" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['con_card_expiry_date'] ?>">
 							</div>
 						</div>
-
+</div> 
 						<br class="clearfix">
 						<h3>UNIQUE STUDENT IDENTIFIER (USI)</h3>
 
 						<div class="col-sm-12">
 							<div class="form-group">
-								<div class="col-sm-7">
+								<div class="col-sm-10">
 									<label>I give permission for Optimistic Futures Pty Ltd to access my Unique Student Identifier (USI) for the purpose of
 										recording my results.</label>
 								</div>
-								<div class="col-sm-5">
+								<div class="col-sm-6">
 									<input type="text" id="twentyTwo" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['usi1'] ?>">
 									<br />
 								</div>
@@ -512,11 +556,11 @@
 
 						<div class="col-sm-12">
 							<div class="form-group">
-								<div class="col-sm-7">
+								<div class="col-sm-10">
 									<label>If I do not have a USI in place, I am willing for Optimistic Futures Pty Ltd to set up my USI on my behalf. *Please
 										complete the USI form attached</label>
 								</div>
-								<div class="col-sm-5">
+								<div class="col-sm-6">
 									<input type="text" id="twentyThree" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['usi2'] ?>">
 									<br />
 								</div>
@@ -579,13 +623,14 @@
 						<br class="clearfix">
 						<h3>EMPLOYMENT</h3>
 						<p>Of the following categories, which BEST describes your current employment status?</p>
-							<?php
+						<div class="row">
+						<?php
 								$employmentStatusSelected = explode(',', $form_apply3['enrol']['employment_status']);
 								$employmentStatus = $form_apply3['employmentStatus'];
 								$num=0;
 								$empInput=20;
 								$empLable=20;
-								foreach ($employmentStatus as $status) { 
+								foreach ($employmentStatus as $status) {  
 									if ($num == 0 || $num == 4){?>
 									<div class="col-sm-6">
 									<?php } ?>
@@ -606,10 +651,10 @@
 								 	$num++;
 								 } 
 							?>
-							
+							</div>
 						<br class="clearfix">
 						<h3>EMPLOYMENT DETAILS (if applicable)</h3>
-
+				<div class="row">
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Organisation:</label>
@@ -623,12 +668,16 @@
 								<input type="text" id="twentySeven" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_position'] ?>">
 							</div>
 						</div>
+				</div>
+				<div class="row">
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label>Address:</label>
 								<input type="text" id="twentyEight" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_address'] ?>">
 							</div>
 						</div>
+				</div>
+				<div class="row">		
 
 						<div class="col-sm-6">
 							<div class="form-group">
@@ -643,11 +692,12 @@
 								<input type="text" id="thirty" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_abn'] ?>">
 							</div>
 						</div>
+				</div>		
 
 						<br class="clearfix">
 						<h3>SCHOOLING</h3>
 						<p>What is your highest COMPLETED school Level:</p>
-
+						<div class="row">
 						<?php
 							$highestCompletedSchoolSelected = explode(',', $form_apply3['enrol']['highest_completed_school']);
 							$highestCompletedSchool = $form_apply3['highestCompletedSchool'];
@@ -677,19 +727,22 @@
 								 	$num++;
 							}
 						?>
-
+						</div>
+						<div class="row">
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label>In which YEAR did you complete that Schooling Level:(e.g. 2008, 2005 etc)</label>
 								<input type="text" id="thirtyOne" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['year_school_completed'] ?>">
 							</div>
 						</div>
+						</div>
 
+<div class="row">
 						<div class="col-sm-4">
 							<p>Are you still attending secondary school?</p>
 						</div>
-
 						<div class="col-sm-8">
+							<div class="row">
 							<?php 
 								$attendSecondarySchoolSelected = explode(',', $form_apply3['enrol']['attend_secondary_school']);
 								$attendSecondarySchool = $form_apply3['attendSecondarySchool'];
@@ -701,18 +754,22 @@
 										$checked="checked";
 									}
 									?>
-									<div class="checkbox">
-										<input id="box<?php echo $attInput++; ?>" type="checkbox" class="changeOption attendSecondarySchool" name="attendSecondarySchool[]" value="<?php echo $attendSchool; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $attLable++; ?>"><?php echo $attendSchool; ?></label>
+									<div class="col-sm-6">
+										<div class="checkbox">
+											<input id="box<?php echo $attInput++; ?>" type="checkbox" class="changeOption attendSecondarySchool" name="attendSecondarySchool[]" value="<?php echo $attendSchool; ?>" <?php echo $checked; ?>/>
+											<label for="box<?php echo $attLable++; ?>"><?php echo $attendSchool; ?></label>
+										</div>
 									</div>
-							<?php
+									<?php
 								}
-							?>
+								?>
+							</div>
 						</div>
+</div>
 
 						<br class="clearfix">
 						<h3>PREVIOUS QUALIFICATIONS ACHIEVED</h3>
-
+			<div class="row">
 						<div class="col-sm-8">
 							<p>Have you SUCCESSFULLY completed any of the following qualifications?</p>
 						</div>
@@ -741,6 +798,8 @@
 								}
 							?>
 						</div>
+			</div>
+			<div class="row">			
 
 						<br class="clearfix">
 
@@ -783,6 +842,7 @@
 							<?php	
 							}
 							?>
+				</div>			
 
 						<div class="col-sm-12">
 							<div class="form-group">
@@ -790,7 +850,7 @@
 								<input type="text" id="thirtyTwo" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['another_certificate']?>">
 							</div>
 						</div>
-
+						<div class="row">
 						<div class="col-sm-7">
 							<p>Please tick where the qualification was completed:</p>
 						</div>
@@ -819,10 +879,11 @@
 								}
 							?>
 						</div>
+						</div>
 
 						<br class="clearfix">
 						<h3>LANGUAGE & CULTURAL DIVERSITY</h3>
-
+						<div class="row">
 						<div class="col-sm-6">
 							<?php
 								$countryOfBirthSelected = explode(',', $form_apply3['enrol']['country_of_birth']);
@@ -844,15 +905,17 @@
 								<input type="text" id="thirtyThree" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['country_of_birth'] ?>">
 							</div>
 						</div>
-
+						</div>
+					<div class="row">
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label>City of birth:</label>
 								<input type="text" id="thirtyFour" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['city_of_birth']?>">
 							</div>
 						</div>
+					</div>
 
-
+						<div class="row">
 						<div class="col-sm-4">
 							<p>Do you speak a Language other than English at home:</p>
 							<?php
@@ -925,15 +988,17 @@
 								}
 							?>
 						</div>
+						</div>
 
 						<br class="clearfix">
 						<h3>DISABILITY</h3>
-
+					<div class="row">
 						<div class="col-sm-8">
 							<p>Do you consider yourself to have a disability, impairment or long-term condition?</p>
 						</div>
 
 						<div class="col-sm-4">
+							
 
 							<?php 
 								$haveDisabilitySelected = $form_apply3['enrol']['have_disability'];
@@ -958,9 +1023,13 @@
 								}
 							?>
 						</div>
+					</div>	
+					<div class="row">
 
 						<div class="col-sm-12">
-							<p>If yes, then please indicate the areas of a disability, impairment or long-term condition:</p>
+							<p>
+								If yes, then please indicate the areas of a disability, impairment or long-term condition:</p>
+						<div class="row">
 							<?php
 								$areasOfDiabilitySelected = explode(',', $form_apply3['enrol']['areas_of_disability']);
 								$areasOfDiability = $form_apply3['areasOfDiability'];
@@ -988,13 +1057,16 @@
 								 	$num++;
 								}
 							 ?>
+						</div>	 
 						</div>
-
+						</div>
+						<div class="row">
 						<div class="col-sm-12">
 							<div class="form-group">
 								<label>Other:</label>
 								<input type="text" id="thirtySix" class="form-control Form_Setup textChange areasOfDiability required" value="<?php echo $form_apply3['enrol']['other_areas_of_disability'] ?>">
 							</div>
+						</div>
 						</div>
 
 						<br class="clearfix">
@@ -1002,8 +1074,9 @@
 						<p>Of the following categories, which BEST describes your main Reason for undertaking this course/traineeship/ apprenticeship?
 							Tick only ONE</p>
 
-
+						<div class="row">
 						<div class="col-sm-12">
+						<div class="row">
 							<?php
 								$studyReasonSelected = explode(',', $form_apply3['enrol']['study_reason']);
 								$studyReason = $form_apply3['studyReason'];
@@ -1041,15 +1114,18 @@
 								 	$num++;
 								 } 
 							?>
-
+						</div>
+						</div>
 						</div>
 
 
 						<br class="clearfix">
 						<h3>IDENTIFICATION</h3>
 
-						<div class="col-sm-12">
 
+						<div class="row">
+						<div class="col-sm-12">
+						<div class="row">
 							<?php 
 								$identificationsSelected = explode(',', $form_apply3['enrol']['identification']);
 								$identifications = $form_apply3['identifications'];
@@ -1077,13 +1153,16 @@
 								 	$num++;
 								 } 
 							?>
+						</div>	
 						</div>
+						</div>	
 
 
 						<br class="clearfix">
 						<h3>TUITION FEES</h3>
 						<strong>Fee Concession or Fee Waivers</strong>
 
+						<div class="row">
 						<div class="col-sm-6">
 							<p>Do you have a current concession cards? (Please Tick One)</p>
 						</div>
@@ -1125,6 +1204,7 @@
 
 						<br>
 						<p>If yes which of the following has been sighted?</p>
+						
 						<div class="col-sm-12">
 
 							<?php 
@@ -1174,7 +1254,8 @@
 
 						<p>Have you been referred by Job Seekers with a standard Job Seeker Referral Form? (Please Tick One)?</p>
 						<div class="col-sm-12">
-							<div class="b">
+							<div class="row">
+							<div class="col-sm-4">
 								<div class="checkbox">
 									<input id="box96" type="checkbox" />
 									<label for="box96">Yes</label>
@@ -1193,6 +1274,8 @@
 								</div>
 							</div>
 						</div>
+						</div>
+	
 
 						<p>NB: Optimistic Futures must invoice the referring agency directly for the portion of the tuition fee not covered by
 							the referred job seeker.</p>
@@ -1201,7 +1284,8 @@
 							(Please Tick One)</p>
 
 						<div class="col-sm-12">
-							<?php 
+							<div class="row">
+								<?php 
 								$tuitionSelfIdentifiedSelected = explode(',', $form_apply3['enrol']['tuition_self_identified']);
 								$tuitionSelfIdentified = array('Yes', 'No');
 								$selfInput=98;
@@ -1212,21 +1296,25 @@
 										$checked="checked";
 									} 
 									?>
+									<div class="col-sm-6">
 										<div class="checkbox">
 											<input id="box<?php echo $selfInput++ ?>" type="checkbox" class="changeOption tuitionSelfIdentified" name=tuitionSelfIdentified[] value="<?php echo $self; ?>" <?php echo $checked; ?>/>
 											<label for="box<?php echo $selfLabel++ ?>"><?php echo $self; ?></label>
 										</div>
+									</div>
 							<?php
 								}
 
 							?>
 						</div>
+						</div>
+							</div>
 
 
 						<br class="clearfix">
 						<h3>PAYMENT METHOD</h3>
 						<p>Please make payable to: Optimistic Futures Pty Ltd</p>
-
+						<div class="row">
 						<div class="col-sm-12">
 							<?php
 								$paymentMethodSelected = explode(',', $form_apply3['enrol']['payment_method']);
@@ -1275,6 +1363,7 @@
 								<label for="box105">Funded from Skills First Program</label>
 							</div> -->
 						</div>
+						</div>
 
 
 						<br class="clearfix">
@@ -1295,6 +1384,7 @@
 						<h3>CONSENT</h3>
 
 						<div class="form-group">
+						<div class="row">
 							<label class="col-sm-10">Do you give consent to OPTIMISTIC FUTURES to display your testimonials on their website?</label>
 							<div class="col-sm-2">
 								<?php 
@@ -1320,8 +1410,9 @@
 								?>
 							</div>
 						</div>
-
+						</div>
 						<div class="form-group">
+						<div class="row">
 							<label class="col-sm-10">Do you give consent to OPTIMISTIC FUTURES to use your photo on their website or/and on their marketing material?</label>
 							<div class="col-sm-2">
 								<?php 
@@ -1359,11 +1450,13 @@
 								</div> -->
 							</div>
 						</div>
+						</div>
 
 						<br class="clearfix">
 						<h3>TERMS & CONDITIONS OF ENROLMENT</h3>
 
 						<div class="iframe-local">
+						<div class="row">
 							<div class="col-sm-6">
 								<h4>Enrolment & Selection (5.3) </h4>
 								<p>1. Courses are open to all adults 18 years and over. 2. The student is responsible for notifying the RTO if they
@@ -1481,6 +1574,7 @@
 									to participate in the Department’s annual student outcome survey: Contacted by the Department (or persons authorised
 									by the Department) for audit, review or investigation purposes.</p>
 							</div>
+							</div>
 
 							<div class="col-sm-12">
 								<h4>IMPORTANT INFORMATION</h4>
@@ -1496,6 +1590,7 @@
 
 
 						<br class="clearfix">
+					<div class="row">
 						<div class="col-sm-8">
 							<div class="form-group">
 								<label>Student Signature</label>
@@ -1509,7 +1604,9 @@
 								<input type="text" id="thirtyNine" class="form-control Form_Setup required">
 							</div>
 						</div>
+					</div>
 						<br class="clearfix">
+					<div class="row">
 						<div class="col-sm-8">
 							<div class="form-group">
 								<label>RTO REPRESENTATIVE</label>
@@ -1523,6 +1620,7 @@
 								<input type="text" id="fortyOne" class="form-control Form_Setup required">
 							</div>
 						</div>
+						</div>	
 
 						<div class="clearfix"></div>
 
@@ -1530,6 +1628,7 @@
 
 						<div class="form-group">
 							<label class="col-sm-10">All required data received for application of USI</label>
+							<div class="row">
 							<div class="col-sm-2">
 								<div class="Office-checks">
 									<div class="checkbox">
@@ -1544,9 +1643,11 @@
 									</div>
 								</div>
 							</div>
+								</div>
 						</div>
 
 						<div class="form-group">
+						<div class="row">
 							<label class="col-sm-10">USI applied on behalf of the Student?</label>
 							<div class="col-sm-2">
 								<div class="Office-checks">
@@ -1563,8 +1664,10 @@
 								</div>
 							</div>
 						</div>
+						</div>
 
 						<div class="form-group">
+						<div class="row">	
 							<label class="col-sm-10">USI verified/validated</label>
 							<div class="col-sm-2">
 								<div class="Office-checks">
@@ -1581,8 +1684,10 @@
 								</div>
 							</div>
 						</div>
+						</div>
 
 
+					<div class="row">
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label>Optimistic Futures Representative Name</label>
@@ -1603,6 +1708,7 @@
 								<input type="text" id="" class="form-control Form_Setup required" disabled>
 							</div>
 						</div>
+					</div>	
 
 
 						<div class="clearfix"></div>
@@ -1611,14 +1717,17 @@
 
 						<h4>Evidence of citizenship/residency and age</h4>
 
+						<div class="row">
 						<div class="col-sm-8">
 							<div class="form-group">
 								<label>I confirm that in relation to</label>
 								<input type="text" id="fortyTwo" class="form-control Form_Setup required">
 							</div>
 						</div>
+						</div>
 
 						<div class="form-group">
+						<div class="row">	
 							<div class="col-sm-12">
 								<div class="Office-checks">
 									<div class="checkbox">
@@ -1642,6 +1751,8 @@
 										<label for="box112"> the uncertified copy and a receipt from a document verification service;</label>
 									</div>
 								</div>
+						</div>
+						<div class="row">	
 
 								<div class="col-sm-12">
 									<p>and if the student’s age is relevant to their eligibility and the document produced from the list above does not
@@ -1665,9 +1776,16 @@
 										</div>
 									</div>
 
-									<p>Or if the individual is undertaking training under the Asylum Seeker VET Program and meets the requirements set
-										out in Clause 2.1 of these Guidelines, I have sighted and retained: </p>
+
+									<br/>
+									<div class="col-sm-12">
 									<div class="Office-checks">
+										<div class="checkbox">
+										<p>
+											Or if the individual is undertaking training under the Asylum Seeker VET Program and meets the requirements set
+											out in Clause 2.1 of these Guidelines, I have sighted and retained: 
+										</p>
+										</div>
 										<div class="checkbox">
 											<input id="box117" type="checkbox" />
 											<label for="box117">a Referral Letter from the Asylum Seeker Resource Centre or the Australian Red Cross, or</label>
@@ -1682,6 +1800,9 @@
 											Guidelines</p>
 									</div>
 								</div>
+							</div>	
+								</div>
+								</div>
 
 
 								<div class="clearfix"></div>
@@ -1689,6 +1810,7 @@
 								<h3>Section B - To be completed by the student</h3>
 
 								<h4>Education history</h4>
+								<div class="row">	
 
 								<div class="col-sm-8">
 									<div class="form-group">
@@ -1696,8 +1818,11 @@
 										<input type="text" id="eduHistoryHighestQualifications" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['edu_history_highest_qualifications']; ?>">
 									</div>
 								</div>
+								</div>
 
 
+
+								<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
 										<label>Q2. Not including the course/s you are seeking to enrol in now, how many other government funded courses have you
@@ -1725,8 +1850,10 @@
 										
 									</div>
 								</div>
+							</div>
 
 
+								<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
 										<label>Q3. Not including the course/s you are seeking to enrol in now, how many other government funded courses are you
@@ -1752,8 +1879,11 @@
 										</select>
 									</div>
 								</div>
+							</div>	
 
 
+
+							<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
 										<label>Q4. In your lifetime, how many government funded courses have you started (commenced) that are at the same level
@@ -1786,9 +1916,10 @@
 										</select>
 									</div>
 								</div>
+								</div>
 
 								<h4>Student declaration</h4>
-
+								<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label>I</label>
@@ -1801,6 +1932,7 @@
 										<label> in seeking to enrol in</label>
 										<input type="text" id="" class="form-control Form_Setup required" disabled>
 									</div>
+								</div>
 								</div>
 
 								<h4>declare the following to be true and accurate statements: </h4>
@@ -1818,7 +1950,7 @@
 										survey, interview or other questionnaire.</li>
 
 								</ul>
-
+								<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label>Signed</label>
@@ -1833,6 +1965,7 @@
 										<input type="text" id="" class="form-control Form_Setup required" disabled>
 									</div>
 								</div>
+								</div>
 
 								<div class="clearfix"></div>
 
@@ -1840,26 +1973,31 @@
 
 								<h4>Number of courses student is currently eligible for:</h4>
 
-								<h4>Optimistic Futures declaration Based on discussion with the student, the above evidence I have sighted (and retained
+								<p>Optimistic Futures declaration Based on discussion with the student, the above evidence I have sighted (and retained
 									a copy of) in Section A, and the information provided to me by the student in Section B of this form I believe that
 									the above individual satisfies the Entitlement to Funded Training eligibility criteria as set out in the VET Funding
-									Contract and is eligible for funding under the Skill First Program for the following qualification/s: </h4>
+									Contract and is eligible for funding under the Skill First Program for the following qualification/s: </p>
 
+								<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label>(Include full title of qualification/s in which the student is seeking to enrol)</label>
 										<input type="text" id="" class="form-control Form_Setup required" disabled>
 									</div>
 								</div>
+								</div>
 
 								<h4>Authorised Training Provider delegate:</h4>
 
+								<div class="row">
 								<div class="col-sm-12">
 									<div class="form-group">
 										<label>Name</label>
 										<input type="text" id="" class="form-control Form_Setup required" disabled>
 									</div>
 								</div>
+								</div>
+								
 
 								<div class="col-sm-12">
 									<div class="form-group">
@@ -1894,6 +2032,7 @@
 					</div>
 				</div>
 	</section>
+	<br /><br /><br /><br /><br /><br />
 	<!-- Welcome_Classic Closed -->
 
 	<script>

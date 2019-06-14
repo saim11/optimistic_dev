@@ -1,3 +1,25 @@
+ <!-- Header files -->
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+        <!-- All pages css -->
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+        <link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootnavbar.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootstrap.min.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/carouseller.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/glyphicons.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/responsive.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+
+    <!-- End header Files -->
+
+
 <?php
 $passport =base_url()."/resources-Images/dummy.jpg";
 $driverLicense =base_url()."/resources-Images/dummy.jpg";
@@ -430,17 +452,16 @@ select:-moz-focusring {
 
 
 
-<section class="Section_Devs Head_Titles" style='background:url(<?php echo base_url(); ?>uploads/pages/students.png) no-repeat top center;background-size: cover;' >
-	
-    <div class="container">
-		<h1>Student Profile</h1>
-		<ol class="breadcrumb">
-		  <li><a href="index-2.html">Home</a></li>	
-		  <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>	  
-		  <li class="active">Student Profile</li>
-		</ol>
-	</div>
-</section>
+<!--our satisfied customer Start -->
+<div class="osc">
+  <div class="ocs_sub"> 
+    <!--Carousel Wrapper-->
+    	<img src="<?php echo FRONTEND_ASSETS; ?>front-pages/images/slider_myaccount.jpg" class="img-fluid" alt="Responsive image">
+    <!--/.Carousel Wrapper--> 
+  </div>
+  <!-- ocs_sub--> 
+</div>
+<!-- osc--> 
 <!-- Head_Titles Closed -->
 
 
@@ -460,39 +481,39 @@ select:-moz-focusring {
             <div class="col-md-12">
             
             <div class="main">
-
-        <div class="container">
-            <div class="signup-content">
-                <div class="signup-form">
+              <div class="container">
+                <div class="signup-conten">
+                  <div class="signup-for">
                     <form method="POST" action="<?php echo $this->config->base_url().'editProfile/resetPassword' ?>" class="register-form" id="register_form">
-                        <div class="form-row">
-                            <div class="form-group my_group">
-                                <div class="form-input">
+                        <div class="">
+                          <div class="form-group my_group">
+                            <br /><br /><br />
+                              <div class="form-input">
                                     <label for="student_name" class="required">Name</label>
-                                    <input type="text" name="student_name" value=<?php echo '"'.$user_details[0]['user_name'].'"' ?> id="Name" disabled />
+                                    <input type="text" class="form-control" name="student_name" value=<?php echo '"'.$user_details[0]['user_name'].'"' ?> id="Name" disabled />
                                 </div>
                                 <div class="form-input">
                                     <label for="student_email" class="required">Email</label>
-                                    <input type="text" name="student_email" value=<?php echo '"'.$user_details[0]['user_email'].'"' ?> id="Email" disabled />
+                                    <input type="text" name="student_email" class="form-control" value=<?php echo '"'.$user_details[0]['user_email'].'"' ?> id="Email" disabled />
                                 </div>
                                 <div class="form-input">
                                     <label for="student_contact" class="required">Contact number</label>
-                                    <input type="number" name="student_contact" value=<?php echo '"'.$user_details[0]['user_contact'].'"' ?> id="Contact number" />
+                                    <input type="number" class="form-control" name="student_contact" value=<?php echo '"'.$user_details[0]['user_contact'].'"' ?> id="Contact number" />
                                 </div>
                                 <div class="form-input">
                                     <label for="student_password" class="required">Password</label>
-                                    <input type="password" name="student_password" value=<?php echo '"'.$user_details[0]['user_password'].'"' ?> id="Password" disabled /><br />
-                                    <a id="reset" onclick="openNav()">Changed Password</a> 
+                                    <input type="password" class="form-control" name="student_password" value=<?php echo '"'.$user_details[0]['user_password'].'"' ?> id="Password" disabled /><br />
+                                    <small id="emailHelp" class="form-text text-muted"><a id="reset" href="" onclick="openNav()"> Changed Password </a></small> 
                                 </div>
                                 
                             </div>
                         </div>
                         <div class="form-submit">
-                            <input type="submit" value="Update Account" class="submit" id="submit_" name="accountBtn" />    
+                            <input type="submit" value="Update Account" class="btn btn-success" id="submit_" name="accountBtn" />    
                             
 
                             
-   <div id="myNav" class="overlay">
+   <!-- <div id="myNav" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   
   
@@ -515,7 +536,7 @@ select:-moz-focusring {
     <button type="submit" value="saveBtn" class="my-btn" name="saveBtn">Save Password</button>
   </form>
 </div>
-  </div>
+  </div> -->
   
   
   
@@ -545,6 +566,9 @@ select:-moz-focusring {
                                     <div class="my_courses_details1">
                                     <div class="form-radio-group">            
                                             <div class="form-radio-item checkbox123">
+                                            <div class="container">
+                                            <div class="row">
+                                            <div class="col-sm">
                                             <div class="row">
                                             <div class="col-xs-6 col-md-2"></div>
                                               <div class="col-xs-6 col-md-8">
@@ -560,7 +584,9 @@ select:-moz-focusring {
                                             </div>
                                             <br>
                                             <br>
+                                            </div>
                                              
+                                            <div class="col-sm">
                                             <div class="row">
                                             <div class="col-xs-6 col-md-2"></div>
                                               <div class="col-xs-6 col-md-8">
@@ -574,12 +600,19 @@ select:-moz-focusring {
                                             <input type="file" id="driverLicense" name="driverLicense" class="myuploadbtn">
                                               <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
                                             </div>
+                                            </div>
+    
+    </div>
+  </div>
 
                                             
                                             <br>
                                             <br>
                                             <br>
                                             <br>
+                                            <div class="container">
+  <div class="row">
+    <div class="col-sm">
                                             <div class="row">
                                             <div class="col-xs-6 col-md-2"></div>
                                               <div class="col-xs-6 col-md-8">
@@ -590,13 +623,14 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                            
                                               <input type="file" id="medicare" name="medicare" class="myuploadbtn">
                                               <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                            </div>
                                             </div>
                                             
                                             <br>
                                             <br>
+                                            <div class="col-sm">
                                             <div class="row">
                                             
                                             <div class="col-xs-6 col-md-2"></div>
@@ -612,12 +646,22 @@ select:-moz-focusring {
                                               <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
                                             </div>
                                             <br>
+                                            <br>
+    <br>
+    <br>
+    <br>
                                         </div>
+    </div>
+    
+  </div>
+</div>
 
                                         
                                         <div class="form-radio-group">            
                                             <div class="form-radio-item">
-                                            
+                                            <div class="container">
+  <div class="row">
+    <div class="col-sm">
                                             <div class="row">
                                               <div class="col-xs-6 col-md-2"></div>
                                               <div class="col-xs-6 col-md-8">
@@ -633,6 +677,8 @@ select:-moz-focusring {
                                             </div>
                                             <br>
                                             <br>
+                                            </div>
+    <div class="col-sm">
                                             <div class="row">
                                             
                                               <div class="col-xs-6 col-md-2"></div>
@@ -648,7 +694,17 @@ select:-moz-focusring {
                                               <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
                                             </div>
                                             <br>
-                                            <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </div>
+    
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
                                             <div class="row">
                                             
                                               <div class="col-xs-6 col-md-2"></div>
@@ -666,6 +722,8 @@ select:-moz-focusring {
                                             </div>
                                             <br>
                                             <br>
+                                            </div>
+    <div class="col-sm">
                                             <div class="row">
                                             
                                               <div class="col-xs-6 col-md-2"></div>
@@ -681,13 +739,18 @@ select:-moz-focusring {
                                               <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
                                             </div>
                                             <br>
+    <br>
+    <br>
+    </div>
+  </div>
+</div>
                                         </div>
                                       </div>
                                     </div>    
                                 </div> 
                             </div> 
                           <div class="form-submi">
-                          <input type="submit" value="Upload" class="uploadFiles" id="submit" onClick="fileUploaded(this)" name="uploadBtn" /> 
+                          <input type="submit" value="Upload" class="uploadFiles btn btn-success" id="submit" onClick="fileUploaded(this)" name="uploadBtn" /> 
                         </div> 
                       </div>
                     </form>

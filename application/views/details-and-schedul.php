@@ -14,7 +14,40 @@
 <link rel="stylesheet" href="assets/css/slick-theme.css">
 <link rel="stylesheet" href="assets/css/helpers.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<!--End Meta Details -->
 
+<!-- Title -->
+<title>Melbourne Based Early Childhood Education Courses & Security Operations Certifications | OptimisticFutures</title>
+<!-- End Title -->
+
+<!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- End Scripts -->
+
+<!--End Bootstrap + all CSS -->
+    <link title="hello" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/bootstraps.min.css" rel="stylesheet">
+    <link  href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/style.css" rel="stylesheet">
+    <link  href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        <!-- fontawesome CSS -->
+        <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/fontawesome/css/all.css">
+        <!-- Glyphicons CSS -->
+        <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/glyphicons.css">
+        <!-- carousell CSS -->
+        <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/carouseller.css">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/png" href="favicon.ico">
+
+        <!-- WEB FONT -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- End WEB FONT -->
+
+        <!-- End All pages css -->
+<!--End Bootstrap + all CSS -->
 
 
 
@@ -26,7 +59,7 @@
 
 <!-- Animate.css -->
 
-    <link rel="stylesheet" href="assets/css/animate.css">   
+    <link rel="stylesheet" href="assets/css/animate.css">
 
 
 
@@ -35,9 +68,9 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
 
     <link rel="stylesheet" href="assets/css/jquery.steps.css">
-    
+
 <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>    
+<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -78,7 +111,7 @@
   .dropdown-menu>li>a {
     color: #fff;
   }
-  
+
   .dropdown-submenu>a:after {
       display: block;
       content: " ";
@@ -113,176 +146,99 @@
 </head>
 <body>
 
-
 <header>
 
-<div class="container">
+<!-- Top Bar Start -->
+<div class="top_bar">
+  <div class="top_bar_sub">
+    <div class="top_social"> <a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-youtube"></i></a>
+      <p>Broadmeadows: 03 93093370  |  Glenroy: 03 99172133  |  Shepparton: 03 58218665</p>
+    </div>
+    <!-- top_social-->
+    <div class="top_bar_nav">
+      <ul class="nav my_top_nav">
+        <li class="nav-item"> <a class="nav-link active" href="index.html">Home</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="about-us.html">About Us</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="resources.html">Resourses</a> </li>
+        <div class="login_area">
 
-<div class="row">
-
-  <div class="col-md-3 col-sm-3 col-xs-12 logo"><a href="http://dev.softkodes.com/optimisticfuture/index.php"><img alt="" class="img-responsive" src="assets/images/optimistic_logo.png" style="width: 217px; height: 86px;"></a></div>
-
-<div class="col-md-3 col-sm-3 col-xs-12">.</div>
-
-<div class="col-md-3 col-sm-3 col-xs-12 opt_brands"><!--<img alt="" class="img-responsive" src="/uploads/ckeditor/optimistic-futures/images/op_brands.png" style="width: 215px; height: 71px;" />--></div>
-
-<div class="col-md-3 col-sm-3 col-xs-12 optimistic_logs">
-
-
-
-
-
-<div class="clearfix">&nbsp;</div>
-
-<p class="phone"><a href="tel:0393093370">Broadmeadows: 03 93093370</a> </p>
-<p class="phone"> <a href="tel:0399172133">Glenroy: 03 99172133 </a> </p>
-<p class="phone"> <a href="tel:0399172133">Shepparton: 03 58218665 </a> </p>
-
-
-
-<ul class="nobg">
-
-
-  <li><a href="register.html">Register</a></li>
-
-  <li><a class="btn btn-default theme_buttons" href="login.html">Log In</a></li>
-
-                                    
-
-</ul>
-
-
-
-<div class="clearfix">&nbsp;</div>
-
-</div>
-
-<!-- optimistic_logs Closed --></div>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <nav class="navbar navbar-default optic_navigation">
-
-      <div class="container">
-
-        <div class="navbar-header">
-
-          <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-
-            <span class="sr-only">Toggle navigation</span>
-
-            <span class="icon-bar"></span>
-
-            <span class="icon-bar"></span>
-
-            <span class="icon-bar"></span>
-
-          </button>          
+         <a href="register.html"><button type="button" class="btn btn-outline-primary btn-sm login_btn">Register</button></a>
+        <a href="login.html"><button type="button" class="btn btn-outline-primary btn-sm login_btn">Log In</button></a>
 
         </div>
+        <!-- login_area-->
+      </ul>
+    </div>
+    <!-- top_bar_nav-->
+  </div>
+  <!-- top Sub-->
+</div>
+<!-- top bar-->
+<!-- Top Bar End -->
 
-        <div class="navbar-collapse collapse" id="navbar">
-
-         <ul class="nav navbar-nav">
-	<li><a href="http://dev.softkodes.com/optimisticfuture/index.html">Home</a></li>
-	<li><a href="http://dev.softkodes.com/optimisticfuture/about-us.html">About us</a></li>
-	<li><a href="http://dev.softkodes.com/optimisticfuture/student-info.html">Student Information</a></li>
-	<li><a href="http://dev.softkodes.com/optimisticfuture/application-form.html">Application Forms</a></li>
-	<li><a href="./Details&amp;Schedule">Details and Schedule</a></li>
-	<li class="Menu-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses</a>
-	<ul class="dropdown-menu multi-level">
-		<li class="dropdown-submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="#">INDIVIDUAL SUPPORT</a>
-		<ul class="dropdown-menu">
-			<li><a href="http://dev.softkodes.com/optimisticfuture/individual-support.html">CHC33015</a></li>
-		</ul>
-		</li>
-		<li class="dropdown-submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="#">SECURITY OPERATIONS</a>
-		<ul class="dropdown-menu">
-			<li><a href="http://dev.softkodes.com/optimisticfuture/cpp20212-certificate-ii-in-security-operations.html">CPP20212</a></li>
-			<li><a href="http://dev.softkodes.com/optimisticfuture/cpp30411-certificate-iii-in-security-operations.html">CPP30411</a></li>
-		</ul>
-		</li>
-		<li class="dropdown-submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="#">EARLY CHILDHOOD EDUCATION AND CARE</a>
-		<ul class="dropdown-menu">
-			<li><a href="http://dev.softkodes.com/optimisticfuture/chc30113-certificate-iii-in-early-childhood-education-and-care.html">CHC30113</a></li>
-			<li><a href="http://dev.softkodes.com/optimisticfuture/chc50113-diploma-in-early-childhood-education-and-care.html">CHC50113</a></li>
-		</ul>
-		</li>
-		<li class="dropdown-submenu"><a class="dropdown-toggle" data-toggle="dropdown" href="#">EMERGENCY FIRST AID</a>
-		<ul class="dropdown-menu">
-			<li><a href="http://dev.softkodes.com/optimisticfuture/hltaid001-provide-cardiopulmonary-resuscitation.html">HLTAID001</a></li>
-			<li><a href="http://dev.softkodes.com/optimisticfuture/hltaid002-provide-basic-emergency-life-support.html">HLTAID002</a></li>
-			<li><a href="http://dev.softkodes.com/optimisticfuture/hltaid003-provide-first-aid.html">HLTAID003</a></li>
-			<li><a href="http://dev.softkodes.com/optimisticfuture/hltaid004-provide-an-emergency-first-aid-response-in-an-education-and-care-setting.html">HLTAID004</a></li>
-			<!--<li class="dropdown-submenu">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                  <ul class="dropdown-menu">
-                                      <li class="dropdown-submenu">
-                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
-                                          <ul class="dropdown-menu">
-                                              <li><a href="#">Action</a></li>
-                                              <li><a href="#">Another action</a></li>
-                                          </ul>
-                                      </li>
-                                  </ul>
-                              </li>-->
-		</ul>
-		</li>
-	</ul>
-	</li>
-	<li><a href="./resources.html">Resourses</a></li>
-	<li><a href="http://dev.softkodes.com/optimisticfuture/contact.html">Contact</a></li>
-</ul>
-
-
-          
-
-          <ul class="nav navbar-nav navbar-right">
-
-            <li class="number hidden-xs">TOID : 41053</li>            
-
-          </ul>          
-
-        </div><!--/.nav-collapse -->
-
+<!-- Header Start -->
+<div class="header_area" id="myHeader">
+    <div class="header_area_sub">
+        <div class="col-md-2 col-sm-3 col-xs-12 logo"><a href="/optimisticfuture"><img alt="logo" class="image_res" src="/uploads/ckeditor/optimistic-futures/images/optimistic_logo.png" width='166' height='166' /></a></div>
+      <!-- logo-->
+      <div class="top_nav text-right">
+        <nav class="navbar navbar-expand-lg navbar-light float-right">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"> <a class="nav-link" href="student-info.html">Student Information<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="application-form.html">Application Forms</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="details-and-schedule.html">Details and Schedule</a> </li>
+              <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <a class="dropdown-menu" href="#">Individual
+                    Support
+                  </a> <a class="dropdown-item" href="#">Security Operations</a> <a class="dropdown-item" href="#">Early
+                    Childhood Education And Care</a> <a class="dropdown-item" href="#">Emergency First Aid</a> </div>
+              </li>
+              <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a> </li>
+            </ul>
+          </div>
+        </nav>
       </div>
+      <!-- top_nav-->
+    </div>
+    <!-- header_area_sub-->
+  </div>
+  <!-- header_area-->
+  <!-- Header End -->
 
-    </nav>
+  <div class="clearfix"></div>
 
 
 
 
 
+</header>
 
-</header>    
-    
-    
-    
+<!-- HEADER CLOSED -->
+
+
+
   <section class="pb_sm_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url(assets/images/bg1.jpg)">
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-12">
         <h2 class="heading mb-3">Individual Support</h2>
-            
+
             <p><a href="#" role="button" class="btn smoothscroll pb_outline-light p-3 rounded-0 pb_font-13 pb_letter-spacing-2 top_btn_css">Check Details</a>
                 <a href="#" role="button" class="btn smoothscroll pb_outline-light p-3 rounded-0 pb_font-13 pb_letter-spacing-2 top_btn_css">Apply Now</a>
             </p>
-        
+
       </div>
     </div>
   </div>
 </section>
 <!-- END section -->
-    
-    
+
+
 <section class="pb_section pb_section_v1" data-section="about" id="section-aged-care">
   <div class="container">
     <div class="row">
@@ -293,12 +249,12 @@
           Donec semper tempus interdum. Vivamus sollicitudin
           pellentesque odio sit amet aliquam. </p>
         <div class="col-lg-12 pl-md-5 pl-sm-0">
-            
-            
-            
+
+
+
 <button class="accordion_new">Course Code:</button>
 <div class="panel">
-<p>CHC30115</p>
+<p>CHC30115888</p>
 </div>
 
 
@@ -313,7 +269,7 @@
 <p>4</p>
 </div>
 
-            
+
 <button class="accordion_new">Study area:</button>
 <div class="panel">
 <p>Individual Support (Aged Care)</p>
@@ -330,7 +286,7 @@
 <div class="panel">
 <p>05-07-2018 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 Hutton street Dandenong</p>
 </div>
-            
+
         </div>
       </div>
       <div class="col-lg-7">
@@ -367,10 +323,10 @@
         <p>Are you looking for a new career in Security? Then this
           course is for you. Let us guide you into your new
           career today.</p>
-        
-        
+
+
         <div class="col-lg-12 pl-md-5 pl-sm-0">
-            
+
 <button class="accordion_new">Course code:</button>
 <div class="panel">
     <p>CPP20212</p>
@@ -381,7 +337,7 @@
 <div class="panel">
     <p>Certificate II in Security Operations</p>
 </div>
-            
+
 
 <button class="accordion_new">Release:</button>
 <div class="panel">
@@ -406,7 +362,7 @@
 </div>
 
         </div>
-            
+
 
 
       </div>
@@ -448,44 +404,44 @@
           Certificate III of early Childhood Education and Care is the
           entry level qualification for anyone who wants to work in the
           Early Childhood Education industry. </p>
-        
-        
 
-        
-        
-        
+
+
+
+
+
         <div class="col-lg-12 pl-md-5 pl-sm-0">
-            
-            
- 
-            
+
+
+
+
  <button class="accordion_new">Course code:</button>
 <div class="panel">
     <p>CHC50113</p>
-</div>           
-            
- 
+</div>
+
+
   <button class="accordion_new">Course name:</button>
 <div class="panel">
     <p>Diploma of Early Childhood Education and Care</p>
-</div>  
-  
-  
+</div>
+
+
     <button class="accordion_new">Release:</button>
 <div class="panel">
     <p>4</p>
-</div>  
-    
+</div>
+
     <button class="accordion_new">Study area:</button>
 <div class="panel">
     <p>Early childhood Education</p>
-</div> 
+</div>
 
 
 <button class="accordion_new">Duration:</button>
 <div class="panel">
     <p>78 weeks</p>
-</div>  
+</div>
 
 
 <button class="accordion_new">Date and Location</button>
@@ -536,8 +492,8 @@
           implementation of quality programs for children to best
           meet their developmental needs.</p>
         <div class="col-lg-12 pl-md-5 pl-sm-0">
-            
-            
+
+
 <button class="accordion_new">Course code:</button>
 <div class="panel">
 <p>CHC50113</p>
@@ -612,7 +568,7 @@
           either save a life, or dramatically improve the outcome
           for the patient.</p>
         <div class="col-lg-12 pl-md-5 pl-sm-0">
-            
+
 <button class="accordion_new">Course code:</button>
 <div class="panel">
 <p>HLTAID004</p>
@@ -622,32 +578,32 @@
 <button class="accordion_new">Course name:</button>
 <div class="panel">
 <p>Provide an emergency first aid response in an education and care setting</p>
-</div> 
-            
+</div>
+
  <button class="accordion_new">Release:</button>
 <div class="panel">
 <p>5</p>
-</div>            
+</div>
 
- 
+
   <button class="accordion_new">Study area:</button>
 <div class="panel">
 <p>First aid</p>
-</div> 
-  
-  
+</div>
+
+
     <button class="accordion_new">Duration:</button>
 <div class="panel">
 <p>2 days</p>
 </div>
-    
-    
+
+
  <button class="accordion_new">Date and Location</button>
 <div class="panel">
 <p>05-07-2018 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 Hutton street Dandenong</p>
 </div>
-            
-            
+
+
         </div>
       </div>
       <div class="col-lg-7">
@@ -686,12 +642,12 @@
   </svg>
 </div>
 
-<script src="assets/js/jquery.min.js"></script> 
-<script src="assets/js/popper.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/slick.min.js"></script> 
-<script src="assets/js/jquery.waypoints.min.js"></script> 
-<script src="assets/js/jquery.easing.1.3.js"></script> 
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.easing.1.3.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>

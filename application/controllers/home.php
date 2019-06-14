@@ -5,7 +5,7 @@ use \setasign\Fpdi\Fpdi;
 class Home extends CI_Controller {
     public $ws;
     public $data=array();
-	
+
 	public function __construct(){
 			// Call the Model constructor
 			parent::__construct();
@@ -38,7 +38,13 @@ class Home extends CI_Controller {
 		}
 		
         $pageData = $this->SqlModel->getSingleRecord('pages',$where);
-		if(empty($pageData))
+        if(!isset($pageData['page_meta'])){
+            $pageData['page_meta'] == "";
+        }
+        else if(!isset($pageData['page_title'])){
+            $pageData['page_title'] == "";
+        }
+        if(empty($pageData))
 		{
 			redirect(base_url());
 		}
@@ -55,7 +61,7 @@ class Home extends CI_Controller {
 		{
 			$showView = $pageData["page_uri"];
 		}
-		if($pageData["page_id"] > 17 || $pageData["page_id"] == 8 || $pageData["page_id"] == 9 || $pageData["page_id"] == 10 || $pageData["page_id"] == 11 || $pageData["page_id"] == 12 || $pageData["page_id"] == 13 || $pageData["page_id"] == 42 )
+		if($pageData["page_id"] > 17 || $pageData["page_id"] == 8 || $pageData["page_id"] == 9 || $pageData["page_id"] == 10 || $pageData["page_id"] == 11 || $pageData["page_id"] == 12 || $pageData["page_id"] == 13 || $pageData["page_id"] == 42 || $pageData["page_id"] == 58 || $pageData["page_id"] == 59 )
 		{
 			$showView = 'page';
 		}

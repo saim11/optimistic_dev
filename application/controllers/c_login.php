@@ -76,14 +76,14 @@ class C_login extends CI_Controller {
 
             if($user_details != 0)
             {
-                if($user_details['user_status'] == "Pending" || $user_details['user_status'] == "Un-Active")
+                if($user_details['co_status'] == "Pending" || $user_details['co_status'] == "Un-Active")
                 {
                     $this->session->set_userdata('error_from_php', 'Whoops! Your account is not Activated, please contact Administrator');
                     redirect("c_login");
                 }
                 else
                 {
-                    if($user_details['user_status'] == "Blocked")
+                    if($user_details['co_status'] == "Blocked")
                     {
                         $this->session->set_userdata('error_from_php', 'Your account has been blocked by the Admin.');
                         redirect("c_login");

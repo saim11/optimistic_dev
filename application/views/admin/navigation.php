@@ -1,5 +1,4 @@
 <body class="page-body">
-
 <div class="page-container"><!-- add class "sidebar-collapsed" to close sidebar by default, "chat-visible" to make chat appear always -->	
 	
 	<div class="sidebar-menu">
@@ -184,7 +183,6 @@
 	
 </div>
 <hr />
-
 <script type="text/javascript">
 function getRandomInt(min, max) 
 {

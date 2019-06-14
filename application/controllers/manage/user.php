@@ -517,6 +517,7 @@ class User extends CI_Controller {
     // For user documents.
     public function docs($userId="",$type="")
     {
+        $data['alert'] = $this->session->flashdata('alert');
         $data['students_docs'] = $this->SqlModel->getRecords("*", 'account_upload_files' ,'Id','ASC',array('user_id'=>$userId));
         if(isset($_POST['uploadBtn'])){
 
@@ -555,13 +556,16 @@ class User extends CI_Controller {
             }
             if($_FILES['passport']['tmp_name']!="" || $_FILES['driverLicense']['tmp_name']!="" || $_FILES['medicare']['tmp_name']!="" || $_FILES['b_cert']['tmp_name']!="" || $_FILES['citizenCert']['tmp_name']!="" || $_FILES['regCert']['tmp_name']!="" || $_FILES['IMMI']['tmp_name']!="" || $_FILES['VISA']['tmp_name']!="")
             {
-                $this->session->set_userdata('success_from_php', 'Documents Have Been Sent Successfully');
+                $this->session->set_flashdata('alert','editsuccess');
+                // $this->session->set_userdata('success_from_php', 'Documents Have Been Sent Successfully');
                 // redirect(base_url('manage/'.$this->controller.'?'.$_SERVER['QUERY_STRING']));
                 redirect(base_url().'manage/'.$this->controller.'/docs/'.$userId);
             }
-            else{
-                $this->session->set_userdata('error_from_php', 'Error! While Sending Documents.');
-                redirect(base_url('manage/'.$this->controller.'?'.$_SERVER['QUERY_STRING']));
+            else if($_FILES['passport']['tmp_name']=="" && $_FILES['driverLicense']['tmp_name']=="" && $_FILES['medicare']['tmp_name']=="" && $_FILES['b_cert']['tmp_name']=="" && $_FILES['citizenCert']['tmp_name']=="" && $_FILES['regCert']['tmp_name']=="" && $_FILES['IMMI']['tmp_name']=="" && $_FILES['VISA']['tmp_name']=="")
+            {
+                $this->session->set_flashdata('alert','editsuccess');
+                redirect(base_url().'manage/'.$this->controller.'/docs/'.$userId);
+                // redirect(base_url('manage/'.$this->controller.'?'.$_SERVER['QUERY_STRING']));
             }
         }
         
@@ -747,14 +751,12 @@ class User extends CI_Controller {
                 );
                 $cond = $this->general_model->insertDynamic('students',$insertIntoStudent);   
             }
-            var_dump("Hello 0");
         }
         else if(count($students) > 0){
             $insertIntoStudent = array(
                 'coordinator_id'  => $co_code,
             );
             $this->SqlModel->updateRecord("students", $insertIntoStudent, array('course_id'=>$course_id, 'sub_courses_id'=>$sub_course_id,'student_id'=>$student_id));
-            var_dump("Hello > 0");
 
         }  
         $data = array();

@@ -1,43 +1,62 @@
+ <!-- Header files -->
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+        <!-- All pages css -->
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+				<!-- <link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootnavbar.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootstrap.min.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/carouseller.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/glyphicons.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/responsive.css" rel="stylesheet"> -->
+
+    <!-- End header Files -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- Bootstrap -->
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet"> -->
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/style-student-profile-form.css" rel="stylesheet"> -->
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/style-student-profile-form.css" rel="stylesheet">
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/styles.css?2" rel="stylesheet"> -->
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/styles.css?2" rel="stylesheet">
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/jquery.fancybox.css?1" rel="stylesheet"> -->
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/jquery.fancybox.css?1" rel="stylesheet">
-
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet">        
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet">         -->
 
 
 
 <!-- Animate.css -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/animate.css">   
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/animate.css">    -->
 
 
 
 <!-- 4step form.css -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/normalize.css">
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/normalize.css"> -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/jquery.steps.css">
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/jquery.steps.css"> -->
 
 
 
 <!-- WEB FONT -->
 
-<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'>
+<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'>
 
-<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>    
+<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>
 
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
 <script>
-
+// $('link[title="hello"]')[0].disabled=true;
 	if(window.performance){
 		console.info("window.performance works fine on this browser");
 	}
@@ -48,7 +67,7 @@
 		$.ajax({
 			type: 'POST',
 			data: {studentUsiData: studentUsiData},
-			url: '<?php echo site_url('ApplicationForms/form_apply1_submit_data') ;?>',
+			url: '<?php echo site_url('ApplicationForms/form_apply1_submit_data'); ?>',
 			success: function(result){
 				// $('#returnResult').html(result);
 			},
@@ -57,16 +76,16 @@
 		console.info( "This page is not reloaded");
 	}
 
-	
+
 	var form1data = <?php echo json_encode($form_apply1['enrol']); ?>
 
 	let x = form1data;
 	let {Id,user_id,form_submitted,student_signature,form_submission_date, ...form1_data} = x;
-	
+
 	sessionStorage.setItem('studentUsiData', JSON.stringify(form1_data));
 	studentUsiData = JSON.parse(sessionStorage.getItem('studentUsiData'));
 	console.log("abc", studentUsiData.surname)
-	
+
 	console.log(form1_data);
 
 	function submitForm() {
@@ -82,7 +101,7 @@
 				$.ajax({
 					type: 'POST',
 					data: {form_submitted: "Submitted", Id:"<?php echo $form_apply1['enrol']['Id']; ?>"},
-					url: "<?php echo site_url('ApplicationForms/form_apply1_submitted');?>",
+					url: "<?php echo site_url('ApplicationForms/form_apply1_submitted'); ?>",
 					success: function(result){
 						alert("form submitted");
 	    				window.location.replace('<?php echo base_url("application-form.html"); ?>');
@@ -103,136 +122,130 @@
 
 
 <?php
-	$submitData = $form_apply1['enrol'];
-	// print_r($submitData);
-	// print_r($form_apply1['enrol']['office_use_1']);
+$submitData = $form_apply1['enrol'];
+// print_r($submitData);
+// print_r($form_apply1['enrol']['office_use_1']);
 
-	
+// surname
+$splitSurname      = str_split($form_apply1['enrol']['surname']);
+$splitSurnameCount = count($splitSurname);
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitSurname))) {
+  $splitSurname[$i] = "";
+ }
+ // print_r("  ;--in loop==".$splitSurname[$i]);
+}
 
-	// surname
-	$splitSurname = str_split($form_apply1['enrol']['surname']);
-	$splitSurnameCount = count($splitSurname);
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitSurname))){
-			$splitSurname[$i] = "";
-		}
-		// print_r("  ;--in loop==".$splitSurname[$i]);
-	}
+// given name
+$splitGivenname      = str_split($form_apply1['enrol']['given_name']);
+$splitGivennameCount = count($splitGivenname);
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitGivenname))) {
+  $splitGivenname[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitGivenname[$i]);
+}
 
-	// given name
-	$splitGivenname = str_split($form_apply1['enrol']['given_name']);
-	$splitGivennameCount = count($splitGivenname);
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitGivenname))){
-			$splitGivenname[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitGivenname[$i]);
-	}
+// middle name
+$splitMiddle_name      = str_split($form_apply1['enrol']['middle_name']);
+$splitMiddle_nameCount = count($splitMiddle_name);
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitMiddle_name))) {
+  $splitMiddle_name[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitMiddle_name[$i]);
+}
 
-	// middle name
-	$splitMiddle_name = str_split($form_apply1['enrol']['middle_name']);
-	$splitMiddle_nameCount = count($splitMiddle_name);
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitMiddle_name))){
-			$splitMiddle_name[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitMiddle_name[$i]);
-	}
+// date of birth
+$splitDate_of_birth      = str_split($form_apply1['enrol']['date_of_birth']);
+$splitDate_of_birthCount = count($splitDate_of_birth);
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitDate_of_birth))) {
+  $splitDate_of_birth[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitDate_of_birth[$i]);
+}
 
-	// date of birth
-	$splitDate_of_birth = str_split($form_apply1['enrol']['date_of_birth']);
-	$splitDate_of_birthCount = count($splitDate_of_birth);
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitDate_of_birth))){
-			$splitDate_of_birth[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitDate_of_birth[$i]);
-	}
+// country of birth
+$splitCountry_of_birth      = str_split($form_apply1['enrol']['country_of_birth']);
+$splitCountry_of_birthCount = count($splitCountry_of_birth);
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitCountry_of_birth))) {
+  $splitCountry_of_birth[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitCountry_of_birth[$i]);
+}
 
+// town of birth
+$splitTown_of_birth = str_split($form_apply1['enrol']['town_of_birth']);
 
-	// country of birth
-	$splitCountry_of_birth = str_split($form_apply1['enrol']['country_of_birth']);
-	$splitCountry_of_birthCount = count($splitCountry_of_birth);
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitCountry_of_birth))){
-			$splitCountry_of_birth[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitCountry_of_birth[$i]);
-	}
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitTown_of_birth))) {
+  $splitTown_of_birth[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitTown_of_birth[$i]);
+}
 
-	// town of birth
-	$splitTown_of_birth = str_split($form_apply1['enrol']['town_of_birth']);
+// country
+$splitCountry = str_split($form_apply1['enrol']['country']);
 
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitTown_of_birth))){
-			$splitTown_of_birth[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitTown_of_birth[$i]);
-	}
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitCountry))) {
+  $splitCountry[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitCountry[$i]);
+}
 
-	// country
-	$splitCountry = str_split($form_apply1['enrol']['country']);
+// mobile number
+$splitMobile_num = str_split($form_apply1['enrol']['contact']);
 
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitCountry))){
-			$splitCountry[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitCountry[$i]);
-	}
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitMobile_num))) {
+  $splitMobile_num[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitMobile_num[$i]);
+}
 
-	// mobile number
-	$splitMobile_num = str_split($form_apply1['enrol']['contact']);
+// email address
+$splitEmail = str_split($form_apply1['enrol']['email']);
 
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitMobile_num))){
-			$splitMobile_num[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitMobile_num[$i]);
-	}
+for ($i = 0; $i < 24; $i++) {
+ if (!(array_key_exists($i, $splitEmail))) {
+  $splitEmail[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitEmail[$i]);
+}
 
-	// email address
-	$splitEmail = str_split($form_apply1['enrol']['email']);
+// usi
+$splitUsi = str_split($form_apply1['enrol']['usi']);
 
-	for($i=0; $i < 24; $i++){
-		if(!(array_key_exists($i, $splitEmail))){
-			$splitEmail[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitEmail[$i]);
-	}
-
-	// usi
-	$splitUsi = str_split($form_apply1['enrol']['usi']);
-
-	for($i=0; $i < 12; $i++){
-		if(!(array_key_exists($i, $splitUsi))){
-			$splitUsi[$i] = "";
-		}
-		// print_r(";". $i ."--in loop==".$splitUsi[$i]);
-	}
-
-
+for ($i = 0; $i < 12; $i++) {
+ if (!(array_key_exists($i, $splitUsi))) {
+  $splitUsi[$i] = "";
+ }
+ // print_r(";". $i ."--in loop==".$splitUsi[$i]);
+}
 
 ?>
-	<section class="Section_Devs Head_Titles">
-		<div class="container">
-			<h1>USI Permission and Verification Form</h1>
-			<ol class="breadcrumb">
-				<li>
-					<a href="#">Home</a>
-				</li>
-				<li>
-					<i class="fa fa-angle-double-right" aria-hidden="true"></i>
-				</li>
-				<li class="active">USI Permission and Verification Form</li>
-			</ol>
-		</div>
-	</section>
+<div class="clearfix"></div>
+
+<!--our satisfied customer Start -->
+<div class="osc">
+  <div class="ocs_sub"> 
+    <!--Carousel Wrapper-->
+    	<img src="<?php echo FRONTEND_ASSETS; ?>images/slider_login.jpg" class="img-fluid" alt="Responsive image">
+    <!--/.Carousel Wrapper--> 
+  </div>
+  <!-- ocs_sub--> 
+</div>
+<!-- osc--> 
 	<!-- Head_Titles Closed -->
 
-
+<div class="body_content">
+		<div class="body_content_sub">
 	<section class="Section_Devs Welcome_Classic Optim-Form0s" style="background-color: white;">
 		<div class="container" style="background-color: white;">
-			<div id="divtoconvert" class="row Add_details" style="background-color: white; width: 850px; margin: 0 auto;padding-top: 20px;padding-bottom: 20px;">
+			<div id="divtoconvert" class="row Add_details" style="background-color: white; width: 900px; margin: 0 auto;padding-top: 20px;padding-bottom: 20px;">
 
 
 				<div class="col-md-12 col-sm-12 Contact_Add Appy-formy">
@@ -266,7 +279,7 @@
 
 
 					<br class="clearfix">
-					
+
 					<div id="returnResult"></div>
 
 					<form id="contactForm" class="validate">
@@ -279,7 +292,7 @@
 								<div class="row">
 									<label class="pti1">SURNAME</label>
 									<div class="pti2" id="divAllTextBox">
-										<input type="text" name="firsttext" id="one" class="input-field-box form-control surname_field" maxlength="1" 
+										<input type="text" name="firsttext" id="one" class="input-field-box form-control surname_field" maxlength="1"
 										value="<?php echo $splitSurname[0]; ?>">
 										<input type="text" name="secondtext" id="two" class="input-field-box form-control surname_field" maxlength="1"
 										value="<?php echo $splitSurname[1]; ?>">
@@ -298,9 +311,9 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<script>
-								
+
 							</script>
 
 
@@ -540,7 +553,10 @@
 										<input type="text" id="hundredSeven" class="input-field-box form-control" maxlength="1" value="<?php echo $splitEmail[10]; ?>">
 										<input type="text" id="hundredEight" class="input-field-box form-control" maxlength="1" value="<?php echo $splitEmail[11]; ?>">
 										<br class="clearfix">
-										<input type="text" id="hundredNine" style="margin-left: 167px;" maxlength="1" value="<?php echo $splitEmail[12]; ?>" class="input-field-box form-control">
+									</div>
+									<label class="pti1"></label>
+									<div class="pti2">
+										<input type="text" id="hundredNine"  maxlength="1" value="<?php echo $splitEmail[12]; ?>" class="input-field-box form-control">
 										<input type="text" id="hundredTen" class="input-field-box form-control" maxlength="1" value="<?php echo $splitEmail[13]; ?>">
 										<input type="text" id="hundredEleven" class="input-field-box form-control" maxlength="1" value="<?php echo $splitEmail[14]; ?>">
 										<input type="text" id="hundredTwelve" class="input-field-box form-control" maxlength="1" value="<?php echo $splitEmail[15]; ?>">
@@ -605,42 +621,44 @@
 
 
 						<fieldset>
-							<div class="form-group">
+							<div class="container">
+                          <div class="row">
 
-								<?php 
-									$identification_usi_application_selected = explode(", ", $form_apply1['enrol']['identification_usi_application']);
-									$identification_usi_application = $form_apply1['identification_usi_application'];
-									// print_r($identification_usi_application);
-									$usiInput=1;
-									$usiLable=1;
-									$num=0;
-									foreach ($identification_usi_application as $usi) {
-										// divide into column
-										if($num == 0){ ?>
+								<?php
+$identification_usi_application_selected = explode(", ", $form_apply1['enrol']['identification_usi_application']);
+$identification_usi_application          = $form_apply1['identification_usi_application'];
+// print_r($identification_usi_application);
+$usiInput = 1;
+$usiLable = 1;
+$num      = 0;
+foreach ($identification_usi_application as $usi) {
+ // divide into column
+ if ($num == 0) {?>
 											<div class="col-sm-6">
 										<?php }?>
 
-										<?php if($num == 4){ ?>
+										<?php if ($num == 4) {?>
 											<div class="col-sm-6">
 										<?php }?>
 
 										<?php
-										$checked="";
-										if(in_array($usi, $identification_usi_application_selected)){
-											$checked="checked";
-										}
-										?>
+$checked = "";
+ if (in_array($usi, $identification_usi_application_selected)) {
+  $checked = "checked";
+ }
+ ?>
 										<div class="checkbox">
 											<input id="box<?php echo $usiInput++; ?>"  type="checkbox" class="identification_usi_application input-field-box" name="$identification_usi_application[]" class="identification_usi_application" value="<?php echo $usi; ?>" <?php echo $checked; ?>/>
 											<label for="box<?php echo $usiLable++; ?>"><?php echo $usi; ?></label>
 										</div>
 
-										<?php if ($num == 3 || $num == 7 ){?> </div> <?php }
-										$num++;
-										?>
+										<?php if ($num == 3 || $num == 7) {?> </div> <?php }
+ $num++;
+ ?>
 									<?php
-									}
-									?>
+}
+?>
+							</div>
 							</div>
 						</fieldset>
 
@@ -719,26 +737,34 @@
 								</ul>
 							</div>
 
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="sign-pti">Student Name</label>
-									<input type="text" id="studentName" class="input-field-box form-control formpti1 required" value="<?php echo $form_apply1['enrol']['student_name']; ?>">
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="sign-pti">Signature</label>
-									<input disabled="" type="text" id="" class="form-control formpti1 required">
-								</div>
-							</div>
-
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="sign-pti" style="margin-left: 58px;">Date</label>
-									<input type="text" id="date" class="form-control formpti1 required" value="<?php  ?>">
-								</div>
-							</div>
+<div class="container">
+  <div class="row">
+        <div class="col">
+            <div class="col-sm-4">
+                <div class="form-group my_f_w">
+                <label>Student Name</label>
+                <input type="text" id="studentName" class="form-control formpti1 required">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-4">
+                <div class="form-group my_f_w">
+                <label>Signature</label>
+                <input disabled="" type="text" id="" class="form-control formpti1 required">
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-sm-4">
+                <div class="form-group my_f_w">
+                <label>Date</label>
+                <input type="text" id="date" class="form-control formpti1 required" value="">
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
 
 							<div class="clearfix"></div>
 
@@ -748,27 +774,27 @@
 								<label class="pti3">All required data received for application of USI</label>
 								<div class="pti4">
 
-									<?php 
+									<?php
 
-										$office_use_1Selected = explode(",", $form_apply1['enrol']['office_use_1']);
-										$office_use_1 = array('Yes', 'No');
-										$office_1=9;
-										$office_1L=9;
-										foreach ($office_use_1 as $use_1) {
-											$checked="";
-											if(in_array($use_1, $office_use_1Selected)){
-												$checked="checked";
-											}
-											?>
+$office_use_1Selected = explode(",", $form_apply1['enrol']['office_use_1']);
+$office_use_1         = array('Yes', 'No');
+$office_1             = 9;
+$office_1L            = 9;
+foreach ($office_use_1 as $use_1) {
+ $checked = "";
+ if (in_array($use_1, $office_use_1Selected)) {
+  $checked = "checked";
+ }
+ ?>
 											<div class="Office-checks">
 												<div class="checkbox">
 													<input id="box<?php echo $office_1++ ?>" type="checkbox" class="input-field-box office_use_1" name="office_use_1" value="<?php echo $use_1; ?>" <?php echo $checked; ?> />
-													<label for="box<?php echo $office_1L++ ?>"><?php  echo $use_1; ?></label>
+													<label for="box<?php echo $office_1L++ ?>"><?php echo $use_1; ?></label>
 												</div>
 											</div>
 									<?php
-										}
-									?>
+}
+?>
 
 								</div>
 								<br class="clearfix">
@@ -778,27 +804,27 @@
 								<label class="pti3">USI applied on behalf of the Student?</label>
 								<div class="pti4">
 
-									<?php 
+									<?php
 
-										$office_use_2Selected = explode(",", $form_apply1['enrol']['office_use_2']);
-										$office_use_2 = array('Yes', 'No');
-										$office_2=11;
-										$office_2L=11;
-										foreach ($office_use_2 as $use_2) {
-											$checked="";
-											if(in_array($use_2, $office_use_2Selected)){
-												$checked="checked";
-											}
-											?>
+$office_use_2Selected = explode(",", $form_apply1['enrol']['office_use_2']);
+$office_use_2         = array('Yes', 'No');
+$office_2             = 11;
+$office_2L            = 11;
+foreach ($office_use_2 as $use_2) {
+ $checked = "";
+ if (in_array($use_2, $office_use_2Selected)) {
+  $checked = "checked";
+ }
+ ?>
 											<div class="Office-checks">
 												<div class="checkbox">
 													<input id="box<?php echo $office_2++; ?>" type="checkbox" class="input-field-box office_use_2" name="office_use_2" value="<?php echo $use_2; ?>" <?php echo $checked; ?> />
-													<label for="box<?php echo $office_2L++ ?>"><?php  echo $use_2; ?></label>
+													<label for="box<?php echo $office_2L++ ?>"><?php echo $use_2; ?></label>
 												</div>
 											</div>
 									<?php
-										}
-									?>
+}
+?>
 								</div>
 								<br class="clearfix">
 							</div>
@@ -806,27 +832,27 @@
 							<div class="form-group">
 								<label class="pti3">USI verified/validated</label>
 								<div class="pti4">
-									<?php 
+									<?php
 
-										$office_use_3Selected = explode(",", $form_apply1['enrol']['office_use_3']);
-										$office_use_3 = array('Yes', 'No');
-										$office_3=13;
-										$office_3L=13;
-										foreach ($office_use_3 as $use_3) {
-											$checked="";
-											if(in_array($use_3, $office_use_3Selected)){
-												$checked="checked";
-											}
-											?>
+$office_use_3Selected = explode(",", $form_apply1['enrol']['office_use_3']);
+$office_use_3         = array('Yes', 'No');
+$office_3             = 13;
+$office_3L            = 13;
+foreach ($office_use_3 as $use_3) {
+ $checked = "";
+ if (in_array($use_3, $office_use_3Selected)) {
+  $checked = "checked";
+ }
+ ?>
 											<div class="Office-checks">
 												<div class="checkbox">
 													<input id="box<?php echo $office_3++; ?>" type="checkbox" class="input-field-box office_use_3" name="office_use_3" value="<?php echo $use_3; ?>" <?php echo $checked; ?> />
-													<label for="box<?php echo $office_3L++ ?>"><?php  echo $use_3; ?></label>
+													<label for="box<?php echo $office_3L++ ?>"><?php echo $use_3; ?></label>
 												</div>
 											</div>
 									<?php
-										}
-									?>
+}
+?>
 
 
 								<!-- 	<div class="Office-checks">
@@ -841,31 +867,37 @@
 											<label for="box14">No</label>
 										</div>
 									</div> -->
-								</div>
-								<br class="clearfix">
+									</div>
+								<div class="clearfix"></div>
 							</div>
 
 
-							<div class="col-sm-4">
+							<div class="row">            
 
-								<label class="sign-pti" style="margin-left: -19px;">Optimistic Futures Representative Name</label>
-								<input disabled="" type="text" id="" style="margin-left: 245px; z-index: 1111;" class="form-control formpti1 required">
+<div class="col-sm-4">
+<label class="sign-pti">Optimistic Futures Representative Name</label>
+<input disabled="" type="text" id=""  class="form-control formpti1 required"> 
+</div>
 
-							</div>
 
-							<div class="col-sm-4">
-								<div class="" style="position: relative;">
-									<label class="sign-pti" style="position: absolute; left: 135px; top: 7px; z-index: 0;">Signature</label>
-									<input disabled="" type="text" id="" style="position: absolute; right: -80px; width: 121px;" class="form-control formpti1 required">
-								</div>
-							</div>
+<div class="col-sm-4">
+					<div class="" style="position: relative;">
+						<label class="sign-pti">Signature</label>
+						<input disabled="" type="text" id=""  class="form-control formpti1 required">
+					</div>
+				</div>
 
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label class="sign-pti" style="margin-left: 58px;">Date</label>
-									<input disabled="" type="text" id="" class="form-control formpti1 required">
-								</div>
-							</div>
+
+
+				<div class="col-sm-4">
+					<div class="form-group">
+						<label class="sign-pti">Date</label>
+						<input disabled="" type="text" id="" class="form-control formpti1 required">
+					</div>
+				</div>
+				
+				</div>
+
 
 					</form>
 				</div>
@@ -880,11 +912,8 @@
 			 <!-- id="create_pdf" -->
 		</div>
 	</section>
-	<!-- Welcome_Classic Closed -->
-
-
-			
-
+	</div><!-- body_content_sub--> 
+	</div><!-- body_content--> 	<!-- Welcome_Classic Closed -->
 
 
 
@@ -924,7 +953,7 @@
 		}
 
 		.pti2 {
-			width: 681px;
+			width: 550px;
 		}
 
 		.input-field-box {
@@ -948,17 +977,17 @@
 		}
 
 		.formpti1 {
-			border-top: none;
+			/* border-top: none;
 			border-left: none;
 			border-right: none;
 			border-bottom: 1px dotted;
 			width: 148px;
-			margin-left: 91px;
+			margin-left: 91px; */
 		}
 
 		.sign-pti {
-			position: absolute;
-			bottom: 3px;
+			/* position: absolute;
+			bottom: 3px; */
 		}
 
 		.form-group {
@@ -980,12 +1009,12 @@
 
 <script type="text/javascript">
 				// let av[];
-				
+
 	$(document).ready(function () {
 		console.log('hello world....!!');
 		var surname, givenname, studentUsiData;
 		var chkOffice_use_1Selected = "";
-		var chkOffice_use_2Selected = ""; 
+		var chkOffice_use_2Selected = "";
 		var chkOffice_use_3Selected ="";
 		// make an object and store value in an object
 		studentUsiData = new Object();
@@ -1033,7 +1062,7 @@
 						}
 					});
 
-					
+
 
 					$('.input-field-box').on('change', function(){
 						//get values
@@ -1065,7 +1094,7 @@
 						var twentyThree = $('#twentyThree').val();
 						var twentyFour = $('#twentyFour').val();
 
-						// get middle name 
+						// get middle name
 						var twentyFive = $('#twentyFive').val();
 						var twentySix = $('#twentySix').val();
 						var twentySeven = $('#twentySeven').val();
@@ -1259,8 +1288,8 @@
 
 
 					// check the user action if focus lose trigger this
-					var hidden, visibilityChange; 
-					if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later 	support 
+					var hidden, visibilityChange;
+					if (typeof document.hidden !== "undefined") { // Opera 12.10 and Firefox 18 and later 	support
 
 						  hidden = "hidden";
 						  visibilityChange = "visibilitychange";
@@ -1302,21 +1331,23 @@
 					if (typeof document.addEventListener === "undefined" || hidden === undefined) {
 						console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
 					} else {
-						// Handle page visibility change   
+						// Handle page visibility change
   						document.addEventListener(visibilityChange, handleVisibilityChange, false);
-					} 
+					}
 
 					// also send data to database when page refreshes
 
-				
-					
-					
-				
+
+
+
+
 				});
 
 </script>
-			
+
 
 	<script src='<?php echo base_url(); ?>ofpdfs/f1/form.js'></script>
 	<script src='<?php echo base_url(); ?>ofpdfs/f1/pdfmake.min.js'></script>
-    <script src='<?php echo base_url(); ?>ofpdfs/f1/vfs_fonts.js'></script>
+	<script src='<?php echo base_url(); ?>ofpdfs/f1/vfs_fonts.js'></script>
+
+

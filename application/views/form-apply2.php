@@ -1,8 +1,38 @@
+ <!-- Header files -->
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+        <!-- All pages css -->
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+
+<!-- End header Files -->
+<style>
+/* .top_social , .top_social > a {
+	padding: 0px !important;
+	margin: 0px !important;
+
+}
+.top_social > a {
+margin:2% 1% 2% 1% !important;
+display: inline-block ;
+}
+.nav {
+    padding: 0px;
+    margin: -5px;
+} */
+</style>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- Bootstrap -->
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
+<!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
 
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/style-student-profile-form.css" rel="stylesheet">
 
@@ -10,41 +40,41 @@
 
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/jquery.fancybox.css?1" rel="stylesheet">
 
-<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet">        
+<link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet"> -->
 
 
 
 <!-- Animate.css -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/animate.css">   
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/animate.css"> -->
 
 
 
 <!-- 4step form.css -->
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/normalize.css">
+<!-- <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/normalize.css">
 
-<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/jquery.steps.css">
+<link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/steps/css/jquery.steps.css"> -->
 
 
 
 <!-- WEB FONT -->
 
-<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'>
+<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'> -->
 
-<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>    
+<!-- <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'> -->
 
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
 
 
 <script>
-	
+
 	function submitForm(){
 		console.log("Submitted");
 		$.ajax({
 	    	type: 'POST',
 	    	data: {form_submitted: "Submitted",Id:<?php echo $form_apply2['enrol']['Id']; ?>},
-	    	url: '<?php echo site_url('ApplicationForms/form_apply2_submitted')?>',
+	    	url: '<?php echo site_url('ApplicationForms/form_apply2_submitted') ?>',
 	    	success: function(result){
 	    		alert("form submitted");
 				window.location.replace('<?php echo base_url("application-form.html") ?>');
@@ -55,31 +85,34 @@
 </script>
 
 
-<section class="Section_Devs Head_Titles">
-	<div class="container">
-		<h1>Enrollment Booklet</h1>
-		<ol class="breadcrumb">
-		  <li><a href="#">Home</a></li>	
-		  <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>	  
-		  <li class="active">Enrollment Booklet</li>
-		</ol>
-	</div>
-</section>
-<!-- Head_Titles Closed -->
 
+<!--our satisfied customer Start -->
+<div class="osc">
+  <div class="ocs_sub">
+    <!--Carousel Wrapper-->
+    	<img src="<?php echo FRONTEND_ASSETS; ?>images/slider_login.jpg" class="img-fluid" alt="Responsive image">
+    <!--/.Carousel Wrapper-->
+  </div>
+  <!-- ocs_sub-->
+</div>
+<!-- osc-->
+<!--our satisfied customer End -->
+<!-- Head_Titles Closed -->
+<div class="body_content">
+		<div class="body_content_sub">
 	<section class="Section_Devs Welcome_Classic Optim-Form0s">
 		<div id="divtoconvert" class="container" style="background-color: white; ">
 			<div class="row Add_details">
 				<div class="col-md-12 col-sm-12 Contact_Add Appy-formy">
+				<br /><br /><br /><br /><br /><br />
 					<form id="contactForm" method="post" action="" class="validate">
-
 						<div class="col-sm-12">
 							<div class="form-group">
-								<label>Student Name</label>
-								<input type="text" id="studentName" class="form-control Form_Setup required" 
-									value="<?php 				
-										echo $form_apply2['enrol']['student_name'];
-									?>">
+								<label><h5>Student Name</h5></label>
+								<input type="text" id="studentName" class="form-control Form_Setup required"
+									value="<?php
+echo $form_apply2['enrol']['student_name'];
+?>">
 								<!-- <span id="returnResult"></span> -->
 							</div>
 						</div>
@@ -88,26 +121,25 @@
 						<h3>QUALIFICATIONS (Please tick)</h3>
 
 						<table class="table table-bordered opt-centered">
-							<thead>
-								<tr>
-									<th>Tick</th>
-									<th>Code</th>
-									<th>Title</th>
-								</tr>
-							</thead>
-							<tbody>
 
-								<?php 
-									$qualificationSelected = explode(',', $form_apply2['enrol']['qualification']);
-									$qualifications = $form_apply2['qualifications'];
-									$qulInput=1;
-									$qulLable=1;
-									foreach ($qualifications as $qualification) {
-										$checked="";
-										if (in_array($qualification['code'], $qualificationSelected)) {
-											$checked="checked";
-										}
-										?>
+							<tbody>
+									<tr>
+										<th>Tick</th>
+										<th>Code</th>
+										<th>Title</th>
+									</tr>
+
+								<?php
+$qualificationSelected = explode(',', $form_apply2['enrol']['qualification']);
+$qualifications        = $form_apply2['qualifications'];
+$qulInput              = 1;
+$qulLable              = 1;
+foreach ($qualifications as $qualification) {
+    $checked = "";
+    if (in_array($qualification['code'], $qualificationSelected)) {
+        $checked = "checked";
+    }
+    ?>
 										<tr>
 											<td>
 												<div class="checkbox">
@@ -119,8 +151,8 @@
 											<td><?php echo $qualification['title']; ?></td>
 										</tr>
 								<?php
-									}
-								?>
+}
+?>
 							</tbody>
 						</table>
 
@@ -132,18 +164,18 @@
 						<table class="table table-bordered opt-centered">
 							<tbody>
 
-								<?php 
-									$attachmentsSelected = explode(',', $form_apply2['enrol']['attachments']);
-									$attachments = $form_apply2['attachments'];
+								<?php
+$attachmentsSelected = explode(',', $form_apply2['enrol']['attachments']);
+$attachments         = $form_apply2['attachments'];
 
-									$attInput=6;
-									$attLable=6;
-									foreach ($attachments as $attachment) {
-										$checked="";
-										if (in_array($attachment, $attachmentsSelected)) {
-											$checked="checked";
-										}
-										?>
+$attInput = 6;
+$attLable = 6;
+foreach ($attachments as $attachment) {
+    $checked = "";
+    if (in_array($attachment, $attachmentsSelected)) {
+        $checked = "checked";
+    }
+    ?>
 										<tr>
 											<td>
 												<div class="checkbox">
@@ -152,10 +184,10 @@
 												</div>
 											</td>
 											<td><?php echo $attachment; ?></td>
-										</tr>	
+										</tr>
 								<?php
-									}
-								?>
+}
+?>
 							</tbody>
 						</table>
 
@@ -176,11 +208,13 @@
 			</div>
 		</div>
 	</section>
+</div>
+</div>
 	<!-- Welcome_Classic Closed -->
 
 	<script>
-		
- 
+
+
 $(document).ready(function() {
 
 	//checkbox data send to controller attachments
@@ -192,11 +226,11 @@ $(document).ready(function() {
 			});
 			var attachmentSelected;
 			attachmentSelected = chkAttachmentArray.join(',');
-			
+
 			if(attachmentSelected.length > 0){
-				// alert("You have selected " + attachmentSelected);	
+				// alert("You have selected " + attachmentSelected);
 			}else{
-				// alert("Please at least check one of the checkbox");	
+				// alert("Please at least check one of the checkbox");
 			}
 			// console.log("seleted", attachmentSelected);
 
@@ -221,11 +255,11 @@ $(document).ready(function() {
 		});
 		var qualificationSelected;
 		qualificationSelected = chkQualificationArray.join(',');
-		
+
 		if(qualificationSelected.length > 0){
-			// alert("You have selected " + qualificationSelected);	
+			// alert("You have selected " + qualificationSelected);
 		}else{
-			// alert("Please at least check one of the checkbox");	
+			// alert("Please at least check one of the checkbox");
 		}
 		// console.log("seleted", qualificationSelected);
 
@@ -241,11 +275,11 @@ $(document).ready(function() {
 
 	// checkbox end
 
- 
-  
+
+
 	  $('#studentName').on('input', function() {
-	 
-	    // get the value from the username field                              
+
+	    // get the value from the username field
 	    var studentName = $('#studentName').val();
 	    // Ajax request sent to the CodeIgniter controller "ajax" method "studentname_changes"
 	    // post the studentname field's value
@@ -262,16 +296,16 @@ $(document).ready(function() {
 			}
 	    });
 
-	    // $.post('<?=base_url() ?>ApplicationForms/form_apply2_studentName',
+	    // $.post('<?=base_url()?>ApplicationForms/form_apply2_studentName',
 	    //   { student_Name: studentName },
-	 
+
 	    //   // when the Web server responds to the request
 	    //   function(result) {
 	    //     	$('#returnResult').html(result);
 	    //   }
 	    // );
-	  });  
-	 
+	  });
+
 	});
 
 	</script>

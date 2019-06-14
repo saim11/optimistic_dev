@@ -1,29 +1,56 @@
-	  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+<!-- Header files -->
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+        <!-- All pages css -->
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+        <link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootnavbar.css" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootstrap.min.css" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/carouseller.css" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/glyphicons.css" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/responsive.css" rel="stylesheet">
+		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+
+    <!-- End header Files -->
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 	  <link rel="stylesheet" href="/resources-Images/resource-main.css">
 
 
 <script src="<?php echo FRONTEND_ASSETS;?>js/pdfobject.js"></script>
-<section class=" Head_Titles">
-	<div class="container">
-		<h1>Resources</h1>
-		<ol class="breadcrumb">
-		  <li><a href="<?php echo $this->config->base_url(); ?>">Home</a></li>	
-		  <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>	  
-		  <li class="active">Resources</li>
-		</ol>
-	</div>
-</section>
-<section class=" Welcome_Classic">
-	<div class="container">
-		
-<div class="container gallery-container">
 
-    <div class="tz-gallery">
 
-        <div class="row">
+
+
+<div class="clearfix"></div>
+
+<!--our satisfied customer Start -->
+<div class="osc">
+  <div class="ocs_sub"> 
+    <!--Carousel Wrapper-->
+    	<img src="<?php echo FRONTEND_ASSETS; ?>front-pages/images/slider_resources.jpg" class="img-fluid" alt="Responsive image">
+    <!--/.Carousel Wrapper--> 
+  </div>
+  <!-- ocs_sub--> 
+</div>
+<br/><br />
+
+<!--our satisfied customer End --> 
+
+<!--CONTENT AREA START--> 
+
+	<div class="body_content">
+		<div class="body_content_sub">
+
+<div class="row resources_pagec">
         
-              <?php 
+<?php 
             
 
             $match ="";
@@ -47,7 +74,7 @@
                         <img src="<?php echo base_url().$book_category["book_category_image"] ?>" alt="">
                     </a>
                     <div class="caption">
-                        <h3><?php echo $book_category["book_category_title"]; ?></h3>
+                        <h1><?php //echo $book_category["book_category_title"]; ?></h1>
                     </div>
                 </div>
             </div>
@@ -69,7 +96,7 @@
                                     <img src="<?php echo base_url().$book_category["book_category_image"] ?>" alt="">
                                 </a>
                                 <div class="caption">
-                                    <h3><?php echo $book_category["book_category_title"]; ?></h3>
+                                    <h3><?php //echo $book_category["book_category_title"]; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -92,7 +119,7 @@
                                     <img src="<?php echo base_url().$book_category["book_category_image"] ?>" alt="">
                                 </a>
                                 <div class="caption">
-                                    <h3><?php echo $book_category["book_category_title"]; ?></h3>
+                                    <h3><?php //echo $book_category["book_category_title"]; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +142,7 @@
                                     <img src="<?php echo base_url().$book_category["book_category_image"] ?>" alt="">
                                 </a>
                                 <div class="caption">
-                                    <h3><?php echo $book_category["book_category_title"]; ?></h3>
+                                    <h3><?php //echo $book_category["book_category_title"]; ?></h3>
                                 </div>
                             </div>
                         </div>
@@ -139,9 +166,10 @@
                                 <img src="<?php echo base_url().$book_category["book_category_image"] ?>" alt="">
                             </a>
                             <div class="caption">
-                                <h3><?php echo $book_category["book_category_title"]; ?></h3>
+                                <h3><?php //echo $book_category["book_category_title"]; ?></h3>
                             </div>
                         </div>
+                        <br/><br/><br/>
                     </div>
         
                     <?php } }
@@ -165,19 +193,28 @@
         //         </div>
         //     </div> -->
 
-             <?php //} } ?>
-            
-        </div>
+             <?php //} } ?> 
 
-    </div>
+              
+        </div><!-- body_content_sub--> 
+	</div><!-- body_content--> 
 
-</div>
+<!--CONTENT AREA END--> 
 
 
 
-	</div>
-</section>
-<!-- Welcome_Classic Closed -->
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Modal -->
 
 

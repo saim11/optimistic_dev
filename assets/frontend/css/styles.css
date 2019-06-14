@@ -32,7 +32,7 @@ time, mark, audio, video {
 
 	font-size: 100%;
 
-	font: inherit;
+	font: initial;
 
 	vertical-align: baseline;
 
@@ -168,9 +168,8 @@ a {
 
 .Section_Devs {
 
-  padding: 80px 0;
+  padding: 0px 0;
 
-  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -3263,4 +3262,15 @@ a.register_my {
   border-bottom:3px double #2bb673;
   width:50%;
   height:1px;
+}
+.top_social p .top_social p {
+  font-family: initial !important;
+}
+/* *{
+  font-size:initial !important;
+} */
+.form-check-input {
+  position: absolute !important;
+  margin-top: 0.2rem !important;
+  margin-left: -26.25rem !important;
 }

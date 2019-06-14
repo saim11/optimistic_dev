@@ -1,4 +1,3 @@
-
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Pages extends CI_Controller {
 
@@ -336,8 +335,6 @@ class Pages extends CI_Controller {
 					);
 			}
 		}
-
-
 
 		$q = $this->SqlModel->updateRecord($this->trainerTbl, $trainerData, array($this->updatedId=>$updateId));
 		if($q==true)

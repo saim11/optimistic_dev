@@ -1,4 +1,16 @@
+ <!-- Header files -->
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css">
+        <!-- All pages css -->
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet">
 
+    <!-- End header Files -->
 
 
 <section class="Section_Devs Head_Titles" style='background:url(<?php echo base_url(); ?>uploads/pages/student_profile_bg.jpg) no-repeat top center;background-size: cover;' >

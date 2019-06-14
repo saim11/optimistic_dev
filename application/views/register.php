@@ -1,20 +1,33 @@
-<?php 
-$tbl_coordinator = 	"co_ordinator";
-$coordinator =  $this->SqlModel->getRecords('co_name,co_suburb,co_id',$tbl_coordinator);
-$name_cordinator = array();
+<!-- Header files -->
+        <!-- Animate.css -->
+        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+        <!-- All pages css -->
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+
+    <!-- End header Files -->
+<?php
+$tbl_coordinator   = "co_ordinator";
+$coordinator       = $this->SqlModel->getRecords('co_name,co_suburb,co_id', $tbl_coordinator);
+$name_cordinator   = array();
 $suburb_cordinator = array();
-foreach($coordinator as $field){
-	array_push($name_cordinator,array(
-		'value' => $field['co_name'],
-		'show'=> $field['co_name']
-	));
+foreach ($coordinator as $field) {
+ array_push($name_cordinator, array(
+  'value' => $field['co_name'],
+  'show'  => $field['co_name'],
+ ));
 }
-$suburbs =  $this->SqlModel->getRecords('id,suburb', 'suburbs');
-foreach($suburbs as $field){
-	array_push($suburb_cordinator,array(
-		'value' => $field['id'],
-    'show'=> $field['suburb']
-	));
+$suburbs = $this->SqlModel->getRecords('id,suburb', 'suburbs');
+foreach ($suburbs as $field) {
+ array_push($suburb_cordinator, array(
+  'value' => $field['id'],
+  'show'  => $field['suburb'],
+ ));
 }
 
 ?>
@@ -91,30 +104,34 @@ select:-moz-focusring {
 
 </style>
 
-<section class="Section_Devs Welcome_Classic">
-	<div class="container">
-		
-		<div class="row">
-			<div class="About_Tag">
-				<div class="col-md-12"><h1>REGISTER NOW</h1></div>				
-				<div class="col-md-7 col-sm-7">
-					<form id="" method="post"  action="<?php echo $this->config->base_url().'home/signup' ?>" class="validate Add_details">
-					  <div class="row">
-						<div class="col-md-12">
-							  <div class="form-group">
+<!-- start Register -->
+
+
+
+
+
+<!--Form Body section START -->
+
+<div class="register_main_section">
+    <div class="register_main_container">
+       <div class="register_form_section">
+          <form id="" method="post"  action="<?php echo $this->config->base_url() . 'home/signup' ?>" class="form_section">
+						<div class="col-md-12"><h1>REGISTER NOW</h1></div>
+              <div class="form_field">
+							<div class="form-group">
 								<label for="name">User Type :</label>
-											<select autocomplete="off"  id="user_type" value="<?php echo set_value('user_type'); ?>" name="user_type" onChange="getCourse()" class="form-control Form_Setup required minimal">
+											<select autocomplete="off"  id="user_type" value="<?php echo set_value('user_type'); ?>" name="user_type" onChange="getCourse()" class="form-control Form_Setup required">
 												<!-- <option value="select">---</option> -->
 												<option value="student">Student</option>
 												<option value="trainer">Trainer</option>
 											</select>
 								</div>
-							</div>
+              </div>
 
-							<div class="col-md-12" id="studnetCourses" style="visibility:visible;">
-							  <div class="form-group">
+              <div class="form_field">
+							<div class="form-group">
 								<label for="name">Student Courses:</label>
-											<select autocomplete="off"  id="courses" value="<?php echo set_value('courses'); ?>" name="courses"  class="form-control minimal">
+											<select autocomplete="off"  id="courses" value="<?php echo set_value('courses'); ?>" name="courses"  class="form-control">
 											<i class="arrow down"></i>
 												<option value="none" selected="selected">--Select  Course--</option>
 												<option value="Individual_Support">Individual Support</option>
@@ -123,78 +140,82 @@ select:-moz-focusring {
 												<option value="Emergency_First_Aid">Emergency First Aid</option>
 											</select>
 								</div>
-							</div>
+              </div>
 
-
-						  				<div class="col-md-12">
-			                  <div class="form-group">
+              <div class="form_field">
+									<div class="form-group">
 			                  	<label for="name">Name :</label>
-			                    <input type="text" id="user_name" value="<?php echo set_value('user_name'); ?>" name="user_name" class="form-control Form_Setup required">                  
-			                  </div>   
-		                  </div>
-											<div class="col-md-12">
-			                  <div class="form-group">
+			                    <input type="text" id="user_name" value="<?php echo set_value('user_name'); ?>" name="user_name" class="form-control Form_Setup required">
+			            </div>
+              </div>
+
+              <div class="form_field">
+								<div class="form-group">
 			                  	<label for="name">Contact (Personal):</label>
-			                    <input type="text" id="user_contact" value="<?php echo set_value('user_contact'); ?>" name="user_contact" class="form-control Form_Setup required">                  
-			                  </div>   
-		                  </div>
-		                  <div class="col-md-12">
-			                  <div class="form-group">
-			                  	<label for="email_address">email address :</label>
-			                    <input type="text" id="user_email" value="<?php echo set_value('user_email'); ?>" name="user_email" class="form-control Form_Setup required">
-			                  </div>   
-		                  </div>
-		                  <div class="col-md-12">
-			                  <div class="form-group">
+			                    <input type="text" id="user_contact" value="<?php echo set_value('user_contact'); ?>" name="user_contact" class="form-control Form_Setup required">
+			          </div>
+              </div>
+
+              <div class="form_field">
+									<div class="form-group">
+			                <label for="email_address">email address :</label>
+			                <input type="text" id="user_email" value="<?php echo set_value('user_email'); ?>" name="user_email" class="form-control Form_Setup required">
+			          	</div>
+              </div>
+
+              <div class="form_field">
+									<div class="form-group">
 			                  	<label for="name">Password :</label>
 			                    <input type="password" id="user_password" value="<?php echo set_value('user_password'); ?>" name="user_password" class="form-control Form_Setup required">
-			                  </div>   
-		                  </div>
-		                  <div class="col-md-12">
-			                  <div class="form-group">
+			            </div>
+              </div>
+
+              <div class="form_field">
+								<div class="form-group">
 			                  	<label for="name">Confirm Password :</label>
 			                    <input type="password" id="passconf" value="<?php echo set_value('passconf'); ?>" name="passconf" class="form-control Form_Setup required">
-			                  </div>   
-		                  </div>
-											<div class="col-md-12">
-			                <div class="form-group" id="coordinator"  style="visibility:visible;">
-												<label for="name" class="col-md-6">Refered by Co-Ordinator ?</label>														
-														<label for="Yes" class="col-md-3"> Yes 
+			          </div>
+              </div>
+
+              <div class="form_field">
+								<div class="form-group" id="coordinator"  style="visibility:visible;">
+												<label for="name" class="col-md-6">Refered by Co-Ordinator ?</label>
+														<label for="Yes" class="col-md-2"> Yes
 																<input id="Yes" type="checkbox" name="referance" value="Yes" class="col-md-2 check_box" />
 														</label>
-														<label for="No" class="col-md-3" > No 
+														<label for="No" class="col-md-2" > No
 																<input id="No" type="checkbox" name="referance" value="No" class="col-md-2 check_box" checked  />
 														</label>
-			                  </div>   
-		                  </div>
-											<div class="yes_cordinator">
+			          </div>
+							</div>
+							<div class="yes_cordinator">
 													<div class="col-md-12" id="co-ordinator" style="visibility:visible;">
 														<!-- <div class="form-group">
 															<label for="name">Co-ordinator Code/Name :</label>
-															<input type="text" id="co_ordinator_code" name="co_ordinator_code" value="<?php echo set_value('co_ordinator_code');?>"  class="form-control Form_Setup">                  
+															<input type="text" id="co_ordinator_code" name="co_ordinator_code" value="<?php echo set_value('co_ordinator_code'); ?>"  class="form-control Form_Setup">
 														</div> -->
-														<div class="col-md-12"  style="visibility:visible;">
+														<div class="col-md-12 form_field"  style="visibility:visible;">
 														<div class="form-group">
 															<label for="name">Co-ordinator Code/Name :</label>
-															<input autocomplete="off"  id="co_ordinator_code" name="co_ordinator_code" value="<?php echo set_value('co_ordinator_code');?>" name="courses"  class="form-control Form_Setup minimal">			
+															<input autocomplete="off"  id="co_ordinator_code" name="co_ordinator_code" value="<?php echo set_value('co_ordinator_code'); ?>" name="courses"  class="form-control Form_Setup ">
 														</div>
 														</div>
 														<!-- <div class="form-group">
 															<label for="name">Suburb Name:</label>
-															<input type="text" id="co_ordinator_suburb" name="co_ordinator_suburb" value="<?php echo set_value('co_ordinator_suburb'); ?>"  class="form-control Form_Setup">                  
+															<input type="text" id="co_ordinator_suburb" name="co_ordinator_suburb" value="<?php echo set_value('co_ordinator_suburb'); ?>"  class="form-control Form_Setup">
 														</div>    -->
-														<div class="col-md-12"  style="visibility:visible;">
+														<div class="col-md-12 form_field"  style="visibility:visible;">
 														<div class="form-group">
 															<label for="name">Suburb Name:</label>
-																		<select autocomplete="off"  id="co_ordinator_suburb" name="co_ordinator_suburb" value="<?php echo set_value('co_ordinator_suburb'); ?>" name="courses"  class="form-control Form_Setup minimal">
-																		<?php 
-																			foreach($suburbs as $cols){				
-																				?>
+																		<select autocomplete="off"  id="co_ordinator_suburb" name="co_ordinator_suburb" value="<?php echo set_value('co_ordinator_suburb'); ?>" name="courses"  class="form-control Form_Setup ">
+																			<?php
+foreach ($suburbs as $cols) {
+ ?>
 																				<option value='<?php echo $cols['id']; ?>'>
 																				<?php echo $cols['suburb']; ?>
-																				</option> 
+																				</option>
 
-																			<?php } ?>
+																			<?php }?>
 																		</select>
 														</div>
 														</div>
@@ -202,37 +223,44 @@ select:-moz-focusring {
 
 
 													</div>
-												</div>
-		                  <div class="col-md-12 col-sm-12">
-		                  	  <button type="submit" id="submitBtn" class="btn btn-default Submit_Button">SUBMIT</button>
-		                  </div>
-	                  </div>	                                  
-	                </form>
-				</div>
-				<div class="col-md-5 col-sm-5">
-					<img src="<?php echo FRONTEND_ASSETS;?>images/about_optimistic.jpg" class="img-responsive" alt="" />
-				</div>
-			</div>			
-		</div>
+								</div>
 
-	</div>
-</section>
+              <div class="form_field">
+                <div class="form-group" id="coordinator">
+                    <input type="submit" value="Submit" name="register_btn" id="register_btn" class="register_btn">
+                </div>
+              </div>
+
+
+
+          </form>
+          <div class="image_section">
+            <img src="<?php echo FRONTEND_ASSETS; ?>images/about_optimistic.jpg">
+          </div>
+       </div>
+    </div>
+  </div>
+
+
+<!-- End Register -->
+
+
 
 <script type="text/javascript">
 
 $(document).ready(function(){
-	$('#co-ordinator').hide(); 
-	   
+	$('#co-ordinator').hide();
+
     $('.check_box').on('change',function() {
 			var isChecked  = document.getElementById(this.id).value;
 				$('.check_box').not(this).prop('checked', false);
-				
+
 				if(isChecked == 'No'){
-					$('#co-ordinator').hide();  
+					$('#co-ordinator').hide();
 				}
 				else{
 					$('#co-ordinator').show();
-			}   
+			}
     });
 });
 
@@ -248,7 +276,7 @@ function getCourse(){
 		$('#studnetCourses').show();
 		$('#coordinator').css("visibility", "visible");
 
-	}   
+	}
 }
 
 </script>

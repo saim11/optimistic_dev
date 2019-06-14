@@ -46,5 +46,6 @@ $baseURL .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NA
 define('ADMIN_ASSETS',$baseURL.'assets/admin/');
 define('FRONTEND_ASSETS',$baseURL.'assets/frontend/');
 define('ADMIN_URL',$baseURL.'manage/');
+define('ARABIC_WORD', '﷼');
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

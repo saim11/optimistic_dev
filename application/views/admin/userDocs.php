@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/admin/css/font-icons/entypo/css/entypo.css">
 
     <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +22,42 @@
 
 
 
-
+ <?php if($alert=="success") { ?>
+ <div class="row alertrow">
+	<div class="col-md-12">
+    <button class="close alertBox" data-dismiss="alert">x</button>
+		<div class="alert alert-success"><strong>Success!</strong> <?php echo rtrim($this->moduleName,'s');?> added sucessfully.</div>
+	</div>
+</div>
+   <?php } if($alert=="deletesuccess") { ?>
+ <div class="row alertrow">
+	<div class="col-md-12">
+    <button class="close alertBox" data-dismiss="alert">x</button>
+		<div class="alert alert-success"><strong>Success!</strong> <?php echo rtrim($this->moduleName,'s');?> deleted sucessfully.</div>
+	</div>
+</div>
+   <?php } if($alert=="deleteerror") { ?>
+  <div class="row alertrow">
+	<div class="col-md-12">
+     <button class="close alertBox" data-dismiss="alert">x</button>
+		<div class="alert alert-danger"><strong>Error!!</strong> Error occurred while deleting the record, please try again.</div>
+	</div>
+</div>
+   <?php } if($alert=="editsuccess") { ?>
+   <div class="row alertrow">
+	<div class="col-md-12">
+    <button class="close alertBox" data-dismiss="alert">x</button>
+		<div class="alert alert-success"><strong>Success!</strong> <?php echo rtrim($this->moduleName,'s');?> updated sucessfully.</div>
+	</div>
+</div>
+   <?php } if($alert=="error") { ?>
+  <div class="row alertrow">
+	<div class="col-md-12">
+     <button class="close alertBox" data-dismiss="alert">x</button>
+		<div class="alert alert-danger"><strong>Error!!</strong> Error occurred while saving the record, please try again.</div>
+	</div>
+</div>
+  <?php } ?>
 
 <?php 
 $passport =base_url()."/resources-Images/dummy.jpg";
@@ -457,11 +493,20 @@ select:-moz-focusring {
 <style>
 
 .student_docs{
-  color: light-grey;
-		text-shadow: 1px 1px 10px blue;
-		font-size: 2vw;
+  text-shadow: 1px 1px 10px yellow;
+	color: green;
+	font-size: 2vw;
   padding:1%;
+  font-weight: 900;
+  border-radius: 4ex;
 }
+.action , .uploadFiles{
+  border-radius: 4ex;
+}
+.action_ {
+  border-radius: 1ex 4ex 4ex 1ex;
+}
+
 </style>
 
 <h1 class="panel panel-default student_docs">Student Documents</h1>
@@ -477,7 +522,7 @@ select:-moz-focusring {
                                             <div class="form-radio-item checkbox123">
                                             <div class="row">
                                             <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                                 PASSPORT
                                                 <a href=<?php echo $passportURL; ?> class="thumbnail">
                                                   <img id="passportImg" src= <?php echo $passport; ?> class="img-fluid" crossOrigin="Anonymous" >
@@ -486,19 +531,19 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                              <input type="file" id="passport" name="passport" class="myuploadbtn" onChange="fileUploaded();">
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="passport" class="action_" name="passport" class="myuploadbtn" onChange="fileUploaded();">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button type="button" id="passportImg" onClick="printDoc(this.id,'<?php echo $passportURL; ?>');" class="btn btn-success" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button type="button" id="passportImg" onClick="printDoc(this.id,'<?php echo $passportURL; ?>');" class="btn btn-success action_" style="width:100%;">Print Document</button>
                                             </div>
                                             <br>
                                             <br>
                                              
                                             <div class="row">
                                             <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                             DRIVERS LICENCE 
                                                 <a href=<?php echo $driverLicenseURL; ?> class="thumbnail">
                                                   <img id="driversImg" src=<?php echo $driverLicense; ?>  alt="..." class="img-fluid">
@@ -507,12 +552,12 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                            <input type="file" id="driverLicense" name="driverLicense" class="myuploadbtn">
+                                            <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                            <input type="file" id="driverLicense" class="action_" name="driverLicense" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button id="driversImg" type="button" class="btn btn-success" onClick="printDoc(this.id,'<?php echo $driverLicenseURL; ?>');" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button id="driversImg" type="button" class="btn btn-success action_" onClick="printDoc(this.id,'<?php echo $driverLicenseURL; ?>');" style="width:100%;">Print Document</button>
                                             </div>
 
                                             
@@ -522,7 +567,7 @@ select:-moz-focusring {
                                             <br>
                                             <div class="row">
                                             <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                               MEDICARE (GREEN ONLY)
                                                 <a href=<?php echo $medicareURL; ?> class="thumbnail">
                                                   <img id="medicareImg" src=<?php echo $medicare; ?>  alt="..." class="img-fluid">
@@ -532,12 +577,12 @@ select:-moz-focusring {
                                             </div>
                                             <div class="input-group">
                                             
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                              <input type="file" id="medicare" name="medicare" class="myuploadbtn">
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="medicare" class="action_" name="medicare" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button type="button" id="medicareImg" class="btn btn-success" onClick="printDoc(this.id,'<?php echo $medicareURL; ?>');" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button type="button" id="medicareImg" class="btn btn-success action_" onClick="printDoc(this.id,'<?php echo $medicareURL; ?>');" style="width:100%;">Print Document</button>
                                             </div>
                                             
                                             <br>
@@ -545,7 +590,7 @@ select:-moz-focusring {
                                             <div class="row">
                                             
                                             <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                             BIRTH CERTIFICATE 
                                                 <a href=<?php echo $b_certURL; ?> class="thumbnail">
                                                   <img id="b_certImg" src=<?php echo $b_cert; ?> alt="..." class="img-fluid">
@@ -553,12 +598,12 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                            <input type="file" id="b_cert" name="b_cert" class="myuploadbtn">
+                                            <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                            <input type="file" id="b_cert" class="action_" name="b_cert" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button type="button" id="b_certImg" class="btn btn-success"  onClick="printDoc(this.id,'<?php echo $b_certURL; ?>');" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button type="button" id="b_certImg" class="btn btn-success action_"  onClick="printDoc(this.id,'<?php echo $b_certURL; ?>');" style="width:100%;">Print Document</button>
                                             </div>
                                             <br>
                                         </div>
@@ -569,7 +614,7 @@ select:-moz-focusring {
                                             
                                             <div class="row">
                                               <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                                   CITIZENSHIP CERTIFICATE
                                                 <a href=<?php echo $citizenCertURL; ?> class="thumbnail">
                                                   <img id="citizenCertImg" src=<?php echo $citizenCert; ?> alt="..." class="img-fluid">
@@ -577,19 +622,19 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                             <input type="file" id="citizenCert" name="citizenCert" class="myuploadbtn">
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                             <input type="file" id="citizenCert" class="action_" name="citizenCert" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button type="button" id="citizenCertImg" class="btn btn-success" onClick="printDoc(this.id,'<?php echo $citizenCertURL; ?>');" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button type="button" id="citizenCertImg" class="btn btn-success action_" onClick="printDoc(this.id,'<?php echo $citizenCertURL; ?>');" style="width:100%;">Print Document</button>
                                             </div>
                                             <br>
                                             <br>
                                             <div class="row">
                                             
                                               <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                             REGISTRATION CERTIFICATE BY DESCENT
                                                 <a href=<?php echo $regCertURL; ?> class="thumbnail">
                                                   <img id="regCertImg" src=<?php echo $regCert; ?> alt="..." class="img-fluid">
@@ -597,12 +642,12 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                              <input type="file" id="regCert" name="regCert" class="myuploadbtn">
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="regCert" class="action_" name="regCert" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button type="button" id="regCertImg" class="btn btn-success" onClick="printDoc(this.id,'<?php echo $regCertURL; ?>');" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button type="button" id="regCertImg" class="btn btn-success action_" onClick="printDoc(this.id,'<?php echo $regCertURL; ?>');" style="width:100%;">Print Document</button>
                                             </div>
                                             <br>
                                             <br>
@@ -610,7 +655,7 @@ select:-moz-focusring {
                                             <div class="row">
                                             
                                               <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                             IMMI CARD
                                                 <a href=<?php echo $IMMIURL; ?> class="thumbnail">
                                                   <img id="IMMIImg" src=<?php echo $IMMI; ?> alt="..." class="img-fluid">
@@ -619,19 +664,19 @@ select:-moz-focusring {
                                             </div>
                                             <div class="input-group">
                                             
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                              <input type="file" id="IMMI" name="IMMI" class="myuploadbtn">
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="IMMI" class="action_" name="IMMI" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button id="IMMIImg" type="button" class="btn btn-success" onClick="printDoc(this.id,'<?php echo $IMMIURL; ?>');" style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button id="IMMIImg" type="button" class="btn btn-success action_" onClick="printDoc(this.id,'<?php echo $IMMIURL; ?>');" style="width:100%;">Print Document</button>
                                             </div>
                                             <br>
                                             <br>
                                             <div class="row">
                                             
                                               <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
+                                              <div class="col-xs-6 col-md-8 heading">
                                             VISA
                                                 <a href=<?php echo $VISAURL; ?> class="thumbnail">
                                                   <img id="VISAImg" src=<?php echo $VISA; ?> alt="..." class="img-fluid">
@@ -639,12 +684,12 @@ select:-moz-focusring {
                                               </div>
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                              <input type="file" id="VISA" name="VISA" class="myuploadbtn">
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="VISA" class="action_" name="VISA" class="myuploadbtn">
                                             </div>
                                             <div class="input-group">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
-                                              <button id="VISAImg" type="button" class="btn btn-success"onClick="printDoc(this.id,'<?php echo $VISAURL; ?>');"  style="width:100%;">Print Document</button>
+                                              <span class="input-group-addon action"><span class="glyphicon glyphicon-print" style="color:green"></span></span>
+                                              <button id="VISAImg" type="button" class="btn btn-success action_"onClick="printDoc(this.id,'<?php echo $VISAURL; ?>');"  style="width:100%;">Print Document</button>
                                             </div>
                                             <br>
                                         </div>
@@ -666,3 +711,4 @@ select:-moz-focusring {
 <script src='<?php echo base_url(); ?>ofpdfs/coordinater/vfs_fonts.js'></script>
 <script src='<?php echo base_url(); ?>ofpdfs/coordinater/userDocs.js'></script>
 <script src='<?php echo base_url(); ?>ofpdfs/coordinater/form_attested.js'></script>
+<script src="http://dev.softkodes.com/optimisticfuture/assets/admin/js/bootstrap.min.js"></script>

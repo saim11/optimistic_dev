@@ -4,7 +4,7 @@
 <li><a href="<?php echo ADMIN_URL;?>"><i class="entypo-home"></i>Home</a></li>
 <li class="active"><strong><?php echo $this->moduleName;?></strong></li>
 </ol>
-
+<?php print_r($alert); ?>
  <?php if($alert=="success") { ?>
  <div class="row alertrow">
 	<div class="col-md-12">
