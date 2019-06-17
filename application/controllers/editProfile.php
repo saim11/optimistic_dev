@@ -146,11 +146,11 @@ class editProfile extends CI_Controller {
         }
         if($_FILES['passport']['tmp_name']!="" || $_FILES['driverLicense']['tmp_name']!="" || $_FILES['medicare']['tmp_name']!="" || $_FILES['b_cert']['tmp_name']!="" || $_FILES['citizenCert']['tmp_name']!="" || $_FILES['regCert']['tmp_name']!="" || $_FILES['IMMI']['tmp_name']!="" || $_FILES['VISA']['tmp_name']!="")
 		{
-            $this->session->set_userdata('success_from_php', 'Documents Have Been Sent Successfully');
+            $this->session->set_userdata('success_from_php', 'Files Uploaded Successfully!');
             redirect("/home/myAccount/");
         }
         else{
-            $this->session->set_userdata('error_from_php', 'Error! While Sending Documents.');
+            $this->session->set_userdata('error_from_php', 'Error! While Updating Files.');
             redirect("/home/myAccount/");
         }
     }        

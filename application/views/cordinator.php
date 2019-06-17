@@ -14,12 +14,12 @@
 
 
 <section class="Section_Devs Head_Titles" style='background:url(<?php echo base_url(); ?>uploads/pages/student_profile_bg.jpg) no-repeat top center;background-size: cover;' >
-	
+
     <div class="container">
 		<h1>Coordinator</h1>
 		<ol class="breadcrumb">
-		  <li><a href="index-2.html">Home</a></li>	
-		  <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>	  
+		  <li><a href="index-2.html">Home</a></li>
+		  <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
 		  <li class="active">Coordinator</li>
 		</ol>
 	</div>
@@ -41,7 +41,7 @@
 					<!-- cordinator section start -->
 						<div class="cordinator_section">
 						<!-- form start -->
-							<form method="post" action="<?php echo $this->config->base_url().'editProfile/resetPassword' ?>">
+							<form method="post" action="<?php echo $this->config->base_url() . 'editProfile/resetPassword' ?>">
 							<!-- form row start -->
 								<div class="form-row">
 								<!-- form group start -->
@@ -72,13 +72,13 @@
 										<div class="form-input">
                       <label for="student_password" class="required">Password</label>
                       <input type="password" name="student_password" value="" id="Password" disabled /><br />
-                      <a id="reset">Changed Password</a> 
+                      <a id="reset">Changed Password</a>
                     </div>
 										<!-- password input change -->
 
-										<input type="submit" value="Update Account" class="submit" id="submit" name="accountBtn" /> 
-										
-									</div>		
+										<input type="submit" value="Update Account" class="submit" id="submit" name="accountBtn" />
+
+									</div>
 									<!-- form group end -->
 								</div>
 								<!-- form row end -->
@@ -117,21 +117,21 @@
 										<td>Talal</td>
 										<td>14/1/2019</td>
 										<td>3/8</td>
-										<td><a href="<?php echo $this->config->base_url().'student-details.html' ?>">View Deatils</a></td>
+										<td><a href="<?php echo $this->config->base_url() . 'student-details.html' ?>">View Deatils</a></td>
 									</tr>
 									<tr>
 										<td>2</td>
 										<td>Talal</td>
 										<td>14/1/2019</td>
 										<td>3/8</td>
-										<td><a href="<?php echo $this->config->base_url().'student-details.html' ?>">View Deatils</a></td>
+										<td><a href="<?php echo $this->config->base_url() . 'student-details.html' ?>">View Deatils</a></td>
 									</tr>
 									<tr>
 										<td>3</td>
 										<td>Talal</td>
 										<td>14/1/2019</td>
 										<td>3/8</td>
-										<td><a href="<?php echo $this->config->base_url().'student-details.html' ?>">View Deatils</a></td>
+										<td><a href="<?php echo $this->config->base_url() . 'student-details.html' ?>">View Deatils</a></td>
 									</tr>
 								</tbody>
 							<!-- table body end -->

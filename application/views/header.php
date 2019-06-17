@@ -23,8 +23,7 @@ if (empty($page_meta) && empty($page_title)) {
 
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
   </script>
 
   <!-- End Scripts -->
@@ -54,6 +53,12 @@ if (empty($page_meta) && empty($page_title)) {
 
   <!-- End All pages css -->
   <!--End Bootstrap + all CSS -->
+
+<style>
+.alert{
+  text-align: center;
+}
+</style>
 
 
 </head>
@@ -323,33 +328,13 @@ if (empty($page_meta) && empty($page_title)) {
 
 
 
-  <div class="top_popup_1 top_popup toper">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong><?php echo $this->session->userdata('success_from_php'); ?></strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 
-    <div class="right close_toper">
-
-      <a title="Close">
-
-        <i class="fa fa-times"></i>
-
-      </a>
-
-    </div>
-
-
-
-    <div class="inner_top_popup">
-
-
-
-      <div class="popup_text right">
-
-        <p><?php echo $this->session->userdata('success_from_php'); ?></p>
-
-      </div>
-
-
-
-    </div>
 
   </div>
 
@@ -357,8 +342,8 @@ if (empty($page_meta) && empty($page_title)) {
 
   <?php } else if ($this->session->userdata('error_from_php')) {?>
 
-  <div id="error" class="alert alert-warning alert-dismissible fade show " role="alert">
-    <strong style="position:relative;left:50%;"><?php echo $this->session->userdata('error_from_php'); ?></strong>
+  <div id="error" class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong ><?php echo $this->session->userdata('error_from_php'); ?></strong>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>

@@ -4,21 +4,46 @@
         <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
         <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
         <!-- All pages css -->
-        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
+        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
         <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
-        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
-        <link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet">
 				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootnavbar.css" rel="stylesheet">
 				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/bootstrap.min.css" rel="stylesheet">
 				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/carouseller.css" rel="stylesheet">
 				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/glyphicons.css" rel="stylesheet">
 				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/responsive.css" rel="stylesheet">
-				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+				<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet"> -->
 
     <!-- End header Files -->
 
+
+<style>
+.cardHeadText{
+  color: green;
+  font-size:20px;
+  font-weight:bolder;
+  text-align:center !important;
+  overflow:hidden;
+}
+.card-img-top{
+height:250px;
+}
+.upload_class{
+  margin-left:12%;
+  margin-top:2%;
+}
+.card{
+  width:20rem;
+}
+.input-group{
+flex-wrap:nowrap !important;
+}
+.input-group-text{
+  padding: 40% 30%;
+}
+</style>
 
 <?php
 $passport =base_url()."/resources-Images/dummy.jpg";
@@ -140,323 +165,20 @@ foreach($students_docs as $cols){
 
 
 
-<style type="text/css">
-.img-fluid {
-    max-height:110px;
-    min-height:120px;
-    overflow:auto;
-}
-.loading{
-  position: fixed;
-  left: 50%;
-  top: 50%;
-}
-.loader{
-    position: fixed;
-    left: 45%;
-    top: 35%;
-    z-index: 1000;
-    height: 31px;
-    width: 31px;
-    display:none;
-}
 
-  .Menu-dropdown:hover .multi-level {
-    display: block;
-  }
 
-  .multi-level {
-    background: #2bb673;
-    color: #fff;
-  }
-  .multi-level>li>a {
-    color: #fff;
-  }
 
-  .dropdown-submenu {
-    position: relative;
-  }
 
-  .dropdown-submenu>.dropdown-menu {
-      top: 0;
-      left: 100%;
-      margin-top: -6px;
-      margin-left: -1px;
-      -webkit-border-radius: 0 6px 6px 6px;
-      -moz-border-radius: 0 6px 6px;
-      border-radius: 0 6px 6px 6px;
-      background: #2bb673;
-      color: #fff;
-  }
 
-  .dropdown-submenu:hover>.dropdown-menu {
-      display: block;
-  }
-
-  .dropdown-menu>li>a {
-    color: #fff;
-  }
-  
-  .dropdown-submenu>a:after {
-      display: block;
-      content: " ";
-      float: right;
-      width: 0;
-      height: 0;
-      border-color: transparent;
-      border-style: solid;
-      border-width: 5px 0 5px 5px;
-      border-left-color: #ccc;
-      margin-top: 5px;
-      margin-right: -10px;
-  }
-
-  .dropdown-submenu:hover>a:after {
-      border-left-color: #fff;
-  }
-
-  .dropdown-submenu.pull-left {
-      float: none;
-  }
-
-  .dropdown-submenu.pull-left>.dropdown-menu {
-      left: -100%;
-      margin-left: 10px;
-      -webkit-border-radius: 6px 0 6px 6px;
-      -moz-border-radius: 6px 0 6px 6px;
-      border-radius: 6px 0 6px 6px;
-  }
-</style>
-
-
-
-
-
-
-
-
-    <style type="text/css">
-
-    .toper
-
-{
-
-  text-align: center;
-
-  transition: all 500ms linear 0s;
-
-}
-
-
-
-.top_popup_2 {
-
-  width: 100%;
-
-  background: rgb(209, 63, 63) none repeat scroll 0 0;
-
-  margin-top: 0;
-
-  max-height: 100%;
-
-  /* min-height: 50px; */
-
-  opacity: 1;
-
-  width: 100%;
-
-  z-index: 9999;
-
-  padding: 0px 0px;
-
-}
-
-.top_popup_2 p {
-
-padding: 0 !important;
-
-  margin: 10px 10px 10px;
-
-}
-
-
-
-.top_popup_1 {
-
-  width: 100%;
-
-  background: #81c868 none repeat scroll 0 0;
-
-  margin-top: 0;
-
-  max-height: 100%;
-
-  /* min-height: 50px; */
-
-  opacity: 1;
-
-  width: 100%;
-
-  z-index: 9999;
-
-  padding: 0px 0px;
-
-}
-
-.top_popup_1 p {
-
-  padding: 0 !important;
-
-  margin:10px 10px 10px;
-
-}
-
-.right {
-
-  float: right;
-
-}
-
-
-
-.inner_top_popup {
-
-  display: inline-block;
-
-  /*width: 960px;*/
-
-}
-
-.popup_text {
-
-  margin: 0;
-
- /* width: 900px;*/
-
-}
-
-.popup_text p {
-
-  color: #fff;
-
-  font-family: 'robotoregular';
-
-  font-size: 14px;
-
-  font-weight: normal;
-
-  text-align: center;
-
-  word-wrap: break-word;
-
-}
-
-.mybutton {
-
-  font: 900 14px/14px 'Roboto', sans-serif;
-
-  text-transform: uppercase;
-
-  
-
-  padding: 10px 23px;
-
-  border-radius: 4px;
-
-  margin-bottom: 10px;
-
-  display: inline-block;
-
-  color: #fff;
-
-}
-
-.close_toper {
-
-  padding: 10px;
-
-  color: #fff;
-
-  font-size: 16px;
-
-  font-weight: bold;
-
-}
-
-.close_toper a i {
-
-  color: #fff;
-
-  cursor: pointer;
-}
-
-select.minimal {
-  background-image:
-    linear-gradient(45deg, transparent 50%, gray 50%),
-    linear-gradient(135deg, gray 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px),
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
-  background-repeat: no-repeat;
-  height:50px;
-}
-
-select.minimal:focus {
-  background-image:
-    linear-gradient(45deg, green 50%, transparent 50%),
-    linear-gradient(135deg, transparent 50%, green 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 15px) 1em,
-    calc(100% - 20px) 1em,
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
-  background-repeat: no-repeat;
-  outline: 0;
-}
-
-
-select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-
-</style>
-
-
-
-<script type="text/javascript">
-
-    $(document).ready(function(){
-
-        $('.close_toper').click(function(){
-
-            $(this).parent().hide();
-
-        });
-    });
-
-
-
-</script>
-
+<div class="clearfix"></div>
 
 
 
 <!--our satisfied customer Start -->
 <div class="osc">
-  <div class="ocs_sub"> 
+  <div class="ocs_sub_"> 
     <!--Carousel Wrapper-->
-    	<img src="<?php echo FRONTEND_ASSETS; ?>front-pages/images/slider_myaccount.jpg" class="img-fluid" alt="Responsive image">
+    	<img src="<?php echo FRONTEND_ASSETS; ?>front-pages/images/slider_myaccount.jpg" class="img-fluid_" alt="Responsive image">
     <!--/.Carousel Wrapper--> 
   </div>
   <!-- ocs_sub--> 
@@ -563,24 +285,26 @@ select:-moz-focusring {
                             <div class="form-group">
                                 <div class="form-radio">
                                 	<h1>Upload Files</h1>
-                                    <div class="my_courses_details1">
+                                    <div class="my_courses_details1 upload_class">
                                     <div class="form-radio-group">            
                                             <div class="form-radio-item checkbox123">
                                             <div class="container">
                                             <div class="row">
                                             <div class="col-sm">
-                                            <div class="row">
-                                            <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                                PASSPORT
-                                                <a href=<?php echo $passportURL; ?> class="thumbnail">
-                                                  <img src= <?php echo $passport; ?> class="img-fluid" >
+                                            <div class="row ">
+                                            <div class="card" >
+                                                <span class="cardHeadText">PASSPORT</span>
+                                                <a href=<?php echo $passportURL; ?> class="thumbnai ">
+                                                  <img src= <?php echo $passport; ?> class="img-flui card-img-top" >
                                                 </a>
-                                              </div>
                                             </div>
-                                            <div class="input-group">
+                                            <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
+                                            </div>
                                               <input type="file" id="passport" name="passport" class="myuploadbtn" onChange="fileUploaded();">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              
+                                            </div>
                                             </div>
                                             <br>
                                             <br>
@@ -588,18 +312,22 @@ select:-moz-focusring {
                                              
                                             <div class="col-sm">
                                             <div class="row">
-                                            <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                            DRIVERS LICENCE 
-                                                <a href=<?php echo $driverLicenseURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $driverLicense; ?>  alt="..." class="img-fluid">
+
+                                              <div class=" card" >
+                                              <span class="cardHeadText">DRIVERS LICENCE</span> 
+                                                <a href=<?php echo $driverLicenseURL; ?> class="thumbnai">
+                                                  <img src=<?php echo $driverLicense; ?>  alt="..." class="img-flui card-img-top">
                                                 </a>
                                               </div>
+                                              <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
-                                            <input type="file" id="driverLicense" name="driverLicense" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="driverLicense" name="driverLicense" class="myuploadbtn" onChange="fileUploaded();">
+                                              
                                             </div>
+                                            </div>
+                                            
                                             </div>
     
     </div>
@@ -614,37 +342,49 @@ select:-moz-focusring {
   <div class="row">
     <div class="col-sm">
                                             <div class="row">
-                                            <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                              Medicare (Green only)
+                                            
+                                              <div class="card">
+                                              <span class="cardHeadText">Medicare (Green only)</span>
                                                 <a href=<?php echo $medicareURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $medicare; ?>  alt="..." class="img-fluid">
+                                                  <img src=<?php echo $medicare; ?>  alt="..." class="card-img-top">
                                                 </a>
                                               </div>
+                                            <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
-                                              <input type="file" id="medicare" name="medicare" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="medicare" name="medicare" class="myuploadbtn" onChange="fileUploaded();">
+                                              
                                             </div>
                                             </div>
                                             
-                                            <br>
-                                            <br>
+                                            </div>
+                                            
+                                            
+                                            
                                             <div class="col-sm">
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
                                             <div class="row">
                                             
-                                            <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                            BIRTH CERTIFICATE 
+
+                                              <div class="card">
+                                              <span class="cardHeadText">BIRTH CERTIFICATE</span> 
                                                 <a href=<?php echo $b_certURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $b_cert; ?> alt="..." class="img-fluid">
+                                                  <img src=<?php echo $b_cert; ?> alt="..." class="card-img-top">
                                                 </a>
                                               </div>
+                                            <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
-                                            <input type="file" id="b_cert" name="b_cert" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="b_cert" name="b_cert" class="myuploadbtn" onChange="fileUploaded();">
+                                              
                                             </div>
+                                            </div>
+                                            
                                             <br>
                                             <br>
     <br>
@@ -663,40 +403,44 @@ select:-moz-focusring {
   <div class="row">
     <div class="col-sm">
                                             <div class="row">
-                                              <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                                  CITIZENSHIP CERTIFICATE
+                                              <div class="card">
+                                              <span class="cardHeadText"> CITIZENSHIP CERTIFICATE</span> 
                                                 <a href=<?php echo $citizenCertURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $citizenCert; ?> alt="..." class="img-fluid">
+                                                  <img src=<?php echo $citizenCert; ?> alt="..." class="card-img-top">
                                                 </a>
                                               </div>
+                                              <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
-                                             <input type="file" id="citizenCert" name="citizenCert" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="citizenCert" name="citizenCert" class="myuploadbtn" onChange="fileUploaded();">
+                                              
                                             </div>
+                                            </div>
+                                            
                                             <br>
                                             <br>
                                             </div>
     <div class="col-sm">
                                             <div class="row">
                                             
-                                              <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                            REGISTRATION CERTIFICATE BY DESCENT
+
+                                              <div class="card">
+                                              <span class="cardHeadText"> REGISTRATION CERTIFICATE BY DESCENT</span>
                                                 <a href=<?php echo $regCertURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $regCert; ?> alt="..." class="img-fluid">
+                                                  <img src=<?php echo $regCert; ?> alt="..." class="card-img-top">
                                                 </a>
                                               </div>
+                                              <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
-                                              <input type="file" id="regCert" name="regCert" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="regCert" name="regCert" class="myuploadbtn" onChange="fileUploaded();">
+                                              
                                             </div>
+                                            </div>
+                                            
                                             <br>
-    <br>
-    <br>
-    <br>
     <br>
     </div>
     
@@ -707,37 +451,46 @@ select:-moz-focusring {
     <div class="col-sm">
                                             <div class="row">
                                             
-                                              <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                            IMMI CARD
+
+                                              <div class="card">
+                                              <span class="cardHeadText"> IMMI CARD</span>
                                                 <a href=<?php echo $IMMIURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $IMMI; ?> alt="..." class="img-fluid">
+                                                  <img src=<?php echo $IMMI; ?> alt="..." class="card-img-top">
                                                 </a>
                                               </div>
+                                              <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
+                                              <input type="file" id="IMMI" name="IMMI" class="myuploadbtn" onChange="fileUploaded();">
+                                              
+                                            </div>
+                                            </div>
                                             
-                                              <input type="file" id="IMMI" name="IMMI" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
-                                            </div>
-                                            <br>
-                                            <br>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
                                             </div>
     <div class="col-sm">
                                             <div class="row">
                                             
-                                              <div class="col-xs-6 col-md-2"></div>
-                                              <div class="col-xs-6 col-md-8">
-                                            VISA
+
+                                              <div class="card">
+                                              <span class="cardHeadText"> VISA</span>
                                                 <a href=<?php echo $VISAURL; ?> class="thumbnail">
-                                                  <img src=<?php echo $VISA; ?> alt="..." class="img-fluid">
+                                                  <img src=<?php echo $VISA; ?> alt="..." class="card-img-top">
                                                 </a>
                                               </div>
+                                              <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class=" input-group-text glyphicon glyphicon-saved" style="color:green" id="basic-addon1"></span>
                                             </div>
-                                            <div class="input-group">
-                                              <input type="file" id="VISA" name="VISA" class="myuploadbtn">
-                                              <span class="input-group-addon"><span class="glyphicon glyphicon-saved" style="color:green"></span></span>
+                                              <input type="file" id="VISA" name="VISA" class="myuploadbtn" onChange="fileUploaded();">
+                                              
                                             </div>
+                                            </div>
+                                            
                                             <br>
     <br>
     <br>
@@ -761,12 +514,7 @@ select:-moz-focusring {
                     <hr />
     </div>
     
-    <div  id ="loader" class="loader">
-      <span class="loading">
-      Loading..  
-      </span>
-      <img src=<?php echo base_url()."/resources-Images/loader.gif" ?> alt="Loading ...">
-    </div>
+
                         
 <div class="my_courses_details">
     <h1>Forms Submitted </h1>
