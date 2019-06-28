@@ -313,16 +313,46 @@
                             'title'=> 'Certificate II in Security Operations'
                         ),
                         array(
+                            'code'=>'CPP20212',
+                            'title'=> 'Certificate II in Security Operations (Control Room Operator)'
+                        ),
+                        array(
                             'code'=>'CPP30411',
                             'title'=> 'Certificate III in Security Operations'
+                        ),
+                        array(
+                            'code'=>'CPP30411',
+                            'title'=> 'Certificate III in Security Operations (Batons & Handcuffs)'
                         ),
                         array(
                             'code'=>'CHC33015',
                             'title'=> 'Certificate III in Individual Support'
                         ),
+                        array(
+                            'code'=>'CHCSS00098',
+                            'title'=> 'Individual Support-Disability Skill set'
+                        ),
+                        array(
+                            'code'=>'CPC40110',
+                            'title'=> 'Certificate IV in Building and Construction'
+                        ),
+                        array(
+                            'code'=>'CPC50113',
+                            'title'=> 'Diploma of Building and Construction'
+                        ),
                     );
 
-            $attachments = array('Student Induction Form', 'Pre-Assessment interview completed', 'Language Literacy and Numeracy Completed', 'Skills First Program Enrolment Form Completed','Student ID’s Checked and Completed', 'USI Permission and Verification Form', 'Recognition Prior Learning', 'Credit Transfer Form', 'Statement of Fees');
+            $attachments = array(
+                'Student Induction Form', 
+                'Pre-Assessment interview completed', 
+                'Language Literacy and Numeracy Completed', 
+                'Skills First Program Enrolment Form Completed',
+                'Student ID’s Checked and Completed', 
+                'USI Permission and Verification Form', 
+                'Recognition Prior Learning', 
+                'Credit Transfer Form', 
+                'Statement of Fees'
+            );
 
             $row1 = $query->row_array();
              $row2 = array(
@@ -471,8 +501,16 @@
                             'title'=> 'Certificate II in Security Operations'
                         ),
                         array(
+                            'code'=>' CPP20212', // Put a space before code number because both course has same code number
+                            'title'=> 'Certificate II in Security Operations (Control Room Operator)'
+                        ),
+                        array(
                             'code'=>'CPP30411',
                             'title'=> 'Certificate III in Security Operations'
+                        ),
+                        array(
+                            'code'=>' CPP30411', // Put a space before code number because both course has same code number
+                            'title'=> 'Certificate III in Security Operations (Baton & Handcuffs)'
                         ),
                         array(
                             'code'=>'CHC33015',
@@ -492,8 +530,14 @@
             // gender
             $gender = array('Male', 'Female');
 
+            // method of contact
+            $method_of_contact = array('Mobile/Home phone', 'Email');
+
             // employment status
             $employment_status = array('Full-Time', 'Employer', 'Part-Time', 'Self-employed - not employing others', 'Unemployed - Seeking full-time work', 'Employed - Unpaid worker in a family business', 'Unemployed - Seeking part-time work', 'Not employed - Not seeking employment');
+            
+            // employment status b
+            $employmentStatus_B = array('Manager', 'Professionals', 'Technical and Trade Workers', 'Community and Personal Service Worker', 'Clerical and Administrative Workers', 'Sales Worker', 'Machinery Operators and Drivers', 'Labourers', 'Other');
 
             // highest completed school
             $highestCompletedSchool = array('Year 12 OR Equivalent', 'Year 9 OR Equivalent', 'Year 11 OR Equivalent', 'Year 8 OR Equivalent', 'Year 10 OR Equivalent', 'Never Attended');
@@ -537,7 +581,9 @@
                 'modeOfStudy' => $modeOfStudy,
                 'title' => $title,
                 'gender' => $gender,
+                'method_of_contact' => $method_of_contact,
                 'employmentStatus' => $employment_status,
+                'employmentStatus_B' => $employmentStatus_B,
                 'highestCompletedSchool' => $highestCompletedSchool,
                 'attendSecondarySchool' => $attendSecondarySchool,
                 'completedQulifications' => $completedQulifications,
@@ -560,8 +606,8 @@
 
         //============================
         public function form_apply3($enrolment_courseSelected, $mode_of_studySelected, 
-                                    $titleSelected, $genderSelected,$RTOpermissionSelected, 
-                                    $newEducatorSelected, $employmentStatusSelected, 
+                                    $titleSelected, $genderSelected, $methodOfContactSelected, $RTOpermissionSelected, 
+                                    $newEducatorSelected, $employmentStatusSelected, $employmentStatus_BSelected,
                                     $highestCompletedSchoolSelected,$attendSecondarySchoolSelected, 
                                     $prevQualificationCompletedSelected, $completedQulificationsSelected, 
                                     $countryOfQualificationCompletedSelected, $levelOfSpeakSelected, 
@@ -613,6 +659,8 @@
                     'same_level_govt_funded_courses' => $sameLevelGovtFundedCoursesSelected,
                     'have_disability' => $haveDisabilitySelected,
                     'areas_of_disability' => $areasOfDiabilitySelected,
+                    'method_of_contact' => $methodOfContactSelected,
+                    'employment_status_B' => $employmentStatus_BSelected
 
                 );
                 //insert database
@@ -647,7 +695,9 @@
                     'govt_funded_courses' => $govtFundedCoursesSelected,
                     'same_level_govt_funded_courses' => $sameLevelGovtFundedCoursesSelected,
                     'have_disability' => $haveDisabilitySelected,
-                    'areas_of_disability' => $areasOfDiabilitySelected
+                    'areas_of_disability' => $areasOfDiabilitySelected,
+                    'method_of_contact' => $methodOfContactSelected,
+                    'employment_status_B' => $employmentStatus_BSelected,
                 );
                 // print_r(" -in else ".$studentName);
                 // update current data
@@ -804,7 +854,18 @@
             $row1 = $query->row_array();
 
             // qualifications name
-            $qualificationsName = array('CHC30113 Certificate III in Childhood Education and Care', 'CHC50113 Diploma of Early Childhood Education and Care', 'CPP20212 Certificate II in Security Operations', 'CPP30411 Certificate III in Security Operations', 'CHC33015 Certificate III in Individual Support');
+            $qualificationsName = array(
+                    'CHC30113 Certificate III in Childhood Education and Care',
+                    'CHC50113 Diploma of Early Childhood Education and Care', 
+                    'CPP20212 Certificate II in Security Operations', 
+                    'CPP20212 Certificate II in Security Operations(Control Romm Operator)', 
+                    'CPP30411 Certificate III in Security Operations', 
+                    'CPP30411 Certificate III in Security Operations(Batton and Handcuffs)', 
+                    'CHC33015 Certificate III in Individual Support',
+                    'CHCSS00098 Individual Support - Disability Skill set',
+                    'CPC40110 Certificate IV in Building and Construction',
+                    'CPC50113 Diploma of Building and Construction'
+                );
 
              $row2 = array(
                 'enrol' => $row1,

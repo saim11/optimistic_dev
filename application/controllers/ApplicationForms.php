@@ -184,9 +184,11 @@
                 $mode_of_studySelected = $this->input->post('mode_of_studySelected');
                 $titleSelected = $this->input->post('titleSelected');
                 $genderSelected = $this->input->post('genderSelected');
+                $methodOfContactSelected = $this->input->post('methodOfContactSelected');
                 $RTOpermissionSelected = $this->input->post('RTOpermissionSelected');
                 $newEducatorSelected = $this->input->post('newEducatorSelected');
                 $employmentStatusSelected = $this->input->post('employmentStatusSelected');
+                $employmentStatus_BSelected = $this->input->post('employmentStatus_BSelected');
                 $highestCompletedSchoolSelected = $this->input->post('highestCompletedSchoolSelected');
                 $attendSecondarySchoolSelected = $this->input->post('attendSecondarySchoolSelected');
                 $prevQualificationCompletedSelected = $this->input->post('prevQualificationCompletedSelected');
@@ -214,8 +216,38 @@
                 //     'mode_of_studySelected' => $mode_of_studySelected
                 // );
 
-                 // print_r(' Selected '.$prevQualificationCompletedSelected.' ');
-                $this->applicationforms_model->form_apply3($enrolment_courseSelected, $mode_of_studySelected, $titleSelected, $genderSelected, $RTOpermissionSelected, $newEducatorSelected, $employmentStatusSelected,$highestCompletedSchoolSelected, $attendSecondarySchoolSelected,$prevQualificationCompletedSelected, $completedQulificationsSelected, $countryOfQualificationCompletedSelected, $levelOfSpeakSelected, $originSelected, $studyReasonSelected, $identificationsSelected,$haveFeesConessionSelected, $areaOfFeeConcessionSelected, $tuitionSelfIdentifiedSelected, $paymentMethodSelected,$consentTestimonialsSelected, $consentPhotoSelected, $country_Selected, $speakLanguageAtHomeSelected, $govtEnrolCoursesSelected, $govtFundedCoursesSelected, $sameLevelGovtFundedCoursesSelected, $haveDisabilitySelected, $areasOfDiabilitySelected);
+                //  print_r(' Selected '.$methodOfContactSelected.' ');
+                $this->applicationforms_model->form_apply3(
+                    $enrolment_courseSelected, 
+                    $mode_of_studySelected, 
+                    $titleSelected, 
+                    $genderSelected, 
+                    $methodOfContactSelected,
+                    $RTOpermissionSelected, 
+                    $newEducatorSelected, 
+                    $employmentStatusSelected,
+                    $employmentStatus_BSelected,
+                    $highestCompletedSchoolSelected, 
+                    $attendSecondarySchoolSelected,
+                    $prevQualificationCompletedSelected, 
+                    $completedQulificationsSelected, 
+                    $countryOfQualificationCompletedSelected, 
+                    $levelOfSpeakSelected, $originSelected, 
+                    $studyReasonSelected, 
+                    $identificationsSelected,
+                    $haveFeesConessionSelected, 
+                    $areaOfFeeConcessionSelected, 
+                    $tuitionSelfIdentifiedSelected, 
+                    $paymentMethodSelected,
+                    $consentTestimonialsSelected, 
+                    $consentPhotoSelected, 
+                    $country_Selected, 
+                    $speakLanguageAtHomeSelected, 
+                    $govtEnrolCoursesSelected, 
+                    $govtFundedCoursesSelected, 
+                    $sameLevelGovtFundedCoursesSelected, 
+                    $haveDisabilitySelected, 
+                    $areasOfDiabilitySelected);
             }
 
             public function form_apply3_enrolmentCourse2()

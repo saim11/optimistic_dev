@@ -119,6 +119,55 @@ display: inline-block ;
 					<form id="contactForm" method="post" action="" class="validate">
 
 						<h3>Detail of Fees (Subject to change without notification)</h3>
+						
+						<table class="table table-bordered table-responsive">
+							<thead>
+								<tr>
+									<th scope="col">Qualification</th>
+									<th scope="col">Concession Card Holder Fee (20% of the standard Tuition Fee)</th>
+									<th scope="col">No Concession Card or Job Seeker Fee</th>
+									<th scope="col">Job Seeker with referral</th>
+									<th scope="col">Government Contribution (Approximate)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>CHC30113 Certificate III in Early Childhood Education and Care</td>
+									<td>Tuition=$30.00</td>
+									<td>Tuition=$150.00</td>
+									<td>Tuition=$150.00</td>
+									<td>$6216</td>
+								</tr>
+								<tr>
+									<td>CHC30113 Diploma of Early Childhood Education and Care</td>
+									<td>Tuition=$30.00</td>
+									<td>Tuition=$150.00</td>
+									<td>Tuition=$150.00</td>
+									<td>$11748</td>
+								</tr>
+								<tr>
+									<td>CPP20212 Certificate II in Security Operations</td>
+									<td>Tuition=$24.00</td>
+									<td>Tuition=$120.00</td>
+									<td>Tuition=$120.00</td>
+									<td>$2190</td>
+								</tr>
+								<tr>
+									<td>CPP30411 Certificate III in Security Operations</td>
+									<td>Tuition=$24.00</td>
+									<td>Tuition=$120.00</td>
+									<td>Tuition=$120.00</td>
+									<td>$2028</td>
+								</tr>
+								<tr>
+									<td>CHC33015 Certificate III in individual Support</td>
+									<td>Tuition=$30.00</td>
+									<td>Tuition=$150.00</td>
+									<td>Tuition=$150.00</td>
+									<td>$6077</td>
+								</tr>
+							</tbody>
+						</table>
 
 						<p>Note:</p>
 						<p>
@@ -223,7 +272,7 @@ display: inline-block ;
 									foreach ($courses as $cour) {
 										$checked="";
 										if(in_array($cour['code'], $enrolCoursesChecked)){
-										  $checked = "checked";
+											$checked = "checked";
 										}
 									?>
 										<tr>
@@ -250,8 +299,8 @@ display: inline-block ;
 									$modeOfStudyChecked = explode(",", $form_apply3['enrol']['mode_of_study']);
 									$modeOfStudy = $form_apply3['modeOfStudy'];
 									// print_r($modeOfStudyChecked);
-									$modeInputNum=6;
-									$modeLabelNum=6;
+									$modeInputNum=8;
+									$modeLabelNum=8;
 									foreach ($modeOfStudy as $mode) {
 										$checked="";
 										if(in_array($mode, $modeOfStudyChecked)){
@@ -283,8 +332,8 @@ display: inline-block ;
 										$titleChecked = explode(",", $form_apply3['enrol']['title']);
 										$titles = $form_apply3['title'];
 
-										$titleInputNum = 11;
-										$titleLabelNum = 11;
+										$titleInputNum = 13;
+										$titleLabelNum = 13;
 
 										foreach ($titles as $title) {
 											$checked="";
@@ -314,8 +363,8 @@ display: inline-block ;
 										$genderChecked = explode(",", $form_apply3['enrol']['gender']);
 										$genders = $form_apply3['gender'];
 
-										$genderInputNum = 15;
-										$genderLabelNum = 15;
+										$genderInputNum = 17;
+										$genderLabelNum = 17;
 										foreach ($genders as $gender) {
 											$checked="";
 											if(in_array($gender, $genderChecked)){
@@ -405,8 +454,9 @@ display: inline-block ;
 								<input type="text" id="nine" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['postal_address'] ?>">
 							</div>
 						</div>
-</div> 						
-<div class="row"> 
+					</div> 		
+
+					<div class="row"> 
 						<div class="col-sm-4">
 							<div class="form-group">
 								<label>Home phone:</label>
@@ -427,20 +477,71 @@ display: inline-block ;
 								<input type="text" id="twelve" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['fax'] ?>">
 							</div>
 						</div>
-</div> 						
-<div class="row"> 
-						<div class="col-sm-12">
+					</div> 			
+
+					<div class="row"> 
+						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Email:</label>
 								<input type="text" id="thirteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['email'] ?>">
 							</div>
 						</div>
-</div>
+						
+						<!-- preferred method of contact-->
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label class="col-sm-12">Preferred Method of contact:</label>
+								<div class="col-sm-10">
+									
+									<?php 
+										$methodOfContactChecked = explode(",", $form_apply3['enrol']['method_of_contact']);
+										$methodOfContacts = $form_apply3['method_of_contact'];
+
+										$methodOfContactInputNum = 19;
+										$methodOfContactLabelNum = 19;
+										foreach ($methodOfContacts as $methodOfContact) {
+											$checked="";
+											if(in_array($methodOfContact, $methodOfContactChecked)){
+												$checked="checked";
+											}
+											?>
+											<div class="Office-checks">
+												<div class="checkbox">
+													<input id="box<?php echo $methodOfContactInputNum++ ?>" class="changeOption methodOfContact" type="checkbox" name="methodOfContact[]" value="<?php echo $methodOfContact; ?>" <?php echo $checked; ?> />
+													<label for="box<?php echo $methodOfContactLabelNum++ ?>"><?php echo $methodOfContact; ?></label>
+												</div>
+											</div>
+
+									<?php		
+										}
+									?>
+									
+									<!-- <div class="Office-checks">
+										<div class="checkbox">
+											<input id="box19" class="changeOption methodOfContact" type="checkbox" name="methodOfContact[]" value="Mobile/Home phone">
+											<label for="box19">Mobile/Home phone</label>
+										</div>
+									</div>
+
+									<div class="Office-checks">
+										<div class="checkbox">
+											<input id="box20" class="changeOption methodOfContact" type="checkbox" name="methodOfContact[]" value="Email">
+											<label for="box20">Email</label>
+										</div>
+									</div> -->
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
 
 						<br class="clearfix">
 						<h3>EMERGENCY CONTACT DETAILS</h3>
 						
-<div class="row">  						
+					<div class="row">  						
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Name:</label>
@@ -454,8 +555,8 @@ display: inline-block ;
 								<input type="text" id="fifteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_relationship'] ?>">
 							</div>
 						</div>
-</div>
-<div class="row">  
+					</div>
+					<div class="row">  
 
 						<div class="col-sm-6">
 							<div class="form-group">
@@ -482,8 +583,8 @@ display: inline-block ;
 										$RTOpermissionSelected = explode(",", $form_apply3['enrol']['emerg_rto_permission']);
 										$RTOpermissions = array("Yes", "No");
 										
-										$RTOInputNum = 17;
-										$RTOLabelNum = 17;
+										$RTOInputNum = 21;
+										$RTOLabelNum = 21;
 										foreach ($RTOpermissions as $RTOpermission) {
 											$checked="";
 											if(in_array($RTOpermission, $RTOpermissionSelected)){
@@ -547,6 +648,7 @@ display: inline-block ;
 										recording my results.</label>
 								</div>
 								<div class="col-sm-6">
+									<label>USI</label>
 									<input type="text" id="twentyTwo" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['usi1'] ?>">
 									<br />
 								</div>
@@ -557,10 +659,11 @@ display: inline-block ;
 						<div class="col-sm-12">
 							<div class="form-group">
 								<div class="col-sm-10">
-									<label>If I do not have a USI in place, I am willing for Optimistic Futures Pty Ltd to set up my USI on my behalf. *Please
-										complete the USI form attached</label>
+									<label>If I do not have a USI in place, I am willing for Optimistic Futures Pty Ltd to set up my USI on my behalf. 
+										<br/><br />*Please complete the USI form attached</label>
 								</div>
 								<div class="col-sm-6">
+									<label>Signature</label>
 									<input type="text" id="twentyThree" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['usi2'] ?>">
 									<br />
 								</div>
@@ -612,8 +715,8 @@ display: inline-block ;
 									?>
 
 									<div class="checkbox">
-										<input id="box19" class="changeOption newEducator" type="checkbox" name="newEducator" value="New" <?php echo $checked; ?>/>
-										<label for="box19">New</label>
+										<input id="box23" class="changeOption newEducator" type="checkbox" name="newEducator" value="New" <?php echo $checked; ?>/>
+										<label for="box23">New</label>
 									</div>
 
 								</div>
@@ -622,14 +725,16 @@ display: inline-block ;
 
 						<br class="clearfix">
 						<h3>EMPLOYMENT</h3>
-						<p>Of the following categories, which BEST describes your current employment status?</p>
+						<!-- Option A -->
+						<p><strong>A.</strong> &nbsp; Of the following categories, which BEST describes your current employment status? &nbsp; &nbsp; &nbsp; Tick ONE box only</p>
 						<div class="row">
+
 						<?php
 								$employmentStatusSelected = explode(',', $form_apply3['enrol']['employment_status']);
 								$employmentStatus = $form_apply3['employmentStatus'];
 								$num=0;
-								$empInput=20;
-								$empLable=20;
+								$empInput=24;
+								$empLable=24;
 								foreach ($employmentStatus as $status) {  
 									if ($num == 0 || $num == 4){?>
 									<div class="col-sm-6">
@@ -642,7 +747,7 @@ display: inline-block ;
 										}
 									?>
 								 	<div class="checkbox">
-										<input id="box<?php echo $empInput++; ?>" type="checkbox" class="changeOption employmentStatus" name="employmentStatus[]" value="<?php echo $status; ?>" <?php echo $checked; ?>/>
+										<input id="box<?php echo $empInput++; ?>" type="checkbox" class="changeOption chb_emp_status employmentStatus" name="employmentStatus[]" value="<?php echo $status; ?>" <?php echo $checked; ?>/>
 										<label for="box<?php echo $empLable++; ?>"><?php echo $status; ?></label>
 									</div>
 
@@ -651,7 +756,61 @@ display: inline-block ;
 								 	$num++;
 								 } 
 							?>
+								<script>
+									$(".chb_emp_status").change(function()
+										{
+											$(".chb_emp_status").prop('checked',false);
+											$(this).prop('checked',true);
+										});
+								</script>
+							</div> <br/>
+							
+							<!-- Option B -->
+							<p><strong>B.</strong> &nbsp; Which of the following classification BEST describes your current or recent occupation? &nbsp; &nbsp; &nbsp; Tick ONE box only</p>
+							<div class="row">
+
+								<?php 
+									$employmentStatus_BSelected = explode(',', $form_apply3['enrol']['employment_status_B']);
+									$employmentStatus_B = $form_apply3['employmentStatus_B'];
+									$num=0;
+									foreach($employmentStatus_B as $status_B){
+										if ($num == 0 || $num == 4 || $num == 7){?>
+											<div class="col-sm-4">
+											<?php } ?>
+											<!-- check selected value in array -->
+											<?php
+												$checked="";
+												if(in_array($status_B, $employmentStatus_BSelected)){
+													$checked="checked";
+												}
+											?>
+											<div class="checkbox">
+												<input id="box-<?php echo $status_B; ?>" type="checkbox" class="changeOption chb_emp_status_b employmentStatus_B" name="employmentStatus_B[]" value="<?php echo $status_B; ?>" <?php echo $checked; ?>/>
+												<label for="box-<?php echo $status_B; ?>"><?php echo $status_B; ?></label>
+											</div>
+		
+										<?php if ($num == 3 || $num == 6 || $num == 8){?> </div> <?php } ?>
+										<?php
+										$num++;
+									}
+
+								?>
+								<script>
+									$(".chb_emp_status_b").change(function()
+										{
+											$(".chb_emp_status_b").prop('checked',false);
+											$(this).prop('checked',true);
+										});
+								</script>
 							</div>
+
+							<!-- Option C -->
+							<p><strong>C.</strong> &nbsp; Which of the following classification BEST describes the industry of your current or previous Employer? &nbsp; &nbsp; &nbsp; Tick ONE box only </p>
+							<div class="row">
+							
+							</div>
+
+
 						<br class="clearfix">
 						<h3>EMPLOYMENT DETAILS (if applicable)</h3>
 				<div class="row">
@@ -703,8 +862,8 @@ display: inline-block ;
 							$highestCompletedSchool = $form_apply3['highestCompletedSchool'];
 							// print_r($highestCompletedSchool);
 							$num=0;
-							$comInput=28;
-							$comLable=28;
+							$comInput=32;
+							$comLable=32;
 							foreach ($highestCompletedSchool as $completedSchool) {
 								if ($num == 0 || $num == 2 || $num == 4){?>
 									<div class="col-sm-4">
@@ -746,8 +905,8 @@ display: inline-block ;
 							<?php 
 								$attendSecondarySchoolSelected = explode(',', $form_apply3['enrol']['attend_secondary_school']);
 								$attendSecondarySchool = $form_apply3['attendSecondarySchool'];
-								$attInput=34;
-								$attLable=34;
+								$attInput=38;
+								$attLable=38;
 								foreach ($attendSecondarySchool as $attendSchool) {
 									$checked=""; 
 									if(in_array($attendSchool, $attendSecondarySchoolSelected)){
@@ -769,7 +928,7 @@ display: inline-block ;
 
 						<br class="clearfix">
 						<h3>PREVIOUS QUALIFICATIONS ACHIEVED</h3>
-			<div class="row">
+					<div class="row">
 						<div class="col-sm-8">
 							<p>Have you SUCCESSFULLY completed any of the following qualifications?</p>
 						</div>
@@ -778,8 +937,8 @@ display: inline-block ;
 							<?php 
 								$prevQualificationCompletedSelected = explode(',', $form_apply3['enrol']['prev_qualification_completed']);
 								$prevQualificationCompleted = array('Yes', 'No');
-								$preInput=36;
-								$preLable=36;
+								$preInput=40;
+								$preLable=40;
 								foreach ($prevQualificationCompleted as $prevCompleted) {
 									$checked="";
 									if(in_array($prevCompleted, $prevQualificationCompletedSelected)){
@@ -797,6 +956,12 @@ display: inline-block ;
 
 								}
 							?>
+							<div class="Office-checks">
+								<div class="checkbox">
+									<span>&nbsp;</span>
+									<span>If Yes, Please Tick Any Applicable boxes</span>
+								</div>
+							</div>
 						</div>
 			</div>
 			<div class="row">			
@@ -806,8 +971,8 @@ display: inline-block ;
 						<?php 
 							$completedQulificationsSelected = explode(',', $form_apply3['enrol']['completed_qualifications']);
 							$completedQulifications = $form_apply3['completedQulifications'];
-							$comQualInput=38;
-							$comQualLabel=38;
+							$comQualInput=42;
+							$comQualLabel=42;
 							$num=0;
 
 							foreach ($completedQulifications as $comQual) {
@@ -860,8 +1025,8 @@ display: inline-block ;
 							<?php 
 								$countryOfQualificationCompletedSelected = explode(',', $form_apply3['enrol']['country_of_qualification_completed']);
 								$countryOfQualificationCompleted = $form_apply3['countryOfQualificationCompleted'];
-								$counQualInput=47;
-								$counQualLabel=47;
+								$counQualInput=51;
+								$counQualLabel=51;
 
 								foreach ($countryOfQualificationCompleted as $country) {
 									$checked="";
@@ -894,8 +1059,8 @@ display: inline-block ;
 							?>
 							Country of Birth:
 							<div class="checkbox">
-								<input id="box50" type="checkbox" name="country_australia" class="changeOption country_australia" value="Australian" <?php echo $checked; ?>/>
-								<label for="box50">Australian</label>
+								<input id="box54" type="checkbox" name="country_australia" class="changeOption country_australia" value="Australian" <?php echo $checked; ?>/>
+								<label for="box54">Australian</label>
 							</div>
 						</div>
 
@@ -921,8 +1086,8 @@ display: inline-block ;
 							<?php
 								$speakLanguageAtHomeSelected = explode(',  ', $form_apply3['enrol']['speak_language_at_home']);
 								$speakLanguageAtHome = $form_apply3['speakLanguageAtHome'];
-								$langInput=51;
-								$langLabel=51;
+								$langInput=55;
+								$langLabel=55;
 								foreach ($speakLanguageAtHome as $lang) {
 									$checked="";
 									if(in_array($lang, $speakLanguageAtHomeSelected)){
@@ -947,8 +1112,8 @@ display: inline-block ;
 							<?php 
 								$levelOfSpeakSelected = explode(',', $form_apply3['enrol']['level_of_speak']);
 								$levelOfSpeak = $form_apply3['levelOfSpeak'];
-								$levInput = 53;
-								$levLabel = 53;
+								$levInput = 57;
+								$levLabel = 57;
 								foreach ($levelOfSpeak as $level) {
 									$checked="";
 									if(in_array($level, $levelOfSpeakSelected)){
@@ -971,8 +1136,8 @@ display: inline-block ;
 							<?php 
 								$originSelected = explode(', ', $form_apply3['enrol']['origin']);
 								$origins = $form_apply3['origin'];
-								$originInput = 57;
-								$originLabel = 57;
+								$originInput = 61;
+								$originLabel = 61;
 								foreach ($origins as $origin) {
 									$checked="";
 									if(in_array($origin, $originSelected)){
@@ -1003,8 +1168,8 @@ display: inline-block ;
 							<?php 
 								$haveDisabilitySelected = $form_apply3['enrol']['have_disability'];
 								$haveDisability = array('Yes', 'No');
-								$haveDisInput=61;
-								$haveDisLabel=61;
+								$haveDisInput=65;
+								$haveDisLabel=65;
 								foreach ($haveDisability as $haveDis) {
 									$checked="";
 									if($haveDis == $haveDisabilitySelected){
@@ -1034,8 +1199,8 @@ display: inline-block ;
 								$areasOfDiabilitySelected = explode(',', $form_apply3['enrol']['areas_of_disability']);
 								$areasOfDiability = $form_apply3['areasOfDiability'];
 								$num=0;
-								$disInput=63;
-								$disLabel=63;
+								$disInput=67;
+								$disLabel=67;
 								foreach ($areasOfDiability as $disability) {
 									$checked="";
 									if($num==0 || $num==3 || $num==6) {?>
@@ -1081,8 +1246,8 @@ display: inline-block ;
 								$studyReasonSelected = explode(',', $form_apply3['enrol']['study_reason']);
 								$studyReason = $form_apply3['studyReason'];
 								$num=0;
-								$studyInput=71;
-								$studyLable=71;
+								$studyInput=75;
+								$studyLable=75;
 								foreach ($studyReason as $reason) { 
 									if ($num == 0){?>
 									<div class="col-sm-4">
@@ -1130,8 +1295,8 @@ display: inline-block ;
 								$identificationsSelected = explode(',', $form_apply3['enrol']['identification']);
 								$identifications = $form_apply3['identifications'];
 								$num=0;
-								$idenInput=82;
-								$idenLable=82;
+								$idenInput=85;
+								$idenLable=85;
 								foreach ($identifications as $identification) { 
 									if ($num == 0 || $num == 4){?>
 									<div class="col-sm-6">
@@ -1170,8 +1335,8 @@ display: inline-block ;
 							<?php 
 								$haveFeesConessionSelected = explode(',', $form_apply3['enrol']['have_fees_concession']);
 								$haveFeesConession = array('Yes', 'No');
-								$haveInput=90;
-								$haveLabel=90;
+								$haveInput=93;
+								$haveLabel=93;
 								foreach ($haveFeesConession as $feeCon) {
 									$checked="";
 									if(in_array($feeCon, $haveFeesConessionSelected)){
@@ -1210,8 +1375,8 @@ display: inline-block ;
 							<?php 
 								// $areaOfFeeConcessionSelected = explode(',', $form_apply3['enrol']['area_of_fee_concession']);
 								$areaOfFeeConcession = $form_apply3['areaOfFeeConcession'];
-								$feeInput=92;
-								$feeLabel=92;
+								$feeInput=95;
+								$feeLabel=95;
 								foreach ($areaOfFeeConcession as $areaFee) {
 									$selected="";
 									?>
@@ -1257,14 +1422,14 @@ display: inline-block ;
 							<div class="row">
 							<div class="col-sm-4">
 								<div class="checkbox">
-									<input id="box96" type="checkbox" />
-									<label for="box96">Yes</label>
+									<input id="box99" type="checkbox" />
+									<label for="box99">Yes</label>
 								</div>
 							</div>
 							<div class="col-sm-4">
 								<div class="checkbox">
-									<input id="box97" type="checkbox" />
-									<label for="box97">No</label>
+									<input id="box100" type="checkbox" />
+									<label for="box100">No</label>
 								</div>
 							</div>
 							<div class="col-sm-4">
@@ -1288,8 +1453,8 @@ display: inline-block ;
 								<?php 
 								$tuitionSelfIdentifiedSelected = explode(',', $form_apply3['enrol']['tuition_self_identified']);
 								$tuitionSelfIdentified = array('Yes', 'No');
-								$selfInput=98;
-								$selfLabel=98;
+								$selfInput=101;
+								$selfLabel=101;
 								foreach ($tuitionSelfIdentified as $self) {
 									$checked="";
 									if(in_array($self, $tuitionSelfIdentifiedSelected)){
@@ -1320,8 +1485,8 @@ display: inline-block ;
 								$paymentMethodSelected = explode(',', $form_apply3['enrol']['payment_method']);
 								$paymentMethod = $form_apply3['paymentMethod'];
 
-								$payInput=100;
-								$payLabel=100;
+								$payInput=103;
+								$payLabel=103;
 
 								foreach ($paymentMethod as $method) {
 									$checked="";
@@ -1390,8 +1555,8 @@ display: inline-block ;
 								<?php 
 									$consentTestimonialsSelected = explode(',', $form_apply3['enrol']['consent_testimonials']);
 									$consentTestimonials = array('Yes', 'No');
-									$testimonialInput=106;
-									$testimonialLabel=106;
+									$testimonialInput=109;
+									$testimonialLabel=109;
 									foreach ($consentTestimonials as $testimonial) {
 										$checked="";
 										if(in_array($testimonial, $consentTestimonialsSelected)){
@@ -1418,8 +1583,8 @@ display: inline-block ;
 								<?php 
 									$consentPhoteSelected = explode(',', $form_apply3['enrol']['consent_photo']);
 									$consentPhoto = array('Yes', 'No');
-									$photoInput=108;
-									$photoLabel=108;
+									$photoInput=111;
+									$photoLabel=111;
 									foreach ($consentPhoto as $photo) {
 										$checked="";
 										if(in_array($photo, $consentPhoteSelected)){
@@ -1632,14 +1797,14 @@ display: inline-block ;
 							<div class="col-sm-2">
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box103" type="checkbox" />
-										<label for="box103">Yes</label>
+										<input id="box113" type="checkbox" />
+										<label for="box113">Yes</label>
 									</div>
 								</div>
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box104" type="checkbox" />
-										<label for="box104">No</label>
+										<input id="box114" type="checkbox" />
+										<label for="box114">No</label>
 									</div>
 								</div>
 							</div>
@@ -1652,14 +1817,14 @@ display: inline-block ;
 							<div class="col-sm-2">
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box105" type="checkbox" />
-										<label for="105">Yes</label>
+										<input id="box115" type="checkbox" />
+										<label for="115">Yes</label>
 									</div>
 								</div>
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box106" type="checkbox" />
-										<label for="box106">No</label>
+										<input id="box116" type="checkbox" />
+										<label for="box116">No</label>
 									</div>
 								</div>
 							</div>
@@ -1672,14 +1837,14 @@ display: inline-block ;
 							<div class="col-sm-2">
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box107" type="checkbox" />
-										<label for="box107">Yes</label>
+										<input id="box117" type="checkbox" />
+										<label for="box117">Yes</label>
 									</div>
 								</div>
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box108" type="checkbox" />
-										<label for="box108">No</label>
+										<input id="box118" type="checkbox" />
+										<label for="box118">No</label>
 									</div>
 								</div>
 							</div>
@@ -1731,24 +1896,24 @@ display: inline-block ;
 							<div class="col-sm-12">
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box109" type="checkbox" />
-										<label for="box109">formal documentation issued by the Australian Department of Immigration and Border Protection confirming permanent
+										<input id="box119" type="checkbox" />
+										<label for="box119">formal documentation issued by the Australian Department of Immigration and Border Protection confirming permanent
 											residence </label>
 									</div>
 									<div class="checkbox">
-										<input id="box110" type="checkbox" />
-										<label for="box110">a copy of the original or certified copy, or
+										<input id="box120" type="checkbox" />
+										<label for="box120">a copy of the original or certified copy, or
 										</label>
 									</div>
 									<div class="checkbox">
-										<input id="box111" type="checkbox" />
-										<label for="box111">the certified copy, or </label>
+										<input id="box121" type="checkbox" />
+										<label for="box121">the certified copy, or </label>
 									</div>
 								</div>
 								<div class="Office-checks">
 									<div class="checkbox">
-										<input id="box112" type="checkbox" />
-										<label for="box112"> the uncertified copy and a receipt from a document verification service;</label>
+										<input id="box122" type="checkbox" />
+										<label for="box122"> the uncertified copy and a receipt from a document verification service;</label>
 									</div>
 								</div>
 						</div>
@@ -1759,20 +1924,20 @@ display: inline-block ;
 										include a date of birth: </p>
 									<div class="Office-checks">
 										<div class="checkbox">
-											<input id="box113" type="checkbox" />
-											<label for="box113">a current drivers licence, or</label>
+											<input id="box123" type="checkbox" />
+											<label for="box123">a current drivers licence, or</label>
 										</div>
 										<div class="checkbox">
-											<input id="box114" type="checkbox" />
-											<label for="box114">a current learner permit, or</label>
+											<input id="box124" type="checkbox" />
+											<label for="box124">a current learner permit, or</label>
 										</div>
 										<div class="checkbox">
-											<input id="box115" type="checkbox" />
-											<label for="box115">a Proof of Age card, or</label>
+											<input id="box125" type="checkbox" />
+											<label for="box125">a Proof of Age card, or</label>
 										</div>
 										<div class="checkbox">
-											<input id="box116" type="checkbox" />
-											<label for="box116">a ‘Keypass’ card</label>
+											<input id="box126" type="checkbox" />
+											<label for="box126">a ‘Keypass’ card</label>
 										</div>
 									</div>
 
@@ -1787,12 +1952,12 @@ display: inline-block ;
 										</p>
 										</div>
 										<div class="checkbox">
-											<input id="box117" type="checkbox" />
-											<label for="box117">a Referral Letter from the Asylum Seeker Resource Centre or the Australian Red Cross, or</label>
+											<input id="box127" type="checkbox" />
+											<label for="box127">a Referral Letter from the Asylum Seeker Resource Centre or the Australian Red Cross, or</label>
 										</div>
 										<div class="checkbox">
-											<input id="box118" type="checkbox" />
-											<label for="box118">for TAFE Institutes and Learn Locals organisations only, an electronic or printed record demonstrating that the
+											<input id="box128" type="checkbox" />
+											<label for="box128">for TAFE Institutes and Learn Locals organisations only, an electronic or printed record demonstrating that the
 												student holds a current valid Bridging Visa Class E (BVE), Safe Haven Enterprise Visa (SHEV) or Temporary Protection
 												Visa (TPV) as verified via the Commonwealth’s Visa Entitlement Verification Online (VEVO). </label>
 										</div>
@@ -2092,9 +2257,11 @@ display: inline-block ;
 		var chkModeOfStudyArray = [];
 		var chktitleArray = [];
 		var chkGenderArray = [];
+		var chkMethodOfContact = [];
 		var chkRTOpermissionArray = [];
 		// var chkNewEducatorArray = [];
 		var chkEmploymentStatusArray = [];
+		var chkEmploymentStatus_BArray = [];
 		var chkhighestCompletedSchoolArray = [];
 		var chkattendSecondarySchoolArray = [];
 		var chkprevQualificationCompletedArray = [];
@@ -2114,7 +2281,9 @@ display: inline-block ;
 		var chkcountryOfBirth = [];
 		var chkspeakLanguageAtHomeArray = [];
 
-
+		$(".methodOfContact:checked").each(function(){
+			chkMethodOfContact.push($(this).val());
+		});
 
 		$(".enrolment_course:checked").each(function() {
 			chkEnrolment_courseArray.push($(this).val());
@@ -2142,6 +2311,10 @@ display: inline-block ;
 
 		$(".employmentStatus:checked").each(function(){
 			chkEmploymentStatusArray.push($(this).val());
+		});
+		
+		$(".employmentStatus_B:checked").each(function(){
+			chkEmploymentStatus_BArray.push($(this).val());
 		});
 
 		$(".highestCompletedSchool:checked").each(function(){
@@ -2218,9 +2391,11 @@ display: inline-block ;
 		var mode_of_studySelected;
 		var titleSelected;
 		var genderSelected;
+		var methodOfContactSelected;
 		var RTOpermissionSelected;
 		var newEducatorSelected;
 		var employmentStatusSelected;
+		var employmentStatus_BSelected;
 		var highestCompletedSchoolSelected;
 		var attendSecondarySchoolSelected;
 		var prevQualificationCompletedSelected;
@@ -2240,11 +2415,11 @@ display: inline-block ;
 		var country_Selected;
 		var speakLanguageAtHomeSelected;
 
-
 		enrolment_courseSelected = chkEnrolment_courseArray.join(',');
 		mode_of_studySelected = chkModeOfStudyArray.join(',');
 		titleSelected = chktitleArray.join(',');
 		genderSelected = chkGenderArray.join(',');
+		methodOfContactSelected = chkMethodOfContact.join(',');
 		RTOpermissionSelected = chkRTOpermissionArray.join(',');
 		// newEducatorSelected = chkNewEducatorArray.join(',');
 			if ($('.newEducator').is(":checked")){
@@ -2253,6 +2428,7 @@ display: inline-block ;
 				newEducatorSelected = '';
 			}
 		employmentStatusSelected = chkEmploymentStatusArray.join(',');
+		employmentStatus_BSelected = chkEmploymentStatus_BArray.join(',');
 		highestCompletedSchoolSelected = chkhighestCompletedSchoolArray.join(',');
 		attendSecondarySchoolSelected = chkattendSecondarySchoolArray.join(',');
 		prevQualificationCompletedSelected = chkprevQualificationCompletedArray.join(',');
@@ -2334,7 +2510,7 @@ display: inline-block ;
 
 		var sameLevelGovtFundedCoursesSelected = $('#sameLevelGovtFundedCourses option:selected').text();
 		// console.log(sameLevelGovtFundedCoursesSelected);
-
+		console.log(employmentStatus_BSelected);
 		$.ajax({
 			type: 'POST',
 			data: {
@@ -2342,9 +2518,11 @@ display: inline-block ;
 				mode_of_studySelected: mode_of_studySelected,
 				titleSelected: titleSelected,
 				genderSelected: genderSelected,
+				methodOfContactSelected: methodOfContactSelected,
 				RTOpermissionSelected: RTOpermissionSelected,
 				newEducatorSelected: newEducatorSelected,
 				employmentStatusSelected: employmentStatusSelected,
+				employmentStatus_BSelected: employmentStatus_BSelected,
 				highestCompletedSchoolSelected: highestCompletedSchoolSelected,
 				attendSecondarySchoolSelected: attendSecondarySchoolSelected,
 				prevQualificationCompletedSelected: prevQualificationCompletedSelected,
