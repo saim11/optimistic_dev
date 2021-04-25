@@ -20,16 +20,16 @@ class Trainingtwo extends CI_Controller {
     }
 
     public function Update(){
-        // echo $_POST['subCatUpdateId'];
+
         if(isset($_POST['subCatUpdateId'])){
             $data['tbl_data'] = $this->SqlModel->getSingleRecord($this->books_sub_categories, array($this->pKey=>$_POST['subCatUpdateId']));
             $newdata = array(
                 'cat2Id' => $data['tbl_data']["sub_cat_id"],
                 'cat2Title' => $data['tbl_data']["book_subCategory_title"]
             );
-        $this->session->set_userdata($newdata);
-        $title = $this->session->userdata("cat2Title");
-        echo json_encode($title);
+        // $this->session->set_userdata($newdata);
+        // $title = $this->session->userdata("cat2Title");
+        echo json_encode( $newdata['cat2Title']);
         }
     }
 
@@ -57,23 +57,7 @@ class Trainingtwo extends CI_Controller {
         {
             $data['listing']=$this->SqlModel->getJoinRecords('books_sub_categories.sub_cat_id,books_sub_categories.book_subCategory_title,book_category.book_category_title',$this->tblName, $this->books_sub_categories, "book_category.book_category_id=books_sub_categories.book_category_id");
             $listing = array();
-            foreach ($data['listing'] as $value) {
-                $abc = array($value["sub_cat_id"],$value["book_subCategory_title"], $value["book_category_title"]);
-                array_push($listing, $abc);
-            }
-
-            for ($x = 0; $x <= count($listing)-1; $x++) {
-                
-                    echo "<tr>
-                            <td>".$listing[$x][0]."</td>
-                            <td>".$listing[$x][1]."</td>
-                            <td>".$listing[$x][2]."</td>
-                            <td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#confirmTwo' id= ".$listing[$x][0]." onClick='myCatTwo(this.id)'>Update</button></td>
-                            <td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#deleteTwo' id= ".$listing[$x][0]." onClick='myIdTwo(this.id)'>Delete</button></td>                                
-                        </tr>";
-            } 
-            $data['alert'] = $this->session->flashdata('alert');
-            $this->session->set_flashdata('alert','success');
+            print_r(json_encode(['data'=>$data['listing']]));
         }
         else
         {

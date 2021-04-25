@@ -114,26 +114,26 @@ display: inline-block ;
 									<td style="text-align: left;">
 
 										<?php
-$qualificationsNameSelected = explode(',', $form_apply4['enrol']['qualifications_name']);
-$qualificationsName         = $form_apply4['qualificationsName'];
-// print_r($qualificationsNameSelected);
-$qualificationInput = 1;
-$qualificationLabel = 1;
-foreach ($qualificationsName as $qualification) {
-    $checked = "";
+											$qualificationsNameSelected = explode(',', $form_apply4['enrol']['qualifications_name']);
+											$qualificationsName         = $form_apply4['qualificationsName'];
+											// print_r($qualificationsNameSelected);
+											$qualificationInput = 1;
+											$qualificationLabel = 1;
+											foreach ($qualificationsName as $qualification) {
+												$checked = "";
 
-    if (in_array($qualification, $qualificationsNameSelected)) {
-        $checked = "checked";
-    }
-    ?>
+												if (in_array($qualification, $qualificationsNameSelected)) {
+													$checked = "checked";
+												}
+												?>
 
 												<div class="checkbox">
 													<input id="box<?php echo $qualificationInput++; ?>" name="qualificationsName[]" type="checkbox" class="changeOption qualificationsName" value="<?php echo $qualification; ?>" <?php echo $checked; ?> />
 													<label for="box<?php echo $qualificationLabel++; ?>"><?php echo $qualification; ?></label>
 												</div>
 										<?php
-}
-?>
+											}
+											?>
 									</td>
 								</tr>
 

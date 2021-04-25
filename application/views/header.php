@@ -58,16 +58,13 @@ if (empty($page_meta) && empty($page_title)) {
     .alert {
         text-align: center;
     }
+    
     </style>
 
 
 </head>
 
 <body>
-
-
-
-
     <!-- Top Bar Start -->
     <div class="top_bar">
         <div class="top_bar_sub">

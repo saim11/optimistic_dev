@@ -22,7 +22,12 @@ $sub_category  = $this->session->userdata('sub_category');
  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
  <link rel="stylesheet" href="/resources-Images/resources-page.css">
-
+ <style>
+ .card h6{
+	 text-align:center;
+	 border:none !important;
+ }
+ </style>
 
  <script type="text/javascript">
  	var dFlipLocation = "<?php echo FRONTEND_ASSETS; ?>DFLIP";
@@ -48,6 +53,11 @@ $sub_category  = $this->session->userdata('sub_category');
  </div>
  <!-- osc-->
  <?php
+ if(!$this->session->userdata('user_id'))
+ {
+	 $this->session->set_userdata('error_from_php', 'Login required !');           // checking is activation code available or not
+	 redirect('login.html');
+ }else{
 
 $book_category_id = 0;
 
@@ -76,6 +86,23 @@ if ($book_category) {
 
  if ($books) {
   foreach ($books as $book) {
+	$str = strlen($book["book_title"]) > 20 ? substr($book["book_title"], 0, 20) . "..." : $book["book_title"];
+	  if($_GET["book_category"] !=1 && $_GET["book_category"] !=5 ){
+	?>
+	<div class="col-sm-6 col-md-2">
+ 			<div class="card" style="border:none;">
+ 				<a target="_blank"
+ 					href="<?php echo base_url() . $book["book_file_path"] ?>" id="df_manual_custom">
+ 					<img src="<?php echo base_url() . $book["book_image"] ?>" class="card-img-top" width="100"
+ 						height="120" alt="<?php echo $book["book_title"] ?>">
+ 				</a>
+ 				<div class="card-body">
+ 					<h6><?php echo $str; //$book["book_title"] ?></h6>
+ 				</div>
+ 			</div>
+ 		</div>
+	<?php 
+	  }else{
 
    ?>
 
@@ -91,7 +118,7 @@ if ($book_category) {
  				</div>
  			</div>
  		</div>
- 		<?php }}?>
+ 		<?php }}}?>
 
  	</div>
  	<br /><br />
@@ -106,6 +133,7 @@ if ($book_category) {
 $autoload['libraries'] = array('session');
 $the_session           = array("course_id" => $_GET["book_category"]);
 $this->session->set_userdata($the_session);
+	  }
 ?>
 
 

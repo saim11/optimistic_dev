@@ -82,7 +82,7 @@ class Trainingfive extends CI_Controller {
                 'course_title'     => $_POST['updatedValue']
             );
             $q = $this->SqlModel->updateRecord($this->course_list, $updatedData, array($this->pKey=>$_POST['updateId']));
-            $this->fetchingRecordThree($q);
+            $this->fetchingRecordFive($q);
         }
     }
 
@@ -93,23 +93,24 @@ class Trainingfive extends CI_Controller {
 
         if($q!=""){
             $data['listing']=$this->SqlModel->getDoubleJoinRecords('trainer_books.book_id, books_sub_categories.book_subCategory_title,trainer_books.book_title, book_category.book_category_title ',$this->trainer_books, $this->books_sub_categories, "books_sub_categories.sub_cat_id=trainer_books.sub_cat_id",$this->tblName,"book_category.book_category_id=trainer_books.book_category_id");
-            $listing = array();
-            foreach ($data['listing'] as $value) {
-                $abc = array($value["book_id"],$value["book_title"],$value["book_subCategory_title"], $value["book_category_title"]);
-                array_push($listing, $abc);
-                }
-                    for ($x = 0; $x <= count($listing)-1; $x++) {
-                                echo "<tr>
-                                        <td>".$listing[$x][0]."</td>
-                                        <td>".$listing[$x][1]."</td>
-                                        <td>".$listing[$x][2]."</td>
-                                        <td>".$listing[$x][3]."</td>
-                                        <td><button type='button' class='btn btn-success' id=".$listing[$x][0]." onClick='myIdFive(this.id)'><a href=".base_url()."manage/pages/control/0/50/".$listing[$x][0].">Update</a></button></td>                                
-                                        <td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#deleteFive' id= ".$listing[$x][0]." onClick='myIdFive(this.id)'>Delete</button></td>
-                                    </tr>";
-                        }
-                        $this->session->set_flashdata('alert','deletesuccess');
-                        redirect(base_url().'manage/'.$this->controller.'/control/'.$parent_id.'/49','location'); 
+            print_r(json_encode(['data'=>$data['listing']]));
+            // $listing = array();
+            // foreach ($data['listing'] as $value) {
+            //     $abc = array($value["book_id"],$value["book_title"],$value["book_subCategory_title"], $value["book_category_title"]);
+            //     array_push($listing, $abc);
+            //     }
+            //         for ($x = 0; $x <= count($listing)-1; $x++) {
+            //                     echo "<tr>
+            //                             <td>".$listing[$x][0]."</td>
+            //                             <td>".$listing[$x][1]."</td>
+            //                             <td>".$listing[$x][2]."</td>
+            //                             <td>".$listing[$x][3]."</td>
+            //                             <td><button type='button' class='btn btn-success' id=".$listing[$x][0]." onClick='myIdFive(this.id)'><a href=".base_url()."manage/pages/control/0/50/".$listing[$x][0].">Update</a></button></td>                                
+            //                             <td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#deleteFive' id= ".$listing[$x][0]." onClick='myIdFive(this.id)'>Delete</button></td>
+            //                         </tr>";
+            //             }
+            //             $this->session->set_flashdata('alert','deletesuccess');
+            //             redirect(base_url().'manage/'.$this->controller.'/control/'.$parent_id.'/49','location'); 
             }
             else
                 {
@@ -121,19 +122,15 @@ class Trainingfive extends CI_Controller {
 
     public function Delete(){
         if(isset($_POST['deleteId'])){
-            $q = $this->SqlModel->deleteRecord($this->trainer_books , array($this->pKey=>$_POST['deleteId']));
-            $this->fetchingRecordFive($q);
-            
+            $filePathToUnlink = $this->SqlModel->getSingleField('book_file_path',$this->trainer_books,array($this->pKey=>$_POST['deleteId']));
+            $result = unlink(FCPATH.'/'.$filePathToUnlink);
+            if($result){
+                $q = $this->SqlModel->deleteRecord($this->trainer_books , array($this->pKey=>$_POST['deleteId']));
+                $this->fetchingRecordFive($q);
+            }
     }
     }
     
 }
 
-
 ?>
-
-
-
-
-
-

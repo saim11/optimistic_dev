@@ -8,8 +8,8 @@ var s = ""
 var l = `Hello ${s} how are you??`;
 var IconTick = 'data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAATCAYAAAB7u5a2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADpSURBVDhP3ZQtEoUgFIXZhct4kcgSiC8aXYJLIBpdgpFoJBqJRiORSDxP9M2IM/Izzli8M1A8891zjwDBg0UeZOOtcKOhlLpes80mGo / FSNRcQEbhBnYSoLSFivSJws3A0U5xcxuYEBBSgfXzpTAJFxvcYdHLuh91Aq + i8FvYJQN30B1D5d39IaVg3yTr3IXjf / kRxdrMupjn3X8W7kWHW58xAd2m0Og + AonfUgYPG + xgXxMEuQm3Y4NamtMpcDaIwY1o + ICz4nxoEtd / gawpKGNgF4tSjl7fzDx7 / QoEb324CkZPSR6N5QdImVqfbkGFCgAAAABJRU5ErkJggg =='
 var IconBlank = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAYAAAC0EpUuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhP7ZQhDsMwDEVzo8HAwMEcIbBH2BEMB3eEwsDCwEIfYTBwsPBtB4gzVVOjglkys56+/W07Dgh3AJPB0KqUUtqptdtgW2nNpChkA5rlShBlM9BNaJ0jt7UnZkUud3QvVL5BnWCVmEr/0I5TH6P2zvS1TKTc2cVtYYozVoVxUU9y8vgQCI30PvJQa0sZfaY/fJrBD+VsSt/rn6Q5x3b2AQAAAABJRU5ErkJggg=='
-var box1, box2, box3, box4, box5, box6 , box7, box8, box9, box10, box11, box12, box13, box14, box15, box16 ;
-box1= box2= box3= box4= box5= box6= box7= box8= box9= box10= box11= box12= box13= box14= box15= box16 = IconBlank;
+var box1, box2, box3, box4, box5, box6, box7, box8, box9, box10, box11, box12, box13, box14, box15, box16;
+box1 = box2 = box3 = box4 = box5 = box6 = box7 = box8 = box9 = box10 = box11 = box12 = box13 = box14 = box15 = box16 = IconBlank;
 
 
 let hello = () => {
@@ -164,27 +164,63 @@ let hello = () => {
     boxThirteen = document.getElementById('box13').checked;
     boxForteen = document.getElementById('box14').checked;
 
-    boxOne ? box1 = IconTick: box1= IconBlank;
+    boxOne ? box1 = IconTick : box1 = IconBlank;
     boxTwo ? box2 = IconTick : box2 = IconBlank;
-    boxThree ? box3 = IconTick: box3= IconBlank;
-    boxFour ? box4 = IconTick: box4= IconBlank;
-    boxFive ? box5 = IconTick: box5= IconBlank;
-    boxSix ? box6 = IconTick: box6= IconBlank;
-    boxSeven ? box7 = IconTick: box7= IconBlank;
-    boxEight ? box8 = IconTick: box8= IconBlank;
-    boxNine ? box9 = IconTick: box9= IconBlank;
-    boxTen ? box10 = IconTick: box10= IconBlank;
-    boxEleven ? box11 = IconTick: box11= IconBlank;
-    boxTwelve ? box12 = IconTick: box12= IconBlank;
-    boxThirteen ? box13 = IconTick: box13= IconBlank;
-    boxForteen ? box14 = IconTick: box14= IconBlank;
-
-
-
-    console.log(box2)
+    boxThree ? box3 = IconTick : box3 = IconBlank;
+    boxFour ? box4 = IconTick : box4 = IconBlank;
+    boxFive ? box5 = IconTick : box5 = IconBlank;
+    boxSix ? box6 = IconTick : box6 = IconBlank;
+    boxSeven ? box7 = IconTick : box7 = IconBlank;
+    boxEight ? box8 = IconTick : box8 = IconBlank;
+    boxNine ? box9 = IconTick : box9 = IconBlank;
+    boxTen ? box10 = IconTick : box10 = IconBlank;
+    boxEleven ? box11 = IconTick : box11 = IconBlank;
+    boxTwelve ? box12 = IconTick : box12 = IconBlank;
+    boxThirteen ? box13 = IconTick : box13 = IconBlank;
+    boxForteen ? box14 = IconTick : box14 = IconBlank;
 
 
     var docDefinition = {
+        // Footer Start
+        footer: function (currentPage, pageCount) {
+            return {
+
+                table: {
+
+                    widths: [60, 70, 350, 50],
+                    body: [
+                        [{ text: "", border: [false, false, false, false] }, { text: "", border: [false, true, false, false] }, { text: "Optimistic Futures Pty Ltd TOID:41053 | USI Permission Verification Form | V1.3 \n Updated DEC2017 | Responsibility Training Manager ", fontSize: 7, border: [false, true, false, false], }, { text: currentPage.toString(), alignment: 'center', fontSize: 9, color: 'white', fillColor: "green", border: [false, true, false, false] }]
+                    ]
+
+                },
+                layout: {
+                    // hLineColor: "#fff",
+                    // vLineColor: "#fff",
+                    paddingTop: function (i, node) { return 5; },
+                    paddingBottom: function (i, node) { return 5; },
+                    paddingRight: function (i, node) { return 2; },
+                    paddingLeft: function (i, node) { return 2; },
+
+                }
+            }
+        },
+        // Footer Closed
+
+        userPassword: '123',
+        ownerPassword: '123456',
+        permissions: {
+            printing: 'highResolution', //'lowResolution'
+            modifying: false,
+            copying: false,
+            annotating: true,
+            fillingForms: true,
+            contentAccessibility: true,
+            documentAssembly: true
+        },
+
+
+
+
         margin: [0, 0, 0, 0],
         content: [
             {
@@ -193,14 +229,14 @@ let hello = () => {
                 height: 70,
                 alignment: 'center'
             },
-            
+
             {
                 style: 'header',
                 table: {
                     widths: [498],
-                    
+
                     body: [
-                        [{ text: 'USI Permission and Verification Form', fillColor: '#4f6228', color:'white'},]
+                        [{ text: 'USI Permission and Verification Form', fillColor: '#4f6228', color: 'white' },]
                     ]
                 }
                 , layout: {
@@ -245,11 +281,6 @@ let hello = () => {
                 margin: [10, 0, 0, 7]
             },
 
-            {
-                text: 'You will need a USI when you enrol or re-enrol in training from 1 January 2015 if you are a:\n',
-                style: 'paragrapgh',
-                margin: [14, 0, 0, 0]
-            },
             {
                 style: 'paragrapgh',
                 margin: [14, 0, 0, 0],
@@ -614,7 +645,7 @@ let hello = () => {
                                             widths: [64, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 8,],
                                             body: [
                                                 [{ text: 'COUNTRY', margin: [0, 0, 0, 0], border: [false, false, false, false], }, { text: seventyThree, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false] }, { text: seventyFour, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: seventyFive, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: seventySix, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: seventySeven, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: seventyEight, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: seventyNine, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: eighty, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: eightyOne, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: eightyTwo, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: eightyThree, border: [false, false, false, false], fillColor: "white", }, { text: '', border: [false, false, false, false], margin: [0, 0, 0, 0] }, { text: eightyFour, border: [false, false, false, false], fillColor: "white", }, { text: '', margin: [20, 0, 12, 0], border: [false, false, false, false], }],
-                                       
+
                                             ]
                                         },
                                         layout: {
@@ -743,8 +774,8 @@ let hello = () => {
                                         layout: {
                                             paddingLeft: function (i, node) { return 7; },
                                             paddingRight: function (i, node) { return 8 },
-                                            paddingTop: function (i, node) { return 3; },
-                                            paddingBottom: function (i, node) { return 3; },
+                                            paddingTop: function (i, node) { return 7; },
+                                            paddingBottom: function (i, node) { return 7; },
                                             // fillColor: function (i, node) { return null; }
                                         }
                                     }
@@ -752,10 +783,8 @@ let hello = () => {
 
                             ],
                         ],
-
-                    }
-
-                    , layout: {
+                    },
+                    layout: {
                         // paddingLeft: function(i, node) { return 14; },
                         // paddingRight: function(i, node) { return 4; },
                         paddingTop: function (i, node) { return 9; },
@@ -816,7 +845,7 @@ let hello = () => {
                 {
                     style: 'tableExample',
                     color: 'red',
-                    text: "(IN WHICH YOU ARE STUDYING)",
+                    text: "(IF ALREADY OBTAINED)",
                     margin: [0, 2, 0, 3]
                 },
                 //Input Bar 10************************************
@@ -998,14 +1027,45 @@ let hello = () => {
                             },
                         ]
                     },
-                    { text: ' VET regulators to enable them to perform their VET regulatory functions;', margin: [0, 0, 0, 4], },
-                    { text: ' VET Admission Bodies for the purposes of administering VET and VET programs;', margin: [0, 0, 0, 4], },
-                    { text: ' Current and former Registered Training Organisations to enable them to deliver VET courses to the individual, meet their reporting obligations under the VET Standards and Government Contracts and assist in determining eligibility for training subsidies;', margin: [0, 0, 0, 4], },
-                    { text: ' School for the purposes of delivering VET courses to the individual and reporting on these courses;', margin: [0, 0, 0, 4], },
-                    { text: ' The National Centre for Vocational Education Research for the purposes of creating authenticated VET transcripts, resolving problems with USI’s and for the collection, preparation and auditing of national VET statistics;', margin: [0, 0, 0, 4], },
-                    { text: ' Researchers for education and training related research purposes; Any other person or agency that may be authorised or required by law to access the information;', margin: [0, 0, 0, 4], },
-                    { text: ' Any entity contractually engaged by the Student Identifiers Registrar to assist in the performance of his or her functions in the administration of the USI system; and', margin: [0, 0, 0, 4], },
-                    { text: ' Will not otherwise be disclosed without their consent unless authorised or required by or under law. The full copy of the Privacy Policy can be seen on this website http://USI.gov.au/Pages/privacy-policy.aspx. This site will also contain information on how to access and seek correction of the personal information held and how such complaints will be dealt with. In accordance with Section 11 of the Student Identifiers Act 2014, Optimistic Futures information which we collect from individuals solely for the purpose of applying for the student has made the application or the information is no longer needed for law to retain it. I have read and understood the privacy notice and I give my permission to Optimistic provided, to apply USI on my behalf, validate/verify my USI, disclose and use my view transcripts or extracts by using my USI.', margin: [0, 0, 0, 4], },
+                    {
+                        ul: [
+
+                            { text: ' VET regulators to enable them to perform their VET regulatory functions;', margin: [0, 0, 0, 4], listType: 'circle' },
+                        ]
+                    },
+                    {
+                        ul: [
+                            { text: ' VET Admission Bodies for the purposes of administering VET and VET programs;', margin: [0, 0, 0, 4], listType: 'circle' },
+                        ]
+                    },
+                    {
+                        ul: [
+                            { text: ' Current and former Registered Training Organisations to enable them to deliver VET courses to the individual, meet their reporting obligations under the VET Standards and Government Contracts and assist in determining eligibility for training subsidies;', margin: [0, 0, 0, 4], listType: 'circle' },
+                        ]
+                    },
+                    {
+                        ul: [
+                            { text: ' School for the purposes of delivering VET courses to the individual and reporting on these courses;', margin: [0, 0, 0, 4], listType: 'circle' }
+                        ]
+                    },
+                    {
+                        ul: [
+                            { text: ' The National Centre for Vocational Education Research for the purposes of creating authenticated VET transcripts, resolving problems with USI’s and for the collection, preparation and auditing of national VET statistics;', margin: [0, 0, 0, 4], listType: 'circle' }
+                        ]
+                    },
+                    {
+                        ul: [
+                            { text: ' Researchers for education and training related research purposes; Any other person or agency that may be authorised or required by law to access the information;', margin: [0, 0, 0, 4], listType: 'circle' }
+                        ]
+                    },
+                    {
+                        ul: [
+                            { text: ' Any entity contractually engaged by the Student Identifiers Registrar to assist in the performance of his or her functions in the administration of the USI system; and', margin: [0, 0, 0, 4], listType: 'circle' }
+                        ]
+                    },
+                    {
+                        text: ' Will not otherwise be disclosed without their consent unless authorised or required by or under law. \n\n\nThe full copy of the Privacy Policy can be seen on this website http://USI.gov.au/Pages/privacy-policy.aspx. This site will also contain information on how to access and seek correction of the personal information held and how such complaints will be dealt with. \n\n\nIn accordance with Section 11 of the Student Identifiers Act 2014, Optimistic Futures information which we collect from individuals solely for the purpose of applying for the student has made the application or the information is no longer needed for law to retain it. \n\n\nI have read and understood the privacy notice and I give my permission to Optimistic provided, to apply USI on my behalf, validate/verify my USI, disclose and use my view transcripts or extracts by using my USI.', margin: [0, 0, 0, 4]
+                    },
                 ],
             },
             '\n',
@@ -1322,22 +1382,22 @@ let hello = () => {
         },
     };
 
-    pdfMake.createPdf(docDefinition).download('USI_Form.pdf');
-    pdfMake.createPdf(docDefinition).getBase64(function(encodedString) {
-        pdf = encodedString;
-        $.ajax({
-            method: "POST",
-            url: "http://dev.softkodes.com/optimisticfuture/formEmail",
-            data: {form: pdf},
-          }).done(function(data){
-              console.log(data)
-          });
-    });
+    // pdfMake.createPdf(docDefinition).download('USI_Form.pdf');
+    // pdfMake.createPdf(docDefinition).getBase64(function (encodedString) {
+    //     pdf = encodedString;
+    //     $.ajax({
+    //         method: "POST",
+    //         url: "http://dev.softkodes.com/optimisticfuture/formEmail",
+    //         data: { form: pdf },
+    //     }).done(function (data) {
+    //         console.log(data)
+    //     });
+    // });
 
     // "http://dev.softkodes.com/optimisticfuture/formEmail"
     // <?php echo "'". base_url()."'" ?>+"trainingtwo/updatedVal"
 
     // download the PDF
     // Open the pdf in new window
-    // pdfMake.createPdf(docDefinition).open();
+    pdfMake.createPdf(docDefinition).open();
 }

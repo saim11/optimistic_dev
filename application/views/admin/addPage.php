@@ -1,5 +1,7 @@
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <?php 
 // Flash Messages Started..
+
 
 if($alert=="success") { ?>
  <div class="row alertrow">
@@ -44,6 +46,10 @@ if($alert=="success") { ?>
 		<div class="alert alert-danger"><strong>Error!!</strong> Some fields are missing to be filled.</div>
 	</div>
 </div>
+<style>
+th.dt-center, td.dt-center { text-align: center; }
+</style>
+
 <?php 
 // Flash Messages End  
 }?>
@@ -148,7 +154,7 @@ $crumb2 = "";
 					
 						<div class="col-sm-8" style="padding-left:0px;">
 						<?php 
-		 					if($tbl_data['page_id'] != 50 ) {
+		 					if($tbl_data['page_id'] != 50 && $tbl_data['page_id'] != 45 && $tbl_data['page_id'] != 46 && $tbl_data['page_id'] != 49 ) {
 						?>
 								<label class="control-label">Slug :</label><br clear="all" />
 							<div class="pull-left">
@@ -351,12 +357,22 @@ for (var i = 0; i < doc.length; i++) {
 
 function addCategory(elementId){
 	val = document.getElementById(elementId).value;
+	var form = new FormData(); 
+	var oFReader = new FileReader();
+	oFReader.readAsDataURL($('#addCatLvl2').prop('files')[0]);
+	val2 = $('#addCatLvl2').prop('files')[0];
+    form.append('image', val2);
+    form.append('action', val);
+    form.append('elementId', elementId);
 	$.ajax({
     url : <?php echo "'". base_url()."'" ?>+"training/index",
 	type : "POST",
-	cache: false,
-	data : {"action": val, "elementId":elementId},
+	data : form ,
+	contentType: false,
+    cache: false,
+    processData: false,
     success : function(data) {
+		console.log(data);
 		document.getElementById(elementId).value = "";
 		splittingData(data);
     },
@@ -368,8 +384,22 @@ function addCategory(elementId){
 }
 function splittingData(data){
 	if(data){
-		$('#table').html(data);
-		// console.log(data) ;
+		// $('#table').html(data);
+		console.log($('#categoryA').DataTable());
+		$('#categoryA').DataTable().ajax.reload();
 	}
 }
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
 </script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->

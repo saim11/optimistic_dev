@@ -1,5 +1,5 @@
 
-<!-- <?php print_r ($fetch_rec[0]["book_category_title"]);echo count($fetch_rec); ?> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 
 <table class="tableTwo">
 					<hr />
@@ -21,19 +21,19 @@
     				</tbody>
 				  </table>
 			       <hr />
-				<table class="table table-dark">
+				<table id ="categoryB" class="table table-striped table-bordered">
 					<thead class="table-primary" style="background-color:#32CD32">
 					<tr>
 						<th>#</th>
-						<th>Child Category Title</th>
-						<th>Category Title</th>
+						<th>Main Course</th>
+						<th>Course Units</th>
 						<th>Update</th>
 						<th>Delete</th>
 					</tr>
-					</thead>
-					<tbody id ="table">
-					</tbody>
-</table>
+				</thead>
+				<tfoot id ="table">
+				</tfoot>
+				</table>
 <script type="text/javascript">
 
 $( document ).ready(function() {
@@ -42,7 +42,7 @@ $( document ).ready(function() {
 	type : "POST",
 	cache: false,
     success : function(data) { 
-		splittingData(data);
+		$('#categoryB').DataTable().ajax.reload();
 	},
     error : function(data) {
         console.log("error in Loading page!!", data);
@@ -68,7 +68,7 @@ function addCategoryB(elementId){
 	data : {"action": val, 'catSelected' : catSelected  ,"elementId":elementId},
     success : function(data) {
 		document.getElementById(elementId).value = "";
-		splittingData(data);
+		$('#categoryB').DataTable().ajax.reload();
     },
     error : function(data) {
         console.log("error in add page Ajax Function!", data);
@@ -78,7 +78,8 @@ function addCategoryB(elementId){
 }
 function splittingData(data){
 	if(data){
-		$('#table').html(data);
+		$('#categoryB').DataTable().ajax.reload();
+		// $('#table').html(data);
 	}
 }
 
@@ -123,9 +124,9 @@ function updatedValTwo(status){
 		cache: false,
 		data : {"updateId": id, "updatedValue":catName },
 		success : function(data) { 
-			splittingData(data);
 			console.log("Update Value!"+data);
 			$('#confirmTwo').modal('hide');
+			$('#categoryB').DataTable().ajax.reload();
 		},
 		error : function(data) {
 			console.log("Error in add page Ajax Function!", data);
@@ -158,7 +159,7 @@ function deleteRecordTwo(status)
 	cache: false,
 	data : {"deleteId": id},
     success : function(data) { 
-		splittingData(data);
+		$('#categoryB').DataTable().ajax.reload();
 		$('#deleteTwo').modal('hide');
 		console.log("Delete function successful!");
 	},
@@ -227,3 +228,38 @@ function deleteRecordTwo(status)
 	</div>
 	
    <!--End Modal Box Pop Up -->
+
+   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready( function () {
+    $('#categoryB').DataTable({
+		// processing: true,
+    	// serverSide: true,
+		ajax:<?php echo "'". base_url()."'" ?>+"trainingtwo/fetchingRecordTwo",
+		columnDefs: [
+            { 
+                targets: 3,
+                render: function(data, type, row, meta){
+                   return "<td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#confirmTwo' id="+row['sub_cat_id']+" onClick='myCatTwo(this.id)'>Update</button></td>";  
+                }
+            },            
+            { 
+                targets: 4,
+                render: function(data, type, row, meta){
+                   return "<td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#deleteTwo' id="+row['sub_cat_id']+" onClick='myIdTwo(this.id)'>Delete</button></td>";  
+                }
+            },
+			{"className": "dt-center", "targets": "_all"}            
+        ],
+		columns:[
+			{ data: 'sub_cat_id' },
+        	{ data: 'book_category_title' },
+        	{ data: 'book_subCategory_title' },
+			
+		]
+	});
+});
+</script>
+

@@ -189,7 +189,7 @@
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active"> <a class="nav-link" href="student-info.html">Student Information<span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item"> <a class="nav-link" href="application-form.html">Application Forms</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="application-form.html">Application Form</a> </li>
               <li class="nav-item"> <a class="nav-link" href="details-and-schedule.html">Details and Schedule</a> </li>
               <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses</a>
@@ -380,7 +380,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-12">
-        <h2 class="heading mb-3">Early Childhood Education</h2>
+        <h2 class="heading mb-3">Early Childhood Educations</h2>
         <p>
         <a href="#" role="button" class="btn smoothscroll pb_outline-light p-3 rounded-0 pb_font-13 pb_letter-spacing-2 top_btn_css">Check Details</a>
                 <a href="#" role="button" class="btn smoothscroll pb_outline-light p-3 rounded-0 pb_font-13 pb_letter-spacing-2 top_btn_css">Apply Now</a>

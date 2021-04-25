@@ -25,7 +25,6 @@ h3 a {
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-
                 <aside class="blog">
                     <div class="post_image">
                         <a href="single_blog.html"><img src="./uploads/pages/mobile_login_banner.jpg"></a>
@@ -43,13 +42,7 @@ h3 a {
                             seven courses to offer to students in the fields that are in high demand in Australia.
                         </p>
                     </div>
-                    <!-- <div class="post_location">
-                        <h3>melbourne, shelovesdata, tableau</h3>
-                    </div> -->
                 </aside>
-
-
-
             </div>
         </div>
     </div>

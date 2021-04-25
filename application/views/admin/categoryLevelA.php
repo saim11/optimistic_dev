@@ -1,24 +1,29 @@
 
-<table class="table">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">  
+				<table  class="table">
     				<tbody>
 						<tr>
-							<td><input type="text" name="addCatLvl1" id="addCatLvl1"  class="form-control " placeholder="Add Main Category of Books" data-validate="require,maxlength[250]"/></td>
-							<td><button type="button"   id="addCatLvl1" class="btn btn-success" onClick="addCategory(this.id)" >Add</button></td>
+						<form method="post" action="" enctype="multipart/form-data" id="catForm">
+							<td><input type="text" name="addCatLvl1" id="addCatLvl1"  class="form-control " placeholder="Add Course of Books" data-validate="require,maxlength[250]"/></td>
+							<td><input type="file" name="addCatLvl2" id="addCatLvl2"  class="form-control"  data-validate="require"/></td>
+							<td><button type="button" id="addCatLvl1" class="btn btn-success" onClick="addCategory(this.id);" >Add</button></td>
+						</form>
 						</tr>
     				</tbody>
 				  </table>
 			       <hr />
-				<table class="table table-dark">
-					<thead class="table-primary" style="background-color:#32CD32" >
+					<table id ="categoryA" class="table table-striped table-bordered">
+					<thead class="table-primary">
 					<tr>
 						<th>#</th>
-						<th>Category Title</th>
-						<th>Update</th>
-						<th>Delete</th>
+						<th>Course Title</th>
+						<!-- <th></th>
+						<th></th> -->
 					</tr>
 					</thead>
-					<tbody id ="table">
-					</tbody>
+					<tfoot id ="table">
+					</tfoot>
 </table>
 
 
@@ -62,28 +67,36 @@
   
 
 
-
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script type="text/javascript">
 
-$( document ).ready(function() {
-	var x = <?php echo "'". base_url()."'" ?>;
-	console.log(<?php echo "'". base_url()."'" ?>+"training/fetchingRecord");
-	$.ajax({
-    url : <?php echo "'". base_url()."'" ?>+"training/fetchingRecord",
-	type : "POST",
-	cache: false,
-    success : function(data) { 
-		splittingData(data);
-	},
-    error : function(data) {
-        console.log("error in Reloading page!!", data);
-    }
+
+$(document).ready( function () {
+    $('#categoryA').DataTable({
+		// processing: true,
+    	// serverSide: true,
+		ajax:<?php echo "'". base_url()."'" ?>+"training/fetchingRecord",
+		columnDefs: [
+            { 
+                // targets: 2,
+                // render: function(data, type, row, meta){
+                //    return "<td><button type='button' class='btn btn-primary' data-toggle='modal' data-target='#confirm' id="+row['book_category_id']+" onClick='myCat(this.id)'>Update</button></td>";  
+                // }
+            },            
+            { 
+                // targets: 3,
+                // render: function(data, type, row, meta){
+                //    return "<td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#delete' id="+row['book_category_id']+" onClick='myId(this.id)'>Delete</button></td>";  
+                // }
+            },
+			{"className": "dt-center", "targets": "_all"}            
+        ],
+		columns:[
+			{ data: 'book_category_id' },
+        	{ data: 'book_category_title' },
+        	
+			
+		]
 	});
 });
-
-function splittingData(data){
-	if(data){
-		$('#table').html(data);
-	}
-}
 </script>

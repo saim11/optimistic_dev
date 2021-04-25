@@ -28,6 +28,16 @@ $this->session->set_userdata($the_session);
 	  <link rel="stylesheet" href="/resources-Images/resource-main.css">
 
 
+<style>
+.card{
+    border:none;
+}
+.card-body-title{
+    text-align:center;
+}
+</style>      
+
+
 <script src="<?php echo FRONTEND_ASSETS; ?>js/pdfobject.js"></script>
 <div class="clearfix"></div>
 
@@ -47,6 +57,11 @@ $this->session->set_userdata($the_session);
 
 <div class="container gallery-container">
 <?php
+if(!$this->session->userdata('user_id'))
+{
+    $this->session->set_userdata('error_from_php', 'Login required !');           // checking is activation code available or not
+    redirect('login.html');
+}else{
 $whereArray     = array('book_category_id' => $_GET["book_category"], 'book_category_status' => 1);
 $book_categorys = $this->general_model->getResultDynamic('books_sub_categories', $whereArray);
 $cat_id         = $book_categorys[0]['book_category_id'];
@@ -70,15 +85,15 @@ if ($book_categorys) {
             <br/><br/><br/>
         <div class="card" >
             <a href="<?php echo base_url() . 'course_list.html?book_sub_category=' . $book_category["sub_cat_id"]; ?>">
-                <img src="<?php echo base_url() . $book_category["book_category_image"] ?>" class="card-img-top" src="img_avatar1.png" alt="Card image" width="200" height="200">
+                <img src="<?php echo base_url() . $book_category["book_category_image"] ?>" class="card-img-top" src="img_avatar1.png" alt="Card image" width="170" height="170">
             </a>
             <div class="card-body">
-            <h4>
+            <h6 class="card-body-title">
                     <?php
 echo $book_category["book_subCategory_title"];
   $_GET["book_category"];
   ?>
-        </h4>
+        </h6>
             <h1>
                 <?php $_GET["book_category"]?>
             </h1>
@@ -90,6 +105,7 @@ echo $book_category["book_subCategory_title"];
             </div>
 
             <?php }}
+}
 ?>
         </div>
 

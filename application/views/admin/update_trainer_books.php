@@ -34,27 +34,78 @@
 						</tr>
 						<br/>
 						<tr>
+										<?php 
+												$resources=FALSE;
+												$assessment=FALSE;
+												$learner_guide=FALSE;
+												$placement_documents=FALSE;
+												$marking_guide=FALSE;
+												if('1' == $trainer_books['content_id'] ){
+													$resources=TRUE;
+													$assessment=FALSE;
+													$learner_guide=FALSE;
+													$placement_documents=FALSE;
+													$marking_guide=FALSE;
+												}
+												if('2' == $trainer_books['content_id'] ){
+													$resources=FALSE;
+													$assessment=TRUE;
+													$learner_guide=FALSE;
+													$placement_documents=FALSE;
+													$marking_guide=FALSE;
+												}
+												if('3' == $trainer_books['content_id'] ){
+													$resources=FALSE;
+													$assessment=FALSE;
+													$learner_guide=TRUE;
+													$placement_documents=FALSE;
+													$marking_guide=FALSE;
+												}
+												if('4' == $trainer_books['content_id'] ){
+													$resources=FALSE;
+													$assessment=FALSE;
+													$learner_guide=FALSE;
+													$placement_documents=TRUE;
+													$marking_guide=FALSE;
+												}
+												if('5' == $trainer_books['content_id'] ){
+													$resources=FALSE;
+													$assessment=FALSE;
+													$learner_guide=FALSE;
+													$placement_documents=FALSE;
+													$marking_guide=TRUE;
+												}
+												$resources=array('id'=>'1','name'=>'radio', 'value'=>'1', 'checked'=>$resources);
+												$assessment=array('id'=>'2','name'=>'radio', 'value'=>'2', 'checked'=>$assessment);
+												$learner_guide=array('id'=>'3','name'=>'radio', 'value'=>'3', 'checked'=>$learner_guide);
+												$placement_documents=array('id'=>'4','name'=>'radio', 'value'=>'4', 'checked'=>$placement_documents);
+												$marking_guide=array('id'=>'5','name'=>'radio', 'value'=>'5', 'checked'=>$marking_guide);
+												?>
 						<label>Select Trainer books folder:</label>
-						<td width="250">
+						<td width="150">
 						<?php
-						$question = FALSE;
-						$answer = FALSE;
-						if('1' == $trainer_books['content_id'] ){
-							$question = TRUE;
-							$answer=FALSE;
-						}
-						if('2' == $trainer_books['content_id'] ){
-							$answer= TRUE;
-							$question = FALSE;
-						}
-						$questions=array('id'=>'1','name'=>'radio', 'value'=>'1', 'checked'=> $question);
-						$answers=array('id'=>'2','name'=>'radio', 'value'=>'2','checked'=> $answer);
-							echo form_radio($questions)."Questionnaires";  
+							echo form_radio($resources)."Resources";  
 						?>
+						
 						</td>
-  						<td >
+  						<td width="150">
 						  <?php
-						  	echo  form_radio($answers)."Answers";
+						  	echo  form_radio($assessment)."Assesment";
+						  ?>
+						</td>
+						<td width="150">
+						  <?php
+						  	echo  form_radio($learner_guide)."Learner Guide";
+						  ?>
+						</td>
+						<td width="200">
+						  <?php
+						  	echo  form_radio($placement_documents)."Placement Documents";
+						  ?>
+						</td>
+						<td width="150">
+						  <?php
+						  	echo  form_radio($marking_guide)."Marking Guide";
 						  ?>
 						</td>
 						</tr>

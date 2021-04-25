@@ -1,34 +1,27 @@
-
 <!-- Header files -->
-        <!-- Animate.css -->
-        <!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
-        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
-        <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
-        <!-- All pages css -->
-        <!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css" rel="stylesheet">
-        <link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
-        <link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
-        <link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
-		<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
+<!-- Animate.css -->
+<!-- <link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>css/animate.css">
+<link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/normalize.css">
+<link rel="stylesheet" href="<?php echo FRONTEND_ASSETS; ?>steps/css/jquery.steps.css"> -->
+<!-- All pages css -->
+<!-- <link href="<?php echo FRONTEND_ASSETS; ?>css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo FRONTEND_ASSETS; ?>css/style-student-profile-form.css"
+rel="stylesheet">
+<link href="<?php echo FRONTEND_ASSETS; ?>css/styles.css?2" rel="stylesheet">
+<link href="<?php echo FRONTEND_ASSETS; ?>css/jquery.fancybox.css?1" rel="stylesheet">
+<link href="<?php echo FRONTEND_ASSETS; ?>css/media_queries.css" rel="stylesheet"> -->
+<link href="<?php echo FRONTEND_ASSETS; ?>front-pages/old_pages_css/style.css" rel="stylesheet">
 
-    <!-- End header Files -->
+<!-- End header Files -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 <!-- Bootstrap -->
-
 <!-- <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/bootstrap.min.css" rel="stylesheet">
-
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/style-student-profile-form.css" rel="stylesheet">
-
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/styles.css?2" rel="stylesheet">
-
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/jquery.fancybox.css?1" rel="stylesheet">
-
 <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/css/media_queries.css" rel="stylesheet">         -->
-
-
 
 <!-- Animate.css -->
 
@@ -47,2637 +40,3089 @@
 <!-- WEB FONT -->
 
 <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,500' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-<link href='https://fonts.googleapis.com/css?family=Raleway:500,600,800,400' rel='stylesheet' type='text/css'>    
-
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <style>
-.top_social , .top_social > a {
-	padding: 0px !important;
-	margin: 0px !important;
+.border-bottom-only {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+    border-radius: 0px;
+}
+
+.border-bottom-only:hover {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.top_social,
+.top_social>a {
+    padding: 0px !important;
+    margin: 0px !important;
 
 }
-.top_social > a {
-margin:2% 1% 2% 1% !important;
-display: inline-block ;
+
+.top_social>a {
+    margin: 2% 1% 2% 1% !important;
+    display: inline-block;
 }
+
 .nav {
     padding: 0px;
     margin: -5px;
 }
+.font26 {
+    font-size:26px !important;
+    font-weight: 1200 !important;
+}
+.btncircleMange {
+    padding: 2px !important;
+
+}
+.saveButton{
+    z-index:0 !important;
+    padding-top:300px !important;
+    padding-bottom:400px !important;
+}
 </style>
-<script>
-	
-	function submitForm(){
-		console.log("submitted");
-		$.ajax({
-	    	type: 'POST',
-	    	data: {form_submitted: "Submitted"},
-	    	url: '<?php echo site_url('ApplicationForms/form_apply3_submitted')?>',
-	    	success: function(result){
-	    		alert("form submitted");
-	    		window.location.replace('<?php echo base_url("application-form.html") ?>');
-	    	},
-	    	error: function(err){
-	    		alert("Form not submit please try again");
-	    	}
-	    });
-	}
 
-</script>
-
+<!-- <script>
+function submitForm() {
+    console.log("submitted");
+    $.ajax({
+        type: 'POST',
+        data: {
+            form_submitted: "Submitted"
+        },
+        url: '<?php echo site_url('
+            ApplicationForms / form_apply3_submitted ') ?>',
+        success: function(result) {
+            alert("form submitted");
+            window.location.replace(
+                '<?php echo base_url("application-form.html") ?>');
+        },
+        error: function(err) {
+            alert("Form not submit please try again");
+        }
+    });
+}
+</script> -->
 
 <!--our satisfied customer Start -->
 <div class="osc">
-  <div class="ocs_sub"> 
-    <!--Carousel Wrapper-->
-    	<img src="<?php echo FRONTEND_ASSETS; ?>images/slider_login.jpg" class="img-fluid" alt="Responsive image">
-    <!--/.Carousel Wrapper--> 
-  </div>
-  <!-- ocs_sub--> 
+    <div class="ocs_sub">
+        <!--Carousel Wrapper-->
+        <img src="<?php echo FRONTEND_ASSETS; ?>images/slider_login.jpg" class="img-fluid" alt="Responsive image">
+        <!--/.Carousel Wrapper-->
+    </div>
+    <!-- ocs_sub-->
 </div>
-<!-- osc--> 
+<!-- osc-->
+
 <!-- Head_Titles Closed -->
+<section  class="Section_Devs Welcome_Classic Optim-Form0s">
+    <div  class="container" style="background-color: white; ">
+        <form method="post" action="<?php echo site_url('ApplicationForms/form_apply3_enrolmentCourse2 '); ?>" id="formSubmit">
+        <div class="row">
+        <div class='col-md-11' id="pdfdownload">
+            <!-- first row start -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-center">
+                        <h1 class="display-4"><strong>ENROLMENT AGREEMENT FORM</strong></h1>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <h5 style="margin-top:-14px;" class="ml-2"><strong>OPTIMISTIC FUTURES PTY LTD TOID: 41053</strong></h5>
+                    </div>
+                    <h3  class="text-dark bg-white p-0 font26">STUDENT INFORMATION SHEET</h3>
+                    <strong>Please read this Information Sheet before completing the Application Form.</strong>
+                    <p>An Application Form is required to be completed as part of the Enrolment Process into any
+                        qualifcation. All sections
+                        <strong> MUST </strong> be answered.
+                        <strong> Your application cannot proceed without its completion. </strong></p>
+                    <p>A Language, Literacy and Numeracy Test & Pre-Training Review will be conducted as part of the
+                        Application Process. Student
+                        who are enrolling in government subsidised training are required to complete eligibility form
+                        and other relevant paper
+                        work as required by relevant funding contract.</p>
+                    <p>Optimistic Futures Pty Ltd encourages Recognition of Prior Learning and recognizes
+                        qualifications and statement of Attainment
+                        issued by other RTOs for credit transfer purposes.</p>
 
-<section class="Section_Devs Welcome_Classic Optim-Form0s">
-		<div id="divtoconvert" class="container" style="background-color: white; ">
-			<div class="row Add_details">
-				<div class="col-md-12">
-					<h2>STUDENT INFORMATION SHEET</h2>
-					<p>Please read this Information Sheet before completing the Application Form. An Application Form is required to be completed
-						as part of the Enrolment Process into any qualification. All sections MUST be answered. Your application cannot proceed
-						without its completion.</p>
+                    <p>This form is to be completed by
+                        <strong>the student</strong>. Student may ask questions from the concerned staff if need any
+                        help in completing this form.</p>
 
-					<p>A Language, Literacy and Numeracy Test & Pre-Training Review will be conducted as part of the Application Process.</p>
+                    <p>As part of the enrolment process all Optimistic Futures - Authorised Delegates will ensure that
+                        applicants are aware of the
+                        consequences arising from a false, misleading or an incomplete declaration, including the
+                        possible withdrawal of any
+                        government subsidised training offer and/or the cancellation of enrolment.</p>
+                </div>
+            </div>
 
-					<p>Optimistic Futures Pty Ltd encourages Recognition of Prior Learning, and recognizes qualifications and statement of
-						Attainment issued by other RTOs for credit transfer purposes.
-					</p>
-				</div>
-
-				<div class="col-md-12 col-sm-12 Contact_Add Appy-formy">
-					<form id="contactForm" method="post" action="" class="validate">
-
-						<h3>Detail of Fees (Subject to change without notification)</h3>
-						
-						<table class="table table-bordered table-responsive">
-							<thead>
-								<tr>
-									<th scope="col">Qualification</th>
-									<th scope="col">Concession Card Holder Fee (20% of the standard Tuition Fee)</th>
-									<th scope="col">No Concession Card or Job Seeker Fee</th>
-									<th scope="col">Job Seeker with referral</th>
-									<th scope="col">Government Contribution (Approximate)</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>CHC30113 Certificate III in Early Childhood Education and Care</td>
-									<td>Tuition=$30.00</td>
-									<td>Tuition=$150.00</td>
-									<td>Tuition=$150.00</td>
-									<td>$6216</td>
-								</tr>
-								<tr>
-									<td>CHC30113 Diploma of Early Childhood Education and Care</td>
-									<td>Tuition=$30.00</td>
-									<td>Tuition=$150.00</td>
-									<td>Tuition=$150.00</td>
-									<td>$11748</td>
-								</tr>
-								<tr>
-									<td>CPP20212 Certificate II in Security Operations</td>
-									<td>Tuition=$24.00</td>
-									<td>Tuition=$120.00</td>
-									<td>Tuition=$120.00</td>
-									<td>$2190</td>
-								</tr>
-								<tr>
-									<td>CPP30411 Certificate III in Security Operations</td>
-									<td>Tuition=$24.00</td>
-									<td>Tuition=$120.00</td>
-									<td>Tuition=$120.00</td>
-									<td>$2028</td>
-								</tr>
-								<tr>
-									<td>CHC33015 Certificate III in individual Support</td>
-									<td>Tuition=$30.00</td>
-									<td>Tuition=$150.00</td>
-									<td>Tuition=$150.00</td>
-									<td>$6077</td>
-								</tr>
-							</tbody>
-						</table>
-
-						<p>Note:</p>
-						<p>
-							the above fees include student amenities and services
-							<br> all fees are paid upon enrolments
-							<br> the above fees are inclusive of GST
-							<br> The student tuition fees are indicative only and subject to change given individual circumstances at enrolment</p>
-
-						<p>If you are going through a financial hardship and you wish to waive the tuition fees please fill in the hardship form
-							for consideration.</p>
-
-						<p>Note: For detailed information regarding fees please refer to our statement of fees.</p>
-
-						<p>This form is to be completed by an Authorised Delegate at Optimistic Futures to establish whether students who enquire
-							about completing a qualification - meet the eligibility requirements for government subsidised training under the
-							Skills First Program.</p>
-
-						<p>As part of the enrolment process all Optimistic Futures - Authorised Delegates will ensure that applicants are aware
-							of the consequences arising from a false, misleading or an incomplete declaration, including the possible withdrawal
-							of any government subsidised training offer and/or the cancellation of enrolment.</p>
-
-						<h2>1. Qualification Information</h2>
-						<p>General information and individual brochures on Optimistic Futures qualifications are available on our website http://www.optimisticfutures.com.au
-							or from reception at any of the Optimistic Futures Office.</p>
-						<p>After you have selected a qualification for application, attempted LLN test and the Pre-Training Review: Complete all
-							Parts of this application form:</p>
-
-						<p>
-							A - Personal and statistical details;
-							<br> B - Self declaration
-							<br> C – Optimistic Futures - Authorised Delegate Declaration
-						</p>
-
-						<p>
-							<strong>Note: The ‘Optimistic Futures Student Information Handbook’ should be read and understood prior to completing the
-								Application Form</strong>
-						</p>
-
-						<h2>2. Supporting Documentation</h2>
-						<p>Supporting documentation will be required in determining qualification entry requirements, funding eligibility, fees
-							and fee concessions and to support a Credit transfer/RPL request.</p>
-
-						<p>Original documents will be returned but a copy of all documentation will be retained.</p>
-
-						<p>Once completed, this form and the associated declarations are to be placed in the students file.</p>
-
-						<h2>3. Funding Eligibility - Skills First Program</h2>
-						<p>The Skills First Program provides subsidised training for people who do not hold a post-school qualification or who
-							want to gain a higher-level qualification than they already hold.</p>
-						<p>Eligibility for government funded subsidised training will be assessed according to specific eligibility requirements.</p>
-
-						<h2>4. Fee Types</h2>
-						<p>Fees for both Government Funded qualifications and Fee for Service qualifications will be assessed and levied on the
-							basis of information supplied by the Applicant.</p>
-
-						<h2>5. Victorian Student Number (VSN)</h2>
-						<p>The VSN is a student identification number that is assigned by the Department of Education and Early Childhood Development
-							to all students in government and non-government schools, and students in Vocational Education and Training institutions.
-							The number, which is unique to each student, is a key identifier on a student’s school records, and will remain with
-							the student throughout his or her education, until reaching the age of 25. The VSN is nine digits long, randomly assigned,
-							and tied to identifying information about the student (name, gender and date of birth). The Education and Training
-							Reform Act 2006 requires Optimistic Futures to collect and disclose your personal information for a number of purposes
-							including the allocation to you of a Victorian Student Number and updating your personal information on the Victorian
-							Student Register.</p>
-
-						<h2>6.A Unique Student Identifier (USI)</h2>
-						<p>Is a reference number made up of numbers and letters that gives students access to their USI account. A USI will allow
-							an individual's USI account to be linked to the National Vocational Education and Training (VET) Data Collection allowing
-							an individual to see all of their training results from all providers including all completed training units and qualifications.
-							The Student Identifiers Act 2014, Standards for NVR Registered Training Organisations (RTO) 2014 and Student Identifiers
-							Regulation 2014 require that the training Organisation: Collect a USI from each student, verify a USI supplied by
-							a student and ensure a student has a valid USI before conferring a qualification or statement of attainment on that
-							student. As of 1 January 2015, students will need to give their USI to each new training Organisation they enroll
-							with. This will normally happen at enrolment</p>
-
-						<h2>7. NCVER Survey:</h2>
-						<p>National Centre of Vocational Education Research may in the duration of your studies contact you to participate in
-							a survey which may include the following:</p>
-
-						<p>An invitation to participate in a Department endorsed project:</p>
-
-						<p>An invitation to participate in the Department’s annual student outcome survey:</p>
-
-						<p>Contacted by the Department (or persons authorised by the Department) for audit, review or investigation purposes.</p>
+            <!-- question 1 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">1.<strong class="pl-3">Qualification and Short Courses Information</strong></p>
+                    <div style="margin-left:43px;">
+                        <p>Currently, Optimistic Futures Pty Ltd is delivery following Government qualifications under Skills first program. </p>
+                        <strong> Qualification: </strong>
+                        <p>Please tick the relevant qualification you intend to enrol in.</p>
+                        <figure>
+                            <table class="table table-bordered opt-centered">
+                                <tbody>
+                                    <tr>
+                                        <th>Fee for Service</th>
+                                        <th>Government Subsidised</th>
+                                        <th>Code</th>
+                                        <th>Title</th>
+                                    </tr>
+                                    <?php 
+                                    if (isset($form_apply3['quatification_courses'])) {
+                                        $IsCheckQualification = json_decode($form_apply3['form3']['qualification'], true);
+                                        $isCheckedfos = '';
+                                        $isCheckedgs  = '';
 
 
-						<h3>COURSE OF ENROLMENT</h3>
+                                        foreach($form_apply3['quatification_courses'] as $qCourse) {
+                                            // $isCheckedCode = (array_key_exists($qCourse['code'],$IsCheckQualification))? 'checked' : NULL;
+                                            // var_dump($isCheckedcode, array_key_exists($qCourse['code'],$IsCheckQualification)); die;
+                                            // var_dump($isCheckedcode);
+                                            //  foreach(json_decode($form_apply3['form3']['qualification'])  as $key => $qua_value){
+                                            //     $isCheckedfos = ($key == $qCourse['code'] && $qua_value->fee_for_service == true)? 'checked': null;
+                                            //     $isCheckedgs  = ($key == $qCourse['code'] && $qua_value->govt_subsidised == true)? 'checked': null;
+                                            // }
+                                        
+                                            $isCheckedfos = ($IsCheckQualification[$qCourse['code']]['fee_for_service'] == true)? 'checked': NULL;
+                                            $isCheckedgs  = ($IsCheckQualification[$qCourse['code']]['gov_subsidised'] == true)? 'checked': NULL;
+                                           
 
-						<table class="table table-bordered opt-centered">
-							<tbody>
-									<tr>
-										<th>Tick</th>
-										<th>Code</th>
-										<th>Title</th>
-									</tr>
-								<?php 
-									$enrolCoursesChecked = explode(",", $form_apply3['enrol']['enrollment_course']);
-									$courses = $form_apply3['courses'];
+                                                    echo '<tr> 
+                                                            <td>';
+                                                                if ($qCourse['fee_for_service'] == true) {
+                                                                echo    '<div class="checkbox">
+                                                                            <input '.$isCheckedfos.' class="form-check-input  qualificationlimit anyTwo checkOne '.$qCourse['code'].'" name="qualification['.$qCourse['code'].'][fee_for_service]" data-checklimit=".qualificationlimit" data-target=".'.$qCourse['code'].'"  type="checkbox"  value="ture">
+                                                                        </div>';
+                                                                } else {    echo 'X';  }
+                                                    echo    '</td>
+                                                            <td>';
+                                                                if ($qCourse['govt_subsidised'] == true) {
+                                                                    echo    '<div class="checkbox">
+                                                                                <input '.$isCheckedgs.' class="form-check-input qualificationlimit anyTwo checkOne '.$qCourse['code'].'" name="qualification['.$qCourse['code'].'][gov_subsidised]" data-checklimit=".qualificationlimit" data-target=".'.$qCourse['code'].'"   type="checkbox"  value="false">
+                                                                            </div>';
+                                                                } else {    echo 'X';   }
+                                                            echo '</td>
+                                                            <td> ' . $qCourse['code'] . '</td>
+                                                            <td> ' . $qCourse['title'] . '</td>
+                                                        </tr>';
+                                            }
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                            <figcaption class="text-center ">
+                                <small>
+                                    <strong> X Not being offered as a Government subsidised course.</strong>
+                                </small>
+                            </figcaption>
+                        </figure>
 
-									$enrolInputNum=1;
-									$enrolLabelNum=1;
-									foreach ($courses as $cour) {
-										$checked="";
-										if(in_array($cour['code'], $enrolCoursesChecked)){
-											$checked = "checked";
-										}
-									?>
-										<tr>
-											<td>
-												<div class="checkbox">
-													<input id="box<?php echo $enrolInputNum++ ?>" class="changeOption enrolment_course" name="enrolment_course[]" value="<?php echo $cour['code'] ?>" <?php echo $checked ?> type="checkbox" />
-													<label for="box<?php echo $enrolLabelNum++ ?>"></label>
-												</div>
-											</td>
-											<td><?php echo $cour['code'] ?></td>
-											<td><?php echo $cour['title'] ?></td>
-										</tr>
-									<?php
-										}
-									?>
-							</tbody>
-						</table>
+                        <strong> Short Courses and Skills Set: </strong>
+                        <p>Please tick the relevant Short course you intend to enrol in.</p>
+                        <figure>
+                            <table class="table table-bordered opt-centered">
+                                <tbody>
+                                    <tr>
+                                        <th>Fee for Service</th>
+                                        <th>Government Subsidised</th>
+                                        <th>Code</th>
+                                        <th>Title</th>
+                                    </tr>
+                                    <?php
+                                    $shortCourseSkill = json_decode($form_apply3['form3']['short_courses'], true);
+                                    if (isset($form_apply3['coursesShortAndSkillSet'])) {
+                                        foreach ($form_apply3['coursesShortAndSkillSet'] as $qCourse) {
 
-						<div class="form-group">
-							<label class="col-sm-3">Mode of Study:</label>
-							<div class="col-sm-9">
+                                           
+                                        $isCheckedShortCoursefos = ($shortCourseSkill[$qCourse['code']]['fee_for_service'] == true)? 'checked': NULL;
+                                        $isCheckedShortCoursegs  = ($shortCourseSkill[$qCourse['code']]['gov_subsidised'] == true)? 'checked': NULL;
+                                         
 
-								<?php 
-									$modeOfStudyChecked = explode(",", $form_apply3['enrol']['mode_of_study']);
-									$modeOfStudy = $form_apply3['modeOfStudy'];
-									// print_r($modeOfStudyChecked);
-									$modeInputNum=8;
-									$modeLabelNum=8;
-									foreach ($modeOfStudy as $mode) {
-										$checked="";
-										if(in_array($mode, $modeOfStudyChecked)){
-											$checked="checked";
-										}
-									?>
+                                        echo    '<tr>
+                                                    <td>';
+                                                        if ($qCourse['fee_for_service'] == true) {
+                                                            echo '<input '.$isCheckedShortCoursefos.' class="form-check-input" name="short_courses['.$qCourse['code'].'][fee_for_service]"  type="checkbox"  value="ture">';
+                                                        } else {    echo 'X'; }
+                                        echo        '</td>
+                                                    <td>';
+                                                        if ($qCourse['govt_subsidised'] == true) {
+                                                            echo '<input '.$isCheckedShortCoursegs.' class="form-check-input"  type="checkbox"  value="false">';
+                                                        } else {echo 'X';}
+                                            echo    '</td>
+                                                    <td> ' . $qCourse['code'] . '</td>
+                                                    <td> ' . $qCourse['title'] . '</td>
+                                                </tr>';
+                                        }
+                                    } ?>
+                                </tbody>
+                            </table>
+                            <figcaption class="text-center ">
+                                <small>
+                                    <strong> X Not being offered as a Government subsidised course.</strong>
+                                </small>
+                            </figcaption>
+                        </figure>
 
-									<div class="Office-checks">
-										<div class="checkbox">
-											<input id="box<?php echo $modeInputNum++ ?>" class="changeOption mode_of_study" name="mode_of_study[]" value="<?php echo $mode; ?>" type="checkbox" <?php echo $checked ?>/>
-											<label for="box<?php echo $modeLabelNum++ ?>"><?php echo $mode; ?></label>
-										</div>
-									</div>
 
-								<?php
-									}
-								?>
-							</div>
-						</div>
+                        <p>General information and individual brochures including statements of fees on Optimistic Futures
+                            qualifications are available
+                            on our website http://www.optimisticfutures.com.au or can be obtained from reception at any of
+                            the Optimistic Futures
+                            Office</p>
+                        <p>All Parts of this application form shall be completed after you have selected a qualification
+                            for application, attempted
+                            LLN test and completed Pre-Training Review.</p>
+                        <p><i><strong>Note: The ‘Optimistic Futures Student Information Handbook’should be read and understood
+                                prior to completing the Application
+                                Form</strong></i></p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 1 end -->
 
-						<br class="clearfix">
-						<h3>PERSONAL DETAILS (Legal name as per photo ID, which will need to be sighted to verify legal name)</h3>
-						<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label class="col-sm-2">Title:</label>
-								<div class="col-sm-10">
-									<?php 
-										$titleChecked = explode(",", $form_apply3['enrol']['title']);
-										$titles = $form_apply3['title'];
+            <!-- question 2 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">2.<strong class="pl-3">Supporting Documentation</strong></p>
+                    <div style="margin-left:43px;">
+                        <p>Supporting documentation will be required in determining qualification entry requirements,
+                            funding eligibility, fees and fee concessions and to support a Credit transfer/RPL request.</p>
+                        <p>Original documents will be returned but a copy of all documentation will be retained.</p>
+                        <p>Once completed, this form and the associated declarations are to be placed in the students file.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 2 end -->
 
-										$titleInputNum = 13;
-										$titleLabelNum = 13;
+             <!-- question 3 -->
+             <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">3.<strong class="pl-3">Fee Types</strong></p>
+                    <div style="margin-left:43px;">
+                        <p>We offer both Fee for service and Government subsidised courses. Student enrolling in government
+                            subsidised courses are required to complete Skills First eligibility form along with these documents.</p>
+                        <p>Student Fees for both Government Funded qualifications and Fee for Service qualifications will
+                            be assessed and levied on the basis of information supplied by the Applicant.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 3 end -->
 
-										foreach ($titles as $title) {
-											$checked="";
+            <!-- question 4 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">4.<strong class="pl-3">Funding Eligibility - Skills First Program</strong></p>
+                    <div style="margin-left:43px;">
+                        <p>The Skills First Program provides subsidised training for people who do not hold a post-school
+                            qualification or who want to gain a higher-level qualification than they already hold.</p>
+                        <p>Eligibility for government funded subsidised training will be assessed according to specific
+                            eligibility requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 4 end -->
 
-											if(in_array($title, $titleChecked)){
-												$checked="checked";
-											}
-										?>
-										<div class="Office-checks">
-											<div class="checkbox">
-												<input id="box<?php echo $titleInputNum++ ?>" class="changeOption title" name="title[]" value="<?php echo $title; ?>" type="checkbox" <?php echo $checked ?>/>
-												<label for="box<?php echo $titleLabelNum++ ?>"><?php echo $title; ?></label>
-											</div>
-										</div>
-									<?php
-										}
-									?>
-								</div>
-							</div>
-						</div>
+             <!-- question 5 -->
+             <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">5.<strong class="pl-3">Victorian Student Number (VSN)</strong></p>
+                    <div style="margin-left:43px;">
+                        <p>
+                            The VSN is a student identification number that is assigned by the Department of Education and
+                            Early Childhood Development to all students in government and non-government schools, and students in Vocational Education
+                            and Training institutions. The number, which is unique to each student, is a key identifier on a studenƚ͛s school records,
+                            and will remain with the student throughout his or her education, until reaching the age of 25. The VSN is nine
+                            digits long, randomly assigned, and tied to identifying information about the student (name, gender and date of birth). The
+                            Education and Training Reform Act 2006 requires Optimistic Futures to collect and disclose your personal information
+                            for a number of purposes including the allocation to you of a Victorian Student Number and updating your personal
+                            information on the Victorian Student Register.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 5 end -->
 
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label class="col-sm-2">Gender:</label>
-								<div class="col-sm-10">
-									<?php
-										$genderChecked = explode(",", $form_apply3['enrol']['gender']);
-										$genders = $form_apply3['gender'];
+            <!-- question 6 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">6.<strong class="pl-3">A Unique Student Identifier (USI)</strong></p>
+                    <div style="margin-left:43px;">
+                        <p> Is a reference number made up of numbers and letters that gives students access to their USI account. A USI will
+                            allow an individual's USI account to be linked to the National Vocational Education and Training (VET) Data Collection
+                            allowing an individual to see all of their training results from all providers including all completed training units and
+                            qualifications. The Student Identifiers Act 2014, Standards for NVR Registered Training Organisations (RTO) 2014
+                            and Student Identifiers Regulation 2014 require that the training Organisation: Collect a USI from each student,
+                            verify a USI supplied by a student and ensure a student has a valid USI before conferring a qualification or statement
+                            of attainment on that student. As of 1 January 2015, students will need to give their USI to each new training
+                            Organisation they enroll with. This will normally happen at enrolment</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 6 end -->
 
-										$genderInputNum = 17;
-										$genderLabelNum = 17;
-										foreach ($genders as $gender) {
-											$checked="";
-											if(in_array($gender, $genderChecked)){
-												$checked="checked";
-											}
-											?>
-											<div class="Office-checks">
-												<div class="checkbox">
-													<input id="box<?php echo $genderInputNum++; ?>" class="changeOption gender" type="checkbox" name="gender[]" value="<?php echo $gender; ?>" <?php echo $checked; ?> />
-													<label for="box<?php echo $genderLabelNum++; ?>"><?php echo $gender; ?></label>
-												</div>
-											</div>
+            <!-- question 7 -->
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">7.<strong class="pl-3">Surveys</strong></p>
+                    <div style="margin-left:43px;">
+                    <p>You may be contacted to participate in a survey conducted by NCVER or a Department-endorsed
+                        project, audit or review relating to your training. This provides valuable feedback on the delivery of VET programs in Victoria.</p>
+                    <p>Please note you may opt out of the NCVER survey at the time of being contacted.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 7 end -->
 
-									<?php		
-										}
-									?>
-								</div>
-							</div>
-						</div>
+             <!-- question 8 -->
+             <div class="row">
+                <div class="col-md-12">
+                    <p class="h2">8.<strong class="pl-3">Consequence of not provide complete information:</strong></p>
+                    <div style="margin-left:43px;">
+                    <p>Failure to provide your personal information may mean that it is not possible for you to enrol
+                        in VET and/or to obtain a Victorian Government VET subsidy.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- question 8 end -->
 
+
+
+            <!-- second row start -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="bg-dark text-white my-2">PART A : PERSONAL AND STATISTICAL DETAILS</h3>
+
+                    <!-- row mode of study -->
+                    <div class="pl-5">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <strong>Mode of Study:</strong>
+                            </div>
+                            <div class="col-md-10">
+                                <?php
+                                    $isCheckedStudyMode = $form_apply3['form3']['mode_of_study'];
+                                    $mode_of_study        = $form_apply3['mode_of_study'];
+                                    foreach ($mode_of_study as $studymode) {
+                                        $checkedModeOfStudy = ($isCheckedStudyMode == $studymode)? 'checked': null;
+                                    echo '<div class="form-check form-check-inline">
+                                             <input data-target=".studyMode" name="mode_of_study" ' . $checkedModeOfStudy . ' class="form-check-input pr-3 checkOne studyMode" type="checkbox"  value="' . $studymode . '">
+                                             <label data-target=".studyMode" class="form-check-label checkOne studyMode" >' . $studymode . '</label>
+                                         </div>';    }?>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row mode of study end -->
+
+                    <!-- personal details -->
+                    <h3 class="text-white bg-dark">PERSONAL DETAILS (Legal name as per photo ID, which will need to be sighted to verify legal
+                        name)</h3>
+
+                    <!-- row title and gender -->
+                    <div class="pl-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="col-6">
+                                        <strong class="pr-3">Title:</strong>
+                                        <span class="text-secondary"> (please tick one) </span>
+                                    </div>
+                                    <?php
+                                    $isCheckedGenderTitle = $form_apply3['form3']['gender_title'];
+                                    $gendertitle          = $form_apply3['gender_type'];
+                                    foreach ($gendertitle as $g_title) {
+                                        $IsCheckedGender = ($g_title == $isCheckedGenderTitle) ? 'checked' : '';
+                                    echo'<div class="form-check form-check-inline">
+                                            <input data-target=".genderTitle" name="gender_title" ' . $IsCheckedGender . ' class="form-check-input checkOne genderTitle" type="checkbox"  value="' . $g_title . '">
+                                            <label data-target=".genderTitle" class="form-check-label checkOne genderTitle" >' . $g_title . '</label>
+                                        </div>';    }?>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="col-6">
+                                        <strong class="pr-3">Gender:</strong>
+                                        <span class="text-secondary"> (please tick one) </span>
+
+                                    </div>
+                                    <?php
+                                    $isCheckedGender = $form_apply3['form3']['gender'];
+                                    $gendertitle     = $form_apply3['gender'];
+                                    foreach ($gendertitle as $g_title) {
+                                        $checked = ($g_title == $isCheckedGender) ? 'checked' : '';
+                                    echo'<div class="form-check form-check-inline">
+                                            <input data-target=".gender" name="gender" ' . $checked . ' class="form-check-input checkOne gender" type="checkbox"  value="' . $g_title . '">
+                                            <label data-target=".gender" class="form-check-label checkOne gender" >' . $g_title . '</label>
+                                         </div>';   } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row title and gender end -->
+
+                    <!-- row first and middle name -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">First Name:</strong>
+                                    <input type="text" name="first_name"
+                                        value="<?php echo $form_apply3['form3']['first_name'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Middle Name:</strong>
+                                    <input type="text" name="middle_name"
+                                        value="<?php echo $form_apply3['form3']['middle_name'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  row first and middle name end -->
+
+                    <!-- row last name and dateOfbirth -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Last Name:</strong>
+                                    <input type="text" name="last_name"
+                                        value="<?php echo $form_apply3['form3']['last_name'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Date of Birth:</strong>
+                                    <input type="date" name="data_of_birth"
+                                        value="<?php echo $form_apply3['form3']['data_of_birth'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row last name and dateOfbirth -->
+
+                    <!--  row residential start -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-2">Residential Address:</strong>
+                                    <input type="text" name="residential_address"
+                                        value="<?php echo $form_apply3['form3']['residential_address'] ?>"
+                                        class="form-control border-bottom-only col-10"
+                                       >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  row residential end -->
+
+
+                    <!-- row town state postcode -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="d-flex">
+                                    <strong class="pl-3 pt-2 col-5">Suburb/Town:</strong>
+                                    <input type="text" name="town"
+                                        value="<?php echo $form_apply3['form3']['town'] ?>"
+                                        class="form-control border-bottom-only col-8" >
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">State:</strong>
+                                    <input type="text" name="state" value="<?php echo $form_apply3['form3']['state'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-4">Postcode:</strong>
+                                    <input type="text" name="postal_code"
+                                        value="<?php echo $form_apply3['form3']['postal_code'] ?>"
+                                        class="form-control border-bottom-only col-8" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row last name and dateOfbirth -->
+
+                    <!--  row emergency details -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-2">Postal Address:</strong>
+                                    <input type="text" name="postal_address"
+                                        value="<?php echo $form_apply3['form3']['postal_address'] ?>"
+                                        class="form-control border-bottom-only col-10">
+                                </div>
+                                    <span style="margin-left:300px;" class='text-muted'>only if different from Residential Address</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  row Postal end -->
+
+                    <!-- row town state postcode -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="d-flex">
+                                    <strong class="pl-3 pt-2 col-5">Home phone:</strong>
+                                    <input type="text" name="phone_number"
+                                        value="<?php echo $form_apply3['form3']['phone_number'] ?>"
+                                        class="form-control border-bottom-only col-8" >
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Mobile:</strong>
+                                    <input type="text" name="mobile_number"
+                                        value="<?php echo $form_apply3['form3']['mobile_number'] ?>"
+                                        class="form-control border-bottom-only col-9">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Fax:</strong>
+                                    <input type="text" name="fax" value="<?php echo $form_apply3['form3']['fax'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row last name and dateOfbirth -->
+
+
+                    <!--  row email method start -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-1">Email:</strong>
+                                    <input type="text" name="email" value="<?php echo $form_apply3['form3']['email'] ?>"
+                                        class="form-control border-bottom-only col-11" >
+                                </div>
+                                <div class="d-flex">
+                                    <strong class="pl-3 pt-2 col-4">Preferred method of contact:</strong>
+                                    <?php   $isCheckedPreferredMethod = $form_apply3['form3']['preferred_contact_method'];?>
+                                    <div class="form-check form-check-inline col-3">
+                                        <input name="preferred_contact_method" <?php echo ($isCheckedPreferredMethod == 'mobile_phone') ? 'checked' : ''; ?> data-target=".preferredContact" class="preferredContact checkOne  form-check-input"
+                                            type="checkbox" value="mobile_phone">
+                                        <label class="form-check-label" >Mobile/Home phone</label>
+                                    </div>
+                                    <div class="form-check form-check-inline col-3">
+                                        <input name="preferred_contact_method" <?php echo ($isCheckedPreferredMethod == 'email') ? 'checked' : ''; ?> data-target=".preferredContact" class="preferredContact checkOne form-check-input"
+                                            type="checkbox" value="email">
+                                        <label class="form-check-label" >Email</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  row email method  end -->
+
+                    <br class="clearfix">
+                    <h3 class="text-white bg-dark">EMERGENCY CONTACT DETAILS</h3>
+
+                    <!-- row name and relation -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-2">Name:</strong>
+                                    <input type="text" name="ec_name"
+                                        value="<?php echo $form_apply3['form3']['ec_name'] ?>"
+                                        class="form-control border-bottom-only col-10" >
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Relationship:</strong>
+                                    <input type="text" name="ec_relation"
+                                        value="<?php echo $form_apply3['form3']['ec_relation'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row name and relation -->
+
+                    <!-- row name and relation -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-4">Home Number:</strong>
+                                    <input type="text" name="ec_home_number"
+                                        value="<?php echo $form_apply3['form3']['ec_home_number'] ?>"
+                                        class="form-control border-bottom-only col-8">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Mobile:</strong>
+                                    <input type="text" name="ec_mobile_number"
+                                        value="<?php echo $form_apply3['form3']['ec_mobile_number'] ?>"
+                                        class="form-control border-bottom-only col-9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row name and relation -->
+
+                    <!--  row emergency details -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="d-flex justify-content-between">
+                                    <p class=" pl-3 pt-2 col-9">
+                                        <strong class="pr-4">In the event of an emergency, do you give the RTO permission to organise
+                                            emergency transport and treatment and agree to pay all costs related to the emergency?</strong>
+                                        <span class="text-secondary">(please tick one)</span>
+                                        <?php $isCheckedEmergencyPermision = $form_apply3['form3']['ec_emergency_preferred']; ?>
+                                    <div class="form-check form-check-inline ">
+                                        <input name="ec_emergency_preferred" <?php echo ($isCheckedEmergencyPermision == 'yes') ? 'checked' : ''; ?>class="form-check-input checkOne emregencyPermision" data-target=".emregencyPermision"
+                                            type="checkbox" value="no">
+                                        <label class="form-check-label" >Mobile/Home phone</label>
+                                    </div>
+                                    <div class="form-check form-check-inline ">
+                                        <input name="ec_emergency_preferred" <?php echo ($isCheckedEmergencyPermision == 'no')? 'checked' : ''; ?> class="form-check-input checkOne emregencyPermision" data-target=".emregencyPermision"
+                                            type="checkbox" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">Email</label>
+                                    </div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  row emergency details -->
+
+                    <br class="clearfix">
+                    <h3 class="text-white bg-dark">CONCESSION DETAILS</h3>
+
+                    <!-- row medicare -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-4">Medicare No:</strong>
+                                    <input type="text" name="c_medicare_no"
+                                        value="<?php echo $form_apply3['form3']['c_medicare_no'] ?>"
+                                        class="form-control border-bottom-only col-8">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Expiry date:</strong>
+                                    <input type="date" name="c_medi_expire_date"
+                                        value="<?php echo $form_apply3['form3']['c_medi_expire_date'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row medicare -->
+
+                    <!-- row name and relation -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-4">Concession card No:</strong>
+                                    <input type="text" name="c_concession_card"
+                                        value="<?php echo $form_apply3['form3']['c_concession_card'] ?>"
+                                        class="form-control border-bottom-only col-8">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex ">
+                                    <strong class="pl-3 pt-2 col-3">Expiry date:</strong>
+                                    <input type="date" name="c_concess_expire_date"
+                                        value="<?php echo $form_apply3['form3']['c_concess_expire_date'] ?>"
+                                        class="form-control border-bottom-only col-9" >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row name and relation -->
+
+                    <br class="clearfix">
+                    <h3 class="text-white bg-dark">UNIQUE STUDENT IDENTIFIER (USI)</h3>
+                    <div class="pl-4">
+                        <div class="row pl-3 ">
+                            <div class="col-md-7 col-7 col-sm-4">
+                                <p>I give permission for Optimistic Futures Pty Ltd to access my Unique Student
+                                    Identifier (USI) for the purpose of
+                                    recording my results.
+                                <p>
+                            </div>
+                            <div class="col-5 col-sm-4 col-md-5">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">USI:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="usi_name"
+                                            class="form-control border-left-0 border-top-0 border-right-0 border-bottom textChange required"
+                                             value="<?php echo $form_apply3['form3']['usi_name'] ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row pl-3 ">
+                            <div class="col-md-7 col-7 col-sm-4">
+                                <p>If I do not have a USI in place, I am willing for Optimistic Futures Pty Ltd to set
+                                    up my USI on my behalf.
+                                    <br />
+                                    <strong>*Please complete the USI form attached</strong>
+                                <p>
+                            </div>
+                            <div class="col-5 col-sm-4 col-md-5">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">Signature:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="usi_signature"
+                                            class="form-control border-left-0 border-top-0 border-right-0 border-bottom textChange required"
+                                             value="<?php echo $form_apply3['form3']['usi_signature'] ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br class="clearfix">
+                    <h3 class="text-white bg-dark">VICTORIAN STUDENT NUMBER (VSN)</h3>
+
+                    <div class="pl-4">
+                        <div class="row pl-3 ">
+                            <div class="col-md-6 col-6 col-sm-4">
+                                <p>If you are under 25 years of age ʹ you may have a VSN from pervious enrolment
+                                <p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-sm-2 col-form-label">VSN:</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="vsn_number"
+                                            class="form-control border-left-0 border-top-0 border-right-0 border-bottom textChange required"
+                                             value="<?php echo $form_apply3['form3']['vsn_number'] ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 ">
+                            <div class="col-md-6 col-6 col-sm-4">
+                                <p>If you do not know your VSN number, then please state your.
+                                <p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-6">
+                                <div class="form-group row">
+                                    <label for="twentyFive" class="col-sm-4 col-form-label">Previous School:</label>
+                                    <div class="col-8">
+                                        <input type="text" name="vsn_pervious_school"
+                                            class="form-control border-left-0 border-top-0 border-right-0 border-bottom textChange required"
+                                             value="<?php echo $form_apply3['form3']['vsn_pervious_school'] ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pl-3 ">
+                            <div class="col-md-6 col-6 col-sm-4">
+                                <p>If new to the education sector ʹ tick the ‘new’ box
+                                <p>
+                            </div>
+                            <div class="col-6 col-sm-4 col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input name="vsn_edu_sector" class="form-check-input changeOption newEducator" <?php echo ($form_apply3['form3']['vsn_edu_sector'] == 'new') ? 'checked' : ''; ?> type="checkbox" id="box21" value="new">
+                                    <label class="form-check-label" for="box21">New</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pl-3">
+                            <div class="col-md-12">
+                                <strong>This means you have never attended a Victorian School, TAFE or other Training
+                                    Provider and are over the age of 25
+                                    at the time of enrolment.</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br class="clearfix">
+                    <h3 class="text-white bg-dark">EMPLOYMENT</h3>
+
+                    <!-- row name and relation -->
+                    <div class="pl-4 pt-2">
+                        <div class="row">
+                            <div class="col-12">
+                                <ol type="A">
+                                    <?php
+                                        $employment_question = $form_apply3['employment_question'];
+                                        $questionNo = 'emp_ques_a';
+                                        $kecount = 1;
+
+                                        foreach ($employment_question as $em_key => $em_value) {
+                                        $em_count = 1;
+                                        ?>
+                                    <li class="pt-4">
+                                        <?php echo $em_key; ?>
+                                        <ol style="list-style-type: none;" class="pt-3">
+                                            <div class="row">
+                                                <?php
+                                                    $total_ans = count($em_value);
+                                                    $total     = ceil(12 / $total_ans);
+                                                    $totals    = ceil(12 / $total);
+                                                    $quest = 1;
+                                                    foreach ($em_value as $answere) {
+                                                    if ($em_count == 1 || $em_count == 4 || $em_count == 8 || $em_count == 12) {
+                                                       
+                                                        
+                                                    echo "<div class='col-md-" . $totals . "'>";}
+                                                    if($questionNo == 'emp_ques_a'){
+                                                        $checked = ($form_apply3['form3']['emp_ques_a'] == $answere)? 'checked': NULL;
+                                                     }else if($questionNo == 'emp_ques_b'){
+                                                         $checked = ($form_apply3['form3']['emp_ques_b'] == $answere)? 'checked': NULL;
+                                                     }else{
+                                                         $checked = ($form_apply3['form3']['emp_ques_c'] == $answere)? 'checked': NULL;
+                                                     }
+                                                    echo '   <li>
+                                                    <div class="form-check">
+                                                    <input name="'.$questionNo.'" '.$checked.' class="form-check-input checkOne '.url_title($em_key, 'dash', true).'" data-target=".'.url_title($em_key, 'dash', true).'"  type="checkbox" value="' . $answere . '">
+                                                    <label class="form-check-label">
+                                                    ' . $answere . '
+                                                    </label>
+                                                    </div>
+                                                    </li>';
+                                                    $em_count++;
+                                                    if ($em_count == 4 || $em_count == 8 || $em_count == 12) {echo "</div>"; }
+                                                    }?>
+                                            </div>
+                                        </ol>
+                                    </li>
+                                    <?php $kecount++; $questionNo = ($kecount == 2)? 'emp_ques_b' : 'emp_ques_c'; }?>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+<br class="clearfix">
+<h3 class="text-white bg-dark">EMPLOYMENT DETAILS (if applicable)</h3>
+
+<!-- row name and relation -->
+<div class="pl-4 pt-2">
+    <div class="row">
+        <div class="col-6">
+            <div class="d-flex ">
+                <strong class="pl-3 pt-2 col-3">Organisation:</strong>
+                <input type="text" name="ed_organisation"
+                    value="<?php echo $form_apply3['form3']['ed_organisation'] ?>"
+                    class="form-control border-bottom-only col-9">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="d-flex ">
+                <strong class="pl-3 pt-2 col-2">Expiry date:</strong>
+                <input type="date" name="ed_expire_date"
+                    value="<?php echo $form_apply3['form3']['ed_expire_date'] ?>"
+                    class="form-control border-bottom-only col-10">
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row">  
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>First Name:</label>
-								<input type="text" id="one" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['first_name'] ?>">
-							</div>
-						</div>
+<!-- row name and relation -->
 
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Middle Name:</label>
-								<input type="text" id="two" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['middle_name'] ?>">
-							</div>
-						</div>
+
+<!-- row name and relation -->
+<div class="pl-4 pt-2">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex ">
+                <strong class="pl-3 pt-2 col-1">Address:</strong>
+                <input type="text" name="ed_address"
+                    value="<?php echo $form_apply3['form3']['ed_address'] ?>"
+                    class="form-control border-bottom-only col-11">
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Last Name:</label>
-								<input type="text" id="three" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['last_name'] ?>">
-							</div>
-						</div>
- 
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Date of Birth:</label>
-								<input placeholde="1999-11-24" type="text" id="four" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['date_of_birth'] ?>">
-							</div>
-						</div>
+<!-- row name and relation -->
+
+
+<!-- row name and relation -->
+<div class="pl-4 pt-2">
+    <div class="row">
+        <div class="col-6">
+            <div class="d-flex ">
+                <strong class="pl-3 pt-2 col-3">Telephone:</strong>
+                <input type="text" name="ed_telephone"
+                    value="<?php echo $form_apply3['form3']['ed_telephone'] ?>"
+                    class="form-control border-bottom-only col-9">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="d-flex ">
+                <strong class="pl-3 pt-2 col-2">ABN:</strong>
+                <input type="text" name="ed_abn"
+                    value="<?php echo $form_apply3['form3']['ed_abn'] ?>"
+                    class="form-control border-bottom-only col-10">
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row">    
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>Residential Address:</label>
-								<input type="text" id="five" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['residential_address'] ?>">
-							</div>
-						</div>
+<!-- row name and relation -->
+
+<br class="clearfix">
+<h3 class="text-white bg-dark">SCHOOLING</h3>
+
+<!-- row name and relation -->
+<div class="pl-4 pt-2">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex ">
+                <p class="pl-3 pt-2 ">What is your highest COMPLETED school Level:
+                    <span class="pl-3 text-secondary"> Tick ONE box only</span>
+                </p>
+            </div>
+            <div class="pl-3 pt-2">
+                <div class="row">
+                    <?php
+    $school_equ = $form_apply3['school_equivalent'];
+    $count      = 0;
+    foreach ($school_equ as $key => $eq) {
+    if ($count == 0 || $count == 2 || $count == 4) {
+        echo '<div class="col-md-4">';
+    }
+    //  '   <div class="col-md-4">'
+        $checkeSchl =  ($key == $form_apply3['form3']['sch_grade_level'])? 'checked' : NULL;
+        echo '
+        <div class="form-check">
+        <input class="form-check-input checkOne Schoolequva " '.$checkeSchl.' data-target=".Schoolequva" name="sch_grade_level"  type="checkbox" value="' . $key . '">
+        <label class="form-check-label">
+        ' . $eq . '
+        </label>
+        </div>
+        ';
+    if ($count == 1 || $count == 3 || $count == 5) {echo '</div>';}
+        $count++;
+    }
+?>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row">    						
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Suburb/Town:</label>
-								<input type="text" id="six" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['subrub_town'] ?>">
-							</div>
-						</div>
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>State:</label>
-								<input type="text" id="seven" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['state'] ?>">
-							</div>
-						</div>
+<!-- row name and relation -->
 
- 
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Postcode:</label>
-								<input type="text" id="eight" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['post_code'] ?>">
-							</div>
-						</div>
-</div > 		
-<div class="row"> 				
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>Postal Address:</label>
-								<input type="text" id="nine" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['postal_address'] ?>">
-							</div>
-						</div>
-					</div> 		
-
-					<div class="row"> 
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Home phone:</label>
-								<input type="text" id="ten" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['home_phone'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Mobile:</label>
-								<input type="text" id="eleven" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['mobile'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Fax:</label>
-								<input type="text" id="twelve" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['fax'] ?>">
-							</div>
-						</div>
-					</div> 			
-
-					<div class="row"> 
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Email:</label>
-								<input type="text" id="thirteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['email'] ?>">
-							</div>
-						</div>
-						
-						<!-- preferred method of contact-->
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label class="col-sm-12">Preferred Method of contact:</label>
-								<div class="col-sm-10">
-									
-									<?php 
-										$methodOfContactChecked = explode(",", $form_apply3['enrol']['method_of_contact']);
-										$methodOfContacts = $form_apply3['method_of_contact'];
-
-										$methodOfContactInputNum = 19;
-										$methodOfContactLabelNum = 19;
-										foreach ($methodOfContacts as $methodOfContact) {
-											$checked="";
-											if(in_array($methodOfContact, $methodOfContactChecked)){
-												$checked="checked";
-											}
-											?>
-											<div class="Office-checks">
-												<div class="checkbox">
-													<input id="box<?php echo $methodOfContactInputNum++ ?>" class="changeOption methodOfContact" type="checkbox" name="methodOfContact[]" value="<?php echo $methodOfContact; ?>" <?php echo $checked; ?> />
-													<label for="box<?php echo $methodOfContactLabelNum++ ?>"><?php echo $methodOfContact; ?></label>
-												</div>
-											</div>
-
-									<?php		
-										}
-									?>
-									
-									<!-- <div class="Office-checks">
-										<div class="checkbox">
-											<input id="box19" class="changeOption methodOfContact" type="checkbox" name="methodOfContact[]" value="Mobile/Home phone">
-											<label for="box19">Mobile/Home phone</label>
-										</div>
-									</div>
-
-									<div class="Office-checks">
-										<div class="checkbox">
-											<input id="box20" class="changeOption methodOfContact" type="checkbox" name="methodOfContact[]" value="Email">
-											<label for="box20">Email</label>
-										</div>
-									</div> -->
-
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-
-						<br class="clearfix">
-						<h3>EMERGENCY CONTACT DETAILS</h3>
-						
-					<div class="row">  						
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Name:</label>
-								<input type="text" id="forteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_name'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Relationship:</label>
-								<input type="text" id="fifteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_relationship'] ?>">
-							</div>
-						</div>
-					</div>
-					<div class="row">  
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Home Number:</label>
-								<input type="text" id="sixteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_home_number'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Mobile:</label>
-								<input type="text" id="seventeen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emerg_mobile'] ?>">
-							</div>
-						</div>
-</div> 
-<div class="col-sm-12">
-	<div class="form-group">
-		<div class="col-sm-9">
-			<label>In the event of an emergency, do you give the RTO permission to organise emergency transport and treatment and agree
-										to pay all costs related to the emergency? (please tick one)</label>
-								</div>
-								<div class="col-sm-3">
-									<?php 
-										$RTOpermissionSelected = explode(",", $form_apply3['enrol']['emerg_rto_permission']);
-										$RTOpermissions = array("Yes", "No");
-										
-										$RTOInputNum = 21;
-										$RTOLabelNum = 21;
-										foreach ($RTOpermissions as $RTOpermission) {
-											$checked="";
-											if(in_array($RTOpermission, $RTOpermissionSelected)){
-												$checked="checked";
-											}
-											?>
-											<div class="row"> 
-											<div class="checkbox">
-												<input id="box<?php echo $RTOInputNum++?>" type="checkbox" class="RTOpermission changeOption" name="RTOpermission[]" value="<?php echo $RTOpermission; ?>" <?php echo $checked; ?>/>
-												<label for="box<?php echo $RTOLabelNum++?>"><?php echo $RTOpermission; ?></label>
-											</div>
-											</div> 
-
-									<?php		
-										}
-									?>
-								</div>
-							</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>CONCESSION DETAILS</h3>
-<div class="row"> 
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Medicare No:</label>
-								<input type="text" id="eighteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['con_medicare_no'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Expiry date:</label>
-								<input type="text" id="ninteen" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['con_mdicare_expiry_date'] ?>">
-							</div>
-						</div>
-</div> 
-<div class="row"> 
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Concession card No:</label>
-								<input type="text" id="twenty" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['con_card_no'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Expiry date:</label>
-								<input type="text" id="twentyOne" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['con_card_expiry_date'] ?>">
-							</div>
-						</div>
-</div> 
-						<br class="clearfix">
-						<h3>UNIQUE STUDENT IDENTIFIER (USI)</h3>
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<div class="col-sm-10">
-									<label>I give permission for Optimistic Futures Pty Ltd to access my Unique Student Identifier (USI) for the purpose of
-										recording my results.</label>
-								</div>
-								<div class="col-sm-6">
-									<label>USI</label>
-									<input type="text" id="twentyTwo" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['usi1'] ?>">
-									<br />
-								</div>
-							</div>
-						</div>
-
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<div class="col-sm-10">
-									<label>If I do not have a USI in place, I am willing for Optimistic Futures Pty Ltd to set up my USI on my behalf. 
-										<br/><br />*Please complete the USI form attached</label>
-								</div>
-								<div class="col-sm-6">
-									<label>Signature</label>
-									<input type="text" id="twentyThree" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['usi2'] ?>">
-									<br />
-								</div>
-							</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>VICTORIAN STUDENT NUMBER (VSN)</h3>
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<div class="col-sm-7">
-									<p>If you are under 25 years of age – you may have a VSN from pervious enrolment</p>
-								</div>
-								<div class="col-sm-5">
-									<label>VSN:</label>
-									<input type="text" id="twentyFour" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['vsn'] ?>">
-									<br />
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<div class="col-sm-7">
-									<p>If you do not know your VSN number, then please state your</p>
-								</div>
-								<div class="col-sm-5">
-									<label>your Previous School:</label>
-									<input type="text" id="twentyFive" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['vsn_previous_school'] ?>">
-									<br />
-								</div>
-							</div>
-						</div>
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<div class="col-sm-10">
-									<p>If new to the education sector – tick the ‘new’ box This means you have never attended a Victorian School, TAFE
-										or other Training Provider and are over the age of 25 at the time of enrolment.</p>
-								</div>
-								<div class="col-sm-2">
-									<?php 
-										$newEducatorSelected = $form_apply3['enrol']['new_Educator'];
-										$checked="";
-										if($newEducatorSelected == 'New'){
-											$checked="checked";
-										}
-									?>
-
-									<div class="checkbox">
-										<input id="box23" class="changeOption newEducator" type="checkbox" name="newEducator" value="New" <?php echo $checked; ?>/>
-										<label for="box23">New</label>
-									</div>
-
-								</div>
-							</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>EMPLOYMENT</h3>
-						<!-- Option A -->
-						<p><strong>A.</strong> &nbsp; Of the following categories, which BEST describes your current employment status? &nbsp; &nbsp; &nbsp; Tick ONE box only</p>
-						<div class="row">
-
-						<?php
-								$employmentStatusSelected = explode(',', $form_apply3['enrol']['employment_status']);
-								$employmentStatus = $form_apply3['employmentStatus'];
-								$num=0;
-								$empInput=24;
-								$empLable=24;
-								foreach ($employmentStatus as $status) {  
-									if ($num == 0 || $num == 4){?>
-									<div class="col-sm-6">
-									<?php } ?>
-									<!-- check selected value in array -->
-									<?php
-										$checked="";
-										if(in_array($status, $employmentStatusSelected)){
-											$checked="checked";
-										}
-									?>
-								 	<div class="checkbox">
-										<input id="box<?php echo $empInput++; ?>" type="checkbox" class="changeOption chb_emp_status employmentStatus" name="employmentStatus[]" value="<?php echo $status; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $empLable++; ?>"><?php echo $status; ?></label>
-									</div>
-
-									<?php if ($num == 3 || $num == 7){?> </div> <?php } ?>
-								 	<?php
-								 	$num++;
-								 } 
-							?>
-								<script>
-									$(".chb_emp_status").change(function()
-										{
-											$(".chb_emp_status").prop('checked',false);
-											$(this).prop('checked',true);
-										});
-								</script>
-							</div> <br/>
-							
-							<!-- Option B -->
-							<p><strong>B.</strong> &nbsp; Which of the following classification BEST describes your current or recent occupation? &nbsp; &nbsp; &nbsp; Tick ONE box only</p>
-							<div class="row">
-
-								<?php 
-									$employmentStatus_BSelected = explode(',', $form_apply3['enrol']['employment_status_B']);
-									$employmentStatus_B = $form_apply3['employmentStatus_B'];
-									$num=0;
-									foreach($employmentStatus_B as $status_B){
-										if ($num == 0 || $num == 4 || $num == 7){?>
-											<div class="col-sm-4">
-											<?php } ?>
-											<!-- check selected value in array -->
-											<?php
-												$checked="";
-												if(in_array($status_B, $employmentStatus_BSelected)){
-													$checked="checked";
-												}
-											?>
-											<div class="checkbox">
-												<input id="box-<?php echo $status_B; ?>" type="checkbox" class="changeOption chb_emp_status_b employmentStatus_B" name="employmentStatus_B[]" value="<?php echo $status_B; ?>" <?php echo $checked; ?>/>
-												<label for="box-<?php echo $status_B; ?>"><?php echo $status_B; ?></label>
-											</div>
-		
-										<?php if ($num == 3 || $num == 6 || $num == 8){?> </div> <?php } ?>
-										<?php
-										$num++;
-									}
-
-								?>
-								<script>
-									$(".chb_emp_status_b").change(function()
-										{
-											$(".chb_emp_status_b").prop('checked',false);
-											$(this).prop('checked',true);
-										});
-								</script>
-							</div>
-
-							<!-- Option C -->
-							<p><strong>C.</strong> &nbsp; Which of the following classification BEST describes the industry of your current or previous Employer? &nbsp; &nbsp; &nbsp; Tick ONE box only </p>
-							<div class="row">
-							
-							</div>
-
-
-						<br class="clearfix">
-						<h3>EMPLOYMENT DETAILS (if applicable)</h3>
-				<div class="row">
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Organisation:</label>
-								<input type="text" id="twentySix" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_organization'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Position:</label>
-								<input type="text" id="twentySeven" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_position'] ?>">
-							</div>
-						</div>
-				</div>
-				<div class="row">
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>Address:</label>
-								<input type="text" id="twentyEight" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_address'] ?>">
-							</div>
-						</div>
-				</div>
-				<div class="row">		
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>Telephone:</label>
-								<input type="text" id="twentyNine" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_telephone'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>ABN:</label>
-								<input type="text" id="thirty" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['emp_abn'] ?>">
-							</div>
-						</div>
-				</div>		
-
-						<br class="clearfix">
-						<h3>SCHOOLING</h3>
-						<p>What is your highest COMPLETED school Level:</p>
-						<div class="row">
-						<?php
-							$highestCompletedSchoolSelected = explode(',', $form_apply3['enrol']['highest_completed_school']);
-							$highestCompletedSchool = $form_apply3['highestCompletedSchool'];
-							// print_r($highestCompletedSchool);
-							$num=0;
-							$comInput=32;
-							$comLable=32;
-							foreach ($highestCompletedSchool as $completedSchool) {
-								if ($num == 0 || $num == 2 || $num == 4){?>
-									<div class="col-sm-4">
-									<?php } ?>
-									<!-- check selected value in array -->
-									<?php 
-										$checked="";
-										if(in_array($completedSchool, $highestCompletedSchoolSelected)){
-											$checked="checked";
-										}
-									?>
-
-									<div class="checkbox">
-										<input id="box<?php echo $comInput++ ?>" type="checkbox" class="changeOption highestCompletedSchool" name="highestCompletedSchool[]" value="<?php echo $completedSchool; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $comLable++ ?>"><?php echo $completedSchool; ?></label>
-									</div>
-
-									<?php if ($num == 1 || $num == 3 || $num ==  5){?> </div> <?php } ?>
-								 	<?php
-								 	$num++;
-							}
-						?>
-						</div>
-						<div class="row">
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>In which YEAR did you complete that Schooling Level:(e.g. 2008, 2005 etc)</label>
-								<input type="text" id="thirtyOne" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['year_school_completed'] ?>">
-							</div>
-						</div>
-						</div>
-
-<div class="row">
-						<div class="col-sm-4">
-							<p>Are you still attending secondary school?</p>
-						</div>
-						<div class="col-sm-8">
-							<div class="row">
-							<?php 
-								$attendSecondarySchoolSelected = explode(',', $form_apply3['enrol']['attend_secondary_school']);
-								$attendSecondarySchool = $form_apply3['attendSecondarySchool'];
-								$attInput=38;
-								$attLable=38;
-								foreach ($attendSecondarySchool as $attendSchool) {
-									$checked=""; 
-									if(in_array($attendSchool, $attendSecondarySchoolSelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="col-sm-6">
-										<div class="checkbox">
-											<input id="box<?php echo $attInput++; ?>" type="checkbox" class="changeOption attendSecondarySchool" name="attendSecondarySchool[]" value="<?php echo $attendSchool; ?>" <?php echo $checked; ?>/>
-											<label for="box<?php echo $attLable++; ?>"><?php echo $attendSchool; ?></label>
-										</div>
-									</div>
-									<?php
-								}
-								?>
-							</div>
-						</div>
+<div class="pl-3 pt-2">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex">
+                <p class="pl-3 pt-2 ">In which YEAR did you complete that Schooling
+                    Level:
+                    <input type="text" name="sch_complete_since"
+                        value="<?php echo $form_apply3['form3']['sch_complete_since'] ?>"
+                        class="border-bottom-only text-center  "
+                        placeholder="School year"> e.g. 2005, 2008 etc
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
-						<br class="clearfix">
-						<h3>PREVIOUS QUALIFICATIONS ACHIEVED</h3>
-					<div class="row">
-						<div class="col-sm-8">
-							<p>Have you SUCCESSFULLY completed any of the following qualifications?</p>
-						</div>
-
-						<div class="col-sm-4">
-							<?php 
-								$prevQualificationCompletedSelected = explode(',', $form_apply3['enrol']['prev_qualification_completed']);
-								$prevQualificationCompleted = array('Yes', 'No');
-								$preInput=40;
-								$preLable=40;
-								foreach ($prevQualificationCompleted as $prevCompleted) {
-									$checked="";
-									if(in_array($prevCompleted, $prevQualificationCompletedSelected)){
-										$checked="checked";
-									} 
-									?>
-									<div class="Office-checks">
-										<div class="checkbox">
-											<input id="box<?php echo $preInput++; ?>" type="checkbox" class="changeOption prevQualificationCompleted" name="prevQualificationCompleted[]" value="<?php echo $prevCompleted; ?>" <?php echo $checked; ?> />
-											<label for="box<?php echo $preLable++; ?>"><?php echo $prevCompleted; ?></label>
-										</div>
-									</div>
-
-							<?php
-
-								}
-							?>
-							<div class="Office-checks">
-								<div class="checkbox">
-									<span>&nbsp;</span>
-									<span>If Yes, Please Tick Any Applicable boxes</span>
-								</div>
-							</div>
-						</div>
-			</div>
-			<div class="row">			
-
-						<br class="clearfix">
-
-						<?php 
-							$completedQulificationsSelected = explode(',', $form_apply3['enrol']['completed_qualifications']);
-							$completedQulifications = $form_apply3['completedQulifications'];
-							$comQualInput=42;
-							$comQualLabel=42;
-							$num=0;
-
-							foreach ($completedQulifications as $comQual) {
-								// divide into column
-								if($num == 0){ ?>
-									<div class="col-sm-3">
-								<?php }?>
-
-								<?php if($num == 3){ ?>
-									<div class="col-sm-5">
-								<?php }?>
-
-								<?php if($num == 6){ ?>
-									<div class="col-sm-4">
-								<?php }?>
-
-
-								<?php 
-								$checked="";
-								if(in_array($comQual, $completedQulificationsSelected)){
-									$checked="checked";
-								} 
-								?>
-								<div class="checkbox">
-									<input id="box<?php echo $comQualInput++; ?>" class="changeOption completedQulifications" name="completedQulifications[]" type="checkbox" value="<?php echo $comQual; ?>" <?php echo $checked; ?>/>
-									<label for="box<?php echo $comQualLabel++; ?>"><?php echo $comQual; ?></label>
-								</div>
-
-								<?php if ($num == 2 || $num == 5 || $num == 8){?> </div> <?php }
-									$num++;
-								?>
-							<?php	
-							}
-							?>
-				</div>			
-
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>Details of another Certificate:</label>
-								<input type="text" id="thirtyTwo" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['another_certificate']?>">
-							</div>
-						</div>
-						<div class="row">
-						<div class="col-sm-7">
-							<p>Please tick where the qualification was completed:</p>
-						</div>
-
-						<div class="col-sm-5">
-
-							<?php 
-								$countryOfQualificationCompletedSelected = explode(',', $form_apply3['enrol']['country_of_qualification_completed']);
-								$countryOfQualificationCompleted = $form_apply3['countryOfQualificationCompleted'];
-								$counQualInput=51;
-								$counQualLabel=51;
-
-								foreach ($countryOfQualificationCompleted as $country) {
-									$checked="";
-									if(in_array($country, $countryOfQualificationCompletedSelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="Office-checks">
-										<div class="checkbox">
-											<input id="box<?php echo $counQualInput++ ?>"class="changeOption countryOfQualificationCompleted" name="countryOfQualificationCompleted[]" type="checkbox" value="<?php echo $country; ?>" <?php echo $checked; ?>/>
-											<label for="box<?php echo $counQualLabel++ ?>"><?php echo $country; ?></label>
-										</div>
-									</div>
-							<?php
-								}
-							?>
-						</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>LANGUAGE & CULTURAL DIVERSITY</h3>
-						<div class="row">
-						<div class="col-sm-6">
-							<?php
-								$countryOfBirthSelected = explode(',', $form_apply3['enrol']['country_of_birth']);
-								$checked="";
-								if($countryOfBirthSelected[0] == 'Australian'){
-									$checked="checked";
-								}
-							?>
-							Country of Birth:
-							<div class="checkbox">
-								<input id="box54" type="checkbox" name="country_australia" class="changeOption country_australia" value="Australian" <?php echo $checked; ?>/>
-								<label for="box54">Australian</label>
-							</div>
-						</div>
-
-						<div class="col-sm-6">
-							<div class="form-group">
-								<label>other:</label>
-								<input type="text" id="thirtyThree" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['country_of_birth'] ?>">
-							</div>
-						</div>
-						</div>
-					<div class="row">
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>City of birth:</label>
-								<input type="text" id="thirtyFour" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['city_of_birth']?>">
-							</div>
-						</div>
-					</div>
-
-						<div class="row">
-						<div class="col-sm-4">
-							<p>Do you speak a Language other than English at home:</p>
-							<?php
-								$speakLanguageAtHomeSelected = explode(',  ', $form_apply3['enrol']['speak_language_at_home']);
-								$speakLanguageAtHome = $form_apply3['speakLanguageAtHome'];
-								$langInput=55;
-								$langLabel=55;
-								foreach ($speakLanguageAtHome as $lang) {
-									$checked="";
-									if(in_array($lang, $speakLanguageAtHomeSelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="checkbox">
-										<input id="box<?php echo $langInput++?>" class="changeOption speakLanguageAtHome" name="speakLanguageAtHome[]" type="checkbox" value="<?php echo $lang; ?>" <?php echo $checked; ?> />
-										<label for="box<?php echo $langLabel++?>"><?php echo $lang; ?></label>
-									</div>
-							<?php
-								}
-							?>
-							<div class="checkbox">
-								<input type="text" id="thirtyFive" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['speak_language_at_home'] ?>">
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<p>How well do you speak english:</p>
-
-							<?php 
-								$levelOfSpeakSelected = explode(',', $form_apply3['enrol']['level_of_speak']);
-								$levelOfSpeak = $form_apply3['levelOfSpeak'];
-								$levInput = 57;
-								$levLabel = 57;
-								foreach ($levelOfSpeak as $level) {
-									$checked="";
-									if(in_array($level, $levelOfSpeakSelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="checkbox">
-										<input id="box<?php echo $levInput++ ?>" class="changeOption levelOfSpeak" type="checkbox" name="levelOfSpeak[]" value="<?php echo $level; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $levLabel++ ?>"><?php echo $level; ?></label>
-									</div>
-
-							<?php
-								}
-							?>
-						</div>
-
-						<div class="col-sm-4">
-							<p>Are you of Aboriganl or Torres Strait Islander origin?</p>
-
-							<?php 
-								$originSelected = explode(', ', $form_apply3['enrol']['origin']);
-								$origins = $form_apply3['origin'];
-								$originInput = 61;
-								$originLabel = 61;
-								foreach ($origins as $origin) {
-									$checked="";
-									if(in_array($origin, $originSelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="checkbox">
-										<input id="box<?php echo $originInput++ ?>" class="changeOption origin" type="checkbox" name="origin[]" value="<?php echo $origin; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $originLabel++ ?>"><?php echo $origin; ?></label>
-									</div>
-
-							<?php
-								}
-							?>
-						</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>DISABILITY</h3>
-					<div class="row">
-						<div class="col-sm-8">
-							<p>Do you consider yourself to have a disability, impairment or long-term condition?</p>
-						</div>
-
-						<div class="col-sm-4">
-							
-
-							<?php 
-								$haveDisabilitySelected = $form_apply3['enrol']['have_disability'];
-								$haveDisability = array('Yes', 'No');
-								$haveDisInput=65;
-								$haveDisLabel=65;
-								foreach ($haveDisability as $haveDis) {
-									$checked="";
-									if($haveDis == $haveDisabilitySelected){
-										$checked="checked";
-									}
-
-								?>
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box<?php echo $haveDisInput++; ?>" class="changeOption haveDisability" value="<?php echo $haveDis; ?>"  type="checkbox" <?php echo $checked; ?> />
-										<label for="box<?php echo $haveDisLabel++; ?>"><?php echo $haveDis;  ?></label>
-									</div>
-								</div>
-
-							<?php
-								}
-							?>
-						</div>
-					</div>	
-					<div class="row">
-
-						<div class="col-sm-12">
-							<p>
-								If yes, then please indicate the areas of a disability, impairment or long-term condition:</p>
-						<div class="row">
-							<?php
-								$areasOfDiabilitySelected = explode(',', $form_apply3['enrol']['areas_of_disability']);
-								$areasOfDiability = $form_apply3['areasOfDiability'];
-								$num=0;
-								$disInput=67;
-								$disLabel=67;
-								foreach ($areasOfDiability as $disability) {
-									$checked="";
-									if($num==0 || $num==3 || $num==6) {?>
-										<div class="col-sm-4">
-									<?php } 
-
-									if(in_array($disability, $areasOfDiabilitySelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="checkbox">
-										<input id="box<?php echo $disInput++ ?>" class="changeOption areasOfDiability" type="checkbox" name="areasOfDiability[]" value="<?php echo $disability; ?>" <?php echo $checked; ?> />
-										<label for="box<?php echo $disLabel++ ?>"><?php echo $disability; ?></label>
-									</div>
-
-
-									<?php if ($num == 2 || $num == 5 || $num==7){?> </div> <?php } ?>
-								 	<?php
-								 	$num++;
-								}
-							 ?>
-						</div>	 
-						</div>
-						</div>
-						<div class="row">
-						<div class="col-sm-12">
-							<div class="form-group">
-								<label>Other:</label>
-								<input type="text" id="thirtySix" class="form-control Form_Setup textChange areasOfDiability required" value="<?php echo $form_apply3['enrol']['other_areas_of_disability'] ?>">
-							</div>
-						</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>STUDY REASON</h3>
-						<p>Of the following categories, which BEST describes your main Reason for undertaking this course/traineeship/ apprenticeship?
-							Tick only ONE</p>
-
-						<div class="row">
-						<div class="col-sm-12">
-						<div class="row">
-							<?php
-								$studyReasonSelected = explode(',', $form_apply3['enrol']['study_reason']);
-								$studyReason = $form_apply3['studyReason'];
-								$num=0;
-								$studyInput=75;
-								$studyLable=75;
-								foreach ($studyReason as $reason) { 
-									if ($num == 0){?>
-									<div class="col-sm-4">
-									<?php } ?>
-
-									<?php if ($num == 4){?>
-									<div class="col-sm-4">
-									<?php } ?>
-
-									<?php if ($num == 7){?>
-									<div class="col-sm-4">
-									<?php } ?>
-
-
-									<!-- check selected value in array -->
-									<?php
-										$checked="";
-										if(in_array($reason, $studyReasonSelected)){
-											$checked="checked";
-										}
-									?>
-								 	<div class="checkbox">
-										<input id="box<?php echo $studyInput++; ?>" type="checkbox" class="changeOption studyReason" name="studyReason[]" value="<?php echo $reason; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $studyLable++; ?>"><?php echo $reason; ?></label>
-									</div>
-
-									<?php if ($num == 3 || $num == 6 || $num == 9){?> </div> <?php } ?>
-								 	<?php
-								 	$num++;
-								 } 
-							?>
-						</div>
-						</div>
-						</div>
-
-
-						<br class="clearfix">
-						<h3>IDENTIFICATION</h3>
-
-
-						<div class="row">
-						<div class="col-sm-12">
-						<div class="row">
-							<?php 
-								$identificationsSelected = explode(',', $form_apply3['enrol']['identification']);
-								$identifications = $form_apply3['identifications'];
-								$num=0;
-								$idenInput=85;
-								$idenLable=85;
-								foreach ($identifications as $identification) { 
-									if ($num == 0 || $num == 4){?>
-									<div class="col-sm-6">
-									<?php } ?>
-									<!-- check selected value in array -->
-									<?php
-										$checked="";
-										if(in_array($identification, $identificationsSelected)){
-											$checked="checked";
-										}
-									?>
-								 	<div class="checkbox">
-										<input id="box<?php echo $idenInput++; ?>" type="checkbox" class="changeOption identifications" name="identifications[]" value="<?php echo $identification; ?>" <?php echo $checked; ?>/>
-										<label for="box<?php echo $idenLable++; ?>"><?php echo $identification; ?></label>
-									</div>
-
-									<?php if ($num == 3 || $num == 7){?> </div> <?php } ?>
-								 	<?php
-								 	$num++;
-								 } 
-							?>
-						</div>	
-						</div>
-						</div>	
-
-
-						<br class="clearfix">
-						<h3>TUITION FEES</h3>
-						<strong>Fee Concession or Fee Waivers</strong>
-
-						<div class="row">
-						<div class="col-sm-6">
-							<p>Do you have a current concession cards? (Please Tick One)</p>
-						</div>
-						<div class="col-sm-6">
-							<?php 
-								$haveFeesConessionSelected = explode(',', $form_apply3['enrol']['have_fees_concession']);
-								$haveFeesConession = array('Yes', 'No');
-								$haveInput=93;
-								$haveLabel=93;
-								foreach ($haveFeesConession as $feeCon) {
-									$checked="";
-									if(in_array($feeCon, $haveFeesConessionSelected)){
-										$checked="checked";
-									} 
-									?>
-									<div class="Office-checks">
-										<div class="checkbox">
-											<input id="box<?php echo $haveInput++ ?>" type="checkbox" class="changeOption haveFeesConession" name=haveFeesConession[] value="<?php echo $feeCon; ?>" <?php echo $checked; ?>/>
-											<label for="box<?php echo $haveLabel++ ?>"><?php echo $feeCon; ?></label>
-										</div>
-									</div>
-							<?php
-								}
-
-							?>
-							<!-- <div class="Office-checks">
-								<div class="checkbox">
-									<input id="box90" type="checkbox" class="changeOption have_fees_conession" name=have_fees_conession[] value="Yes" <?php echo $checked; ?>/>
-									<label for="box90">Yes</label>
-								</div>
-							</div>
-							<div class="Office-checks">
-								<div class="checkbox">
-									<input id="box91" type="checkbox" class="changeOption have_fees_conession" name="have_fees_conession[]" value="No" <?php echo $checked; ?> />
-									<label for="box91">No</label>
-								</div>
-							</div> -->
-						</div>
-
-						<br>
-						<p>If yes which of the following has been sighted?</p>
-						
-						<div class="col-sm-12">
-
-							<?php 
-								// $areaOfFeeConcessionSelected = explode(',', $form_apply3['enrol']['area_of_fee_concession']);
-								$areaOfFeeConcession = $form_apply3['areaOfFeeConcession'];
-								$feeInput=95;
-								$feeLabel=95;
-								foreach ($areaOfFeeConcession as $areaFee) {
-									$selected="";
-									?>
-									<div class="checkbox">
-										<input id="box<?php echo $feeInput++ ?>" type="checkbox" class="areaOfFeeConcession" name="changeOption areaOfFeeConcession[]" value="<?php echo $areaFee; ?>" />
-										<label for="box<?php echo $feeLabel++ ?>"><?php echo $areaFee; ?></label>
-									</div>
-							<?php
-								}
-							?>
-							<!-- <div class="checkbox">
-								<input id="box92" type="checkbox" />
-								<label for="box92">Health Care Card issued by the commonwealth</label>
-							</div>
-							<div class="checkbox">
-								<input id="box93" type="checkbox" />
-								<label for="box93">Pensioner Concession Card; or</label>
-							</div>
-							<div class="checkbox">
-								<input id="box94" type="checkbox" />
-								<label for="box94">Veteran’s Gold Card; or</label>
-							</div>
-							<div class="checkbox">
-								<input id="box95" type="checkbox" />
-								<label for="box95">An alternative card or concession eligibility criterion approved by the Minister for the Purpose of these Guidelines</label>
-							</div> -->
-						</div>
-
-						<p>NB: Optimistic Futures must retain a copy of the relevant concession card specified clauses 3.7 of these Guidelines
-							Where the concession card is present via digital wallet through Centrelink Express Plus mobile application, optimistic
-							futures must make a written declaration and attach it to the student file stating, the following;</p>
-
-						<ul>
-							<li>It’s a digital concession card with clause 3.7; </li>
-							<li>Name of the authorised delegate who sighted the digital concession card; </li>
-							<li>Date the digital concession was sighted; </li>
-							<li>Document number of the concession card; and </li>
-							<li>Name of the concession holder. </li>
-						</ul>
-
-						<p>Have you been referred by Job Seekers with a standard Job Seeker Referral Form? (Please Tick One)?</p>
-						<div class="col-sm-12">
-							<div class="row">
-							<div class="col-sm-4">
-								<div class="checkbox">
-									<input id="box99" type="checkbox" />
-									<label for="box99">Yes</label>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="checkbox">
-									<input id="box100" type="checkbox" />
-									<label for="box100">No</label>
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<div class="form-group">
-									<label>Other:</label>
-									<input type="text" id="thirtySeven" class="form-control Form_Setup required">
-								</div>
-							</div>
-						</div>
-						</div>
-	
-
-						<p>NB: Optimistic Futures must invoice the referring agency directly for the portion of the tuition fee not covered by
-							the referred job seeker.</p>
-
-						<p>Are you self-identified as being of Aboriginal or Torres Strait Islander descent under the Indigenous Completion initiative?
-							(Please Tick One)</p>
-
-						<div class="col-sm-12">
-							<div class="row">
-								<?php 
-								$tuitionSelfIdentifiedSelected = explode(',', $form_apply3['enrol']['tuition_self_identified']);
-								$tuitionSelfIdentified = array('Yes', 'No');
-								$selfInput=101;
-								$selfLabel=101;
-								foreach ($tuitionSelfIdentified as $self) {
-									$checked="";
-									if(in_array($self, $tuitionSelfIdentifiedSelected)){
-										$checked="checked";
-									} 
-									?>
-									<div class="col-sm-6">
-										<div class="checkbox">
-											<input id="box<?php echo $selfInput++ ?>" type="checkbox" class="changeOption tuitionSelfIdentified" name=tuitionSelfIdentified[] value="<?php echo $self; ?>" <?php echo $checked; ?>/>
-											<label for="box<?php echo $selfLabel++ ?>"><?php echo $self; ?></label>
-										</div>
-									</div>
-							<?php
-								}
-
-							?>
-						</div>
-						</div>
-							</div>
-
-
-						<br class="clearfix">
-						<h3>PAYMENT METHOD</h3>
-						<p>Please make payable to: Optimistic Futures Pty Ltd</p>
-						<div class="row">
-						<div class="col-sm-12">
-							<?php
-								$paymentMethodSelected = explode(',', $form_apply3['enrol']['payment_method']);
-								$paymentMethod = $form_apply3['paymentMethod'];
-
-								$payInput=103;
-								$payLabel=103;
-
-								foreach ($paymentMethod as $method) {
-									$checked="";
-									if(in_array($method, $paymentMethodSelected)){
-										$checked="checked";
-									}
-									?>
-									<div class="checkbox">
-										<input id="box<?php echo $payInput++; ?>" class="changeOption paymentMethod" type="checkbox" name="paymentMethod[]" value="<?php echo $method; ?>" <?php echo $checked; ?> />
-										<label for="box<?php echo $payLabel++; ?>"><?php echo $method; ?></label>
-									</div>
-
-							<?php		
-								}
-
-							?>
-							<!-- <div class="checkbox">
-								<input id="box100" type="checkbox" />
-								<label for="box100">Cheque</label>
-							</div>
-							<div class="checkbox">
-								<input id="box101" type="checkbox" />
-								<label for="box101">Cash – Do not send cash, to make a cash payment please pay at the front desk</label>
-							</div>
-							<div class="checkbox">
-								<input id="box102" type="checkbox" />
-								<label for="box102">Bank cheque</label>
-							</div>
-							<div class="checkbox">
-								<input id="box103" type="checkbox" />
-								<label for="box103"> Money order</label>
-							</div>
-							<div class="checkbox">
-								<input id="box104" type="checkbox" />
-								<label for="box104">EFTPOS</label>
-							</div>
-							<div class="checkbox">
-								<input id="box105" type="checkbox" />
-								<label for="box105">Funded from Skills First Program</label>
-							</div> -->
-						</div>
-						</div>
-
-
-						<br class="clearfix">
-						<h3>REFUNDS</h3>
-						<p>Deposits are non-refundable (deposits are outlined on each course flyer) but can be transferred to another course or
-							student. An administration fee of $150 will be charged to any student who withdraws from a course in excess of 3 working
-							days prior to course commencement. No refunds will be issued once the course has commenced</p>
-
-						<p>Refunds may be made in the following circumstances:
-							<br> • Participants have overpaid the administration charge
-							<br> • Participants enrolled in training that has been cancelled by the RTO
-							<br> • Participant advises the RTO prior to course commencement that they are withdrawing from the course
-							<br> • If the participant withdraws from a course or program due to illness or extreme hardship as determined by the RTO
-							<br>
-						</p>
-
-						<br class="clearfix">
-						<h3>CONSENT</h3>
-
-						<div class="form-group">
-						<div class="row">
-							<label class="col-sm-10">Do you give consent to OPTIMISTIC FUTURES to display your testimonials on their website?</label>
-							<div class="col-sm-2">
-								<?php 
-									$consentTestimonialsSelected = explode(',', $form_apply3['enrol']['consent_testimonials']);
-									$consentTestimonials = array('Yes', 'No');
-									$testimonialInput=109;
-									$testimonialLabel=109;
-									foreach ($consentTestimonials as $testimonial) {
-										$checked="";
-										if(in_array($testimonial, $consentTestimonialsSelected)){
-											$checked="checked";
-										} 
-										?>
-										<div class="Office-checks">
-											<div class="checkbox">
-												<input id="box<?php echo $testimonialInput++ ?>" type="checkbox" class="changeOption consentTestimonials" name=consentTestimonials[] value="<?php echo $testimonial; ?>" <?php echo $checked; ?>/>
-												<label for="box<?php echo $testimonialLabel++ ?>"><?php echo $testimonial; ?></label>
-											</div>
-										</div>
-								<?php
-									}
-
-								?>
-							</div>
-						</div>
-						</div>
-						<div class="form-group">
-						<div class="row">
-							<label class="col-sm-10">Do you give consent to OPTIMISTIC FUTURES to use your photo on their website or/and on their marketing material?</label>
-							<div class="col-sm-2">
-								<?php 
-									$consentPhoteSelected = explode(',', $form_apply3['enrol']['consent_photo']);
-									$consentPhoto = array('Yes', 'No');
-									$photoInput=111;
-									$photoLabel=111;
-									foreach ($consentPhoto as $photo) {
-										$checked="";
-										if(in_array($photo, $consentPhoteSelected)){
-											$checked="checked";
-										} 
-										?>
-										<div class="Office-checks">
-											<div class="checkbox">
-												<input id="box<?php echo $photoInput++ ?>" type="checkbox" class="changeOption consentphoto" name=consentphoto[] value="<?php echo $photo; ?>" <?php echo $checked; ?>/>
-												<label for="box<?php echo $photoLabel++ ?>"><?php echo $photo; ?></label>
-											</div>
-										</div>
-								<?php
-									}
-
-								?>
-								<!-- <div class="Office-checks">
-									<div class="checkbox">
-										<input id="box108" type="checkbox" />
-										<label for="box108">Yes</label>
-									</div>
-								</div>
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box109" type="checkbox" />
-										<label for="box109">No</label>
-									</div>
-								</div> -->
-							</div>
-						</div>
-						</div>
-
-						<br class="clearfix">
-						<h3>TERMS & CONDITIONS OF ENROLMENT</h3>
-
-						<div class="iframe-local">
-						<div class="row">
-							<div class="col-sm-6">
-								<h4>Enrolment & Selection (5.3) </h4>
-								<p>1. Courses are open to all adults 18 years and over. 2. The student is responsible for notifying the RTO if they
-									have a medical condition or disability or require assistance in their training. 3. A deposit must accompany enrolment
-									to secure a placement within a course; this fee is also the Administration Fee. 4. It is the student’s responsibility
-									to note the date, time and location of the course as advertised. 5. Courses with low enrolments may be cancelled,
-									every effort will be made to contact students, please ensure your contact details are correct. 6. Requests from
-									the student to transfer or credit their course placement due to changed personal circumstances will be considered
-									and every effort will be made to ensure a placement into an alternative course. 7. If you are unable to complete
-									your course, due to changed personal circumstances, the RTO will make every effort to ensure you are placed into
-									an alternative pre-scheduled course. 8. Students can only join after course commencement date if they meet all prerequisites.
-									Full course fees are still payable for late enrolments. 9. The RTO reserves the right to decline admission to a
-									course, terminate a student's enrolment in a class or change a course or tutor at any time without notice. 10. Students
-									participate in courses involving physical activity; field trips, practical demonstrations etc. and do so at their
-									own risk. The RTO’s students are covered by public liability insurance whilst working within the RTO’s premises.</p>
-
-
-								<h4>Training Guarantee (5.3)</h4>
-								<p>The RTO will guarantee to complete all training and/ or assessment once the student has commenced study in their
-									chosen qualification or course of study, unless the student submits a formal Letter of Withdrawal notifying the
-									RTO that they wish to withdraw. If a student voluntarily drops out, this guarantee is valid for a maximum of six
-									months from initial course commencement date.</p>
-
-								<h4>Course Fees, Payments and Refunds (5.3)</h4>
-								<p>
-									1. Please refer to the course flyer for information on course fees, including any required deposit; administration fees;
-									materials fees and any other charges (if applicable). 2. An administration fee of $150 is required to be paid prior
-									to course commencement to secure a place within the course, if the student withdraws from the course at any time,
-									they will forfeit this fee. If the total course fee is less than $150, then the total of the course is to be paid
-									prior to course commencement to secure a place within the course. 3. The Administration Fee is non-refundable, but
-									can be transferred to another course or student. 4. Certificates and Statements of Attainment are issued to students
-									who are assessed as competent in the units completed. The cost of the certificates is included in the course fees.
-									5. Refunds may be made in the following circumstances: a. Participants have overpaid the administration charge b.
-									Participants enrolled in training that has been cancelled by the RTO c. Participant advises the RTO prior to course
-									commencement that they are withdrawing from the course d. If the participant withdraws from a course or program
-									due to illness or extreme hardship as determined by the RTO 6. No refunds will be issued once the course has commenced
-									7. Students are responsible for the safe storage of their Certificates and Statements of Attainment. If a student
-									requires a reissue of their Certificate or Statement of Attainment, a certificate re-issue fee of $80 will be charged.
-									8. If a student is deemed not yet competent on completion of training, they will be offered an opportunity to be
-									reassessed. If a student is deemed not yet competent a second time, they will be given another opportunity for reassessment.
-									9. If a student is required to be reassessed, they will be provided with further guidance from their trainer prior
-									to reassessment. 10. In most cases there will be no reassessment fee. If a reassessment fee is applicable, this
-									fee will be included on the course flyer. 11. If a student is deemed competent in some but not all the units of
-									competencies required, a Statement of Attainment will be issued and the student will be given a six-month period
-									to undertake reassessment if required.
-								</p>
-
-								<h4>Fee Protection (7.3)</h4>
-								<p>The RTO requires a minimum deposit, which will not exceed $1,500 per individual student, prior to course commencement.
-									If the full course fees are below $1,500, the full fees may be required to be paid prior to course commencement.
-									Please refer to the course flyers for deposits and course fees. Following course commencement, full fees will be
-									required to be paid by either a payment plan (if remaining fees are over $1500), or in full (if the remaining fees
-									are below $1500) for tuition and other services yet to be delivered.</p>
-							</div>
-
-							<div class="col-sm-6">
-								<h4>Consumer Guarantee (5.3)</h4>
-								<p>The RTO guarantees that the services provided by the RTO will be: • provided with due care and skill • fit for any
-									specified purpose (express or implied) • Provided within a reasonable time (when no timeframe is set for the training).</p>
-
-								<h4>Cooling Off Period (5.3)</h4>
-								<p>Students are eligible to cancel their enrolment by placing a formal notice of cancellation in writing to the RTO
-									Manager (a letter or email is acceptable) within 10 business days of enrolment, without attracting a cancellation
-									fee, unless the student has already commenced the training.</p>
-
-								<h4>Complaints and Appeals (6.1)</h4>
-								<p>If a student, trainer or staff member is experiencing any difficulties, they are encouraged to discuss their concerns
-									with Senior Management. The RTO administrative staff will make themselves available at a mutually convenient time
-									if a student wishes to seek assistance. If a Staff member or Student wishes to make a formal complaint they are
-									required to complete a Complaints and Appeals Form, which is included in the Student Handbook. Once the form has
-									been completed, the form should be submitted to the RTO for actioning. Please refer to the Student Handbook for
-									more details on the complaints and appeals process.</p>
-
-								<h4>Credit Transfer (3.5)</h4>
-								<p>The RTO recognises the Australian Qualifications Framework and Vocational Education and Training (VET) qualifications
-									and VET statements of attainment issued by any other Registered Training Organisation. Credit Transfer will be awarded
-									for all units of competencies that directly align with units from the qualification the student has enrolled. Evidence
-									of competences achieved must be supplied for recognition to be processed (i.e. presentation of original certificate
-									or transcript). Please refer to the Student Handbook or contact the office for the procedure on how to apply for
-									a Credit Transfer.</p>
-
-								<h4>Language, Literacy and Numeracy (LLN) (1.7)</h4>
-								<p>LLN support is available to provide students with advice and support services in the provision of language, literacy
-									and numeracy assessment services. Students needing assistance with their learning should be identified upon enrolment.
-									Trainers and staff within the RTO can provide students with support to assist the student throughout the learning
-									process. Language, Literacy and Numeracy skills are generally included and identified in Training Packages and accredited
-									course programs. In identifying language, literacy and numeracy requirements, students are required to have basic
-									skills in:</p>
-
-								<p>Count, check and record accurately Read and interpret Estimate, calculate and measure</p>
-
-								<p>All students undertaking a Certificate III qualification or below are required to undertake an LLN Assessment.</p>
-
-								<h4>Support Services (1.7)</h4>
-								<p>The RTO caters to diverse client learning needs and aims to identify and respond to the learning needs of all clients.
-									Clients are encouraged to express their views about their learning needs at all stages of their learning experience
-									from the initial enrolment and induction stage. The RTO will analyse who the target candidates are and whether an
-									individual, a specific group or a broad target group and will determine the key characteristics and needs of candidates,
-									including disabilities.</p>
-								<p>The RTO is committed to providing clients requiring additional support, advice or assistance while training. To achieve
-									this and to ensure the quality delivery of training and education, the RTO provides client vocational counselling
-									to improve and extend training outcomes. Students are advised to make an appointment with their trainer in the first
-									instance, if required the student can then schedule an appointment with the RTO for further counselling.</p>
-
-								<h4>Legislative and Regulatory Requirements (8.5)</h4>
-								<p>All students will undergo an induction with the RTO, which will include the student’s rights and responsibilities
-									against the relevant Commonwealth, State or Territory legislation and regulatory requirements. Students are issued
-									with a Student Handbook, which also includes the Student’s rights and responsibilities that will affect their participation
-									in vocational education and training. The student acknowledges that they must observe The RTO’s policies and procedures,
-									according to State and Federal Government legislative and regulatory requirements, as set out in the Student Handbook.</p>
-
-								<h4>NCVER Survey:</h4>
-								<p>National Centre of Vocational Education Research may in the duration of your studies contact you to participate in
-									a survey which may include the following: An invitation to participate in a Department endorsed project: An invitation
-									to participate in the Department’s annual student outcome survey: Contacted by the Department (or persons authorised
-									by the Department) for audit, review or investigation purposes.</p>
-							</div>
-							</div>
-
-							<div class="col-sm-12">
-								<h4>IMPORTANT INFORMATION</h4>
-								<p>I have read and understand the terms and conditions of my enrolment, as stated above. I acknowledge and agree with
-									the terms and conditions of enrolment with specific reference to the RTO’s enrolment and selection, USI, course
-									fees, payments and refunds, course requirements, Language Literacy and Numeracy requirements, complaints and appeals,
-									Workplace Health and Safety, support services that will be provided for me, legislative and regulatory policies
-									and procedures, which are also provided to me in the Student Handbook. By signing this document, I also give permission
-									for the RTO to access my Unique Student Identifier for the purpose of my training.</p>
-							</div>
-						</div>
-						<!-- iframe-local Closed -->
-
-
-						<br class="clearfix">
-					<div class="row">
-						<div class="col-sm-8">
-							<div class="form-group">
-								<label>Student Signature</label>
-								<input type="text" id="thirtyEight" class="form-control Form_Setup required">
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Date</label>
-								<input type="text" id="thirtyNine" class="form-control Form_Setup required">
-							</div>
-						</div>
-					</div>
-						<br class="clearfix">
-					<div class="row">
-						<div class="col-sm-8">
-							<div class="form-group">
-								<label>RTO REPRESENTATIVE</label>
-								<input type="text" id="forty" class="form-control Form_Setup required">
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Date</label>
-								<input type="text" id="fortyOne" class="form-control Form_Setup required">
-							</div>
-						</div>
-						</div>	
-
-						<div class="clearfix"></div>
-
-						<h3>For office use only:</h3>
-
-						<div class="form-group">
-							<label class="col-sm-10">All required data received for application of USI</label>
-							<div class="row">
-							<div class="col-sm-2">
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box113" type="checkbox" />
-										<label for="box113">Yes</label>
-									</div>
-								</div>
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box114" type="checkbox" />
-										<label for="box114">No</label>
-									</div>
-								</div>
-							</div>
-								</div>
-						</div>
-
-						<div class="form-group">
-						<div class="row">
-							<label class="col-sm-10">USI applied on behalf of the Student?</label>
-							<div class="col-sm-2">
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box115" type="checkbox" />
-										<label for="115">Yes</label>
-									</div>
-								</div>
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box116" type="checkbox" />
-										<label for="box116">No</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						</div>
-
-						<div class="form-group">
-						<div class="row">	
-							<label class="col-sm-10">USI verified/validated</label>
-							<div class="col-sm-2">
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box117" type="checkbox" />
-										<label for="box117">Yes</label>
-									</div>
-								</div>
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box118" type="checkbox" />
-										<label for="box118">No</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						</div>
-
-
-					<div class="row">
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Optimistic Futures Representative Name</label>
-								<input type="text" id="" class="form-control Form_Setup required" disabled>
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Signature</label>
-								<input type="text" id="" class="form-control Form_Setup required" disabled>
-							</div>
-						</div>
-
-						<div class="col-sm-4">
-							<div class="form-group">
-								<label>Date</label>
-								<input type="text" id="" class="form-control Form_Setup required" disabled>
-							</div>
-						</div>
-					</div>	
-
-
-						<div class="clearfix"></div>
-
-						<h3>Section A - To be completed by an authorised delegate of the Optimistic Futures</h3>
-
-						<h4>Evidence of citizenship/residency and age</h4>
-
-						<div class="row">
-						<div class="col-sm-8">
-							<div class="form-group">
-								<label>I confirm that in relation to</label>
-								<input type="text" id="fortyTwo" class="form-control Form_Setup required">
-							</div>
-						</div>
-						</div>
-
-						<div class="form-group">
-						<div class="row">	
-							<div class="col-sm-12">
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box119" type="checkbox" />
-										<label for="box119">formal documentation issued by the Australian Department of Immigration and Border Protection confirming permanent
-											residence </label>
-									</div>
-									<div class="checkbox">
-										<input id="box120" type="checkbox" />
-										<label for="box120">a copy of the original or certified copy, or
-										</label>
-									</div>
-									<div class="checkbox">
-										<input id="box121" type="checkbox" />
-										<label for="box121">the certified copy, or </label>
-									</div>
-								</div>
-								<div class="Office-checks">
-									<div class="checkbox">
-										<input id="box122" type="checkbox" />
-										<label for="box122"> the uncertified copy and a receipt from a document verification service;</label>
-									</div>
-								</div>
-						</div>
-						<div class="row">	
-
-								<div class="col-sm-12">
-									<p>and if the student’s age is relevant to their eligibility and the document produced from the list above does not
-										include a date of birth: </p>
-									<div class="Office-checks">
-										<div class="checkbox">
-											<input id="box123" type="checkbox" />
-											<label for="box123">a current drivers licence, or</label>
-										</div>
-										<div class="checkbox">
-											<input id="box124" type="checkbox" />
-											<label for="box124">a current learner permit, or</label>
-										</div>
-										<div class="checkbox">
-											<input id="box125" type="checkbox" />
-											<label for="box125">a Proof of Age card, or</label>
-										</div>
-										<div class="checkbox">
-											<input id="box126" type="checkbox" />
-											<label for="box126">a ‘Keypass’ card</label>
-										</div>
-									</div>
-
-
-									<br/>
-									<div class="col-sm-12">
-									<div class="Office-checks">
-										<div class="checkbox">
-										<p>
-											Or if the individual is undertaking training under the Asylum Seeker VET Program and meets the requirements set
-											out in Clause 2.1 of these Guidelines, I have sighted and retained: 
-										</p>
-										</div>
-										<div class="checkbox">
-											<input id="box127" type="checkbox" />
-											<label for="box127">a Referral Letter from the Asylum Seeker Resource Centre or the Australian Red Cross, or</label>
-										</div>
-										<div class="checkbox">
-											<input id="box128" type="checkbox" />
-											<label for="box128">for TAFE Institutes and Learn Locals organisations only, an electronic or printed record demonstrating that the
-												student holds a current valid Bridging Visa Class E (BVE), Safe Haven Enterprise Visa (SHEV) or Temporary Protection
-												Visa (TPV) as verified via the Commonwealth’s Visa Entitlement Verification Online (VEVO). </label>
-										</div>
-										<p>NB: The Training Provider must retain a copy of all documentation used in Section A, as per clauses 3.3-4 of these
-											Guidelines</p>
-									</div>
-								</div>
-							</div>	
-								</div>
-								</div>
-
-
-								<div class="clearfix"></div>
-
-								<h3>Section B - To be completed by the student</h3>
-
-								<h4>Education history</h4>
-								<div class="row">	
-
-								<div class="col-sm-8">
-									<div class="form-group">
-										<label>Q1. The highest qualification I have completed is: </label>
-										<input type="text" id="eduHistoryHighestQualifications" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['edu_history_highest_qualifications']; ?>">
-									</div>
-								</div>
-								</div>
-
-
-
-								<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Q2. Not including the course/s you are seeking to enrol in now, how many other government funded courses have you
-											enrolled to undertake this year? Include training you have enrolled in to undertake at this and other training
-											providers but not yet started. </label>
-										<input type="text" id="govtEnrolCoursesName" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['govt_enrol_courses_name']; ?>">
-										<select id="govtEnrolCourses" class="changeOption">
-											<?php
-												$govtEnrolCoursesSelected = $form_apply3['enrol']['govt_enrol_courses'];
-												$govtEnrolCourses = array('0','1','2','3','4+');
-												$numValue=0;
-
-												foreach ($govtEnrolCourses as $enrolCourse) {
-													$selected="";
-													if($enrolCourse == $govtEnrolCoursesSelected){
-														$selected = "selected";
-													}
-													?>
-													<option value="<?php echo $enrolCourse; ?>" <?php echo $selected; ?>><?php echo $enrolCourse; ?></option>
-										<?php 			
-											}
-										?>
-
-										</select>
-										
-									</div>
-								</div>
-							</div>
-
-
-								<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Q3. Not including the course/s you are seeking to enrol in now, how many other government funded courses are you
-											undertaking training in at the moment?</label>
-										<input type="text" id="govtFundedCoursesName" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['govt_funded_courses_name']; ?>">
-										
-										<select id="govtFundedCourses" class="changeOption">
-											<?php
-												$govtFundedCoursesSelected = $form_apply3['enrol']['govt_funded_courses'];
-												$govtFundedCourses = array('0','1','2','3','4+');
-												$numValue=0;
-
-												foreach ($govtFundedCourses as $fundCourse) {
-													$selected="";
-													if($fundCourse == $govtFundedCoursesSelected){
-														$selected = "selected";
-													}
-													?>
-													<option value="<?php echo $fundCourse; ?>" <?php echo $selected; ?>><?php echo $fundCourse; ?></option>
-										<?php 			
-											}
-										?>
-										</select>
-									</div>
-								</div>
-							</div>	
-
-
-
-							<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Q4. In your lifetime, how many government funded courses have you started (commenced) that are at the same level
-											as the one you are applying for now? Don’t answer this question if you are seeking to enrol in a course on the
-											Foundation Skills List. </label>
-										<input type="text" id="sameLevelGovtFundedCoursesName" class="form-control Form_Setup textChange required" value="<?php echo $form_apply3['enrol']['same_level_govt_funded_courses_name']; ?>">
-										<select id="sameLevelGovtFundedCourses" class="changeOption">
-
-											<?php 
-												$sameLevelGovtFundedCoursesSelected = $form_apply3['enrol']['same_level_govt_funded_courses'];
-												$sameLevelGovtFundedCourses = array('0','1','2','3','4+');
-
-												foreach ($sameLevelGovtFundedCourses as $samelevelCourse) {
-													$selected="";
-													if($samelevelCourse == $sameLevelGovtFundedCoursesSelected){
-														$selected = "selected";
-													}
-													?>
-													<option value="<?php echo $samelevelCourse; ?>" <?php echo $selected; ?>><?php echo $samelevelCourse; ?></option>
-										<?php 			
-											}
-										?>
-											?>
-
-											<!-- <option>0 </option>
-											<option>1 </option>
-											<option>2 </option>
-											<option>3 </option>
-											<option>4+ </option> -->
-										</select>
-									</div>
-								</div>
-								</div>
-
-								<h4>Student declaration</h4>
-								<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>I</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label> in seeking to enrol in</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-								</div>
-
-								<h4>declare the following to be true and accurate statements: </h4>
-
-
-								<ul>
-									<li>a. I AM / AM NOT enrolled in a school, including government, non-government, independent, Catholic or home school.
-										(circle appropriate response)</li>
-									<li>b. I AM / AM NOT enrolled in the Commonwealth Government’s Skills for Education and Employment program. (circle
-										appropriate response):</li>
-									<li>c. I understand that my enrolment in the above qualification/s may be subsidised by the Victorian and Commonwealth
-										Governments under the Skills First Program. I understand how enrolling in the above qualification/s will affect
-										my future training options and eligibility for further government subsidised training under the Skills First Program.</li>
-									<li>d. I acknowledge and understand that I may be contacted by the Department or an agent to participate in a student
-										survey, interview or other questionnaire.</li>
-
-								</ul>
-								<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Signed</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-
-
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>Date</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-								</div>
-
-								<div class="clearfix"></div>
-
-								<h3>Section C - To be completed by an authorised delegate from Optimistic Futures</h3>
-
-								<h4>Number of courses student is currently eligible for:</h4>
-
-								<p>Optimistic Futures declaration Based on discussion with the student, the above evidence I have sighted (and retained
-									a copy of) in Section A, and the information provided to me by the student in Section B of this form I believe that
-									the above individual satisfies the Entitlement to Funded Training eligibility criteria as set out in the VET Funding
-									Contract and is eligible for funding under the Skill First Program for the following qualification/s: </p>
-
-								<div class="row">
-								<div class="col-sm-6">
-									<div class="form-group">
-										<label>(Include full title of qualification/s in which the student is seeking to enrol)</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-								</div>
-
-								<h4>Authorised Training Provider delegate:</h4>
-
-								<div class="row">
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Name</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-								</div>
-								
-
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Position</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-
-								<div class="col-sm-12">
-									<div class="form-group">
-										<label>Signed</label>
-										<input type="text" id="" class="form-control Form_Setup required" disabled>
-									</div>
-								</div>
-
-								<p>Notes Use this section to record additional, relevant eligibility information, including information used by the
-									Training Provider to verify the individual’s eligibility that is not captured in Sections A, B or C.</p>
-
-
-								<!--  <div class="col-md-12 col-sm-12">
-                  	  <button type="submit" id="submitBtn" class="btn btn-default Submit_Button">SUBMIT</button>
-                  </div>	-->
-					</form>
-					</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row Add_details">
-						<div class="col-md-12 col-sm-12">
-							<a class="btn btn-default Submit_Button" type="button" onClick="hello(); submitForm();">SUBMIT</a>
-						</div>
-					</div>
-				</div>
-	</section>
-	<br /><br /><br /><br /><br /><br />
-	<!-- Welcome_Classic Closed -->
-
-	<script>
-		$(document).ready(function(){
-			if ($('.country_australia').is(":checked")){
-				$('#thirtyThree').val("");
-				$('#thirtyThree').attr("disabled", "disabled");
-			}else {
-				$('#thirtyThree').removeAttr("disabled");
-			}
-
-			if($('#box90').is(":checked") && $('#box91').is(":checked")){
-				$('.haveFeesConession').attr('checked', false);
-			}
-
-			if($('#box51').is(":checked")){
-				$('#thirtyFive').attr("disabled", "disabled");
-				$('#thirtyFive').val("");
-			}else if($('#box51').is(":checked") && $('#box52').is(":checked")){
-				$('#thirtyFive').attr("checked", false);
-				$('#thirtyFive').removeAttr("disabled");
-			}else if($('#box52').is(":checked")){
-				$('#thirtyFive').val("");
-			}
-			else {				
-				$('#thirtyFive').removeAttr("disabled");
-			}
-
-			$('.haveDisability').click(function(){
-				if($(this).val()=='No'){
-					$('#box61').attr('checked', false);
-					$('.areasOfDiability').attr('checked', false);
-					$('#thirtySix').val("");
-					$('.areasOfDiability').attr('disabled', 'disabled');
-				}else if($(this).val()=='Yes'){
-					$('#box62').attr('checked', false);
-					$('.areasOfDiability').removeAttr("disabled");
-				}
-				console.log($(this).val()=='Yes');
-			})
-
-			if($('#box62').is(":checked")){
-				$('#box61').attr('checked', false);
-				$('.areasOfDiability').attr('checked', false);
-				$('#thirtySix').val("");
-				$('.areasOfDiability').attr('disabled', 'disabled');
-			}	
-
-
-
-			// checkboxes data send to controller enrollment
-			// start================
-	$('.changeOption').change(function(){
-		console.log("change");
-
-		var chkEnrolment_courseArray = [];
-		var chkModeOfStudyArray = [];
-		var chktitleArray = [];
-		var chkGenderArray = [];
-		var chkMethodOfContact = [];
-		var chkRTOpermissionArray = [];
-		// var chkNewEducatorArray = [];
-		var chkEmploymentStatusArray = [];
-		var chkEmploymentStatus_BArray = [];
-		var chkhighestCompletedSchoolArray = [];
-		var chkattendSecondarySchoolArray = [];
-		var chkprevQualificationCompletedArray = [];
-		var chkcompletedQulificationsArray = [];
-		var chkcountryOfQualificationCompletedArray = [];
-		var chklevelOfSpeakArray = [];
-		var chkoriginArray = [];
-		var chkareasOfDiabilityArray = [];
-		var chkstudyReasonArray = [];
-		var chkidentificationsArray = [];
-		var chkhaveFeesConessionArray = [];
-		var chkareaOfFeeConcessionArray = [];
-		var chktuitionSelfIdentifiedArray = [];
-		var chkpaymentMethodArray = [];
-		var chkconsentTestimonialsArray = [];
-		var chkconsentPhotoArray = [];
-		var chkcountryOfBirth = [];
-		var chkspeakLanguageAtHomeArray = [];
-
-		$(".methodOfContact:checked").each(function(){
-			chkMethodOfContact.push($(this).val());
-		});
-
-		$(".enrolment_course:checked").each(function() {
-			chkEnrolment_courseArray.push($(this).val());
-		});
-
-		$(".mode_of_study:checked").each(function() {
-			chkModeOfStudyArray.push($(this).val());
-		});
-
-		$(".title:checked").each(function() {
-			chktitleArray.push($(this).val());
-		});
-
-		$(".gender:checked").each(function(){
-			chkGenderArray.push($(this).val());
-		});
-
-		$(".RTOpermission:checked").each(function(){
-			chkRTOpermissionArray.push($(this).val());
-		});
-
-		// $(".newEducator:checked").each(function(){
-		// 	chkNewEducatorArray.push($(this).val());
-		// });
-
-		$(".employmentStatus:checked").each(function(){
-			chkEmploymentStatusArray.push($(this).val());
-		});
-		
-		$(".employmentStatus_B:checked").each(function(){
-			chkEmploymentStatus_BArray.push($(this).val());
-		});
-
-		$(".highestCompletedSchool:checked").each(function(){
-			chkhighestCompletedSchoolArray.push($(this).val());
-		});
-
-		$(".attendSecondarySchool:checked").each(function(){
-			chkattendSecondarySchoolArray.push($(this).val());
-		});
-
-		$(".prevQualificationCompleted:checked").each(function(){
-			chkprevQualificationCompletedArray.push($(this).val());
-		});
-
-		$(".completedQulifications:checked").each(function(){
-			chkcompletedQulificationsArray.push($(this).val());
-		});
-
-		$(".countryOfQualificationCompleted:checked").each(function(){
-			chkcountryOfQualificationCompletedArray.push($(this).val());
-		});
-
-		$(".levelOfSpeak:checked").each(function(){
-			chklevelOfSpeakArray.push($(this).val());
-		});
-
-		$(".origin:checked").each(function(){
-			chkoriginArray.push($(this).val());
-		});
-
-		$(".areasOfDiability:checked").each(function(){
-			chkareasOfDiabilityArray.push($(this).val());
-		});
-
-		$(".studyReason:checked").each(function(){
-			chkstudyReasonArray.push($(this).val());
-		});
-
-		$(".identifications:checked").each(function(){
-			chkidentificationsArray.push($(this).val());
-		});
-
-		$(".haveFeesConession:checked").each(function(){
-			chkhaveFeesConessionArray.push($(this).val());
-		});
-
-		$(".areaOfFeeConcession:checked").each(function(){
-			chkareaOfFeeConcessionArray.push($(this).val());
-		});
-
-		$(".tuitionSelfIdentified:checked").each(function(){
-			chktuitionSelfIdentifiedArray.push($(this).val());
-		});
-
-		$(".paymentMethod:checked").each(function(){
-			chkpaymentMethodArray.push($(this).val());
-		});
-
-		$(".consentTestimonials:checked").each(function(){
-			chkconsentTestimonialsArray.push($(this).val());
-		});
-
-		$(".consentPhoto:checked").each(function(){
-			chkconsentPhotoArray.push($(this).val());
-		});
-
-		$(".speakLanguageAtHome:checked").each(function(){
-			chkspeakLanguageAtHomeArray.push($(this).val());
-		});
-		
-		// console.log(chkspeakLanguageAtHomeArray);
-
-		var enrolment_courseSelected;
-		var mode_of_studySelected;
-		var titleSelected;
-		var genderSelected;
-		var methodOfContactSelected;
-		var RTOpermissionSelected;
-		var newEducatorSelected;
-		var employmentStatusSelected;
-		var employmentStatus_BSelected;
-		var highestCompletedSchoolSelected;
-		var attendSecondarySchoolSelected;
-		var prevQualificationCompletedSelected;
-		var completedQulificationsSelected;
-		var countryOfQualificationCompletedSelected;
-		var levelOfSpeakSelected;
-		var originSelected;
-		var areasOfDiabilitySelected;
-		var studyReasonSelected;
-		var identificationsSelected;
-		var haveFeesConessionSelected;
-		var areaOfFeeConcessionSelected;
-		var tuitionSelfIdentifiedSelected;
-		var paymentMethodSelected;
-		var consentTestimonialsSelected;
-		var consentPhotoSelected;
-		var country_Selected;
-		var speakLanguageAtHomeSelected;
-
-		enrolment_courseSelected = chkEnrolment_courseArray.join(',');
-		mode_of_studySelected = chkModeOfStudyArray.join(',');
-		titleSelected = chktitleArray.join(',');
-		genderSelected = chkGenderArray.join(',');
-		methodOfContactSelected = chkMethodOfContact.join(',');
-		RTOpermissionSelected = chkRTOpermissionArray.join(',');
-		// newEducatorSelected = chkNewEducatorArray.join(',');
-			if ($('.newEducator').is(":checked")){
-				newEducatorSelected = $('.newEducator').val();
-			}else {
-				newEducatorSelected = '';
-			}
-		employmentStatusSelected = chkEmploymentStatusArray.join(',');
-		employmentStatus_BSelected = chkEmploymentStatus_BArray.join(',');
-		highestCompletedSchoolSelected = chkhighestCompletedSchoolArray.join(',');
-		attendSecondarySchoolSelected = chkattendSecondarySchoolArray.join(',');
-		prevQualificationCompletedSelected = chkprevQualificationCompletedArray.join(',');
-		completedQulificationsSelected = chkcompletedQulificationsArray.join(',');
-		countryOfQualificationCompletedSelected = chkcountryOfQualificationCompletedArray.join(',');
-		levelOfSpeakSelected = chklevelOfSpeakArray.join(',');
-		originSelected = chkoriginArray.join(', ');
-
-		if($('#box62').is(':checked')){
-			// areasOfDiabilitySelected = "";
-			// $('#thirtySix').val();
-			// console.log("==",$('#box62').val());
-			// console.log("ds",$('#thirtySix').val());
-			haveDisabilitySelected = $('#box62').val();
-		}else {
-			areasOfDiabilitySelected = chkareasOfDiabilityArray.join(',');
-			haveDisabilitySelected = $('#box61').val();
-		}
-
-		studyReasonSelected = chkstudyReasonArray.join(',');
-		identificationsSelected = chkidentificationsArray.join(',');
-		haveFeesConessionSelected = chkhaveFeesConessionArray.join(',');
-		// areaOfFeeConcessionSelected = chkareaOfFeeConcessionArray.join(',');
-
-		if(haveFeesConessionSelected == 'No'){
-			// console.log("no");
-			areaOfFeeConcessionSelected = " ";
-
-
-		}else if(haveFeesConessionSelected == 'Yes,No'){
-			alert('Please select only one option in fees concession');
-			$('.haveFeesConession').attr('checked', false);
-			areaOfFeeConcession = " ";
-
-		}else if(haveFeesConessionSelected == ""){
-			areaOfFeeConcession = " ";
-		}else if(haveFeesConessionSelected == 'Yes'){
-			// console.log('yes');
-			areaOfFeeConcessionSelected = chkareaOfFeeConcessionArray.join(',')
-		}
-		// console.log("----",haveFeesConessionSelected);
-		// console.log("===",areaOfFeeConcessionSelected);
-		tuitionSelfIdentifiedSelected = chktuitionSelfIdentifiedArray.join(',');
-		paymentMethodSelected = chkpaymentMethodArray.join(',');
-		consentTestimonialsSelected = chkconsentTestimonialsArray.join(',');
-		consentPhotoSelected = chkconsentPhotoArray.join(',');
-
-		if ($('.country_australia').is(":checked")){
-			country_Selected = $('.country_australia').val();
-			$('#thirtyThree').val("");
-			$('#thirtyThree').attr("disabled", "disabled");
-		}else {
-			$('#thirtyThree').removeAttr("disabled");
-		}
-		// console.log("country", country_Selected);
-
-		speakLanguageAtHomeSelected = chkspeakLanguageAtHomeArray.join(',  '); //comma with 2 spaces
-
-
-		if(speakLanguageAtHomeSelected == "No, only English"){
-			$('#thirtyFive').attr("disabled", "disabled");
-			$('#thirtyFive').val("");
-		} else if(speakLanguageAtHomeSelected == "No, only English,  Yes, (Please speicfy)"){
-			alert('Please select only one option');
-			$('.speakLanguageAtHome').attr('checked', false);
-			$('#thirtyFive').removeAttr("disabled");
-		}
-		else {
-			$('#thirtyFive').removeAttr("disabled");
-			$('#thirtyFive').val("");
-		}
-		
-
-		var govtEnrolCoursesSelected = $('#govtEnrolCourses option:selected').text();
-		// console.log(govtEnrolCoursesSelected);
-
-		var govtFundedCoursesSelected = $('#govtFundedCourses option:selected').text();
-		// console.log(govtFundedCoursesSelected);
-
-		var sameLevelGovtFundedCoursesSelected = $('#sameLevelGovtFundedCourses option:selected').text();
-		// console.log(sameLevelGovtFundedCoursesSelected);
-		console.log(employmentStatus_BSelected);
-		$.ajax({
-			type: 'POST',
-			data: {
-				enrolment_courseSelected: enrolment_courseSelected,
-				mode_of_studySelected: mode_of_studySelected,
-				titleSelected: titleSelected,
-				genderSelected: genderSelected,
-				methodOfContactSelected: methodOfContactSelected,
-				RTOpermissionSelected: RTOpermissionSelected,
-				newEducatorSelected: newEducatorSelected,
-				employmentStatusSelected: employmentStatusSelected,
-				employmentStatus_BSelected: employmentStatus_BSelected,
-				highestCompletedSchoolSelected: highestCompletedSchoolSelected,
-				attendSecondarySchoolSelected: attendSecondarySchoolSelected,
-				prevQualificationCompletedSelected: prevQualificationCompletedSelected,
-				completedQulificationsSelected: completedQulificationsSelected,
-				countryOfQualificationCompletedSelected: countryOfQualificationCompletedSelected,
-				levelOfSpeakSelected: levelOfSpeakSelected,
-				originSelected: originSelected,
-				studyReasonSelected: studyReasonSelected,
-				identificationsSelected: identificationsSelected,
-				haveFeesConessionSelected: haveFeesConessionSelected,
-				areaOfFeeConcessionSelected: areaOfFeeConcessionSelected,
-				tuitionSelfIdentifiedSelected: tuitionSelfIdentifiedSelected,
-				paymentMethodSelected: paymentMethodSelected,
-				consentTestimonialsSelected: consentTestimonialsSelected,
-				consentPhotoSelected: consentPhotoSelected,
-				country_Selected: country_Selected,
-				speakLanguageAtHomeSelected: speakLanguageAtHomeSelected,
-				govtEnrolCoursesSelected: govtEnrolCoursesSelected,
-				govtFundedCoursesSelected: govtFundedCoursesSelected,
-				sameLevelGovtFundedCoursesSelected: sameLevelGovtFundedCoursesSelected,
-				haveDisabilitySelected:haveDisabilitySelected,
-				areasOfDiabilitySelected: areasOfDiabilitySelected,
-
-			},
-			url: '<?php echo site_url('ApplicationForms/form_apply3_enrolmentCourse') ?>',
-			success: function(result){
-		   		// console.log(result);
-		   	},
-		})
-	});
-
-	// checkbox end
-
-	// textboxes data start
-		$('.textChange').keyup(function(){
-
-			var firstName = $('#one').val();
-			var middleName = $('#two').val();
-			var lastName = $('#three').val();
-			var dateOfBirth = $('#four').val();
-			var residentialAddress = $('#five').val();
-			var subrubTown = $('#six').val();
-			var state = $('#seven').val();
-			var postCode = $('#eight').val();
-			var postalAddress = $('#nine').val();
-			var homePhone = $('#ten').val();
-			var mobile = $('#eleven').val();
-			var fax = $('#twelve').val();
-			var email = $('#thirteen').val();
-			var emergencyName = $('#forteen').val();
-			var emergencyRelationship = $('#fifteen').val();
-			var emergencyHomeNumber = $('#sixteen').val();
-			var emergencyMobile = $('#seventeen').val();
-			//RTO permission in checkbox section (above)
-			var concessionMedicareNumber = $('#eighteen').val();
-			var concessionMedicareExpiryDate = $('#ninteen').val();
-			var concessionCardNumber = $('#twenty').val();
-			var concessionCardExpiryDate = $('#twentyOne').val();
-			var usi1 = $('#twentyTwo').val();
-			var usi2 = $('#twentyThree').val();
-			var vsn = $('#twentyFour').val();
-			var vsnPreviousSchool = $('#twentyFive').val();
-			// newEducator in checkbox section
-			// employment status in checkbox section
-			var employmentOrganization = $('#twentySix').val();
-			var employmentPosition = $('#twentySeven').val();
-			var employmentAddress = $('#twentyEight').val();
-			var employmentTelephone = $('#twentyNine').val();
-			var employmentAbn = $('#thirty').val();
-			// highest completed school
-			var yearSchoolCompleted = $('#thirtyOne').val();
-			//attend secondary school
-			// completed qualification yes or no
-			// if yes then completed qualification
-			var anotherCertificate = $('#thirtyTwo').val();
-			// where the qualification completed country
-			var countryOfBirth = $('#thirtyThree').val();
-			var cityOfBirth = $('#thirtyFour').val();
-			var speakLanguageAtHome = $('#thirtyFive').val();
-
-			if($('#box62').is(':checked')){
-				var otherAreasOfDisability = "";
-			}else {
-				var otherAreasOfDisability = $('#thirtySix').val();
-			}
-			var eduHistoryHighestQualifications = $('#eduHistoryHighestQualifications').val();
-			var govtEnrolCoursesName = $('#govtEnrolCoursesName').val();
-			var govtFundedCoursesName = $('#govtFundedCoursesName').val();
-			var sameLevelGovtFundedCoursesName = $('#sameLevelGovtFundedCoursesName').val();
-
-
-			// console.log(concessionMedicareNumber);
-			
-			//set values into the object
-			var textBoxData = new Object();
-			textBoxData.firstName = firstName;
-			textBoxData.middleName = middleName;
-			textBoxData.lastName = lastName;
-			textBoxData.dateOfBirth = dateOfBirth;
-			textBoxData.residentialAddress = residentialAddress;
-			textBoxData.subrubTown = subrubTown;
-			textBoxData.state = state;
-			textBoxData.postCode = postCode;
-			textBoxData.postalAddress = postalAddress;
-			textBoxData.homePhone = homePhone;
-			textBoxData.mobile = mobile;
-			textBoxData.fax = fax;
-			textBoxData.email = email;
-			textBoxData.emergencyName = emergencyName;
-			textBoxData.emergencyRelationship = emergencyRelationship;
-			textBoxData.emergencyHomeNumber = emergencyHomeNumber;
-			textBoxData.emergencyMobile = emergencyMobile;
-			textBoxData.concessionMedicareNumber = concessionMedicareNumber;
-			textBoxData.concessionMedicareExpiryDate = concessionMedicareExpiryDate;
-			textBoxData.concessionCardNumber = concessionCardNumber;
-			textBoxData.concessionCardExpiryDate = concessionCardExpiryDate;
-			textBoxData.usi1 = usi1;
-			textBoxData.usi2 = usi2;
-			textBoxData.vsn = vsn;
-			textBoxData.vsnPreviousSchool = vsnPreviousSchool;
-			textBoxData.employmentOrganization = employmentOrganization;
-			textBoxData.employmentPosition = employmentPosition;
-			textBoxData.employmentAddress = employmentAddress;
-			textBoxData.employmentTelephone = employmentTelephone;
-			textBoxData.employmentAbn = employmentAbn;
-			textBoxData.yearSchoolCompleted = yearSchoolCompleted;
-			textBoxData.anotherCertificate = anotherCertificate;
-			textBoxData.cityOfBirth = cityOfBirth;
-			textBoxData.countryOfBirth = countryOfBirth;
-			textBoxData.speakLanguageAtHome = speakLanguageAtHome;
-			textBoxData.otherAreasOfDisability = otherAreasOfDisability;
-			textBoxData.eduHistoryHighestQualifications = eduHistoryHighestQualifications;
-			textBoxData.govtEnrolCoursesName = govtEnrolCoursesName;
-			textBoxData.govtFundedCoursesName = govtFundedCoursesName;
-			textBoxData.sameLevelGovtFundedCoursesName = sameLevelGovtFundedCoursesName;
-
-
-			$.ajax({
-				type: 'POST',
-				data: {
-					textBoxData: textBoxData
-				},
-				url: '<?php echo site_url('ApplicationForms/form_apply3_enrolmentCourse2') ?>',
-				success: function(result){
-		    		console.log(result);
-		    	},
-			})
-		});
-	// textboxes data end
-
-		});
-	</script>
-
+<div class="pl-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex ">
+                <p class="col-4 pt-3">Are you still attending secondary school?</p>
+                <div class="form-check form-check-inline col-2">
+                    <input
+                        <?php echo ($form_apply3['form3']['sch_stillattend'] == 'yes') ? 'checked' : ''; ?> class="form-check-input checkOne stillattendSchool"
+                     name="sch_stillattend"   data-target=".stillattendSchool" type="checkbox" value="yes">
+                    <label class="form-check-label" >Yes</label>
+                </div>
+                <div class="form-check form-check-inline col-2">
+                    <input
+                        <?php echo ($form_apply3['form3']['sch_stillattend'] == 'not') ? 'checked' : ''; ?>
+                        name="sch_stillattend"   class="form-check-input checkOne stillattendSchool"
+                        data-target=".stillattendSchool" type="checkbox" value="not">
+                    <label class="form-check-label" >No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <br class="clearfix">
+    <h3 class="text-white bg-dark">PREVIOUS QUALIFICATIONS ACHIEVED</h3>
+
+    <div class="pl-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex ">
+                    <p class="pr-2 pt-3">Have you SUCCESSFULLY completed any of the
+                        following qualifications?</p>
+                 
+                    <div class="form-check form-check-inline col-1">
+                        <input
+                            <?php echo ($form_apply3['form3']['pea_qualification_completed'] == 'yes') ? 'checked' : ''; ?>class="form-check-input checkOne attendSchool"
+                            name="pea_qualification_completed" data-target=".attendSchool" type="checkbox" value="yes">
+                        <label class="form-check-label" >Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline col-1">
+                        <input
+                            <?php echo ($form_apply3['form3']['pea_qualification_completed'] == 'not') ? 'checked' : ''; ?>
+                            class="form-check-input checkOne attendSchool"
+                           name="pea_qualification_completed"  data-target=".attendSchool" type="checkbox" value="not">
+                        <label class="form-check-label" >No</label>
+                    </div>
+                    <span class="pt-3 text-secondary">if Yes, please tick ANY applicable
+                        boxes</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pl-4">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table table-borderless p-0">
+                            <thead>
+                                <tr>
+                                    <th class="p-0" width="5%" scope="col">A</th>
+                                    <th class="p-0" width="5%" scope="col">E</th>
+                                    <th class="p-0" width="5%" scope="col">I</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php  $checkedPreviousAcheived = json_decode($form_apply3['form3']['pea_certification'], true); ?>
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_i]" <?php echo ($checkedPreviousAcheived['certificate_i'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate1" data-target=".certificate1" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_i]" <?php echo ($checkedPreviousAcheived['certificate_i'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate1" data-target=".certificate1" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_i]" <?php echo ($checkedPreviousAcheived['certificate_i'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate1" data-target=".certificate1" value="i" >
+                                    </td>
+                                    <td class="p-0">Certificate I</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_ii]" <?php echo ($checkedPreviousAcheived['certificate_ii'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate2" data-target=".certificate2" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_ii]" <?php echo ($checkedPreviousAcheived['certificate_ii'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate2" data-target=".certificate2" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_ii]" <?php echo ($checkedPreviousAcheived['certificate_ii'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate2" data-target=".certificate2" value="i" >
+                                    </td>
+                                    <td class="p-0">Certificate II</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_iii]" <?php echo ($checkedPreviousAcheived['certificate_iii'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate3" data-target=".certificate3 " value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_iii]" <?php echo ($checkedPreviousAcheived['certificate_iii'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate3" data-target=".certificate3 " value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_iii]" <?php echo ($checkedPreviousAcheived['certificate_iii'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate3" data-target=".certificate3 " value="i" >
+                                    </td>
+                                    <td class="p-0">Certificate III</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[trade_certificate]" <?php echo ($checkedPreviousAcheived['trade_certificate'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne trade-certificate" data-target=".trade-certificate" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[trade_certificate]" <?php echo ($checkedPreviousAcheived['trade_certificate'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne trade-certificate" data-target=".trade-certificate" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[trade_certificate]" <?php echo ($checkedPreviousAcheived['trade_certificate'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne trade-certificate" data-target=".trade-certificate" value="i" >
+                                    </td>
+                                    <td class="p-0">Certificate III (Or Trade Certificate)</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[advance_certificate]" <?php echo ($checkedPreviousAcheived['advance_certificate'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate4" data-target=".certificate4" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[advance_certificate]" <?php echo ($checkedPreviousAcheived['advance_certificate'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate4" data-target=".certificate4" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[advance_certificate]" <?php echo ($checkedPreviousAcheived['advance_certificate'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne certificate4" data-target=".certificate4" value="i" >
+                                    </td>
+                                    <td class="p-0">Certificate IV (Or Advance Certificate/Technician)</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-borderless p-0">
+                            <thead>
+                                <tr>
+                                    <th class="p-0" width="5%" scope="col">A</th>
+                                    <th class="p-0" width="5%" scope="col">E</th>
+                                    <th class="p-0" width="5%" scope="col">I</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                    
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[diploma_associate]" <?php echo ($checkedPreviousAcheived['diploma_associate'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne assosiatecertificate" data-target=".assosiatecertificate" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[diploma_associate]" <?php echo ($checkedPreviousAcheived['diploma_associate'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne assosiatecertificate" data-target=".assosiatecertificate" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[diploma_associate]" <?php echo ($checkedPreviousAcheived['diploma_associate'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne assosiatecertificate" data-target=".assosiatecertificate" value="i" >
+                                    </td>
+                                    <td class="p-0">Diploma (Or Associate Diploma)</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[advance_diploma]" <?php echo ($checkedPreviousAcheived['advance_diploma'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne advancediploma" data-target=".advancediploma" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[advance_diploma]" <?php echo ($checkedPreviousAcheived['advance_diploma'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne advancediploma" data-target=".advancediploma" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[advance_diploma]" <?php echo ($checkedPreviousAcheived['advance_diploma'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne advancediploma" data-target=".advancediploma" value="i" >
+                                    </td>
+                                    <td class="p-0">Advance Diploma Or Associate Degree</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[bachelor_degree]" <?php echo ($checkedPreviousAcheived['bachelor_degree'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne bachelordegree" data-target=".bachelordegree" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[bachelor_degree]" <?php echo ($checkedPreviousAcheived['bachelor_degree'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne bachelordegree" data-target=".bachelordegree" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[bachelor_degree]" <?php echo ($checkedPreviousAcheived['bachelor_degree'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne bachelordegree" data-target=".bachelordegree" value="i" >
+                                    </td>
+                                    <td class="p-0">Bachelor Degree Or Higher Degree</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_other]" <?php echo ($checkedPreviousAcheived['certificate_other'] == 'a')? 'checked': NULL; ?> type="checkbox" class="checkOne certificateOtherthantheabove" data-target=".certificateOtherthantheabove" value="a" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_other]" <?php echo ($checkedPreviousAcheived['certificate_other'] == 'e')? 'checked': NULL; ?> type="checkbox" class="checkOne certificateOtherthantheabove" data-target=".certificateOtherthantheabove" value="e" >
+                                    </td>
+                                    <td class="p-0" width="5%">
+                                        <input name="pea_certification[certificate_other]" <?php echo ($checkedPreviousAcheived['certificate_other'] == 'i')? 'checked': NULL; ?> type="checkbox" class="checkOne certificateOtherthantheabove" data-target=".certificateOtherthantheabove" value="i" >
+                                    </td>
+                                    <td class="p-0">Certificate Other Than The Above</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex">
+                        <p> <strong class="pr-4"> Legends: </strong> <strong class="px-2">A:</strong> Australia <strong class="px-2">E:</strong> Australian equivalent
+                            <strong class="px-2">I:</strong> International (Overseas)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                
+                                
+    <br class="clearfix">
+    <h3 class="text-white bg-dark">LANGUAGE & CULTURAL DIVERSITY</h3>
+
+        <!-- row title and gender -->
+        <div class="pl-4">
+            <div class="row">
+                <div class="col-4">
+                    <div class="d-flex">
+                        <strong class="pr-3  ">Country of Birth:</strong>
+                        <div class="form-check">
+                            <input class="form-check-inputy disableInput" <?php echo ($form_apply3['form3']['lcd_country_of_birth'] == 'Australia')? 'checked': NULL; ?> data-disable="#countryOfbirth" name="lcd_country_of_birth" type="checkbox" value="Australia">
+                            <label class="form-check-label">
+                                Australia
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="d-flex ">
+                        <strong class="pl-3 col-md-2">Others:</strong>
+                        <input id="countryOfbirth" type="text" name="lcd_country_of_birth"  value="<?php echo ($form_apply3['form3']['lcd_country_of_birth'] != 'Australia')? $form_apply3['form3']['lcd_country_of_birth']: NULL; ?>" class="form-control border-bottom-only col-md-10" placeholder="Others">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row title and gender end -->
+
+        <!-- row title and gender -->
+        <div class="pl-4 mt-2">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex ">
+                        <strong class="pt-2 pr-2">City of birth:</strong>
+                        <input type="text" name="lcd_city_of_birth" value="<?php echo $form_apply3['form3']['lcd_city_of_birth']; ?>" class="form-control border bottom-only col-md-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row title and gender end --> 
+
+        <!-- row title and gender -->
+        <div class="pl-4 pt-3">
+            <div class="row">
+                <div class="col-12">
+                    <strong><u>Citizenship Status:</u></strong>
+                </div>
+                <div class="col-12">
+                    <?php foreach($form_apply3['citizen_status'] as $citzenStatus){
+                        $checkedCititzenStatus = ($form_apply3['form3']['lcd_citizenship_status'] == $citzenStatus)? 'checked': NULL; 
+                        echo'
+                        <div class="form-check form-check-inline pr-2">
+                            <input name="lcd_citizenship_status" '.$checkedCititzenStatus.' class="form-check-input checkOne citizenstatus" data-target=".citizenstatus" type="checkbox" value="'.$citzenStatus.'">
+                            <label class="form-check-label" >'.$citzenStatus.'</label>
+                        </div>
+                    ';}?>
+                </div>
+            </div>
+        </div>
+    <!-- row title and gender end -->
+
+        <!-- row title and gender -->
+        <div class="pl-4 pt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex">
+                        <p >Please State your Visa Classification (if applicable) e.g. Visa Subclass 457:
+                            <div class="form-group">
+                                <input type="text" name="lcd_visa_classification" value="<?php echo $form_apply3['form3']['lcd_visa_classification']; ?>" style="width:465px;" class="form-contro text-center border-bottom-only" >
+                                <small  class="form-text text-center text-muted">Attach evidence with the form</small>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <!-- row title and gender end -->
+
+        <!-- row title and gender -->
+        <div class="pl-4 pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    Do you speak a Language other than English at home:
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_speak_english" <?php echo ($form_apply3['form3']['lcd_speak_english'] == 'yes')? 'checked':NULL; ?> class="form-check-input speakLanguageAtHomees checkOne" data-target=".speakLanguageAtHomees" type="checkbox" value="yes">
+                        <label class="form-check-label">No, only English</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input <?php echo ($form_apply3['form3']['lcd_speak_english'] != 'yes' && $form_apply3['form3']['lcd_speak_english']  != NULL)? 'checked':NULL; ?> class="form-check-input speakLanguageAtHomees checkOne" data-target=".speakLanguageAtHomees" type="checkbox" value="yes">
+                        <label class="form-check-label">Yes 
+                            <input type="text" name="lcd_speak_english" placeholder="please specify" class="text-center border-bottom-only" value="<?php echo ($form_apply3['form3']['lcd_speak_english'] != 'yes')? $form_apply3['form3']['lcd_speak_english']:NULL; ?>" >
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- row title and gender end -->
+
+        <!-- row title and gender -->
+        <div class="pl-4 pt-3">
+            <div class="row">
+                <div class="col-md-4">
+                    How well do you speak English:
+                </div>
+                <div class="col-md-8">
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_speak_english_status" class="form-check-input speakLanguageWell checkOne" <?php echo ($form_apply3['form3']['lcd_speak_english_status'] == 'very_well')? 'checked': NULL; ?>  data-target=".speakLanguageWell" type="checkbox"  value="very_well">
+                        <label class="form-check-label">Very Well</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_speak_english_status" class="form-check-input speakLanguageWell checkOne" <?php echo ($form_apply3['form3']['lcd_speak_english_status'] == 'well')? 'checked': NULL; ?>  data-target=".speakLanguageWell" type="checkbox"  value="well">
+                        <label class="form-check-label">Well</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_speak_english_status" class="form-check-input speakLanguageWell checkOne" <?php echo ($form_apply3['form3']['lcd_speak_english_status'] == 'not_well')? 'checked': NULL; ?>  data-target=".speakLanguageWell" type="checkbox"  value="not_well">
+                        <label class="form-check-label">Not Well</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_speak_english_status" class="form-check-input speakLanguageWell checkOne" <?php echo ($form_apply3['form3']['lcd_speak_english_status'] == 'not_at_all')? 'checked': NULL; ?>  data-target=".speakLanguageWell" type="checkbox"  value="not_at_all">
+                        <label class="form-check-label">Not at all</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- row title and gender end -->
+        
+
+        <!-- row title and gender -->
+        <div class="pl-4 pt-3">
+            <div class="row">
+                <div class="col-md-5">
+                Are you of Aboriginal or Torres Strait Islander origin?
+                </div>
+                <div class="col-md-7">
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_islander_origin" class="form-check-input islanderOrigin checkOne" <?php echo ($form_apply3['form3']['lcd_islander_origin'] == 'no')? 'checked': NULL; ?> data-target=".islanderOrigin" type="checkbox" value="no">
+                        <label class="form-check-label">No</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_islander_origin" class="form-check-input islanderOrigin checkOne" <?php echo ($form_apply3['form3']['lcd_islander_origin'] == 'yes_aboriginal')? 'checked': NULL; ?> data-target=".islanderOrigin" type="checkbox" value="yes_aboriginal">
+                        <label class="form-check-label">Yes, Aboriginal</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_islander_origin" class="form-check-input islanderOrigin checkOne" <?php echo ($form_apply3['form3']['lcd_islander_origin'] == 'yes_torres')? 'checked': NULL; ?> data-target=".islanderOrigin" type="checkbox" id="inlineCheckbox3" value="yes_torres">
+                        <label class="form-check-label">Yes, Torres Strait Islander</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="lcd_islander_origin" class="form-check-input islanderOrigin checkOne" <?php echo ($form_apply3['form3']['lcd_islander_origin'] == 'yes_both')? 'checked': NULL; ?> data-target=".islanderOrigin" type="checkbox" value="yes_both">
+                        <label class="form-check-label">Yes, Both</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- row title and gender end -->
+
+        
+        <br class="clearfix">
+        <h3 class="text-white bg-dark">DISABILITY</h3>
+
+        <!-- row title and gender -->
+        <div class="pl-4 pt-3">
+            <div class="row">
+                <div class="col-md-7">
+                    Do you consider yourself to have a disability, impairment or long-term condition?
+                </div>
+                <div class="col-md-5">
+                    <div class="form-check form-check-inline px-4">
+                        <input name="disable_consider_yourself" <?php echo ($form_apply3['form3']['disable_consider_yourself'] == 'yes')? 'checked': NULL; ?> class="form-check-input speakLanguageAtHome checkOne" data-target=".speakLanguageAtHome" type="checkbox" value="yes">
+                        <label class="form-check-label">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline px-4">
+                        <input name="disable_consider_yourself" <?php echo ($form_apply3['form3']['disable_consider_yourself'] == 'no')? 'checked': NULL; ?> class="form-check-input speakLanguageAtHome checkOne" data-target=".speakLanguageAtHome" type="checkbox" value="no">
+                        <label class="form-check-label">No 
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- row title and gender end -->
+
+    <!-- row title and gender -->
+    <div class="pl-4 pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                If yes, then please indicate the areas of a disability, impairment or long-term condition:
+            </div>
+        </div>
+        <div class="row">
+                    <?php 
+                    $count = 0;
+                    $other_specific = '';
+                    foreach($form_apply3['disablity'] as $disable){
+                        if($count == 0 || $count == 3 || $count == 6){ 
+                            echo   '<div class="col-md-3">';
+                        }
+                        $disablityChecked = ($form_apply3['form3']['disability_area'] == $disable)? 'checked':NULL;
+                        if($disable == 'Other'){
+                            $other_specific = '<input name="disability_area" '.$disablityChecked.' type="text" placeholder="please specify" class="text-center border-bottom-only"   >';
+                        }
+                        echo '
+                            <div class="form-check pt-1">
+                                <input type="checkbox" '.$disablityChecked.' class="form-check-input checkOne indicate_the_areas_of_a_disability" name="disability_area"   data-target=".indicate_the_areas_of_a_disability" value="'.$disable.'">
+                                <label class="form-check-label">
+                                    '.$disable.' '.$other_specific.'
+                                </label>
+                            </div>
+                        ';
+
+                        $count++;
+                        if($count == 3 || $count == 6 || $count == 9){ 
+                            echo   '</div>';
+                        }
+                    } ?>
+        </div>
+    </div>
+    <!-- row title and gender end -->
+
+
+                            
+
+    <br class="clearfix">
+    <h3 class="text-white bg-dark">STUDY REASON</h3>
+    <!-- row title and gender -->
+    <div class="pl-4 pt-3">
+        <div class="row">
+            <div class="col-md-12">
+                Of the following categories, which BEST describes your main Reason for undertaking this course/traineeship/apprenticeship? 
+                <span class='pl-4 text-secondary'> Tick only ONE</span>
+            </div>
+        </div>
+        <div class="row pt-2">
+                    <?php 
+                    $count = 0;
+                    $other_specific = '';
+                    foreach($form_apply3['study_reasons'] as $study_reason){
+                        if($count == 0 || $count == 5 || $count == 12){ 
+                            echo   '<div class="col-md-6">';
+                        }
+                        $studyReasonChecked = ($form_apply3['form3']['study_reason'] == $study_reason)? 'checked': NULL;
+
+                        if($study_reason == 'Other'){
+                            $other_specific = '<input name="study_reason" '.$studyReasonChecked.' type="text" placeholder="please specify" class="text-center border-bottom-only" >';
+                        }
+                        echo '
+                            <div class="form-check pt-1">
+                                <input name="study_reason" '.$studyReasonChecked.' class="form-check-input checkOne study_reason" data-target=".study_reason" type="checkbox" value="'.$study_reason.'">
+                                <label class="form-check-label">
+                                    '.$study_reason.' '.$other_specific.'
+                                </label>
+                            </div>
+                        ';
+
+                        $count++;
+                        if($count == 5 || $count == 12 || $count == 18){ 
+                            echo   '</div>';
+                        }
+                    } ?>
+        </div>
+    </div>
+    </div>
+    <!-- row title and gender end -->
+
+                            
+        <br class="clearfix">
+        <h3 class="text-white bg-dark">IDENTIFICATION</h3>
+        <!-- row title and gender -->
+        <div class="pl-4 pt-2">
+                <div class="row">
+                    <?php 
+                    $count = 0;
+                    $other_specific = '';
+                    foreach($form_apply3['identitfication'] as $identitfication){
+                        if($count == 0 || $count == 4 || $count == 12){ 
+                            echo   '<div class="col-md-6 pl-4">';
+                        }
+                        $checkedIdentification = ($form_apply3['form3']['identification'] == $identitfication)? 'checked': NULL;
+                        echo '
+                            <div class="form-check p-1 ">
+                                <input name="identification" '.$checkedIdentification.'  class="form-check-input checkOne identitfication" data-target=".identitfication" type="checkbox" value="'.$identitfication.'">
+                                <label class="form-check-label">
+                                    '.$identitfication.'
+                                </label>
+                            </div>
+                        ';
+
+                        $count++;
+                        if($count == 4 || $count == 12 || $count == 18){ 
+                            echo   '</div>';
+                        }
+                    } ?>
+                </div>
+            </div>
+        </div>
+    <!-- row title and gender end -->
+
+
+        <br class="clearfix">
+        <h3 class="text-white bg-dark">TUITION FEES</h3>
+        <div class="pl-4 pt-2">
+            <div class="row">
+                <div class="col-md-12">
+                    <strong> Fee Concession or Fee Waivers </strong>
+                    <p class="m-0 pb-2"> Do you have a current concession card? <span class='pl-3 text-secondary'> (Please Tick One) </span> </p>
+                    <?php   $array_fee_consession = ['yes', 'no', 'n/a'];
+                            foreach($array_fee_consession as $consess){
+                                $checkedtf_consession_card = ($form_apply3['form3']['tf_consession_card'] == $consess)? 'checked': NULL;
+                                echo '
+                                <div class="form-check form-check-inline pr-5">
+                                    <input class="form-check-input checkOne feeConcessionAndWaiver" '.$checkedtf_consession_card.' name="tf_consession_card" data-target=".feeConcessionAndWaiver" type="checkbox"  value="'.$consess.'">
+                                    <label class="form-check-label">'.$consess.'</label>
+                                </div>
+                                ';
+                            }
+                    ?>
+                    
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-md-12">
+                    <strong>If yes which of the following has been sighted?</strong>
+                    <div class="pt-2">
+                        <?php foreach($form_apply3['tution_sighted'] as $tu_sighted){
+                            $checkedtf_consession_sighted = ($form_apply3['form3']['tf_consession_sighted'] == $tu_sighted)? 'checked':NULL;
+                            echo'
+                            <div class="form-check">
+                                <input class="form-check-input checkOne tutionsighted" '.$checkedtf_consession_sighted.' name="tf_consession_sighted" data-target=".tutionsighted" type="checkbox" value="'.$tu_sighted.'" >
+                                <label class="form-check-label">
+                                    '.$tu_sighted.'
+                                </label>
+                            </div>';
+
+                        } ?>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row pt-3">
+                <div class="col-md-12">
+                    <p>NB: Optimistic Futures must retain a copy of the relevant concession card . Where the concession card is present via digital wallet through Centrelink Express Plus mobile application, optimistic futures must make a written declaration and attach it to the student file stating, the following;</p>
+                    <div class="pt-2">
+                        <ul>
+                            <li>Name of the authorised delegate who sighted the card;</li>
+                            <li>Date the card was sighted;</li>
+                            <li>Concession holder͛s name͖</li>
+                            <li>Card number;</li>
+                            <li>Valid from or card start date; and</li>
+                            <li>Expiry date of the concession entitlement</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-md-12">
+                   <p>Have you been referred by Job Seekers with a standard Job Seeker Referral Form? <span class="pl-3 text-secondary"> (Please Tick One) </span> </p>
+                    <div class="form-check form-check-inline pr-3">
+                        <input class="form-check-input checkOne jobSeekerReferralForm" <?php echo ($form_apply3['form3']['tf_job_seeker_referral'] != 'no' && $form_apply3['form3']['tf_job_seeker_referral'] != NULL)? 'checked':NULL; ?> name="tf_job_seeker_referral" data-target=".jobSeekerReferralForm" type="checkbox">
+                        <label class="form-check-label" >Yes, Plesae Specify:
+                            <input type="text" name="tf_job_seeker_referral"   value="<?php echo ($form_apply3['form3']['tf_job_seeker_referral'] != 'no' && $form_apply3['form3']['tf_job_seeker_referral'] != NULL)? $form_apply3['form3']['tf_job_seeker_referral']:NULL; ?>" class="border-bottom-only">
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline pl-3">
+                        <input class="form-check-input checkOne jobSeekerReferralForm" <?php echo ($form_apply3['form3']['tf_job_seeker_referral'] == 'no')? 'checked':NULL; ?>  name="tf_job_seeker_referral" data-target=".jobSeekerReferralForm" type="checkbox"  value="no">
+                        <label class="form-check-label" >No</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-md-12">
+                   <p>NB: Optimistic Futures must invoice the referring agency directly for the portion of the tuition fee not covered by the referred job seeker.</p>
+                </div>
+            </div>
+
+        </div>
+    
+        <br class="clearfix">
+        <h3 class="text-white bg-dark">PAYMENT METHOD</h3>
+        <div class="pl-4 pt-2">
+            <div class="row pt-3">
+                <div class="col-md-12">
+                    <p>Please make payable to: Optimistic Futures Pty Ltd</p>
+                    <?php 
+                        $count = 0;
+                        foreach($form_apply3['payment_method'] as $paymethod){
+                            $checkedpayable_method = ($form_apply3['form3']['payable_method'] == $paymethod)? 'checked': NULL;
+                        if($count <= 4){
+                            echo'
+                                <div class="form-check form-check-inline pr-3 pt-2">
+                                    <input name="payable_method" '.$checkedpayable_method.' class="form-check-input  checkOne paymentMethod" data-target=".paymentMethod" type="checkbox"  value="'.$paymethod.'">
+                                    <label class="form-check-label" >'.$paymethod.'</label>
+                                </div>
+                            ';
+                        }else{
+                            echo'
+                                <div class="form-check pt-2">
+                                    <input name="payable_method" '.$checkedpayable_method.' class="form-check-input checkOne paymentMethod" data-target=".paymentMethod" type="checkbox" value="'.$paymethod.'">
+                                    <label class="form-check-label" >
+                                        '.$paymethod.'
+                                    </label>
+                                </div> 
+                            ';
+                        }
+                        $count++;
+                        
+                    }?>
+                </div>
+            </div>                        
+        </div>
+    
+
+        <br class="clearfix">
+        <h3 class="text-white bg-dark">REFUNDS</h3>
+        <div class="pl-4 pt-2">
+            <div class="row pt-3">
+                <div class="col-md-12">
+                    <p class="m-0"><strong> Deposits are non-refundable(deposits are outlined on each course flyer) but can be transferred to another course orstudent.</strong></p>
+                    <p class="m-0">An administration fee (if applicable) will be charged to any student who withdrawsfrom a course in excess of 3 working days prior
+                         to course commencement.</p>
+                    <p class="m-0">No refunds will be issued once the course has commenced</p>
+                </div>
+            </div>        
+            <div class="row pt-3">
+                <div class="col-md-12">
+                    <p class="m-0">Refunds may be made in the following circumstances:</p>
+                    <ul>
+                        <li>Participants have overpaid the administration charge</li>
+                        <li>Participants enrolled in training that has been cancelled by the RTO</li>
+                        <li>Participant advises the RTO prior to course commencementthat they are withdrawing from the course</li>
+                        <li>If the participant withdrawsfrom a course or program due to illness or extreme hardship as determined by the RTO</li>
+                    </ul>
+                </div>
+            </div>                        
+        </div>
+      
+
+
+        <br class="clearfix">
+        <h3 class="text-white bg-dark">TERMS & CONDITIONS OF ENROLMENT</h3>
+        <div class="pl-4 pt-2">
+            <div class="row pt-3">
+                <div class="col-md-12">
+                    <p ><strong>Language, Literacy and Numeracy (LLN) (1.7)</strong></p>
+                    <p class="m-0"> LLN support is available to provide students with advice and support services in the provision of language, literacy and numeracy assessment services. Students
+                                    needing assistance with their learning should be identified upon enrolment. Trainers and staff within the RTO can provide students with support to assist the student
+                                    throughout the learning process.</p>
+                    <p >Language, Literacy and Numeracy skills are generally included and identified in Training Packages and accredited course programs. In identifying language, literacy
+                    and numeracy requirements, students are required to have basic skills in:</p>
+                    <ul class="mb-0">
+                        <li>Count, check and record accurately</li>
+                        <li>Read and interpret</li>
+                        <li>Estimate, calculate and measure.</li>
+                    </ul>
+                    <p class="m-0">All students undertaking a Certificate III qualification or below are required to undertake an LLN Assessment.</p>
+                    
+                    <p ><strong>Support Services (1.7)</strong></p>
+                    <p>The RTO caters to diverse client learning needs and aims to identify and respond to the learning needs of all clients. Clients are encouraged to express their views
+                        about their learning needs at all stages of their learning experience from the initial enrolment and induction stage.</p>
+                    <p>The RTO will analyse who the target candidates are and whether an individual, a specific group or a broad target group and will determine the key characteristics and
+                        needs of candidates, including disabilities.</p>
+                    
+                    <p ><strong>Credit Transfer (3.5)</strong></p>
+                    <p>The RTO recognises the Australian Qualifications Framework and Vocational Education and Training (VET) qualifications and VET statements of attainment issued by
+                        any other Registered Training Organisation.</p>
+                    <p>Credit Transfer will be awarded for all units of competencies that directly align with units from the qualification the student has enrolled. Evidence of competences
+                        achieved must be supplied for recognition to be processed (i.e. presentation of original certificate or transcript).</p>
+                    <p>Please refer to the Student Handbook or contact the office for the procedure on how to apply for a Credit Transfer.</p>
+
+                    <p ><strong>Enrolment & Selection (5.3)</strong></p>
+                    <ol>
+                        <li>The student is responsible for notifying the RTO if they have a medical condition or disability or require assistance in their training.</li>
+                        <li>A deposit must accompany enrolment to secure a placement within a course; this fee is also the Administration Fee.</li>
+                        <li>It is the student͛s responsibility to note the date, time and location of the course as advertised.</li>
+                        <li>Courses with low enrolments may be cancelled, every effort will be made to contact students, please ensure your contact details are correct.</li>
+                        <li>Requests from the student to transfer or credit their course placement due to changed personal circumstances will be considered and every effort will be made to</li>
+                        <li>ensure a placement into an alternative course.</li>
+                        <li>If you are unable to complete your course, due to changed personal circumstances, the RTO will make every effort to ensure you are placed into an alternative</li>
+                        <li>pre-scheduled course.</li>
+                        <li>Students can only join after course commencement date if they meet all prerequisites. Full course fees are still payable for late enrolments.</li>
+                        <li>The RTO reserves the right to decline admission to a course, terminate a student's enrolment in a class or change a course or tutor at any time without notice.</li>
+                        <li>Students participate in courses involving physical activity; field trips, practical demonstrations etc. and do so at their own risk. The RTO͛s students are covered by public liability insurance whilst working within the RTO͛s premises.</li>
+                    </ol>
+
+                    <p ><strong>Training Guarantee (5.3)</strong></p>
+                    <p>The RTO will guarantee to complete all training and/ or assessment once the student has commenced study in their chosen qualification or course of study, unless
+                        the student submits a formal Letter of Withdrawal notifying the RTO that they wish to withdraw. If a student voluntarily drops out, this guarantee is valid for a
+                        maximum of six months from initial course commencement date.</p>
+
+                    <p ><strong>Course Fees, Payments and Refunds (5.3)</strong></p>
+                    <ol>
+                        <li>Please refer to the course flyer for information on course fees, including any required deposit; administration fees; materials fees and any other charges (if applicable).</li>
+                        <li>The Administration Fee (if applicable, for details please refer fee schedule) is non-refundable but can be transferred to another course or student.</li>
+                        <li>Certificates and Statements of Attainment are issued to students who are assessed as competent in the units completed. The cost of the certificates is included in the course fees.</li>
+                        <li>Refunds may be made in the following circumstances:</li>
+                        <ol type="a">
+                            <li>Participants have overpaid the administration charge</li>
+                            <li>Participants enrolled in training that has been cancelled by the RTO</li>
+                            <li>Participant advises the RTO prior to course commencement that they are withdrawing from the course</li>
+                            <li>If the participant withdraws from a course or program due to illness or extreme hardship as determined by the RTO</li>
+                        </ol>
+                        <li>No refunds will be issued once the course has commenced</li>
+                        <li>Students are responsible for the safe storage of their Certificates and Statements of Attainment. If a student requires a reissue of their Certificate or Statement of Attainment, a certificate re-issue fee of $80 will be charged.</li>
+                        <li>If a student is deemed not yet competent on completion of training, they will be offered an opportunity to be reassessed. If a student is deemed not yet competent a second time, they will be given another opportunity for reassessment.</li>
+                        <li>If a student is required to be reassessed, they will be provided with further guidance from their trainer prior to reassessment.</li>
+                        <li>In most cases there will be no reassessment fee. If a reassessment fee is applicable, this fee will be included on the course flyer.</li>
+                        <li>If a student is deemed competent in some but not all the units of competencies required, a Statement of Attainment will be issued and the student will be given a six-month period to undertake reassessment if required.</li>
+                    </ol>
+
+                    <p ><strong>Consumer Guarantee (5.3)</strong></p>
+                    <p>The RTO guarantees that the services provided by the RTO will be:</p>
+                    <ul>
+                        <li>provided with due care and skill</li>
+                        <li>fit for any specified purpose (express or implied)</li>
+                        <li>Provided within a reasonable time (when no timeframe is set for the training).</li>
+                    </ul>
+
+                    <p ><strong>Cooling Off Period (5.3)</strong></p>
+                    <p>Students are eligible to cancel their enrolment by placing a formal notice of cancellation in writing to the RTO Manager (a letter or email is acceptable) within
+                        10 business days of enrolment, without attracting a cancellation fee, unless the student has already commenced the training.</p>
+
+                    <p ><strong>Complaints and Appeals (6.1)</strong></p>
+                    <p>If a student, trainer or staff member is experiencing any difficulties, they are encouraged to discuss their concerns with Senior Management. The RTO
+                        administrative staff will make themselves available at a mutually convenient time if a student wishes to seek assistance.</p>
+                    <p>If a Staff member or Student wishes to make a formal complaint they are required to complete a Complaints and Appeals Form, which is included in the Student
+                        Handbook. Once the form has been completed, the form should be submitted to the RTO for actioning.</p>
+                    <p>Please refer to the Student Handbook for more details on the complaints and appeals process.</p>
+
+                    <p ><strong>Fee Protection (7.3)</strong></p>
+                    <p>The RTO requires a minimum deposit, which will not exceed $1,500 per individual student, prior to course commencement. If the full course fees are below
+                        $1,500, the full fees may be required to be paid prior to course commencement. Please refer to the course flyers for deposits and course fees.</p>
+                    <p>Following course commencement, full fees will be required to be paid by either a payment plan (if remaining fees are over $1500), or in full (if the remaining fees
+                        are below $1500) for tuition and other services yet to be delivered.</p>
+                    <p>The RTO is committed to providing clients requiring additional support, advice or assistance while training. To achieve this and to ensure the quality delivery of
+                        training and education, the RTO provides client vocational counselling to improve and extend training outcomes. Students are advised to make an appointment
+                        with their trainer in the first instance, if required the student can then schedule an appointment with the RTO for further counselling.</p>
+
+                    <p><strong>Legislative and Regulatory Requirements (8.5)</strong></p>
+                    <p>All students will undergo an induction with the RTO, which will include the student͛s rights and responsibilities against the relevant Commonwealth, State or
+                        Territory legislation and regulatory requirements. Students are issued with a Student Handbook, which also includes the Student͛s rights and responsibilities that
+                        will affect their participation in vocational education and training.</p>
+                    <p>The student acknowledges that they must observe The RTO͛s policies and procedures, according to State and Federal Government legislative and
+                        regulatory requirements, as set out in the Student Handbook.</p>
+
+                    <h4>Victorian Government VET Student Enrolment Privacy Notice</h4>
+                    <p>The Victorian Government, through the Department of Education and Training (the Department), develops, monitors and funds vocational education and training
+                        (VET) in Victoria. The Victorian Government is committed to ensuring that Victorians have access to appropriate and relevant VET services. Any personal
+                        information collected by the Department for VET purposes is protected in accordance with the Privacy and Data Protection Act 2014 (Vic) and the Health Records
+                        Act 2001 (Vic).</p>
+
+                    <p><strong>Collection of your data</strong></p>
+                    <p>Optimistic Futures is required to provide the Department with student and training activity data. This includes personal information collected by us in enrolment
+                        form and unique identifiers sƵch as ƚhe Vicƚorian SƚƵdenƚ NƵmber ;VSNͿ and ƚhe Commonǁealƚh͛s UniqƵe SƚƵdenƚ Idenƚifier ;USIͿ͘</p>
+                    <p>We provides data to the Department in accordance with the Victorian VET Student Statistical Collection Guidelines, available at DET website.</p>
+                        
+                    <p><strong>Use of your data</strong></p>
+                    <p>The Department uses student and training data, including personal information, for a range of VET purposes including administration, monitoring and planning,
+                        including interaction between the Department and Student where appropriate.</p>
+                    <p>The data may also be subjected to data analytics, which seek to determine the likelihood of certain events occurring (such as program or subject completion),
+                        which may be relevant to the services provided to the student.</p>
+
+                    <p><strong>Disclosure of your data</strong></p>
+                    <p>As necessary and where lawful, the Department may disclose VET data, including personal information, to its contractors, other government agencies, professional
+                        bodies and/or other organisations for VET-related purposes. In particular, this includes disclosure of VET student and training data to the Commonwealth and the
+                        National Centre for Vocational Education Research (NCVER).</p>
+
+                    <p><strong>Legal and Regulatory</strong></p>
+                    <p>The Deparƚmenƚ͛s collecƚion and handling of enrolmenƚ daƚa and VSNs is aƵƚhorised Ƶnder ƚhe EdƵcaƚion and Training Reform Acƚ 2006 (Vic). The Department is
+                        also authorised to collect and handle USIs in accordance with the Student Identifiers Act 2014 (Cth) and the Student Identifiers Regulation 2014 (Cth).</p>
+
+                    <p><strong>Survey participation</strong></p>
+                    <p>You may be contacted to participate in a survey conducted by NCVER or a Department-endorsed project, audit or review relating to your training. This provides
+                        valuable feedback on the delivery of VET programs in Victoria.</p>
+                    <p>Please note you may opt out of the NCVER survey at the time of being contacted.</p>
+
+                    <p><strong>Consequences of not providing your information</strong></p>
+                    <p>Failure to provide your personal information may mean that it is not possible for you to enrol in VET and/or to obtain a Victorian Government VET subsidy.</p>
+
+                    <p><strong>Access, correction and complaints</strong></p>
+                    <p>You have the right to seek access to or correction of your own personal information. You may also complain if you believe your privacy has been breached.
+                        For further information, please contact training manager in the first instance by phone or e-mail as provided in these enrolment documents.</p>
+                    
+                    <p><strong>Further information</strong></p>
+                    <p>For further information about the way the Department collects and handles personal information, including access, correction and complaints, go to Victorian State
+                        Government Education and Training website by following this link <a href="https://www.education.vic.gov.au/Pages/privacypolicy.aspx">https://www.education.vic.gov.au/Pages/privacypolicy.aspx</a>.</p>
+                    <p>For further information about Unique Student Identifiers, including access, correction and complaints, go to Australian Government USI website by following this
+                        link <a href="https://www.usi.gov.au/documents/privacy-notice" >https://www.usi.gov.au/documents/privacy-notice</a>.</p>
+                    
+                    <h3 class="text-center bg-dark mb-1">STUDENT DECLARATION and CONSENT</h3>
+                    <p class="m-0 mb-1">I have read and understand the terms and conditions of my enrolment, as stated above. I acknowledge and agree with the terms and conditions
+                        of enrolment with specific reference to the RTO͛s enrolment and selection, USI, course fees, payments and refunds, course requirements,
+                        Language Literacy and Numeracy requirements, complaints and appeals, Workplace Health and Safety,support servicesthat will be provided for
+                        me, legislative and regulatory policies and procedures, which are also provided to me in the Student Handbook. By signing this document, I also
+                        give permission for the RTO to access my Unique Student Identifier for the purpose of my training.</p>
+                    <p>I acknowledge ƚhaƚ I have read ƚhe Vicƚorian Governments VET Student Enrolment Privacy Notice</p>
+                    <p>I declare that the information I have provided to the best of my knowledge is true and correct. I consent to the collection, use and disclosure of
+                        my personal information in accordance with the Privacy Notice above.</p>
+
+                    <div class="row">
+                        <div class="col-8">
+                            Do you give consent to OPTIMISTIC FUTURES to display your testimonials on their website?
+                        </div>
+                        <div class="col-md-4 float-right">
+                            <div class="form-check form-check-inline col-2 ">
+                                <input class="form-check-input checkOne testimonialsWebsite" <?php echo ($form_apply3['form3']['sdc_display_testimonial_of_web'] == 'yes')? 'checked': NULL;  ?> name="sdc_display_testimonial_of_web"  data-target=".testimonialsWebsite" type="checkbox"  value="yes">
+                                <label class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline col-2 ">
+                                <input class="form-check-input checkOne testimonialsWebsite" name="sdc_display_testimonial_of_web" <?php echo ($form_apply3['form3']['sdc_display_testimonial_of_web'] == 'no')? 'checked': NULL; ?> data-target=".testimonialsWebsite" type="checkbox"  value="no">
+                                <label class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-8">
+                        Do you give consent to OPTIMISTIC FUTURES to use your photo on their website or/and on their marketing material?
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-check form-check-inline col-2 ">
+                                <input class="form-check-input checkOne websiteMarketingMaterial" name="sdc_photo_on_their_web" <?php  echo ($form_apply3['form3']['sdc_photo_on_their_web'] == 'yes')? 'checked': NULL; ?> data-target=".websiteMarketingMaterial" type="checkbox"  value="yes">
+                                <label class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline col-2 ">
+                                <input class="form-check-input checkOne websiteMarketingMaterial" name="sdc_photo_on_their_web" <?php  echo ($form_apply3['form3']['sdc_photo_on_their_web'] == 'no')? 'checked': NULL; ?> data-target=".websiteMarketingMaterial" type="checkbox"  value="no">
+                                <label class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <div class="d-flex mt-3">
+                               <p><strong>STUDENT SIGNATURE:
+                                    <input style="width:600px" type="text" name="sdc_student_sign" class="text-center border-bottom-only " value="<?php echo $form_apply3['form3']['sdc_student_sign'] ; ?>" >
+                                    DATE:<input name="sdc_student_sign_date" type="date" style="width:168px"  class="text-center border-bottom-only " value="<?php echo $form_apply3['form3']['sdc_student_sign_date'] ; ?>" >
+                               </strong></p>
+                            </div>
+
+                            <div class="d-flex mt-3">
+                               <p><strong>PARENT/GUARDIAN SIGNATURE*:
+                                    <input style="width:519px" name="sdc_parent_sign" type="text" class="text-center border-bottom-only " value="<?php echo $form_apply3['form3']['sdc_parent_sign'] ; ?>" >
+                                    DATE:<input name="sdc_parent_sign_date" type="date" style="width:168px"  class="text-center border-bottom-only " value="<?php echo $form_apply3['form3']['sdc_parent_sign_date'] ; ?>" >
+                               </strong></p>
+                            </div>
+                            <p><strong>*Parental/guardian consent is required for allstudents under the age of 18.</strong></p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-dark" style="background-color:#add8e6; ">SECTION A – EVIDENCE OF CITIZENSHIP/RESIDENCY AND AGE</h3>
+                    <p><strong>TO BE COMPLETED BY AN AUTHORISED DELEGATE OF THE TRAINING PROVIDER – <span class="text-danger"> DON’T LEAVE ANY SECTIONS BLANK</span></strong></p>
+              
+                    <div class="row mt-5">
+                        <div class="col-md-12">
+                            <div class="d-flex mt-3">
+                                <p><strong>I confirm that in relation to:</strong>
+                                (student’s full name):
+                                </p>
+                                <input name="sa_full_name" type="text" class="text-center form-control" value="<?php echo $form_apply3['form3']['sa_full_name'] ; ?>" >
+                            </div>                           
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                                <p>I have sighted <strong>ONE</strong> of the following:</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Australian Birth Certificate (not Birth Extract)')? 'checked': NULL ?> data-target=".sightedOftheFollowing" name="sa_sighted_one" type="checkbox" value="Australian Birth Certificate (not Birth Extract)" >
+                                        <label class="form-check-label">
+                                            Australian Birth Certificate (not Birth Extract) 
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Current New Zealand Passport')? 'checked': NULL ?> data-target=".sightedOftheFollowing" name="sa_sighted_one" type="checkbox" value="Current New Zealand Passport" >
+                                        <label class="form-check-label">
+                                            Current New Zealand Passport 
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Current green Medicare card')? 'checked': NULL ?> data-target=".sightedOftheFollowing" name="sa_sighted_one" type="checkbox" value="Current green Medicare card" >
+                                        <label class="form-check-label">
+                                            Current green Medicare card 
+                                        </label>
+                                    </div> 
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'A proxy declaration for individuals in exceptional circumstances as per Clauses 2.12 – 2.16 of the Guidelines About Eligibility (the Eligibility Guidelines)')? 'checked': NULL ?> data-target=".sightedOftheFollowing" name="sa_sighted_one" type="checkbox" value="A proxy declaration for individuals in exceptional circumstances as per Clauses 2.12 – 2.16 of the Guidelines About Eligibility (the Eligibility Guidelines)" >
+                                        <label class="form-check-label">
+                                            A proxy declaration for individuals in exceptional circumstances as per Clauses 2.12 – 2.16 of the Guidelines About Eligibility (the Eligibility Guidelines)
+                                        </label>
+                                    </div> 
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'a Referral to Government Subsidised Training - AsylumSeekers’ form from the Asylum Seeker Resource Centreor the Australian Red Cross')? 'checked': NULL ?> data-target=".sightedOftheFollowing" name="sa_sighted_one" type="checkbox" value="a Referral to Government Subsidised Training - AsylumSeekers’ form from the Asylum Seeker Resource Centreor the Australian Red Cross" >
+                                        <label class="form-check-label">
+                                            a Referral to Government Subsidised Training - AsylumSeekers’ form from the Asylum Seeker Resource Centreor the Australian Red Cross
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Current Australian Passport')? 'checked': NULL ?> name="sa_sighted_one" data-target=".sightedOftheFollowing" type="checkbox" value="Current Australian Passport" >
+                                        <label class="form-check-label">
+                                            Current Australian Passport
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Australian Citizenship Certificate')? 'checked': NULL ?> name="sa_sighted_one" data-target=".sightedOftheFollowing" type="checkbox" value="Australian Citizenship Certificate" >
+                                        <label class="form-check-label">
+                                            Australian Citizenship Certificate
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Australian Certificate of Registration by Descent')? 'checked': NULL ?> name="sa_sighted_one" data-target=".sightedOftheFollowing" type="checkbox" value="Australian Certificate of Registration by Descent" >
+                                        <label class="form-check-label">
+                                            Australian Certificate of Registration by Descent
+                                        </label>
+                                    </div> <div class="form-check mb-1">
+                                        <input class="form-check-input checkOne sightedOftheFollowing" <?php echo ($form_apply3['form3']['sa_sighted_one'] == 'Formal confirmation of permanent residence granted by the Department of Home Affairs (or its successor) AND the student’s foreign passport or ImmiCard.')? 'checked': NULL ?> name="sa_sighted_one" data-target=".sightedOftheFollowing" type="checkbox" value="Formal confirmation of permanent residence granted by the Department of Home Affairs (or its successor) AND the student’s foreign passport or ImmiCard." >
+                                        <label class="form-check-label">
+                                            Formal confirmation of permanent residence granted by the Department of Home Affairs (or its successor) AND the student’s foreign passport or ImmiCard.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <p>By Either:</p>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne byeither" <?php echo ($form_apply3['form3']['sa_either'] == 'viewing an original; OR')?'checked':NULL; ?> name="sa_either" data-target=".byeither" type="checkbox" value="viewing an original; OR" >
+                                <label class="form-check-label">
+                                    viewing an original; OR
+                                </label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne byeither" <?php echo ($form_apply3['form3']['sa_either'] == 'viewing a certified copy; OR')?'checked':NULL; ?> name="sa_either" data-target=".byeither" type="checkbox" value="viewing a certified copy; OR" >
+                                <label class="form-check-label">
+                                    viewing a certified copy; OR
+                                </label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne byeither" <?php echo ($form_apply3['form3']['sa_either'] == 'verifying through the Document Verification Service (DVS) [where it is possible to do so, and in accordance with Clause 2.5(c) of the Eligibility Guidelines]; OR')?'checked':NULL; ?> name="sa_either" data-target=".byeither" type="checkbox" value="verifying through the Document Verification Service (DVS) [where it is possible to do so, and in accordance with Clause 2.5(c) of the Eligibility Guidelines]; OR" >
+                                <label class="form-check-label">
+                                    verifying through the Document Verification Service (DVS) [where it is possible to do so, and in accordance with Clause 2.5(c) of the Eligibility Guidelines]; OR 
+                                </label>
+                            </div> 
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne byeither" <?php echo ($form_apply3['form3']['sa_either'] == 'viewing a digital green Medicare card on a Digital Wallet app on the card holder’s mobile device [in accordance with Clause 2.5(d) of the Eligibility Guidelines]; OR')?'checked':NULL; ?> name="sa_either" data-target=".byeither" type="checkbox" value="viewing a digital green Medicare card on a Digital Wallet app on the card holder’s mobile device [in accordance with Clause 2.5(d) of the Eligibility Guidelines]; OR" >
+                                <label class="form-check-label">
+                                    viewing a digital green Medicare card on a Digital Wallet app on the card holder’s mobile device [in accordance with Clause 2.5(d) of the Eligibility Guidelines]; OR
+                                </label>
+                            </div> 
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne byeither" <?php echo ($form_apply3['form3']['sa_either'] == 'relying on evidence sighted and retained as part of a previous enrolment [in accordance with Clause 2.8 of the Eligibility Guidelines] OR')?'checked':NULL; ?> name="sa_either" data-target=".byeither" type="checkbox" value="relying on evidence sighted and retained as part of a previous enrolment [in accordance with Clause 2.8 of the Eligibility Guidelines] OR" >
+                                <label class="form-check-label">
+                                    relying on evidence sighted and retained as part of a previous enrolment [in accordance with Clause 2.8 of the Eligibility Guidelines] OR
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <p>And I have retained <strong>ONE</strong> of the following:</p>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne retainedOfFollowing" <?php echo ($form_apply3['form3']['sa_retained_one'] == 'a copy of the original or certified copy; OR')? 'checked': NULL; ?> name="sa_retained_one" data-target=".retainedOfFollowing" type="checkbox" value="a copy of the original or certified copy; OR" >
+                                <label class="form-check-label">
+                                    a copy of the original or certified copy; OR
+                                </label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne retainedOfFollowing" <?php echo ($form_apply3['form3']['sa_retained_one'] == 'the certified copy; OR')? 'checked': NULL; ?> name="sa_retained_one" data-target=".retainedOfFollowing" type="checkbox" value="the certified copy; OR" >
+                                <label class="form-check-label">
+                                    the certified copy; OR
+                                </label>
+                            </div>
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne retainedOfFollowing" <?php echo ($form_apply3['form3']['sa_retained_one'] == 'evidence as set out in Clause 2.5(c) of the Eligibility Guidelines [where verified through the DVS]; OR')? 'checked': NULL; ?> name="sa_retained_one" data-target=".retainedOfFollowing" type="checkbox" value="evidence as set out in Clause 2.5(c) of the Eligibility Guidelines [where verified through the DVS]; OR" >
+                                <label class="form-check-label">
+                                    evidence as set out in Clause 2.5(c) of the Eligibility Guidelines [where verified through the DVS]; OR
+                                </label>
+                            </div> 
+                            <div class="form-check mb-1">
+                                <input class="form-check-input checkOne retainedOfFollowing" <?php echo ($form_apply3['form3']['sa_retained_one'] == 'declaration of sighting a digital green Medicare card [as set out in Clause 2.5(d) of the Eligibility Guidelines]; OR')? 'checked': NULL; ?> name="sa_retained_one" data-target=".retainedOfFollowing" type="checkbox" value="declaration of sighting a digital green Medicare card [as set out in Clause 2.5(d) of the Eligibility Guidelines]; OR" >
+                                <label class="form-check-label">
+                                    declaration of sighting a digital green Medicare card [as set out in Clause 2.5(d) of the Eligibility Guidelines]; OR
+                                </label>
+                            </div> 
+                        </div>                           
+                    </div>
+                    <hr />
+
+                    <div class="row mt-2 mb-3">
+                        <div class="col-md-12">
+                            <p>And if the student’s age is relevant to their eligibility, and the document produced from the list above does not include a date of birth
+                                (or if the date of birth has not been verified through use of the DVS), I have also sighted and retained a copy of one of the following:</p>
+                            <div class="form-check form-check-inline col-md-3 mr-4">
+                                <input class="form-check-input checkOne student_age_is_relevant_to_their_eligibility" <?php echo($form_apply3['form3']['sa_eligibility_document'] == 'current drivers licence')? 'checked': NULL; ?> name="sa_eligibility_document"  data-target=".student_age_is_relevant_to_their_eligibility" type="checkbox"  value="current drivers licence">
+                                <label class="form-check-label">current drivers licence</label>
+                            </div>
+                            <div class="form-check form-check-inline col-md-3 mr-4">
+                                <input class="form-check-input checkOne student_age_is_relevant_to_their_eligibility" <?php echo($form_apply3['form3']['sa_eligibility_document'] == 'Keypass’ card')? 'checked': NULL; ?> name="sa_eligibility_document"  data-target=".student_age_is_relevant_to_their_eligibility" type="checkbox"  value="‘Keypass’ card">
+                                <label class="form-check-label">‘Keypass’ card</label>
+                            </div>
+                            <div class="form-check form-check-inline col-md-3 mr-4">
+                                <input class="form-check-input checkOne student_age_is_relevant_to_their_eligibility" <?php echo($form_apply3['form3']['sa_eligibility_document'] == 'Not applicable')? 'checked': NULL; ?> name="sa_eligibility_document"  data-target=".student_age_is_relevant_to_their_eligibility" type="checkbox"  value="Not applicable">
+                                <label class="form-check-label">Not applicable</label>
+                            </div>
+                            <div class="form-check form-check-inline col-md-3 mr-4">
+                                <input class="form-check-input checkOne student_age_is_relevant_to_their_eligibility" <?php echo($form_apply3['form3']['sa_eligibility_document'] == 'current learner permit')? 'checked': NULL; ?> name="sa_eligibility_document"  data-target=".student_age_is_relevant_to_their_eligibility" type="checkbox"  value="current learner permit">
+                                <label class="form-check-label">current learner permit </label>
+                            </div>
+                            <div class="form-check form-check-inline col-md-3 mr-4">
+                                <input class="form-check-input checkOne student_age_is_relevant_to_their_eligibility" <?php echo($form_apply3['form3']['sa_eligibility_document'] == 'Proof of Age card')? 'checked': NULL; ?> name="sa_eligibility_document"  data-target=".student_age_is_relevant_to_their_eligibility" type="checkbox"  value="Proof of Age card">
+                                <label class="form-check-label">Proof of Age card</label>
+                            </div>
+                        </div>                           
+                    </div>
+
+                    <h3 class="border" style="background-color:#c5b0ec; color:#800080;">SECTION B1 – EDUCATION HISTORY (ENROLMENT IN A QUALIFICATION)</h3>
+                    <p><strong>TO BE COMPLETED BY THE STUDENT –  <span class="text-danger"> DON’T LEAVE ANY SECTION BLANK UNLESS YOU ARE ASKED TO SKIP A QUESTION OR GO TO THE DECLARATION – PLEASE ASK THE TRAINING PROVIDER FOR HELP IF YOU DON’T UNDERSTAND A QUESTION</span></strong></p>
+                    <p>A <strong>‘skill set’</strong> means a course with the title ‘Course in...’ or a single subject, or small group of subjects (for example ‘Course in Family Violence’, ‘Infection
+                    control Skill Set (Retail)’).</p>
+                    <p> A <strong>‘qualification’</strong> means a course that has ‘Certificate’ or ‘Diploma’ in the title (for example, ‘Certificate III in Business’, ‘Diploma of Nursing’).</p>
+                    
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q1</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>What is the highest qualification (not including secondary or high school) that you have 
+                            <strong>completed</strong>, or <strong>expect to complete</strong> at the time the training
+                            you are applying for is scheduled to start?</p>
+                            <p>(include code and full title of qualification if possible, for example, Certificate III in Aged Care. If you have not completed any qualification, write ‘none’)</p>
+                            <input name="sb_q1" type="text" class="text-center form-control" value="<?php  echo $form_apply3['form3']['sb_q1']; ?> " >
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q2</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>How many other <strong>Skills First funded</strong> qualifications have you enrolled in that have started,
+                            or will start in the <strong>same calendar year</strong> as the qualification/s you are applying for now? 
+                            (<strong>Don’t</strong> include the qualification/s you are applying for now. <strong>Do</strong> include other qualification/s 
+                            at this and other training
+                            providers you’ve enrolled in, but haven’t started yet).</p>
+                            <div class="d-flex">
+                                <input id="sb_q2" name="sb_q2" type="hidden" value="<?php echo $form_apply3['form3']['sb_q2']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input type="button" <?php echo ($form_apply3['form3']['sb_q2'] == '1')?'style="border:2px solid #000000"' : NULL ; ?>  data-ans="#sb_q2"  value="1" data-target=".skillFirstFunded" class="skillFirstFunded btncircleMange circleOne btn rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" <?php echo ($form_apply3['form3']['sb_q2'] == '2')?'style="border:2px solid #000000"' : NULL ; ?>  data-ans="#sb_q2"  value="2" data-target=".skillFirstFunded" class="skillFirstFunded btncircleMange circleOne btn rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" <?php echo ($form_apply3['form3']['sb_q2'] == '3')?'style="border:2px solid #000000"' : NULL ; ?>  data-ans="#sb_q2"  value="3" data-target=".skillFirstFunded" class="skillFirstFunded btncircleMange circleOne btn rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" <?php echo ($form_apply3['form3']['sb_q2'] == '4+')?'style="border:2px solid #000000"' : NULL ; ?>  data-ans="#sb_q2"  value="4+" data-target=".skillFirstFunded" class="skillFirstFunded btncircleMange circleOne btn rounded-circle">
+                                </div>
+                                    <i>(circle number)</i>
+                            </div>
+                                <hr class="border-dark mt-0" />
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q3</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>Not including the qualification/s you are applying for now, how many other <strong>Skills First funded</strong> skill sets and/or
+                            qualifications are you doing at the moment?</p>
+                            <div class="d-flex">
+                                <input id="sb_q3" name="sb_q3" type="hidden" value="<?php echo $form_apply3['form3']['sb_q3']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q3" <?php echo ($form_apply3['form3']['sb_q3'] == '1')?'style="border:2px solid #000000"' : NULL ; ?> value="1" data-target=".qualificationMoment" class="btn qualificationMoment btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q3" <?php echo ($form_apply3['form3']['sb_q3'] == '2')?'style="border:2px solid #000000"' : NULL ; ?> value="2" data-target=".qualificationMoment" class="btn qualificationMoment btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q3" <?php echo ($form_apply3['form3']['sb_q3'] == '3')?'style="border:2px solid #000000"' : NULL ; ?> value="3" data-target=".qualificationMoment" class="btn qualificationMoment btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q3" <?php echo ($form_apply3['form3']['sb_q3'] == '4+')?'style="border:2px solid #000000"' : NULL ; ?> value="4+" data-target=".qualificationMoment" class="btn qualificationMoment btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <i>(circle number)</i>
+                            </div>
+                                <hr class="border-dark mt-0" />
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q4</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>In your lifetime, how many <strong>government funded</strong> qualifications have you started that are at the same level as the one you are applying for now? If 
+                            you are applying for a qualification on the Foundation Skills List, tick ‘not applicable’.</p>
+                            <div class="d-flex">
+                                <input id="sb_q4" name="sb_q4" type="hidden" value="<?php echo $form_apply3['form3']['sb_q4']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q4"  <?php echo ($form_apply3['form3']['sb_q4'] == '1')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".govFundedQualify" value="1" class="btn govFundedQualify btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q4"  <?php echo ($form_apply3['form3']['sb_q4'] == '2')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".govFundedQualify" value="2" class="btn govFundedQualify btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q4"  <?php echo ($form_apply3['form3']['sb_q4'] == '3')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".govFundedQualify" value="3" class="btn govFundedQualify btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q4"  <?php echo ($form_apply3['form3']['sb_q4'] == '4+')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".govFundedQualify" value="4+" class="btn govFundedQualify btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input type="button" data-ans="#sb_q4"  <?php echo ($form_apply3['form3']['sb_q4'] == 'not applicable')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".govFundedQualify" value="not applicable" class="btn govFundedQualify btncircleMange circleOne  rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <i>(circle number)</i>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-dark mt-0"  />
+                    <p><strong class="text-danger">[FOR TAFE/DUAL SECTOR ENROLMENT ONLY – delete Q5 - Q8 if not required]</strong></p>
+                    
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q5</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you are applying for a qualification on the ‘Free TAFE for Priority Courses List’, do you want to access your opportunity to receive a Fee Waiver for
+                            this qualification? <strong>Note:</strong> You can only receive a Fee Waiver for <strong>one qualification</strong> on this list, unless you are eligible for a second Fee Waiver under
+                            the JobTrainer initiative.</p>
+                            <input id="sb_q5" name="sb_q5" type="hidden" value="<?php echo $form_apply3['form3']['sb_q5']; ?>" />
+                            <div class="d-flex">
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q5" type="button" <?php echo ($form_apply3['form3']['sb_q5'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?> value="Yes"  data-target=".freeTAFE" class="btn freeTAFE btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q5" type="button" <?php echo ($form_apply3['form3']['sb_q5'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?> value="No"  data-target=".freeTAFE" class="btn freeTAFE btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q5" type="button" <?php echo ($form_apply3['form3']['sb_q5'] == 'Not applicable')? 'style="border:2px solid #000000"' : NULL ; ?> value="Not applicable"  data-target=".freeTAFE" class="btn freeTAFE btncircleMange circleOne rounded-circle">
+                                </div>
+                               
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘NO’, or ‘not applicable’ go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q6</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you answered <strong>‘YES’</strong> to Q5, have you already received a Fee Waiver for <strong>this qualification</strong> or 
+                            for <strong>any other qualification</strong> on the ‘Free TAFE for Priority Courses List?</p>
+                            <div class="d-flex">
+                                <input id="sb_q6" name="sb_q6" type="hidden" value="<?php echo $form_apply3['form3']['sb_q6']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q6" type="button" <?php echo ($form_apply3['form3']['sb_q6'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?> value="Yes"  data-target=".sectionB1q6" class="btn sectionB1q6 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q6" type="button" <?php echo ($form_apply3['form3']['sb_q6'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?> value="No"  data-target=".sectionB1q6" class="btn sectionB1q6 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q6" type="button" <?php echo ($form_apply3['form3']['sb_q6'] == 'Not applicable')? 'style="border:2px solid #000000"' : NULL ; ?> value="Not applicable"  data-target=".sectionB1q6" class="btn sectionB1q6 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘NO’, go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q7</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you answered <strong>‘YES’</strong> to Q6, are you applying to recommence in the same qualification for which you previously received a Fee Waiver?</p>
+                            <div class="d-flex">
+                                <input id="sb_q7" name="sb_q7" type="hidden" value="<?php echo $form_apply3['form3']['sb_q7']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q7" type="button" <?php echo ($form_apply3['form3']['sb_q7'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?> value="Yes"  data-target=".sectionB1q7" class="btn sectionB1q7 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q7" type="button" <?php echo ($form_apply3['form3']['sb_q7'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?> value="No"  data-target=".sectionB1q7" class="btn sectionB1q7 btncircleMange circleOne rounded-circle">
+                                </div>
+                              
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘YES’ go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q8</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you answered <strong>‘NO’</strong> to Q7, did you receive the Fee Waiver for a qualification under the JobTrainer initiative?</p>
+                            <div class="d-flex">
+                                <input id="sb_q8" name="sb_q8" type="hidden" value="<?php echo $form_apply3['form3']['sb_q8']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q8" type="button" value="Yes" <?php echo ($form_apply3['form3']['sb_q8'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?>  data-target=".sectionB1q8" class="btn sectionB1q8 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q8" type="button" value="No" <?php echo ($form_apply3['form3']['sb_q8'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?>  data-target=".sectionB1q8" class="btn sectionB1q8 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-center bg-white text-danger"><u>FOR JOBTRAINER ENROLMENT ONLY</u></h3>
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q9</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>Are you seeking to enrol in a qualification under the JobTrainer initiative? <strong>Note:</strong> You can only enrol in <strong>one qualification</strong> under the JobTrainer initiative.</p>
+                            <div class="d-flex">
+                                <input id="sb_q9" name="sb_q9" type="hidden" value="<?php echo $form_apply3['form3']['sb_q9']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q9" type="button" value="Yes" <?php echo ($form_apply3['form3']['sb_q9'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?>  data-target=".sectionB1q9" class="btn sectionB1q9 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q9" type="button" value="No"  <?php echo ($form_apply3['form3']['sb_q9'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".sectionB1q9" class="btn sectionB1q9 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘YES’ go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q10</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you answered <strong>‘YES’</strong> to Q9, have you previously started a qualification under the JobTrainer initiative?</p>
+                            <div class="d-flex">
+                                <input id="sb_q10" name="sb_q10" type="hidden" value="<?php echo $form_apply3['form3']['sb_q10']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input  data-ans="#sb_q10" type="button" value="Yes" <?php echo ($form_apply3['form3']['sb_q10'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?>  data-target=".sectionB1q10" class="btn sectionB1q10 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input  data-ans="#sb_q10" type="button" value="No"  <?php echo ($form_apply3['form3']['sb_q10'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?>  data-target=".sectionB1q10" class="btn sectionB1q10 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘NO’, go to Q12)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q11</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you answered <strong>‘YES’</strong> to Q10, are you applying to recommence in the same qualification that you already started under the JobTrainer initiative?</p>
+                            <div class="d-flex">
+                                <input id="sb_q11" name="sb_q11" type="hidden" value="<?php echo $form_apply3['form3']['sb_q11']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q11" type="button" value="Yes" <?php echo ($form_apply3['form3']['sb_q11'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".sectionB1q11" class="btn sectionB1q11 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q11" type="button" value="No" <?php echo ($form_apply3['form3']['sb_q11'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".sectionB1q11" class="btn sectionB1q11 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘YES’ or ‘NO’, go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q12</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>Are you 17 to 24 years old?</p>
+                            <div class="d-flex">
+                                <input id="sb_q12" name="sb_q12" type="hidden" value="<?php echo $form_apply3['form3']['sb_q12']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q12" type="button" value="Yes" <?php echo ($form_apply3['form3']['sb_q12'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?>  data-target=".sectionB1q12" class="btn sectionB1q12 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q12" type="button" value="No"  <?php echo ($form_apply3['form3']['sb_q12'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?> data-target=".sectionB1q12" class="btn sectionB1q12 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘YES’ go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q13</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>Are you a job seeker?</p>
+                            <div class="d-flex">
+                                <input id="sb_q13" name="sb_q13" type="hidden" value="<?php echo $form_apply3['form3']['sb_q13']; ?>" />
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q13" type="button"  <?php echo ($form_apply3['form3']['sb_q13'] == 'Yes')? 'style="border:2px solid #000000"' : NULL ; ?> value="Yes"  data-target=".sectionB1q13" class="btn sectionB1q13 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <div class="mr-5 pr-5">
+                                    <input data-ans="#sb_q13" type="button" <?php echo ($form_apply3['form3']['sb_q13'] == 'No')? 'style="border:2px solid #000000"' : NULL ; ?>  value="No"  data-target=".sectionB1q13" class="btn sectionB1q13 btncircleMange circleOne rounded-circle">
+                                </div>
+                                <i class="mr-5">(circle number)</i>
+                                <i class="mr-5">(If ‘YES’ go to Student Declaration)</i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q14</strong>
+                        </div>
+                        <div class="col-md-11">
+                                <p>If you answered <strong>‘YES’</strong> to Q13, tick any of these boxes if they apply to you:</p>
+                                    <div class="form-check form-check-inline">
+                                        <input name="sb_q14" class="form-check-input checkOne sectionq14" <?php echo ($form_apply3['form3']['sb_q14'] == 'I have a current and valid Health Care Card, Pensioner Concession Card or Veteran’s Gold Card')? 'checked' : NULL ; ?> data-target=".sectionq14" type="checkbox" value="I have a current and valid Health Care Card, Pensioner Concession Card or Veteran’s Gold Card">
+                                        <label class="form-check-label" >I have a current and valid Health Care Card, Pensioner Concession Card or Veteran’s Gold Card</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input name="sb_q14" class="form-check-input checkOne sectionq14" <?php echo ($form_apply3['form3']['sb_q14'] == 'I have a letter from my employer or a company receiver on company letterhead that says I have been, or will be, made redundant or retrenched')? 'checked' : NULL ; ?> data-target=".sectionq14" type="checkbox" value="I have a letter from my employer or a company receiver on company letterhead that says I have been, or will be, made redundant or retrenched">
+                                        <label class="form-check-label" >I have a letter from my employer or a company receiver on company
+                                        letterhead that says I have been, or will be, made redundant or retrenched</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input name="sb_q14" class="form-check-input checkOne sectionq14" <?php echo ($form_apply3['form3']['sb_q14'] == 'I have a separation certificate from my employer')? 'checked' : NULL ; ?> data-target=".sectionq14" type="checkbox" value="I have a separation certificate from my employer">
+                                        <label class="form-check-label" >I have a separation certificate from my employer</label>
+                                    </div>
+
+                                <i class="mr-5">(If you ticked a box, go to Student Declaration)</i>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col-sm-1">
+                            <strong>Q15</strong>
+                        </div>
+                        <div class="col-md-11">
+                            <p>If you did not tick any of the boxes in Q14, you can make a declaration that you are a job seeker by ticking this box and signing this form.</p>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" name="sb_q15" type="checkbox" <?php echo ($form_apply3['form3']['sb_q15'] == 'I declare that I am currently unemployed')? 'checked' : NULL ; ?> value="I declare that I am currently unemployed">
+                                <label class="form-check-label" >I declare that I am currently unemployed</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>         
+        </div>
+
+            <h3 class="border text-dark bg-white" >SECTION B3 – EDUCATION HISTORY (STUDENT DECLARATION)</h3>
+            <div class="pl-4 pt-2">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p> <strong>STUDENT DECLARATION</strong></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="pt-2"><strong>I,</strong>(print your full name):</p>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" value="<?php echo $form_apply3['form3']['sb3_print_full_name']; ?>" name="sb3_print_full_name" class="text-center form-control" >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="pt-2"><strong>In seeking to enrol in</strong>(write the code and full title of the
+                        qualification/s or skill set/s):</p>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" value="<?php echo $form_apply3['form3']['sb3_in_seeking_to_enrol']; ?>" name="sb3_in_seeking_to_enrol" style="height:120px" class="text-center form-control" >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="pt-2"><strong>Declare the following to be true and accurate statements:</strong></p>
+                        <ul>
+                            <li><strong>I AM / AM NOT</strong> enrolled in a school, including government, non-government, independent, Catholic or home school. (circle the appropriate response)</li>
+                            <li><strong>I AM / AM NOT</strong> enrolled in the Commonwealth Government’s Skills for Education and Employment program. (circle the appropriate response)</li>
+                            <li>I understand that my enrolment in the above qualification/s and/or skill set/s may be subsidised by the Victorian and Commonwealth Government under the Skills First Program. I understand how my enrolment will affect my future training options and eligibility for further training under the Skills First program.</li>
+                            <li>I acknowledge and understand that I may be contacted by the Department of Education and Training or an agent to participate in a survey, interview or other questionnaire.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex">
+                            <p class="pt-2 pr-2"><strong>SIGNED:</strong>
+                            </p>
+                                <input name="sb3_signed"  value="<?php echo $form_apply3['form3']['sb3_signed']; ?>"  type="text" style="height:50px" class="text-center form-control" >
+                            <p class="pt-2 px-2">
+                                <strong>DATE: </strong>
+                            </p>
+                                <input name="sb3_date"   value="<?php echo $form_apply3['form3']['sb3_date']; ?>" type="date" style="height:50px" class="text-center form-control" >
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <input type="hidden" name="formid" value="<?php echo $form_apply3['form3']['id']; ?>" />
+            <h3 class="text-dark border" style="background-color:#90ee90">SECTION C – TRAINING PROVIDER DECLARATION</h3>
+            <div class="pl-4">
+                <strong>TO BE COMPLETED BY THE TRAINING PROVIDER – <span class="text-danger">DON’T LEAVE ANY SECTIONS BLANK </span> </strong>
+                <div class="row  pt-2">
+                    <div class="col-md-6">
+                        <strong>Number of qualifications student is currently eligible for:</strong>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="form-check form-check-inline px-4">
+                            <input class="form-check-input checkOne sectioncQ1" <?php echo ($form_apply3['form3']['sectionc']['sc_num_quali_eligible'] == 0)? 'checked': NULL; ?> data-target=".sectioncQ1" name="sectionc[sc_num_quali_eligible]" type="checkbox" value="0">
+                            <label class="form-check-label">0</label>
+                        </div>
+                        <div class="form-check form-check-inline px-4">
+                            <input class="form-check-input checkOne sectioncQ1" <?php echo ($form_apply3['form3']['sectionc']['sc_num_quali_eligible'] == 1)? 'checked': NULL; ?> data-target=".sectioncQ1" name="sectionc[sc_num_quali_eligible]" type="checkbox" value="1">
+                            <label class="form-check-label">1</label>
+                        </div>
+                        <div class="form-check form-check-inline px-4">
+                            <input class="form-check-input checkOne sectioncQ1" <?php echo ($form_apply3['form3']['sectionc']['sc_num_quali_eligible'] == 2)? 'checked': NULL; ?> data-target=".sectioncQ1" name="sectionc[sc_num_quali_eligible]" type="checkbox" value="1">
+                            <label class="form-check-label">2</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-md-6">
+                        <strong>Eligibility exemption granted:</strong>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check form-check-inline px-4">
+                            <input class="form-check-input checkOne sectioncQ2" <?php echo ($form_apply3['form3']['sectionc']['sc_eligibility_granted'] == 'yes')? 'checked': NULL; ?> data-target=".sectioncQ2" name="sectionc[sc_eligibility_granted]" type="checkbox" value="yes">
+                            <label class="form-check-label" >Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline px-4">
+                            <input class="form-check-input checkOne sectioncQ2" <?php echo ($form_apply3['form3']['sectionc']['sc_eligibility_granted'] == 'no')? 'checked': NULL; ?> data-target=".sectioncQ2" name="sectionc[sc_eligibility_granted]" type="checkbox" value="no">
+                            <label class="form-check-label" >No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Based on:</p>
+                        <ul>
+                            <li>discussion with the student;</li>
+                            <li>the evidence I have sighted (and retained a copy of) in Section A; and</li>
+                            <li>the information provided to me by the student in Section B of this form;</li>
+                        </ul>
+                        <p>I believe that the above individual satisfies the Skills First Entitlement eligibility requirements as set out in the VET Funding Contract
+                            (the Contract) and the Guidelines About Eligibility (the Eligibility Guidelines) and is eligible for funding under the Skills First Program for
+                            the following program/s:</p>
+                        <p class="m-0"><i>(write the code and full title of the program/s in which the student is seeking to enrol)</i></p>
+                        <input type="text" value="<?php echo $form_apply3['form3']['sectionc']['sc_seeking_to_enroll']; ?>" name="sectionc[sc_seeking_to_enroll]" style="height:70px;" class="text-center form-control" >
+                        <p>Where applicable I have also sighted and retained relevant evidence required
+                        to grant an exemption from eligibility requirements or other limits under any initiatives in Part C 
+                        of Schedule 1 of the Contract and as specified in Attachment 4 of the Eligibility Guidelines.</p>
+                        <p>I acknowledge that as the Training Provider’s authorised delegate, I am responsible for ensuring that 
+                        all parts of this form are complete. By signing this Declaration, 
+                        I acknowledge that I have reviewed <strong>Sections A</strong> and <strong>B</strong> and have confirmed they have been completed in full.</p>
+
+
+                        <strong>Authorised Training Provider Delegate:</strong>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p class="pt-1">Name:</p>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="sectionc[sc_name]" value="<?php echo $form_apply3['form3']['sectionc']['sc_name']; ?>"  class="text-center form-control" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p class="pt-1">Position:</p>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text"  name="sectionc[sc_position]" value="<?php echo $form_apply3['form3']['sectionc']['sc_position']; ?>" class="text-center form-control" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p class="pt-1">Signed:</p>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="sectionc[sc_signed]" value="<?php echo $form_apply3['form3']['sectionc']['sc_signed']; ?>"  class="text-center form-control" >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p class="pt-1">Date:</p>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="date" name="sectionc[sc_date]"  value="<?php echo $form_apply3['form3']['sectionc']['sc_date']; ?>" class="text-center form-control" >
+                            </div>
+                        </div>
+
+                        <div class="border border-dark">
+                            <div class="row p-3 mb-4">
+                                <div class="col-md-12">
+                                    <strong>Note:</strong>
+                                    <p>Use this section to record additional detail, relevant eligibility information, including information used by the Training Provider to verify the student’s eligibility that is not captured in Sections A or B.</p>
+                                    <p><strong>If there are no notes, write N/A</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="pl-4 mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                    <p>This questionnaire shall be completed by Optimistic Futures Pty Ltd representative. This questionnaire is not a substitute of the Skills
+                        First Evidence of Eligibility Declaration, however, enhance Optimistic Futures’ decision to enrol student in a Government subsidised
+                        training. Optimistic Futures representative shall complete this questionnaire after interviewing students.</p>
+
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td colspan="4">Optimistic Futures representative is required to ask the questions to student and record the responses as Yes, No or N/A (Not Applicable).</td>
+                                    <td><strong>Not eligible if;</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Are you an Australian Resident, holder of permanent visa or New Zealand Citizen?</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne areYouResidentInAustralia" <?php echo ($form_apply3['form3']['sectionc']['sc_autralian_resident'] == 'yes')? 'checked': NULL; ?> name="sectionc[sc_autralian_resident]" data-target=".areYouResidentInAustralia"  type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne areYouResidentInAustralia" <?php echo ($form_apply3['form3']['sectionc']['sc_autralian_resident'] == 'no')? 'checked': NULL; ?> name="sectionc[sc_autralian_resident]" data-target=".areYouResidentInAustralia"  type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne areYouResidentInAustralia" <?php echo ($form_apply3['form3']['sectionc']['sc_autralian_resident'] == 'n/a')? 'checked': NULL; ?> name="sectionc[sc_autralian_resident]" data-target=".areYouResidentInAustralia"  type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Are you currently enrolled in school?</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne enrolledInSchool"  <?php echo ($form_apply3['form3']['sectionc']['sc_current_enroll_schl'] == 'yes')? 'checked': NULL; ?> name="sectionc[sc_current_enroll_schl]" data-target=".enrolledInSchool" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne enrolledInSchool"  <?php echo ($form_apply3['form3']['sectionc']['sc_current_enroll_schl'] == 'no')? 'checked': NULL; ?> name="sectionc[sc_current_enroll_schl]" data-target=".enrolledInSchool" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne enrolledInSchool"  <?php echo ($form_apply3['form3']['sectionc']['sc_current_enroll_schl'] == 'n/a')? 'checked': NULL; ?> name="sectionc[sc_current_enroll_schl]" data-target=".enrolledInSchool" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Are you currently held at prison or undertake weekend detention?<br />
+                                <strong class="pl-3" >If yes:</strong> Are you able to attend the classes at the designated location?
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input class="form-check-input checkOne weekend_detention" <?php echo ($form_apply3['form3']['sectionc']['sc_weekend_detention'] == 'yes')? 'checked': NULL; ?> name="sectionc[sc_weekend_detention]" data-target=".weekend_detention"  type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input checkOne ifattendClassDentention" <?php echo ($form_apply3['form3']['sectionc']['sc_designated_location'] == 'yes')? 'checked': NULL; ?> name="sectionc[sc_designated_location]" data-target=".ifattendClassDentention" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne weekend_detention" <?php echo ($form_apply3['form3']['sectionc']['sc_weekend_detention'] == 'no')? 'checked': NULL; ?> name="sectionc[sc_weekend_detention]" data-target=".weekend_detention"  type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input checkOne ifattendClassDentention" <?php echo ($form_apply3['form3']['sectionc']['sc_designated_location'] == 'n/a')? 'checked': NULL; ?> name="sectionc[sc_designated_location]" data-target=".ifattendClassDentention" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne weekendDentention" <?php echo ($form_apply3['form3']['sectionc']['sc_weekend_detention'] == 'n/a')? 'checked': NULL; ?> name="sectionc[sc_weekend_detention]" data-target=".weekendDentention"  type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input checkOne ifattendClassDentention" <?php echo ($form_apply3['form3']['sectionc']['sc_designated_location'] == 'n/a')? 'checked': NULL; ?> name="sectionc[sc_designated_location]" data-target=".ifattendClassDentention" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Have you commenced or scheduled to commence two or more government subsidized courses during current year?</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne scheduletocommence_cyear" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_current_year'] == 'yes')? 'checked': NULL; ?> name="sectionc[sc_gov_subsidies_current_year]" data-target=".scheduletocommence_cyear" name="scheduletocommence_cyear" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne scheduletocommence_cyear" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_current_year'] == 'no')? 'checked': NULL; ?> name="sectionc[sc_gov_subsidies_current_year]" data-target=".scheduletocommence_cyear" name="scheduletocommence_cyear" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne scheduletocommence_cyear" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_current_year'] == 'n/a')? 'checked': NULL; ?>  name="sectionc[sc_gov_subsidies_current_year]" data-target=".scheduletocommence_cyear" name="scheduletocommence_cyear" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Have you commenced or scheduled to commence two or more government subsidized courses at the same AQF level in lifetime?</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne scheduled_to_commence" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_aqf_life_time'] == 'yes')? 'checked': NULL; ?>  name="sectionc[sc_gov_subsidies_aqf_life_time]" data-target=".scheduled_to_commence" name="scheduled_to_commence" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne scheduled_to_commence" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_aqf_life_time'] == 'no')? 'checked': NULL; ?>  name="sectionc[sc_gov_subsidies_aqf_life_time]" data-target=".scheduled_to_commence" name="scheduled_to_commence" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne scheduled_to_commence" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_aqf_life_time'] == 'n/a')? 'checked': NULL; ?>  name="sectionc[sc_gov_subsidies_aqf_life_time]" data-target=".scheduled_to_commence" name="scheduled_to_commence" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Have you commenced two or more government subsidized courses with the title “Course in......” in lifetime?</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne govsubsidies-lifetime" name="sectionc[sc_gov_subsidies_course_life_time]" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_course_life_time'] == 'yes')? 'checked': NULL; ?> data-target=".govsubsidies-lifetime" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne govsubsidies-lifetime" name="sectionc[sc_gov_subsidies_course_life_time]" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_course_life_time'] == 'no')? 'checked': NULL; ?> data-target=".govsubsidies-lifetime" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne govsubsidies-lifetime" name="sectionc[sc_gov_subsidies_course_life_time]" <?php echo ($form_apply3['form3']['sectionc']['sc_gov_subsidies_course_life_time'] == 'n/a')? 'checked': NULL; ?> data-target=".govsubsidies-lifetime" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td >Can you provide referral form or letter, if your status comes under the following? </br>
+                                    a) Asylum Seekers and Victims of Human Trafficking Initiative;</br>
+                                    b) access to the VTG for retrenched employees</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne referralform" <?php echo ($form_apply3['form3']['sectionc']['sc_referral_form_letter_status'] == 'yes')? 'checked': NULL; ?>  name="sectionc[sc_referral_form_letter_status]" data-target=".referralform" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne referralform" <?php echo ($form_apply3['form3']['sectionc']['sc_referral_form_letter_status'] == 'no')? 'checked': NULL; ?>  name="sectionc[sc_referral_form_letter_status]" data-target=".referralform" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne referralform" <?php echo ($form_apply3['form3']['sectionc']['sc_referral_form_letter_status'] == 'n/a')? 'checked': NULL; ?>  name="sectionc[sc_referral_form_letter_status]" data-target=".referralform" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>No</td>
+                                </tr>
+
+                                <tr>
+                                    <td><strong><u>Applicable only if you are under the age of 17</u></strong></br>
+                                    Will you be able to provide transition from School Form authorising an
+                                    exemption from school enrolment that has been signed by the student’s school
+                                    principal (only in instances where the student has completed year 10) or signed
+                                    by a Department of Education and Training Regional Director?
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_applicable_under_the_age_17]" <?php echo ($form_apply3['form3']['sectionc']['sc_applicable_under_the_age_17'] == 'yes')? 'checked': NULL; ?>  class="form-check-input checkOne applicable_under17" data-target=".applicable_under17" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_applicable_under_the_age_17]" <?php echo ($form_apply3['form3']['sectionc']['sc_applicable_under_the_age_17'] == 'no')? 'checked': NULL; ?>  class="form-check-input checkOne applicable_under17" data-target=".applicable_under17" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_applicable_under_the_age_17]" <?php echo ($form_apply3['form3']['sectionc']['sc_applicable_under_the_age_17'] == 'n/a')? 'checked': NULL; ?>  class="form-check-input checkOne applicable_under17" data-target=".applicable_under17" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>No</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Are you currently enrolled in two or more courses?</td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne more_enroll_courses" <?php echo ($form_apply3['form3']['sectionc']['sc_enroll_two_or_more_course'] == 'yes')? 'checked': NULL; ?> name="sectionc[sc_enroll_two_or_more_course]" data-target=".more_enroll_courses" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne more_enroll_courses" <?php echo ($form_apply3['form3']['sectionc']['sc_enroll_two_or_more_course'] == 'no')? 'checked': NULL; ?> name="sectionc[sc_enroll_two_or_more_course]" data-target=".more_enroll_courses" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input class="form-check-input checkOne more_enroll_courses" <?php echo ($form_apply3['form3']['sectionc']['sc_enroll_two_or_more_course'] == 'n/a')? 'checked': NULL; ?> name="sectionc[sc_enroll_two_or_more_course]" data-target=".more_enroll_courses" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Have you started two or more courses during current period?</td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_enroll_two_or_more_course_current_period]" <?php echo ($form_apply3['form3']['sectionc']['sc_enroll_two_or_more_course_current_period'] == 'yes')? 'checked': NULL; ?> data-target=".have_you_started_two_or_more_courses_current_periods" class="checkOne form-check-input have_you_started_two_or_more_courses_current_periods" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_enroll_two_or_more_course_current_period]" <?php echo ($form_apply3['form3']['sectionc']['sc_enroll_two_or_more_course_current_period'] == 'no')? 'checked': NULL; ?> data-target=".have_you_started_two_or_more_courses_current_periods" class="checkOne form-check-input have_you_started_two_or_more_courses_current_periods" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_enroll_two_or_more_course_current_period]" <?php echo ($form_apply3['form3']['sectionc']['sc_enroll_two_or_more_course_current_period'] == 'n/a')? 'checked': NULL; ?>  data-target=".have_you_started_two_or_more_courses_current_periods" class="checkOne form-check-input have_you_started_two_or_more_courses_current_periods" type="checkbox" value="n/a" >
+                                            <label class="form-check-label" >
+                                                N/A
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                    <p class="m-1"><strong><u>Only for Job Trainer Initiative:</u></strong></p>
+                    <p class="m-0">Students may be eligible for job trainer program funding. The representative is required to ask the following questions
+                        that help in understanding about students eligibility of Job Trainer Program.</p>
+
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>Is Student aged 17 to 24 or a Job seeker?</td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_jt_jobseeker_age_17_24]" <?php echo ($form_apply3['form3']['sectionc']['sc_jt_jobseeker_age_17_24'] == 'yes')? 'checked': NULL; ?> class="form-check-input checkOne sc_jt_jobseeker_age_17_24" data-target=".sc_jt_jobseeker_age_17_24"  type="checkbox" value="yes" >
+                                            <label  class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_jt_jobseeker_age_17_24]" <?php echo ($form_apply3['form3']['sectionc']['sc_jt_jobseeker_age_17_24'] == 'no')? 'checked': NULL; ?> class="form-check-input checkOne sc_jt_jobseeker_age_17_24" data-target=".sc_jt_jobseeker_age_17_24"  type="checkbox" value="no" >
+                                            <label  class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>No</td>
+                                </tr>
+                            
+                                <tr>
+                                    <td>Have Student have previously received Job Trainer benefits for another program?</td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_jt_job_trainer_another_program]" <?php echo ($form_apply3['form3']['sectionc']['sc_jt_job_trainer_another_program'] == 'yes')? 'checked': NULL; ?> class="form-check-input checkOne sc_jt_job_trainer_another_program" data-target=".sc_jt_job_trainer_another_program" type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td><div class="form-check">
+                                            <input name="sectionc[sc_jt_job_trainer_another_program]" <?php echo ($form_apply3['form3']['sectionc']['sc_jt_job_trainer_another_program'] == 'no')? 'checked': NULL; ?> class="form-check-input checkOne sc_jt_job_trainer_another_program" data-target=".sc_jt_job_trainer_another_program" type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>Yes</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Is student able to provide any of the following (If they are a job seeker)? <br />
+                                        • a current and valid Health Care Card, Pensioner Concession Card or Veteran’s Gold Card;<br />
+                                        • a separation certificate from the individual’s employer;<br />
+                                        • a letter from an employer or company receiver on company letterhead stating that they<br />
+                                        have been made, or will be made, redundant or retrenched; or<br />
+                                        If they do not have one of the above:<br />
+                                        • their response to Part B1 Q15 on the Evidence of Eligibility and Student Declaration form;<br />
+                                        • their response to Part B2 Q10 on the Evidence of Eligibility and Student Declaration form;<br />
+                                        or<br />
+                                        • a self-declaration that they are currently unemployed.<br />
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input name="sectionc[sc_jt_Is_student_able]" <?php echo ($form_apply3['form3']['sectionc']['sc_jt_job_trainer_another_program'] == 'yes')? 'checked': NULL; ?> class="form-check-input checkOne weekendDentention" data-target=".weekendDentention"  type="checkbox" value="yes" >
+                                            <label class="form-check-label" >
+                                                Yes
+                                            </label>
+                                        </div>
+                                    
+                                    </td>
+                                    <td>
+                                        <div class="form-check">
+                                            <input name="sectionc[sc_jt_Is_student_able]" <?php echo ($form_apply3['form3']['sectionc']['sc_jt_job_trainer_another_program'] == 'no')? 'checked': NULL; ?> class="form-check-input checkOne weekendDentention" data-target=".weekendDentention"  type="checkbox" value="no" >
+                                            <label class="form-check-label" >
+                                                No
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td>No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="d-flex mt-3">
+                            <p><strong>RTO REPRESENTATIVE SIGNATURE:
+                                <input style="width:442px" name="sectionc[sc_rto_sign]" type="text" value="<?php echo $form_apply3['form3']['sectionc']['sc_rto_sign']; ?>" class="text-center border-bottom-only " >
+                                DATE:<input type="date" style="width:235px" name="sectionc[sc_rto_sign_date]" value="<?php echo $form_apply3['form3']['sectionc']['sc_rto_sign_date']; ?>"  class="text-center border-bottom-only " >
+                            </strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <button class="btn btn-success text-white btn-block" type="submit">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1">
+        <nav class="navbar-expand-sm sticky-top  saveButton">
+            <button type="submit" class="btn btn-outline-success btn-block">SAVE</button>
+        </nav>
+    </div>
+        </div>
+    </form>
+    </div>
+</section>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<!-- Welcome_Classic Closed -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+<script>
+
+   
+
+$(function() {
+
+
+    $(".checkOne").change(function() {
+        if($(this).prop("checked") == true){
+            var checkedit = true;
+        }else{
+            var checkedit = false;
+        }
+        var target = $(this).data("target");
+        $(target).prop("checked", false);
+        $(this).prop('checked', checkedit);
+     
+    });
+
+    $('.disableInput').click(function(){
+        var disableId = $(this).data("disable");
+        $(disableId).prop('disabled', $(this).is(":checked"));
+    });
+
+
+    $('.circleOne').click(function(){
+        var circleTarget = $(this).data("target");
+        $(circleTarget).css("border", "0px");
+        $(circleTarget).prop('checked', false);
+        $(this).prop('checked', true);
+        $(this).css("border", "2px solid #000000");
+        var value  = $(this).val();
+        var valueTargetId =  $(this).data('ans');
+        $(valueTargetId).val(value);
+        console.log(value, valueTargetId);
+    })
+
+    $(".anyTwo").change(function(){
+        var target = $(this).data('checklimit');
+        var checkboxlength = document.querySelectorAll(target+':checked').length;
+        if(checkboxlength )
+        console.log(checkboxlength);
+    });
+
+
+        $("#formSubmit").submit(function(e) {
+        
+            e.preventDefault(); 
+            var form = $(this);
+            var url = form.attr('action');
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(), 
+                success: function(data){
+                    console.log(data);
+                }
+            });
+        });
+})
+</script>
+<div id="script">
+
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+    </script>
+
+    <!-- End Scripts -->
+
+    <!--End Bootstrap + all CSS -->
+    <link title="hello" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/bootstraps.min.css" rel="stylesheet">
+    <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/style.css" rel="stylesheet">
+    <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <!-- fontawesome CSS -->
+    <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/fontawesome/css/all.css">
+    <!-- Glyphicons CSS -->
+    <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/glyphicons.css">
+    <!-- carousell CSS -->
+    <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/carouseller.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!-- Bootstrap Nav CSS -->
+    <link rel="stylesheet" href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/css/bootnavbar.css">
+
+    <!-- WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,500" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:500,600,800,400" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- End WEB FONT -->
+
+    <!-- End All pages css -->
+    <!--End Bootstrap + all CSS -->
+
+    <style>
+    .alert {
+        text-align: center;
+    }
+    
+    </style>
+    <link href="http://dev.softkodes.com/optimisticfuture/assets/frontend/front-pages/old_pages_css/style.css" rel="stylesheet">
 <script src='<?php echo base_url(); ?>ofpdfs/f3/js/pdfmake.min.js'></script>
-	<script src='<?php echo base_url(); ?>ofpdfs/f3/js/vfs_fonts.js'></script>
+<script src='<?php echo base_url(); ?>ofpdfs/f3/js/vfs_fonts.js'></script>
 
 <script src='<?php echo base_url(); ?>ofpdfs/f3/js/form.js'></script>
 
+</div>

@@ -3,6 +3,7 @@
 // print_r ($fetch_grand_child[0]["course_title"]);echo count($fetch_grand_child);
 // print_r ($fetch_training_content[1]["content_title"]);echo count($fetch_training_content);  
 ?>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 
 <table class="tableThree">
     				<tbody>
@@ -21,16 +22,12 @@
 								} 
 								?>	
 								</select>
-							
 						</tr>
 						<br />
 						<tr>
 								<select autocomplete="off" class="form-control"  name="catLevelTwoSelector"  id="catLevelTwoSelector" onChange="catSelectorB()">
 								<option value="select">--Select Trainer Child Category--</option>
 								<?php 
-								// for ($x = 0; $x <= count($fetch_sub_cat)-1; $x++) {
-								// 	echo "<option value='".$fetch_sub_cat[$x]['sub_cat_id']."'>".$fetch_sub_cat[$x]['book_subCategory_title']."</option>";
-								// } 
 								?>	
 								</select>
 						</tr>	
@@ -41,38 +38,54 @@
 						</tr>
 						<br/>
 						<tr>
-						<label>Select Trainer books folder:</label>
-						<td width="250">
 						<?php
-						$questions=array('id'=>'1','name'=>'radio', 'value'=>'1');
-						$answers=array('id'=>'2','name'=>'radio', 'value'=>'2');
-							echo form_radio($questions)."Questionnaires";  
+						$resources=array('id'=>'1','name'=>'radio', 'value'=>'1');
+						$assessment=array('id'=>'2','name'=>'radio', 'value'=>'2');
+						$learner_guide=array('id'=>'3','name'=>'radio', 'value'=>'3');
+						$placement_documents=array('id'=>'4','name'=>'radio', 'value'=>'4');
+						$marking_guide=array('id'=>'5','name'=>'radio', 'value'=>'5');
 						?>
+						<label>Select Trainer books folder:</label>
+						<td width="150">
+						<?php
+							echo form_radio($resources)."Resources";  
+						?>
+						
 						</td>
-  						<td >
+  						<td width="150">
 						  <?php
-						  	echo  form_radio($answers)."Answers";
+						  	echo  form_radio($assessment)."Assesment";
+						  ?>
+						</td>
+						<td width="150">
+						  <?php
+						  	echo  form_radio($learner_guide)."Learner Guide";
+						  ?>
+						</td>
+						<td width="200">
+						  <?php
+						  	echo  form_radio($placement_documents)."Placement Documents";
+						  ?>
+						</td>
+						<td width="150">
+						  <?php
+						  	echo  form_radio($marking_guide)."Marking Guide";
 						  ?>
 						</td>
 						</tr>
 						<br />
 						
-						<!-- <tr>
-							<td></td>
-							<td><button type="button"  id="addCatLvl5" class="btn btn-success btn-block" onClick="addCategoryE(this.id)" >Upload Book</button></td>
-						</tr> -->
 						
     				</tbody>
 				  </table>
 			       <hr />
-				<table class="table table-dark">
-					<thead class="table-primary" style="background-color:#32CD32" >
+				<table class="table table-striped table-bordered" id="categoryE">
+					<thead class="table-primary"  >
 					<tr>
 						<th>#</th>
-						<!-- <th>Grand Child Category Title</th> -->
 						<th>Book Title</th>
-						<th>Trainer Child Category</th>
-						<th>Trainer Parent Category</th>
+						<th>Course Unit</th>
+						<th>Course Name</th>
 						<th>Update</th>
 						<th>Delete</th>
 					</tr>
@@ -93,7 +106,8 @@ $( document ).ready(function() {
 	type : "POST",
 	cache: false,
     success : function(data) { 
-		splittingData(data);
+		// splittingData(data);
+		$('#categoryE').DataTable().ajax.reload();
 	},
     error : function(data) {
         console.log("error in Loading page!!", data);
@@ -147,10 +161,11 @@ function deleteRecordFive(status)
 	cache: false,
 	data : {"deleteId": id},
     success : function(data) { 
-		splittingData(data);
 		$('#deleteFive').modal('hide');
 		location.reload();
 		console.log("Delete function successful!");
+		// splittingData(data);
+		$('#categoryE').DataTable().ajax.reload();
 	},
     error : function(data) {
         console.log("error in Delete page Ajax Function!", data);
@@ -163,30 +178,12 @@ function deleteRecordFive(status)
 
 function splittingData(data){
 	if(data){
-		$('#table').html(data);
+		$('#categoryE').DataTable().ajax.reload();
+		// $('#table').html(data);
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
-
-
-
-
    <!-- Modal Box Pop Up for Delete-->
  <div class="modal fade" id="deleteFive" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  	<div class="modal-dialog modal-dialog-centered" role="document">
@@ -201,5 +198,37 @@ function splittingData(data){
 					</div>
 				  </div>
 	</div>
-	
    <!--End Modal Box Pop Up -->
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+
+$(document).ready( function () {
+    $('#categoryE').DataTable({
+		// processing: true,
+    	// serverSide: true,
+		ajax:<?php echo "'". base_url()."'" ?>+"trainingfive/fetchingRecordFive",
+		columnDefs: [
+            { 
+                targets: 4,
+                render: function(data, type, row, meta){
+                   return "<td><button type='button' class='btn btn-success' id="+row['book_id']+" onClick='myIdFive(this.id)'><a href="+window.location.origin+"/optimisticfuture/manage/pages/control/0/50/"+row['book_id']+">Update</a></button></td>";  
+                }
+            },            
+            { 
+                targets: 5,
+                render: function(data, type, row, meta){
+                   return "<td><button type='button' class='btn btn-danger' data-toggle='modal' data-target='#deleteFive' id="+row['book_id']+" onClick='myIdFive(this.id)'>Delete</button></td>";  
+                }
+            },
+			{"className": "dt-center", "targets": "_all"}            
+        ],
+		columns:[
+			{ data: 'book_id' },
+        	{ data: 'book_title' },
+        	{ data: 'book_subCategory_title' },
+        	{ data: 'book_category_title' },
+		]
+	});
+});
+</script>

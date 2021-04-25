@@ -135,15 +135,15 @@ class Home extends CI_Controller {
                     
                     $data['form_apply3']= $this->applicationForms_model->get_form_apply3();
                     
-                    if(sizeof($data['form_apply3']['enrol']) <=0){
+                    if(sizeof($data['form_apply3']['form3']) <=0){
                         $loginUserId = $this->session->userdata('user_id');
                         // $query = $this->db->get_where('skills_first_program_enrolment_agreement_for', array('user_id' => $loginUserId));
                         // if($query->num_rows <=0){
-                            $data = array(
-                                'user_id' => $loginUserId,
-                                'form_submitted' => 'Pending'
-                            );
-                            $this->db->insert('skills_first_program_enrolment_agreement_for', $data);
+                            // $data = array(
+                            //     'user_id' => $loginUserId,
+                            //     'status' => 'Pending'
+                            // );
+                            // $this->db->insert('skills_first_program_enrolment_agreement_for', $data);
                             $data['page_title'] = $pageData['page_title'];
                             $data['page_meta'] = $pageData['page_meta'];
                             $data['form_apply3']= $this->applicationForms_model->get_form_apply3();
@@ -1072,7 +1072,7 @@ class Home extends CI_Controller {
 // function for login validation on Category books page
 public function user_validation_on_categories_of_books($val)
 {
-    if(!$this->session->userdata('user_id'))
+    if(!$this->session->userdata('user_id') && !$this->session->userdata('co_id') )
     {
         $this->session->set_userdata('error_from_php', 'Login required !');           // checking is activation code available or not
         redirect('login.html');
@@ -1082,6 +1082,7 @@ public function user_validation_on_categories_of_books($val)
         
         $pageData['pageData'] = $this->SqlModel->getSingleRecord('pages', array('page_id'=>54));
         $user_type = $this->SqlModel->getSingleField('user_type', 'user',array('user_id'=>$this->session->userdata('user_id')));
+        $cordinator = $this->SqlModel->getSingleField('co_type', 'co_ordinator',array('co_id'=>$this->session->userdata('co_id')));
         if($val ==45 && $user_type=='trainer'){
                 $dataheader['headertitle'] = 'Tests';
                 $this->load->view('header', $dataheader);
@@ -1099,7 +1100,7 @@ public function user_validation_on_categories_of_books($val)
                 $this->load->view('header', $dataheader);
                 $this->load->view('nested-category-books');
                 $this->load->view('footer');
-        }
+        }       
         else{
             $showView='page';
             
@@ -1110,6 +1111,10 @@ public function user_validation_on_categories_of_books($val)
         }
     }       
 }
+// else if($cordinator=='coordinator'){
+//     $showView='page';
+//     $this->load->view($showView, $pageData);
+// }
 // end of function for login validation on Category books page
 
     public function pdfsubmit()

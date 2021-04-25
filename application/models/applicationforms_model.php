@@ -302,7 +302,7 @@
             $qualifications = array(
                         array(
                             'code'=>'CHC30113',
-                            'title'=> 'Certificate III in Early Childhood Education and Care'
+                            'title'=> 'Certificate III in Early Childhood Education and Care',
                         ),
                         array(
                             'code'=>'CHC50113',
@@ -313,7 +313,7 @@
                             'title'=> 'Certificate II in Security Operations'
                         ),
                         array(
-                            'code'=>'CPP20212',
+                            'code'=>'CPP20212 ',
                             'title'=> 'Certificate II in Security Operations (Control Room Operator)'
                         ),
                         array(
@@ -321,7 +321,7 @@
                             'title'=> 'Certificate III in Security Operations'
                         ),
                         array(
-                            'code'=>'CPP30411',
+                            'code'=>'CPP30411 ',
                             'title'=> 'Certificate III in Security Operations (Batons & Handcuffs)'
                         ),
                         array(
@@ -354,11 +354,55 @@
                 'Statement of Fees'
             );
 
+            $attachments_reason = array(
+                array(
+                    'attachment'=> 'Student Induction Form',
+                    'availability' => null
+                ),
+                array(
+                    'attachment'=> 'Pre-Assessment interview completed',
+                    'availability' => null
+                ),
+                array(
+                    'attachment'=> 'Language Literacy and Numeracy Completed',
+                    'availability' => null
+                ),
+                array(
+                    'attachment'=> 'Skills First Program Enrolment Form Completed',
+                    'availability' => 'N/A'
+                ),
+                array(
+                    'attachment'=> 'Enrolment Agreement Form',
+                    'availability' => 'N/A'
+                ),
+                array(
+                    'attachment'=> 'Student ID’s Checked and Completed',
+                    'availability' => null
+                ),
+                array(
+                    'attachment'=> 'USI Permission and Verification Form',
+                    'availability' => null
+                ),
+                array(
+                    'attachment'=> 'Recognition Prior Learning',
+                    'availability' => 'N/A'
+                ),
+                array(
+                    'attachment'=> 'Credit Transfer Form',
+                    'availability' => 'N/A'
+                ),
+                array(
+                    'attachment'=> 'Statement of Fees',
+                    'availability' => 'Discussed'
+                ),
+            );
+
             $row1 = $query->row_array();
              $row2 = array(
                 'enrol' => $row1,
                 'qualifications' => $qualifications,
                 'attachments' => $attachments,
+                'attachments_reason' => $attachments_reason,
             );
 
              return $row2;
@@ -427,7 +471,7 @@
             }
         }
         
-        public function form_apply2_attachments($selectedAttachments)
+        public function form_apply2_attachments($selectedAttachments, $attachmentReasonSelected)
         {
             // print_r("selected att ".$selectedAttachments);
             $loginUserId = $this->session->userdata('user_id');
@@ -438,12 +482,16 @@
             // print_r("number of rows   ".$query->num_rows());
             if ($query->num_rows() <= 0 )
             {   
-                $data = array('attachments' => $selectedAttachments, );
+                $data = array(
+                    'attachments' => $selectedAttachments,
+                    'attachment_reason' => $attachmentReasonSelected,
+                 );
                 //insert database
                  $this->db->insert('enrollment_booklet', $data);
             }else {
                 $updateData = array(
                     'attachments' =>  $selectedAttachments, 
+                    'attachment_reason' => $attachmentReasonSelected
                 );
                 // print_r(" -in else ".$studentName);
                 // update current data
@@ -483,123 +531,29 @@
         public function get_form_apply3()
         {
             $loginUserId = $this->session->userdata('user_id');
-            $query = $this->db->get_where('skills_first_program_enrolment_agreement_for', array('user_id' => $loginUserId, 'form_submitted' => 'Pending'));
-            $row1 = $query->row_array();
+            $query1 = $this->db->get_where('form_apply3', array('user_id' => $loginUserId));
+            $form3 = $query1->row_array();
+            $query2 = $this->db->get_where('form_apply3_sectionc', array('form_apply3_id' => $form3['id']));
+            $sectionc = $query2->row_array();
 
-            // courses start
-            $courses = array(
-                        array(
-                            'code'=>'CHC30113',
-                            'title'=> 'Certificate III in Early Childhood Education and Care'
-                        ),
-                        array(
-                            'code'=>'CHC50113',
-                            'title'=> 'Diploma of Early Childhood Education and Care'
-                        ),
-                        array(
-                            'code'=>'CPP20212',
-                            'title'=> 'Certificate II in Security Operations'
-                        ),
-                        array(
-                            'code'=>' CPP20212', // Put a space before code number because both course has same code number
-                            'title'=> 'Certificate II in Security Operations (Control Room Operator)'
-                        ),
-                        array(
-                            'code'=>'CPP30411',
-                            'title'=> 'Certificate III in Security Operations'
-                        ),
-                        array(
-                            'code'=>' CPP30411', // Put a space before code number because both course has same code number
-                            'title'=> 'Certificate III in Security Operations (Baton & Handcuffs)'
-                        ),
-                        array(
-                            'code'=>'CHC33015',
-                            'title'=> 'Certificate III in Individual Support'
-                        ),
-                    );
-            // courses end
-
-            // mode of study start
-            $modeOfStudy = array('Classroom', 'Distance Learning', 'Online', 'RPL', 'CT');
-            // mode of study end
-
-            // title start
-            $title = array('Mr.', 'Mrs.', 'Miss', 'Ms');
-            //title end
-
-            // gender
-            $gender = array('Male', 'Female');
-
-            // method of contact
-            $method_of_contact = array('Mobile/Home phone', 'Email');
-
-            // employment status
-            $employment_status = array('Full-Time', 'Employer', 'Part-Time', 'Self-employed - not employing others', 'Unemployed - Seeking full-time work', 'Employed - Unpaid worker in a family business', 'Unemployed - Seeking part-time work', 'Not employed - Not seeking employment');
+            $rowData = [];
+            $rowData['quatification_courses']       = $this->coursesQualificationFull();
+            $rowData['coursesShortAndSkillSet']     = $this->coursesShortAndSkillSet();
+            $rowData['mode_of_study']               = $this->arrayDataForForm3('mode_of_study');
+            $rowData['gender_type']                 = $this->arrayDataForForm3('gender_type');
+            $rowData['gender']                      = $this->arrayDataForForm3('gender');
+            $rowData['employment_question']         = $this->employmentQuestion();
+            $rowData['school_equivalent']           = $this->arrayDataForForm3('school_equivalent');
+            $rowData['citizen_status']              = $this->arrayDataForForm3('citizen_status');
+            $rowData['disablity']                   = $this->arrayDataForForm3('disablity');
+            $rowData['study_reasons']               = $this->arrayDataForForm3('study_reasons');
+            $rowData['identitfication']             = $this->arrayDataForForm3('identitfication');
+            $rowData['tution_sighted']              = $this->arrayDataForForm3('tution_sighted');
+            $rowData['payment_method']              = $this->arrayDataForForm3('payment_method');     
+            $rowData['form3']                       = $form3;
+            $rowData['form3']['sectionc']           = $sectionc;
             
-            // employment status b
-            $employmentStatus_B = array('Manager', 'Professionals', 'Technical and Trade Workers', 'Community and Personal Service Worker', 'Clerical and Administrative Workers', 'Sales Worker', 'Machinery Operators and Drivers', 'Labourers', 'Other');
-
-            // highest completed school
-            $highestCompletedSchool = array('Year 12 OR Equivalent', 'Year 9 OR Equivalent', 'Year 11 OR Equivalent', 'Year 8 OR Equivalent', 'Year 10 OR Equivalent', 'Never Attended');
-
-            // attend secondary school
-            $attendSecondarySchool = array('Year 10 OR Equivalent', 'Never Attended');
-
-            // completed qualifications
-            $completedQulifications = array('Certificate I', 'Certificate II', 'Certificate III', 'Certificate III (Or Trade Certificate)', 'Certificate IV (Or Advance Certificate/Technician)', 'Diploma (Or Associate Diploma)', 'Advance Diploma Or Associate Degree', 'Bachelor Degree Or Higher Degree', 'Certificate Other Than The Above');
-
-            // country of completed qualifications
-            $countryOfQualificationCompleted = array('Australia', 'Overseas', 'Australian Equivalent');
-
-            // level of speak
-            $levelOfSpeak = array('Very Well', 'Well', 'Not Well', 'Not At All');
-
-            // orogin
-            $origin = array('No', 'Yes,Aboriginal', 'Yes,Torres Strait Islander', 'Yes,Both');
-
-            // study reason
-            $studyReason = array('To get a job', 'To start my own business', 'It was a requirement of my job', 'For personal interest or self-development', 'To develop my existing business','To try for a different career','I wanted extra skills for my job', 'Other reason', 'To get a better job or promotion', 'To get into another course or study');
-
-            // identification
-            $identifications = array('Drivers Licence', 'Passport', 'Proof Of Age Card', 'Learners Permit', 'Birth Certification', 'Medicare Card', 'Health Care Card', 'Credit Card');
-
-            // area of fee concession
-            $areaOfFeeConcession = array('Health Care Card issued by the commonwealth','Pensioner Concession Card; or', 'Veteran’s Gold Card; or', 'An alternative card or concession eligibility criterion approved by the Minister for the Purpose of these Guidelines');
-
-            // paymentMethod
-            $paymentMethod = array('Cheque', 'Cash – Do not send cash, to make a cash payment please pay at the front desk', 'Bank cheque', ' Money order', 'EFTPOS', 'Funded from Skills First Program');
-
-            //speak language at home
-            $speakLanguageAtHome = array('No, only English', 'Yes, (Please speicfy)');
-
-            //areas of disability
-            $areasOfDiability = array('Hearing/Deaf', 'Physical', 'Intellectual', 'Learning', 'Mental Illness', 'Vision', 'Medical Condition', 'Acquired brain impairment');
-
-            $row2 = array(
-                'enrol' => $row1, // data form database 
-                'courses'=> $courses,
-                'modeOfStudy' => $modeOfStudy,
-                'title' => $title,
-                'gender' => $gender,
-                'method_of_contact' => $method_of_contact,
-                'employmentStatus' => $employment_status,
-                'employmentStatus_B' => $employmentStatus_B,
-                'highestCompletedSchool' => $highestCompletedSchool,
-                'attendSecondarySchool' => $attendSecondarySchool,
-                'completedQulifications' => $completedQulifications,
-                'countryOfQualificationCompleted' => $countryOfQualificationCompleted,
-                'levelOfSpeak' => $levelOfSpeak,
-                'origin' => $origin,
-                'studyReason' => $studyReason,
-                'identifications' => $identifications,
-                'areaOfFeeConcession' => $areaOfFeeConcession,
-                'paymentMethod' => $paymentMethod,
-                'speakLanguageAtHome' => $speakLanguageAtHome,
-                'areasOfDiability' => $areasOfDiability
-            );
-            // print_r($row2['enrol']);
-            // print_r($row2);
-            return $row2;
+            return $rowData;
         }
         // get data end
         // form 3 end
@@ -607,17 +561,17 @@
         //============================
         public function form_apply3($enrolment_courseSelected, $mode_of_studySelected, 
                                     $titleSelected, $genderSelected, $methodOfContactSelected, $RTOpermissionSelected, 
-                                    $newEducatorSelected, $employmentStatusSelected, $employmentStatus_BSelected,
-                                    $highestCompletedSchoolSelected,$attendSecondarySchoolSelected, 
+                                    $newEducatorSelected, $employmentStatusSelected, $employmentStatus_BSelected, $employmentStatus_CSelected,
+                                    $ausPerResidentSelected,$highestCompletedSchoolSelected,$attendSecondarySchoolSelected, 
                                     $prevQualificationCompletedSelected, $completedQulificationsSelected, 
                                     $countryOfQualificationCompletedSelected, $levelOfSpeakSelected, 
                                     $originSelected, $studyReasonSelected, $identificationsSelected, 
-                                    $haveFeesConessionSelected, $areaOfFeeConcessionSelected,
+                                    $haveFeesConessionSelected, $referredJobSeekersSelected, $areaOfFeeConcessionSelected,
                                     $tuitionSelfIdentifiedSelected, $paymentMethodSelected, 
                                     $consentTestimonialsSelected, $consentPhotoSelected, 
                                     $country_Selected, $speakLanguageAtHomeSelected, 
                                     $govtEnrolCoursesSelected, $govtFundedCoursesSelected, 
-                                    $sameLevelGovtFundedCoursesSelected, $haveDisabilitySelected,
+                                    $sameLevelGovtFundedCoursesSelected, $feesExamptionSelected, $seekingRecommenceSelected, $haveDisabilitySelected,
                                     $areasOfDiabilitySelected) {
 
             print_r($mode_of_studySelected.' - '.$enrolment_courseSelected.' - '.$genderSelected.' - '.$RTOpermissionSelected);
@@ -660,11 +614,16 @@
                     'have_disability' => $haveDisabilitySelected,
                     'areas_of_disability' => $areasOfDiabilitySelected,
                     'method_of_contact' => $methodOfContactSelected,
-                    'employment_status_B' => $employmentStatus_BSelected
-
+                    'employment_status_B' => $employmentStatus_BSelected,
+                    'employment_status_C' => $employmentStatus_CSelected,
+                    'aus_per_resident' => $ausPerResidentSelected,
+                    'referred-job-seekers' => $referredJobSeekersSelected,
+                    'fees-examption' => $feesExamptionSelected,
+                    'seeking-recommence' => $seekingRecommenceSelected,
+                    
                 );
                 //insert database
-                 $this->db->insert('skills_first_program_enrolment_agreement_for', $data);
+                $this->db->insert('skills_first_program_enrolment_agreement_for', $data);
             }else {
                 $updateData = array(
                     'enrollment_course' => $enrolment_courseSelected, 
@@ -698,6 +657,11 @@
                     'areas_of_disability' => $areasOfDiabilitySelected,
                     'method_of_contact' => $methodOfContactSelected,
                     'employment_status_B' => $employmentStatus_BSelected,
+                    'employment_status_C' => $employmentStatus_CSelected,
+                    'aus_per_resident' => $ausPerResidentSelected,
+                    'referred-job-seekers' => $referredJobSeekersSelected,
+                    'fees-examption' => $feesExamptionSelected,
+                    'seeking-recommence' => $seekingRecommenceSelected,
                 );
                 // print_r(" -in else ".$studentName);
                 // update current data
@@ -709,6 +673,11 @@
             }
         }
         //=======================
+
+        public function createForm3($data)
+        {
+            var_dump($data); die;
+        }
 
         public function form_apply3_2($textBoxData)
         {
@@ -764,11 +733,13 @@
                     'same_level_govt_funded_courses_name' => $textBoxData['sameLevelGovtFundedCoursesName'],
                     'speak_language_at_home' => $textBoxData['speakLanguageAtHome'],
                     'other_areas_of_disability' => $textBoxData['otherAreasOfDisability'],
+                    'visa_evidence' => $textBoxData['visaEvidence'],
+                    'referred-job-seekers-reason' => $textBoxData['referredJobSeekersreason'],
                 );
                 //insert into database
                 $this->db->insert('skills_first_program_enrolment_agreement_for', $data);
                 // print_r("hello ". $data['firstName']);
-             }else {
+            }else {
                 $updateData = array(
                     'first_name' => $textBoxData['firstName'],
                     'middle_name' => $textBoxData['middleName'],
@@ -815,6 +786,8 @@
                     'same_level_govt_funded_courses_name' => $textBoxData['sameLevelGovtFundedCoursesName'],
                     'speak_language_at_home' => $textBoxData['speakLanguageAtHome'],
                     'other_areas_of_disability' => $textBoxData['otherAreasOfDisability'],
+                    'visa_evidence' => $textBoxData['visaEvidence'],
+                    'referred-job-seekers-reason' => $textBoxData['referredJobSeekersreason'],
                 );
                  // print_r("world ".$updateData['first_name']);
                 $this->db->where('user_id', $loginUserId);
@@ -966,6 +939,270 @@
             }
             // $now = unix_to_human($now, FALSE, 'eu');
             return $now;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+             
+        ///NEW WORK
+
+        public function coursesQualificationFull($html_v = false)
+        {
+            return $table_Data = [
+                [
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CHC30113',
+                    'title' => 'Certificate III in Early Childhood Education and Care',
+                ],
+                [
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CHC33015',
+                    'title' => 'Certificate III in Individual Support',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CHC40213',
+                    'title' => 'Certificate IV in Education Support',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CHC43015',
+                    'title' => 'Certificate IV in Ageing Support',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CHC43115',
+                    'title' => 'Certificate IV in Disability',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CHC50113',
+                    'title' => 'Diploma of Early Childhood Education and Care',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CPP20218',
+                    'title' => 'Certificate II in Security Operations',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => true,
+                    'code' => 'CPP31318',
+                    'title' => 'Certificate III in Security Operations',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => false,
+                    'code' => 'CPC40110',
+                    'title' => 'Certificate IV in Building and Construction (Building)',
+                ],[
+                    'fee_for_service'  => true,
+                    'govt_subsidised'  => false,
+                    'code' => 'CPC50210',
+                    'title' => 'Diploma of Building and Construction (Building)',
+                ],               
+            ];
+        }
+
+
+        public function coursesShortAndSkillSet()
+        {
+            return $dataTable = [
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'HLTAID001',      
+                        'title' => 'Provide cardiopulmonary resuscitation',
+                    ],
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'HLTAID002',      
+                        'title' => 'Provide basic emergency life support',
+                    ],
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'HLTAID003',      
+                        'title' => 'Provide first aid',
+                    ],
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'HLTAID004',      
+                        'title' => 'Provide an emergency first aid response in an education and care setting',
+                    ],
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'HLTINFCOV001',   
+                        'title' => 'Comply with infection prevention and control policies and procedures',
+                    ],
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'CCSS00098',     
+                        'title' => 'Individual Support- Disability Skill set',
+                    ],
+                [
+                        'fee_for_service' => true,
+                        'govt_subsidised' => false, 
+                        'code' => 'CPCCWHS1001',    
+                        'title' => 'Prepare to work safely in the construction industry (White card)',
+                    ]
+            ];
+        }
+
+        public function arrayDataForForm3($status)
+        {
+            $array = '';
+            switch ($status) {
+                case 'mode_of_study':
+                        $array = ['Classroom', 'Distance', 'Learning', 'Online', 'RPL', 'CT'];
+                    break;
+                case 'gender_type':
+                        $array = ['Mr', 'Mrs', 'Miss', 'Ms'];
+                    break;
+                case 'gender':
+                        $array = ['Male', 'Female'];
+                    break;
+                case 'school_equivalent':
+                        $array = [ 
+                            12  =>  'Year 12 OR Equivalent', 
+                            9   =>  'Year 9 OR Equivalent', 
+                            11  =>  'Year 11 OR Equivalent', 
+                            8   =>  'Year 8 OR Equivalent', 
+                            10  =>  'Year 10 OR Equivalent', 
+                            0   =>  'Never Attended'];
+                    break;
+                case 'citizen_status':
+                        $array = [
+                            'Australian Citizen',
+                            'Permanent Resident',
+                            'New Zealand Citizen',
+                            'Permanent Humanitarian Visa holder',
+                            'Other Visa',
+                        ];
+                    break;
+                case 'disablity':
+                        $array = [
+                            'Hearing/Deaf',
+                            'Physical',
+                            'Intellectual',
+                            'Learning',
+                            'Mental Illness',
+                            'Vision',
+                            'Medical Condition',
+                            'Acquired brain impairment',
+                            'Other'
+                        ];
+                case 'study_reasons':
+                        $array = [
+                            'To get a job',
+                            'To develop my existing business',
+                            'To start my own business',
+                            'To try for a different career',
+                            'To get a better job or promotion',
+                            'It was a requirement of my job',
+                            'I wanted extra skills for my job',
+                            'To get into another course or study',
+                            'For personal interest or self-development',
+                            'Other reason',
+                        ];
+                    break;
+                case 'identitfication':
+                        $array = [
+                            'Drivers license',
+                            'Birth certification',
+                            'Passport',
+                            'Medicare card',
+                            'Proof of age card',
+                            'Health Care card',
+                            'Learners Permit',
+                            'Citizenship Certificate',
+                        ];
+                    break;
+                case 'tution_sighted':
+                        $array = [
+                            'Health Care Card issued by the commonwealth',
+                            'Pensioner Concession Card; or',
+                            'Veteran͛s Gold Card; or',
+                            'An alternative card or concession eligibility criterion approved by the Minister for the Purpose of these Guidelines',
+                        ];
+                    break;
+                case 'payment_method':
+                        $array = [
+                            'Cheque', 'Bank cheque', 'Money order', 'EFTPOS',
+                            'Cash ʹ Do not send cash, to make a cash payment please pay at the front desk',
+                            'Funded from Skills First Program',
+                        ];
+                
+                    break;
+                default:
+                    return false;
+                    break;
+            }
+                    
+            return $array;
+        }
+
+        public function employmentQuestion()
+        {
+            return [
+                'Of the following categories,
+                which BEST describes your current employment status?' => [
+                    'Full-Time',
+                    'Employer',
+                    'Part-Time',
+                    'Self-employed - not employing others',
+                    'Unemployed - Seeking full-time work',
+                    'Employed - Unpaid worker in a family business',
+                    'Unemployed - Seeking part-time work', 
+                    'Not employed - Not seeking employment'
+                ],
+                'Which of the following classifications BEST describes your current or recent occupation?' => [
+                    'Manager',
+                    'Professionals',
+                    'Technical and Trade Workers',
+                    'Community and Personal Service Worker',
+                    'Clerical and Administrative Workers',
+                    'Sales Worker',
+                    'Machinery Operators and Drivers', 
+                    'Labourers',
+                    'Other'
+                ],
+                'Which of the following classifications BEST describesthe Industry of your current or previous Employer?' => [
+                    'Agriculture, Forestry and Fishing',
+                    'Mining',
+                    'Manufacturing',
+                    'Electricity, Gas, Water and Waste Services',
+                    'Construction',
+                    'Wholesale Trade',
+                    'Retail Trade',
+                    'Accommodation and Food Services',
+                    'Transport, Postal and Warehousing',
+                    'Information Media and Telecommunications',
+                    'Financial and Insurance Service',
+                    'Rental, Hiring and Real Estate Services',
+                    'Professional, Scientific and Technical Services',
+                    'Administrative and Support Services',
+                    'Public Administration and Safety',
+                    'Education and Training',
+                    'Health Care and Social Assistance',
+                    'Arts and Recreation Services',
+                    'Other Services',
+                ]
+            ];
         }
     }
 

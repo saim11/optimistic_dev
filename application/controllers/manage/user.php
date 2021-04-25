@@ -171,6 +171,19 @@ class User extends CI_Controller {
 
         //$this->drop_table();
         //$this->create_table();
+        array('name' => 'Individual_Support'
+        ,'view_update' => true
+        ,'view_list' => true
+        ,'view_name' => 'Individual Support'
+        ,'type' => 'radio'
+        ,'required' => true
+        ,'list'=>array(
+            array('value' => 'Yes'
+                  ,'show' => 'Yes')
+            ,array('value' => 'No'
+                  ,'show' => 'No')                                                 
+        )
+        );
             $this->model  =   array(
                                             array('name' => 'user_name'
                                             ,'view_update' => true
@@ -221,62 +234,62 @@ class User extends CI_Controller {
                                                ,'icon' => 'entypo-docs'
                                                , 'query'=>"SELECT COUNT(`answer_id`) AS 'count' FROM `answer` WHERE `answer_user`='@value@'"
                                                , 'detail_link'=>'manage/answer?answer_user=@value@'
-                                               )
-                                            ,array('name' => 'Individual_Support'
-                                            ,'view_update' => true
-                                            ,'view_list' => true
-                                            ,'view_name' => 'Individual Support'
-                                            ,'type' => 'radio'
-                                            ,'required' => true
-                                            ,'list'=>array(
-                                                array('value' => 'Yes'
-                                                      ,'show' => 'Yes')
-                                                ,array('value' => 'No'
-                                                      ,'show' => 'No')                                                 
                                             )
-                                            )
-                                            ,array('name' => 'Security_Operations'
-                                            ,'view_update' => true
-                                            ,'view_list' => true
-                                            ,'view_name' => 'Security Operations'
-                                            ,'type' => 'radio'
-                                            ,'required' => true
-                                            ,'list'=>array(
-                                                array('value' => 'Yes'
-                                                      ,'show' => 'Yes') 
-                                                ,array('value' => 'No'
-                                                      ,'show' => 'No')                                              
+                                            // ,array('name' => 'Individual_Support'
+                                            // ,'view_update' => true
+                                            // ,'view_list' => true
+                                            // ,'view_name' => 'Individual Support'
+                                            // ,'type' => 'radio'
+                                            // ,'required' => true
+                                            // ,'list'=>array(
+                                            //     array('value' => 'Yes'
+                                            //           ,'show' => 'Yes')
+                                            //     ,array('value' => 'No'
+                                            //           ,'show' => 'No')                                                 
+                                            // )
+                                            // )
+                                            // ,array('name' => 'Security_Operations'
+                                            // ,'view_update' => true
+                                            // ,'view_list' => true
+                                            // ,'view_name' => 'Security Operations'
+                                            // ,'type' => 'radio'
+                                            // ,'required' => true
+                                            // ,'list'=>array(
+                                            //     array('value' => 'Yes'
+                                            //           ,'show' => 'Yes') 
+                                            //     ,array('value' => 'No'
+                                            //           ,'show' => 'No')                                              
                                                                                                    
-                                            )
-                                            )
-                                            ,array('name' => 'Early_Childhood_and_Education'
-                                            ,'view_update' => true
-                                            ,'view_list' => true
-                                            ,'view_name' => 'Early Childhood and Education'
-                                            ,'type' => 'radio'
-                                            ,'required' => true
-                                            ,'list'=>array(
-                                                array('value' => 'Yes'
-                                                      ,'show' => 'Yes') 
-                                                ,array('value' => 'No'
-                                                      ,'show' => 'No')                                              
+                                            // )
+                                            // )
+                                            // ,array('name' => 'Early_Childhood_and_Education'
+                                            // ,'view_update' => true
+                                            // ,'view_list' => true
+                                            // ,'view_name' => 'Early Childhood and Education'
+                                            // ,'type' => 'radio'
+                                            // ,'required' => true
+                                            // ,'list'=>array(
+                                            //     array('value' => 'Yes'
+                                            //           ,'show' => 'Yes') 
+                                            //     ,array('value' => 'No'
+                                            //           ,'show' => 'No')                                              
                                                                                                    
-                                            )
-                                            )
-                                            ,array('name' => 'Emergency_First_Aid'
-                                            ,'view_update' => true
-                                            ,'view_list' => true
-                                            ,'view_name' => 'Emergency First Aid'
-                                            ,'type' => 'radio'
-                                            ,'required' => true
-                                            ,'list'=>array(
-                                                array('value' => 'Yes'
-                                                      ,'show' => 'Yes') 
-                                                ,array('value' => 'No'
-                                                      ,'show' => 'No')                                              
+                                            // )
+                                            // )
+                                            // ,array('name' => 'Emergency_First_Aid'
+                                            // ,'view_update' => true
+                                            // ,'view_list' => true
+                                            // ,'view_name' => 'Emergency First Aid'
+                                            // ,'type' => 'radio'
+                                            // ,'required' => true
+                                            // ,'list'=>array(
+                                            //     array('value' => 'Yes'
+                                            //           ,'show' => 'Yes') 
+                                            //     ,array('value' => 'No'
+                                            //           ,'show' => 'No')                                              
                                                                                                    
-                                            )
-                                            )
+                                            // )
+                                            // )
                                             ,array('name' => 'user_type'
                                             ,'view_update' => true
                                             ,'view_list' => false
@@ -340,12 +353,44 @@ class User extends CI_Controller {
                                                             
                                                             )
                                             )
-                                            
-                                        
-		
                                   );  
-
+                            $this->showCourses();    
+                                  
     }
+    private function showCourses($courseList="")
+    {
+        $getAllCourses = $this->SqlModel->getRecords('*', 'book_category');
+        $i = 0;
+        foreach($getAllCourses as $index=>$value){
+            $check_users_course_exist =  $this->db->field_exists($value['book_category_title'], 'user'); 
+            if($check_users_course_exist == 1){
+            if($i<4){
+                $view_list=true;
+            }else{
+                $view_list=false;
+            }
+                $course = array(
+                    'name' => $value['book_category_title']
+                    ,'view_update' => true
+                    ,'view_list' => $view_list
+                    ,'view_name' => str_replace('_',' ',$value['book_category_title'])
+                    ,'type' => 'radio'
+                    ,'required' => true
+                    ,'list'=>array(
+                        array('value' => 'Yes'
+                        ,'show' => 'Yes') 
+                        ,array('value' => 'No'
+                        ,'show' => 'No')                                                
+                        )
+                    );  
+        array_push($this->model,$course);
+        $temp = $this->model[count($this->model)-1];
+        $this->model[count($this->model)-1] = $this->model[count($this->model)-7];
+        $this->model[count($this->model)-7] = $temp;
+        $i++;
+    }}}
+
+
     private function drop_table()
     {
         $query="DROP TABLE ".$this->tblName."";

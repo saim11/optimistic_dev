@@ -42,11 +42,12 @@
 				
 		<ul id="main-menu" class="">
 			
-			<li <?php echo (isset($dashBoard))? 'class="active"' : '';?>>
+			<li class='<?php echo (isset($dashBoard))? "active" : '';?>'>
 				<a href="<?php echo ADMIN_URL;?>">
 					<i class="entypo-gauge"></i>
 					<span>Dashboard</span>
 				</a>
+				
 				
 			</li>
             
@@ -103,21 +104,38 @@
 				</a>
 			</li>
 			
-			<li <?php echo (isset($pagesActive))? 'class="active"' : '';?>>
+			<li class='<?php echo (isset($pagesActive))? "active" : "";?> has-sub root-level'>
 				<a href="<?php echo ADMIN_URL;?>book_category">
 					<i class="entypo-book-open"></i>
-					<span>Book Category</span>
-				</a>				
+					<span>Books</span>
+				</a>
+				<ul>
+				<li>
+					<a href="<?php echo ADMIN_URL;?>pages/control/0/45">
+						<i class="entypo-folder"></i>
+						<span>Courses of Books</span>
+					</a>
+					<a href="<?php echo ADMIN_URL;?>pages/control/0/46">
+						<i class="entypo-layout"></i>
+						<span>Units of Books</span>
+					</a>
+					<a href="<?php echo ADMIN_URL;?>pages/control/0/49">
+						<i class="entypo-book"></i>
+						<span>Upload Books</span>
+					</a>
+				</li>
+				</ul>				
 			</li>
+			
 			<li <?php echo (isset($pagesActive))? 'class="active"' : '';?>>
 				<a href="<?php echo ADMIN_URL;?>studentForms">
-					<i class="entypo-book-open"></i>
+					<i class="entypo-doc-text"></i>
 					<span>Student Forms</span>
 				</a>				
 			</li>
             
             
-            <li>
+            <li >
 				<a href="<?php echo ADMIN_URL;?>home/logout">
 					<i class="entypo-logout"></i>
 					<span>Logout</span>
@@ -144,8 +162,6 @@
 			<!-- Profile Info -->
 			<li class="profile-info"><!-- add class "pull-right" if you want to place this from right -->
 				
-				
-					
 					<strong>Welcome!</strong> <?php echo $userdata['full_name'];?> <br/><strong>Last login:</strong> <?php echo date('M d, Y h:ia',strtotime($this->session->userdata('last_login')));?> | <strong>IP Address:</strong> <?php echo $this->session->userdata('last_ip');?>
 				
 				

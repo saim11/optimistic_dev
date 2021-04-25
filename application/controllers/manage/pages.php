@@ -277,7 +277,7 @@ class Pages extends CI_Controller {
 
 			$filechecker =  $_FILES['userfile']['size'];			
 			if(isset($_FILES['userfile'])&&$_FILES['userfile']['tmp_name']!="")
-		{
+			{
 			$filename = $_FILES['userfile'];
 			$path="";
 			$QA = $this->input->post('radio');
@@ -510,14 +510,27 @@ if($editID == 49){
 	{
 				$filename = $_FILES['userfile'];
 				$path="";
-				$QA = $this->input->post('radio');
-				if($QA == 1){
-					$upload_path='./trainingBooks/Questions/';
-					$path = 'trainingBooks/Questions';
+				$upload_path="";
+				$BOOK = $this->input->post('radio');
+				if($BOOK == 1){
+					$upload_path='./trainingBooks/Resources/';
+					$path = 'trainingBooks/Resources';
 				}
-				else if($QA == 2){
-					$upload_path='./trainingBooks/Answers/';
-					$path = 'trainingBooks/Answers';
+				else if($BOOK == 2){
+					$upload_path='./trainingBooks/Assessment/';
+					$path = 'trainingBooks/Assessment';
+				}
+				else if($BOOK == 3){
+					$upload_path='./trainingBooks/Learner Guide/';
+					$path = 'trainingBooks/Learner Guide';
+				}
+				else if($BOOK == 4){
+					$upload_path='./trainingBooks/Placement Documents/';
+					$path = 'trainingBooks/Placement Documents';
+				}
+				else if($BOOK == 5){
+					$upload_path='./trainingBooks/Marking Guide/';
+					$path = 'trainingBooks/Marking Guide';
 				}
 				if (!file_exists($upload_path))
 				{

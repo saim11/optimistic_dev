@@ -20,8 +20,8 @@ if ($pageData["page_background"] != "") {
  $backgroundimage = "style='background:url(" . base_url() . $pageData["page_background"] . ") no-repeat top center;background-size: cover;'";
  $backgroundimage = base_url() . $pageData["page_background"];
 }
-
 ?>
+
 <!--our satisfied customer Start -->
 <div class="osc">
   <div class="ocs_sub">

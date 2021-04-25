@@ -104,6 +104,7 @@
 			  {
 				foreach($listing as $c)
 				{
+					if($c['page_id'] != 45 && $c['page_id'] != 46 && $c['page_id'] != 47 && $c['page_id'] != 48 && $c['page_id'] != 49 && $c['page_id'] != 16 && $c['page_id'] != 17 && $c['page_id'] != 31 && $c['page_id'] != 32 && $c['page_id'] != 33 && $c['page_id'] != 34 && $c['page_id'] != 35 && $c['page_id'] != 36 && $c['page_id'] != 37 && $c['page_id'] != 40 && $c['page_id'] != 41 && $c['page_id'] != 50 && $c['page_id'] != 51 && $c['page_id'] != 52 && $c['page_id'] != 53 && $c['page_id'] != 54 && $c['page_id'] != 55 && $c['page_id'] != 56 && $c['page_id'] != 57 && $c['page_id'] != 58 && $c['page_id'] != 59 && $c['page_id'] != 60 && $c['page_id'] != 61 && $c['page_id'] != 62 && $c['page_id'] != 63 && $c['page_id'] != 64 && $c['page_id'] != 65 && $c['page_id'] != 66 && $c['page_id'] != 67  ){
 					?>
 
               <tr id="page-<?php echo $c['page_id'];?>">
@@ -137,6 +138,7 @@
                     
 			 <?php		
 				}
+			}
 			  }
 			  else{ ?>
 				<tr><td colspan="6">Sorry! No Records.</td></tr>

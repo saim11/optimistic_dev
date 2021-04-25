@@ -57,16 +57,17 @@
 <!-- slider_area-->
 <!-- Slider End -->
 
-
-<!-- Main Heading Area Start-->
-<div class="main_heading">
-    <div class="main_heading_sub">
-        <p>The Optimistic Future is a diversified<br> Registered training organization <span>RTO 41053</span> </p>
+<!-- CHANGE October 30th-->
+    <!-- Main Heading Area Start-->
+    <div class="main_heading">
+        <div class="main_heading_sub">
+            <p>The <span>Optimistic Future</span> is a Diversified Registered <br>Training Organization</p>
+        </div>
+        <!-- main_heading_sub-->
     </div>
-    <!-- main_heading_sub-->
-</div>
-<!-- main_heading-->
-<!-- Main Heading Area End-->
+    <!-- main_heading-->
+    <!-- Main Heading Area End-->
+<!-- CHANGE October 30th Close-->
 
 
 <!-- Carousel Area Start-->
@@ -116,18 +117,22 @@
     </div>
     <!-- carousel_area-->
     <!-- Carousel Area END-->
+    
+<!-- CHANGE October 30th-->
 
     <!-- Student Heading Area Start-->
 
     <div class="student_heading">
         <div class="student_heading_sub">
             <div class="main_student">
-                <h1>2000+ Students</h1>
+                <h1>RTO 41053</h1>
             </div>
             <!-- main_student-->
 
+<!-- CHANGE October 30th Close-->
+
             <div class="normal_text">
-                <p>At the Optimistic Future, To promote life-long learning,<br> Tech employability skills, encourage
+                <p>At the Optimistic Futures, To promote life-long learning,<br> Tech employability skills, encourage
                     continuous
                     professional
                     <br> development, inculcate social responsibility.<a href="#"><span>+</span></a></p>
@@ -169,7 +174,6 @@
                     <div class="form-group">
                         <input type="email" id="email" value="<?php echo set_value('user_email'); ?>" name="user_email"
                             class="form-control my_login" aria-describedby="emailHelp" placeholder="Email">
-
                     </div>
                     <div class="form-group">
                         <input type="password" id="password" value="<?php echo set_value('user_password'); ?>"
@@ -320,11 +324,13 @@
 
     <!--client section End -->
     <!--Bottom Link section START -->
+    
+<!-- CHANGE October 30th-->
 
     <div class="bottom_link">
         <div class="bottom_link_sub">
             <h1>Want to know more?</h1>
-            <h2>3 campuses&nbsp;&nbsp; | &nbsp;&nbsp;27 locations</h2>
+            <h2>4 Campuses&nbsp;&nbsp; | &nbsp;&nbsp;21 Locations</h2>
             <div class="bottom_link_images">
                 <a href="./blog.html"><img class="mobile_image"
                         src="<?php echo FRONTEND_ASSETS; ?>front-pages/images/bottom_link.jpg" alt=""></a><a
@@ -337,6 +343,8 @@
             </div><!-- bottom_link_images-->
         </div><!-- bottom_link_sub-->
     </div><!-- bottom_link-->
+    
+<!-- CHANGE October 30th Close-->
 
     <!--Bottom Link section END -->
 

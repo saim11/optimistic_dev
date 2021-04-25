@@ -111,8 +111,8 @@ display: inline-block ;
 								<label><h5>Student Name</h5></label>
 								<input type="text" id="studentName" class="form-control Form_Setup required"
 									value="<?php
-echo $form_apply2['enrol']['student_name'];
-?>">
+									echo $form_apply2['enrol']['student_name'];
+									?>">
 								<!-- <span id="returnResult"></span> -->
 							</div>
 						</div>
@@ -130,16 +130,16 @@ echo $form_apply2['enrol']['student_name'];
 									</tr>
 
 								<?php
-$qualificationSelected = explode(',', $form_apply2['enrol']['qualification']);
-$qualifications        = $form_apply2['qualifications'];
-$qulInput              = 1;
-$qulLable              = 1;
-foreach ($qualifications as $qualification) {
-    $checked = "";
-    if (in_array($qualification['code'], $qualificationSelected)) {
-        $checked = "checked";
-    }
-    ?>
+									$qualificationSelected = explode(',', $form_apply2['enrol']['qualification']);
+									$qualifications        = $form_apply2['qualifications'];
+									$qulInput              = 1;
+									$qulLable              = 1;
+									foreach ($qualifications as $qualification) {
+										$checked = "";
+										if (in_array($qualification['code'], $qualificationSelected)) {
+											$checked = "checked";
+										}
+										?>
 										<tr>
 											<td>
 												<div class="checkbox">
@@ -164,30 +164,53 @@ foreach ($qualifications as $qualification) {
 						<table class="table table-bordered opt-centered">
 							<tbody>
 
-								<?php
-$attachmentsSelected = explode(',', $form_apply2['enrol']['attachments']);
-$attachments         = $form_apply2['attachments'];
+						<?php
+							$attachmentsSelected = explode(',', $form_apply2['enrol']['attachments']);
+							$attachmentsReasonSelected = explode(',', $form_apply2['enrol']['attachment_reason']);
+							$attachments = $form_apply2['attachments'];
+							$attachments_reason = $form_apply2['attachments_reason'];
 
-$attInput = 6;
-$attLable = 6;
-foreach ($attachments as $attachment) {
-    $checked = "";
-    if (in_array($attachment, $attachmentsSelected)) {
-        $checked = "checked";
-    }
-    ?>
+							$attInput = 11;
+							$attLable = 11;
+							$reasonI = 1;
+							$reasonL = 1;
+							foreach ($attachments_reason as $attachment) {
+								$checked = "";
+								if (in_array($attachment['attachment'], $attachmentsSelected)) {
+									$checked = "checked";
+								}
+								?>
 										<tr>
 											<td>
 												<div class="checkbox">
-													<input id="box<?php echo $attInput++; ?>" class="attachments" name="attachments[]" value="<?php echo $attachment ?>" type="checkbox" <?php echo $checked; ?> />
+													<input id="box<?php echo $attInput++; ?>" class="attachments attachment attachments_reason" name="attachments[]" value="<?php echo $attachment['attachment'] ?>" type="checkbox" <?php echo $checked; ?> />
 													<label for="box<?php echo $attLable++; ?>"></label>
 												</div>
 											</td>
-											<td><?php echo $attachment; ?></td>
+											<td class="nr"><?php echo $attachment['attachment']; ?></td>
+											<td>
+											<?php 
+												$checked="";
+												if($attachment['availability'] != null){ 
+													$checked="";
+													
+													if (in_array($attachment['attachment'], $attachmentsReasonSelected)) {
+														$checked='checked';
+												}
+												?>
+														<div class="checkbox">
+															<input type="hidden" name="" value="<?php echo $attachment['attachment']; ?>" />
+															<input id="box-<?php echo $attachment['availability'].$reasonI++; ?>" class="attachments attachments_reason availability" name="availability" value="<?php echo $attachment['attachment']; ?>" type="checkbox" <?php echo $checked; ?> />
+															<label class="nrt" for="box-<?php echo $attachment['availability'].$reasonL++; ?>"><?php echo $attachment['availability']; ?></label>
+														</div>
+													</td>
+
+												<?php }
+											?>
 										</tr>
-								<?php
-}
-?>
+										<?php
+										}
+										?>
 							</tbody>
 						</table>
 
@@ -217,15 +240,54 @@ foreach ($attachments as $attachment) {
 
 $(document).ready(function() {
 
+	// attachments reason function
+
+	// var attachments = [];
+	// var attachment = {};
+
+	// function attach_reason(){
+	// 	var $row = $(this).parents("tr"); 
+		
+	// 	var _attachments = $row.find('.attachments_reason').val();
+	// 	// var _isAvailable = $row.find('input[name="availability"]').is(':checked');
+	// 	var _isAvailable = $row.find('input[name="availability"]').val();
+
+	// 	attachment = {_attachments, _isAvailable};
+	// 	// attachments.push(attachment);
+
+	// 	$(".attachments_reason:checked").each(function() {
+	// 		if($(this).val() == _isAvailable){
+	// 			console.log("ENTA", $(this).val());
+	// 		}
+	// 		// attachments.push($(this).val());
+	// 	});
+
+
+	// 	console.log(_isAvailable);
+	// }
+
+	// $(".attachments_reason").change(attach_reason);
+	// $(".availability").change(attach_reason);
+	
+
+
 	//checkbox data send to controller attachments
 		$('.attachments').change(function(){
-			console.log('attachments change');
 			var chkAttachmentArray = [];
-			$(".attachments:checked").each(function() {
+			var chkAttachmentReasonArray = [];
+			$(".attachment:checked").each(function() {
 				chkAttachmentArray.push($(this).val());
 			});
+
+			$(".availability:checked").each(function(){
+				chkAttachmentReasonArray.push($(this).val());
+			});
+
 			var attachmentSelected;
+			var attachmentReasonSelected;
+			
 			attachmentSelected = chkAttachmentArray.join(',');
+			attachmentReasonSelected = chkAttachmentReasonArray.join(',');
 
 			if(attachmentSelected.length > 0){
 				// alert("You have selected " + attachmentSelected);
@@ -236,7 +298,7 @@ $(document).ready(function() {
 
 			$.ajax({
 				type: 'POST',
-				data: {attachmentSelected: attachmentSelected},
+				data: {attachmentSelected: attachmentSelected, attachmentReasonSelected: attachmentReasonSelected},
 				url: '<?php echo site_url('ApplicationForms/form_apply2_attachments') ?>',
 				success: function(result){
 		    		$('#returnResult').html(result);
