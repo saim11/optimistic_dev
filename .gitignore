@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 application.zip
 trainingBooks/*
 asset-custom_dup/*
@@ -6,3 +7,22 @@ optimisticfure/*
 resources-Images/*
 ofdocs_original/*
 application/logs/*
+=======
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+#codeigniter 3
+application/logs/*
+!application/logs/index.html
+!application/logs/.htaccess
+/vendor/
+>>>>>>> 56e6cbe9a9632fe73ee05e9f9c24bcaf4783a543
